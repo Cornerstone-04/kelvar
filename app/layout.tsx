@@ -44,8 +44,12 @@ export const metadata: Metadata = {
     description:
       "Engineering next-generation drone systems. Based in London, UK.",
     siteName: "Kelvar Industries",
-    images: ["/kelvar.jpg"
-    ]
+    images: [
+      {
+        url: "https://kelvarindustries.vercel.app/kelvar.jpg",
+        alt: "Kelvar Industries — Engineering next-generation drone systems for defence, surveillance, and precision logistics. Based in London, UK.",
+      },
+    ],
   },
   robots: { index: true, follow: true },
 };
