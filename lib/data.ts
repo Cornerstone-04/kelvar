@@ -5,9 +5,11 @@ const assets = (unsplashId: string, mixkitId: number) => ({
 
 export const site = {
   name: "Kelvar Industries",
-  tagline: "Engineering the Future of Unmanned Flight",
+  tagline: "Eyes Everywhere. Safety Guaranteed.",
   mission:
-    "Kelvar Industries exists to design and develop next-generation drone systems that redefine what is possible in defence, surveillance, and precision logistics. We build for the missions that matter.",
+    "Inspired by the idea of purposeful motion and instinctive vigilance, Kelvar Industries develops intelligent autonomous surveillance systems designed to protect people, property, and progress. We create resilient technologies that deliver clarity, coverage, and confidence where it matters most.",
+  story:
+    "In Tolkien’s mythology, Kelvar refers to the living creatures of Arda capable of autonomous movement — quick, self-directed beings that roam, fly, and guard the natural world. We adopted the name as a symbol of intelligent systems built for vigilance, protection, and clarity of action. Inspired by the elevated sight and guardianship associated with the Great Eagles, Kelvar Industries develops autonomous technologies designed to safeguard people, property, and progress through resilient, always-on surveillance.",
   location: "London, United Kingdom",
   email: "contact@kelvarindustries.com",
 };
@@ -123,20 +125,20 @@ export const navLinks = [
 
 export const values = [
   {
-    title: "Precision",
-    desc: "Every system we build is engineered to exacting standards. There is no room for error.",
+    title: "Vigilance",
+    desc: "We build systems designed to see, detect, and respond with constant awareness, day and night.",
   },
   {
-    title: "Innovation",
-    desc: "We pursue unconventional solutions to the hardest problems in unmanned systems.",
+    title: "Autonomy",
+    desc: "Our technologies are shaped for intelligent, self-directed operation that reduces delay and improves coverage.",
   },
   {
     title: "Resilience",
-    desc: "Our platforms are built to operate in the most demanding and contested environments on earth.",
+    desc: "Kelvar solutions are designed to remain dependable in demanding, high-stakes, and always-on environments.",
   },
   {
-    title: "Integrity",
-    desc: "We are transparent with our partners, rigorous in our research, and accountable for our outcomes.",
+    title: "Guardianship",
+    desc: "Everything we create is grounded in protection — safeguarding people, property, and the progress they depend on.",
   },
 ];
 
@@ -159,23 +161,23 @@ export const team = [
 ];
 
 export const careers = {
-  headline: "Build What Others Can't",
+  headline: "Build the Future of Intelligent Protection",
   intro:
-    "We're a small, focused team solving hard problems in unmanned systems. If you're driven by technical excellence and want your work to matter, we want to hear from you.",
+    "We are building autonomous surveillance technologies that combine vigilance, resilience, and intelligent action. If you care about purposeful systems and want to help protect what matters most, we'd love to hear from you.",
   perks: [
-    "Competitive salary & equity",
+    "Competitive salary & growth opportunities",
     "Flexible & hybrid working",
-    "R&D budget for personal projects",
-    "Work on real-world defence systems",
+    "Work on meaningful autonomous systems",
+    "Help shape next-generation surveillance technology",
   ],
   roles: [
     {
-      title: "Mechanical Engineer",
+      title: "Autonomous Systems Engineer",
       department: "Engineering",
       location: "London, UK",
       type: "Full-time",
       summary:
-        "Design and develop airframe structures and mechanical systems for our drone platforms.",
+        "Design and develop intelligent system behaviours for autonomous surveillance and monitoring platforms.",
     },
     {
       title: "Embedded Systems Engineer",
@@ -183,15 +185,15 @@ export const careers = {
       location: "London, UK · Hybrid",
       type: "Full-time",
       summary:
-        "Develop firmware and real-time control systems for autonomous flight platforms.",
+        "Build firmware and real-time control systems that power reliable, always-on autonomous devices.",
     },
     {
-      title: "Flight Systems Engineer",
+      title: "Computer Vision Engineer",
       department: "Engineering",
       location: "London, UK",
       type: "Full-time",
       summary:
-        "Lead the development of navigation, guidance, and control algorithms for multi-rotor and fixed-wing UAS.",
+        "Develop perception and visual intelligence capabilities that improve awareness, tracking, and response accuracy.",
     },
   ],
 };
@@ -200,20 +202,21 @@ export const press = [
   {
     outlet: "Placeholder Outlet",
     headline:
-      "Kelvar Industries announces next-generation drone research programme",
-    date: "2025",
-    url: "#",
-  },
-  {
-    outlet: "Placeholder Outlet",
-    headline: "Inside the London R&D lab pushing the limits of unmanned flight",
+      "Kelvar Industries unveils autonomous surveillance vision inspired by vigilance and intelligent motion",
     date: "2025",
     url: "#",
   },
   {
     outlet: "Placeholder Outlet",
     headline:
-      "Kelvar secures strategic partnership for advanced drone development",
+      "How Kelvar Industries is rethinking 24/7 intelligent surveillance for modern protection needs",
+    date: "2025",
+    url: "#",
+  },
+  {
+    outlet: "Placeholder Outlet",
+    headline:
+      "Kelvar Industries positions autonomous monitoring as the next frontier in safety technology",
     date: "2025",
     url: "#",
   },

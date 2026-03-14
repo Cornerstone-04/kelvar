@@ -30,15 +30,15 @@ export default function AboutPage() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-heading text-[clamp(3rem,10vw,8rem)] leading-none font-black tracking-[-0.02em] text-white"
         >
-          Built for the
+          Inspired by
           <br />
           <span
             className="text-transparent [WebkitTextStroke:1px_#ffffff40]"
             style={{ WebkitTextStroke: "2px #ffffff40" }}
           >
-            Hardest
+            Vigilance
           </span>{" "}
-          Missions
+          in Motion
         </motion.h1>
       </div>
 
@@ -54,11 +54,7 @@ export default function AboutPage() {
         <div>
           <SectionLabel>Story</SectionLabel>
           <p className="font-mono text-[0.82rem] leading-[1.9] text-white/40">
-            Placeholder — awaiting client content. Kelvar Industries was founded
-            with the belief that the next generation of unmanned systems would
-            be built not by legacy primes, but by focused, fast-moving
-            engineering teams willing to tackle the hardest problems from first
-            principles.
+            {site.story}
           </p>
         </div>
       </div>
