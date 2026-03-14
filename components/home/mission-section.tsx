@@ -7,7 +7,7 @@ import { SectionLabel } from "@/components/ui/section-label";
 export default function MissionSection() {
   return (
     <section className="border-t border-[#ffffff12] px-10 py-32">
-      <div className="max-w-200">
+      <div className="max-w-300">
         <div className="mb-8">
           <SectionLabel>Mission</SectionLabel>
         </div>
