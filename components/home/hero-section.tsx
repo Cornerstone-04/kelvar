@@ -14,7 +14,7 @@ export default function HeroSection() {
     target: heroRef,
     offset: ["start start", "end start"],
   });
-  const indicatorOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  // const indicatorOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
@@ -62,6 +62,7 @@ export default function HeroSection() {
           tag="p"
           text={site.location}
           delay={400}
+          speed={100}
           className="font-mono text-[0.6rem] uppercase tracking-[0.3em] text-muted"
         />
 
