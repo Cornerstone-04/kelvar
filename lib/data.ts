@@ -1,5 +1,5 @@
 const assets = (unsplashId: string, mixkitId: number) => ({
-  jpg: `https://images.unsplash.com/photo-${unsplashId}?w=1600&fm=jpg&q=80&fit=crop`,
+  image: `https://images.unsplash.com/photo-${unsplashId}?w=1600&fm=jpg&q=80&fit=crop`,
   video: `https://assets.mixkit.co/videos/${mixkitId}/${mixkitId}-720.mp4`,
 });
 
@@ -15,11 +15,14 @@ export const site = {
 export const drones = [
   {
     id: "01",
-    name: "Drone 01",
+    name: "FUSION VTOL",
     codename: "—",
     tagline: "Placeholder — awaiting client brief",
-    desc: "A next-generation unmanned aerial vehicle designed for extended endurance operations in contested environments. Built for precision, range, and resilience.",
-    assets: assets("1508444845599-5c89863b1c44", 579),
+    desc: "A next-generation unmanned aerial vehicle designed for extended endurance operations in contested environments.",
+    assets: {
+      image: "/images/fusion_vtol.png",
+      video: "videos/fusion_vtol.mp4",
+    },
     specs: [
       { label: "Range", value: "TBC" },
       { label: "Payload", value: "TBC" },
@@ -28,11 +31,15 @@ export const drones = [
   },
   {
     id: "02",
-    name: "Drone 02",
+    name: "HYDRA",
     codename: "—",
     tagline: "Placeholder — awaiting client brief",
-    desc: "A compact, high-speed reconnaissance platform engineered for rapid deployment and real-time intelligence gathering across complex terrain.",
-    assets: assets("1473968512647-3e447244af8f", 581),
+    desc: "An advanced low cost, petrol-powered AAV that merges the high-speed endurance of a small plane with the versatile VTOL capabilities of a drone for long-range reconnaissance.",
+    // assets: assets("1473968512647-3e447244af8f", 581),
+    assets: {
+      image: "/images/hydra.png",
+      video: "https://assets.mixkit.co/videos/581/581-720.mp4",
+    },
     specs: [
       { label: "Range", value: "TBC" },
       { label: "Payload", value: "TBC" },
@@ -41,11 +48,15 @@ export const drones = [
   },
   {
     id: "03",
-    name: "Drone 03",
+    name: "Kelvar One",
     codename: "—",
     tagline: "Placeholder — awaiting client brief",
-    desc: "A heavy-lift autonomous drone developed for logistics and supply chain operations in austere and denied-access environments.",
-    assets: assets("1532996122724-e3c354a0b15b", 44642),
+    desc: "With its roll cage design, on board parachute and ability to fold into the back of a standard pickup, the Kelvar One isn’t just a vehicle; it’s drone as a service.",
+    // assets: assets("1532996122724-e3c354a0b15b", 44642),
+    assets: {
+      image: "/images/kelvar_one.png",
+      video: "https://assets.mixkit.co/videos/44642/44642-720.mp4",
+    },
     specs: [
       { label: "Range", value: "TBC" },
       { label: "Payload", value: "TBC" },
@@ -54,11 +65,14 @@ export const drones = [
   },
   {
     id: "04",
-    name: "Drone 04",
+    name: "Mosquito",
     codename: "—",
     tagline: "Placeholder — awaiting client brief",
-    desc: "A swarm-capable micro drone designed to operate in coordinated formations, providing persistent area coverage and distributed sensing.",
-    assets: assets("1451187580459-43490279c0fa", 32171),
+    desc: "For inspecting pipelines, monitoring in a covert environment and going through tight spots.",
+    assets: {
+      image: "/images/hydra_2.png",
+      video: "https://assets.mixkit.co/videos/581/581-720.mp4",
+    },
     specs: [
       { label: "Range", value: "TBC" },
       { label: "Payload", value: "TBC" },
@@ -67,11 +81,14 @@ export const drones = [
   },
   {
     id: "05",
-    name: "Drone 05",
+    name: "Spectre",
     codename: "—",
     tagline: "Placeholder — awaiting client brief",
     desc: "A high-altitude long-endurance platform capable of operating above controlled airspace, designed for wide-area persistent surveillance.",
-    assets: assets("1446776811765-4b79af1adbc1", 611),
+    assets: {
+      image: "/images/kelvar_one_2.png",
+      video: "https://assets.mixkit.co/videos/581/581-720.mp4",
+    },
     specs: [
       { label: "Range", value: "TBC" },
       { label: "Payload", value: "TBC" },
@@ -80,11 +97,14 @@ export const drones = [
   },
   {
     id: "06",
-    name: "Drone 06",
+    name: "Jackal",
     codename: "—",
     tagline: "Placeholder — awaiting client brief",
     desc: "A vertical take-off and landing strike platform optimised for precision engagement in urban and complex operating environments.",
-    assets: assets("1492892132812-a00a8b245c45", 56),
+    assets: {
+      image: "/images/hydra.png",
+      video: "https://assets.mixkit.co/videos/581/581-720.mp4",
+    },
     specs: [
       { label: "Range", value: "TBC" },
       { label: "Payload", value: "TBC" },

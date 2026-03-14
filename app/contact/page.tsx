@@ -3,71 +3,43 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 import { site } from "@/lib/data";
-
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="flex items-center gap-4 mb-8">
-      <span className="text-[0.6rem] tracking-[0.3em] uppercase text-white/30 font-mono">
-        {children}
-      </span>
-      <span className="flex-1 h-px bg-white/10" />
-    </div>
-  );
-}
+import { SectionLabel } from "@/components/ui/section-label";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <div className="min-h-screen pt-16.25 bg-bg">
+    <div className="min-h-screen bg-bg pt-16.25">
       {/* Header */}
-      <div
-        className="px-6 md:px-12 py-20"
-        style={{ borderBottom: "1px solid var(--border-col)" }}
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-[0.6rem] tracking-[0.35em] uppercase text-white/25 font-mono mb-6"
-        >
-          Get in Touch
-        </motion.div>
+      <div className="border-b border-border-col px-6 py-20 md:px-12">
+        <SectionLabel>Get in touch</SectionLabel>
+
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="font-heading font-black text-white leading-none"
-          style={{
-            fontSize: "clamp(3rem, 10vw, 8rem)",
-            letterSpacing: "-0.02em",
-          }}
+          className="font-heading text-[clamp(3rem,10vw,8rem)] leading-none font-black tracking-[-0.02em] text-white"
         >
           Contact Us
         </motion.h1>
       </div>
 
       {/* Body */}
-      <div
-        className="grid grid-cols-1 md:grid-cols-2"
-        style={{ borderBottom: "1px solid var(--border-col)" }}
-      >
+      <div className="grid grid-cols-1 border-b border-border-col md:grid-cols-2">
         {/* Form */}
-        <div
-          className="px-6 md:px-12 py-16"
-          style={{ borderRight: "1px solid var(--border-col)" }}
-        >
+        <div className="border-r border-border-col px-6 py-16 md:px-12">
           <SectionLabel>Send a Message</SectionLabel>
+
           {submitted ? (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="py-16"
             >
-              <div className="font-heading font-black text-white text-[3rem] mb-4">
+              <div className="mb-4 font-heading text-[3rem] font-black text-white">
                 ✓
               </div>
-              <p className="text-white/40 font-mono text-[0.85rem]">
+              <p className="font-mono text-[0.85rem] text-white/40">
                 Message received. We'll be in touch within 48 hours.
               </p>
             </motion.div>
@@ -103,49 +75,39 @@ export default function ContactPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + i * 0.05 }}
                 >
-                  <label className="block text-[0.6rem] tracking-[0.25em] uppercase text-white/25 font-mono mb-2">
+                  <label className="mb-2 block font-mono text-[0.6rem] uppercase tracking-[0.25em] text-white/25">
                     {field.label}
                   </label>
+
                   <input
                     type={field.type}
                     placeholder={field.placeholder}
                     required
-                    className="w-full bg-transparent pb-2 text-[0.85rem] outline-none placeholder:text-white/15 text-white font-mono"
-                    style={{ borderBottom: "1px solid var(--border-col)" }}
-                    onFocus={(e) =>
-                      (e.target.style.borderColor = "rgba(255,255,255,0.4)")
-                    }
-                    onBlur={(e) =>
-                      (e.target.style.borderColor = "var(--border-col)")
-                    }
+                    className="w-full border-b border-border-col bg-transparent pb-2 font-mono text-[0.85rem] text-white outline-none placeholder:text-white/15 transition-colors focus:border-white/40"
                   />
                 </motion.div>
               ))}
+
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.35 }}
               >
-                <label className="block text-[0.6rem] tracking-[0.25em] uppercase text-white/25 font-mono mb-2">
+                <label className="mb-2 block font-mono text-[0.6rem] uppercase tracking-[0.25em] text-white/25">
                   Message
                 </label>
+
                 <textarea
                   placeholder="Tell us about your enquiry..."
                   required
                   rows={4}
-                  className="w-full bg-transparent pb-2 text-[0.85rem] outline-none resize-none placeholder:text-white/15 text-white font-mono"
-                  style={{ borderBottom: "1px solid var(--border-col)" }}
-                  onFocus={(e) =>
-                    (e.target.style.borderColor = "rgba(255,255,255,0.4)")
-                  }
-                  onBlur={(e) =>
-                    (e.target.style.borderColor = "var(--border-col)")
-                  }
+                  className="w-full resize-none border-b border-border-col bg-transparent pb-2 font-mono text-[0.85rem] text-white outline-none transition-colors placeholder:text-white/15 focus:border-white/40"
                 />
               </motion.div>
+
               <button
                 type="submit"
-                className="px-8 py-4 text-xs tracking-[0.25em] uppercase font-mono text-bg bg-card border border-transparent hover:bg-surface/90 hover:border-muted transition-all ease-linear duration-200 cursor-pointer"
+                className="inline-flex items-center gap-2 border border-[#ffffff1f] px-8 py-4 font-mono text-xxs uppercase tracking-[0.15em] text-white/40 no-underline transition-all duration-200 ease-in-out hover:border-[#ffffff66] hover:text-white"
               >
                 Send Message →
               </button>
@@ -154,11 +116,9 @@ export default function ContactPage() {
         </div>
 
         {/* Info */}
-        <div
-          className="px-6 md:px-12 py-16"
-          style={{ background: "var(--surface)" }}
-        >
+        <div className="bg-surface px-6 py-16 md:px-12">
           <SectionLabel>Details</SectionLabel>
+
           <div className="space-y-0">
             {[
               {
@@ -171,24 +131,21 @@ export default function ContactPage() {
                 label: "Availability",
                 value: "Open to partnerships, investment & collaboration",
               },
-            ].map((item, i) => (
-              <div
-                key={item.label}
-                className="py-5"
-                style={{ borderBottom: "1px solid var(--border-col)" }}
-              >
-                <div className="text-[0.58rem] tracking-[0.25em] uppercase text-white/20 font-mono mb-1">
+            ].map((item) => (
+              <div key={item.label} className="border-b border-border-col py-5">
+                <div className="mb-1 font-mono text-[0.58rem] uppercase tracking-[0.25em] text-white/20">
                   {item.label}
                 </div>
+
                 {item.href ? (
                   <a
                     href={item.href}
-                    className="text-[0.82rem] text-white/60 hover:text-white no-underline font-mono transition-colors duration-200"
+                    className="font-mono text-[0.82rem] text-white/60 no-underline transition-colors duration-200 hover:text-white"
                   >
                     {item.value}
                   </a>
                 ) : (
-                  <span className="text-[0.82rem] text-white/50 font-mono">
+                  <span className="font-mono text-[0.82rem] text-white/50">
                     {item.value}
                   </span>
                 )}

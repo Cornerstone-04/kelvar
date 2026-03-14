@@ -49,7 +49,7 @@ export default function Navbar() {
       >
         <Link
           href="/"
-          className="no-underline text-sm font-heading tracking-[0.2em] uppercase leading-[1.2] block"
+          className="no-underline font-semibold text-sm font-heading tracking-[0.2em] uppercase leading-[1.2] block"
           onClick={() => setOpen(false)}
         >
           <span style={{ color: "rgba(255,255,255,0.7)" }}>
