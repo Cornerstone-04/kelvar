@@ -32,10 +32,7 @@ export default function GlobalNetworkMap() {
         <SectionLabel>Global Reach</SectionLabel>
       </div>
 
-      <div
-        className="relative w-full overflow-hidden"
-        style={{ aspectRatio: "2.1 / 1" }}
-      >
+      <div className="relative w-full overflow-hidden aspect-square md:aspect-[2.1/1]">
         <MapSVG />
       </div>
 
