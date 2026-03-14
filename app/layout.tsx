@@ -37,13 +37,15 @@ export const metadata: Metadata = {
     "London",
   ],
   authors: [{ name: "Kelvar Industries" }],
-  metadataBase: new URL("https://kelvarindustries.com"),
+  metadataBase: new URL("https://kelvarindustries.vercel.app"),
   openGraph: {
     type: "website",
     title: "Kelvar Industries",
     description:
       "Engineering next-generation drone systems. Based in London, UK.",
     siteName: "Kelvar Industries",
+    images: ["/kelvar.jpg"
+    ]
   },
   robots: { index: true, follow: true },
 };
