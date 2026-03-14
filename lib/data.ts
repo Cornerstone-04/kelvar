@@ -10,7 +10,7 @@ export const site = {
     "Inspired by the idea of purposeful motion and instinctive vigilance, Kelvar Industries develops intelligent autonomous surveillance systems designed to protect people, property, and progress. We create resilient technologies that deliver clarity, coverage, and confidence where it matters most.",
   story:
     "In Tolkien’s mythology, Kelvar refers to the living creatures of Arda capable of autonomous movement — quick, self-directed beings that roam, fly, and guard the natural world. We adopted the name as a symbol of intelligent systems built for vigilance, protection, and clarity of action. Inspired by the elevated sight and guardianship associated with the Great Eagles, Kelvar Industries develops autonomous technologies designed to safeguard people, property, and progress through resilient, always-on surveillance.",
-  location: "London, United Kingdom",
+  location: "Lagos · London · Los Angeles",
   email: "contact@kelvarindustries.com",
 };
 
@@ -65,62 +65,62 @@ export const drones = [
       { label: "Endurance", value: "TBC" },
     ],
   },
-  {
-    id: "04",
-    name: "Mosquito",
-    codename: "—",
-    tagline: "Placeholder — awaiting client brief",
-    desc: "For inspecting pipelines, monitoring in a covert environment and going through tight spots.",
-    assets: {
-      image: "/images/hydra_2.png",
-      video: "https://assets.mixkit.co/videos/581/581-720.mp4",
-    },
-    specs: [
-      { label: "Range", value: "TBC" },
-      { label: "Payload", value: "TBC" },
-      { label: "Endurance", value: "TBC" },
-    ],
-  },
-  {
-    id: "05",
-    name: "Spectre",
-    codename: "—",
-    tagline: "Placeholder — awaiting client brief",
-    desc: "A high-altitude long-endurance platform capable of operating above controlled airspace, designed for wide-area persistent surveillance.",
-    assets: {
-      image: "/images/kelvar_one_2.png",
-      video: "https://assets.mixkit.co/videos/581/581-720.mp4",
-    },
-    specs: [
-      { label: "Range", value: "TBC" },
-      { label: "Payload", value: "TBC" },
-      { label: "Endurance", value: "TBC" },
-    ],
-  },
-  {
-    id: "06",
-    name: "Jackal",
-    codename: "—",
-    tagline: "Placeholder — awaiting client brief",
-    desc: "A vertical take-off and landing strike platform optimised for precision engagement in urban and complex operating environments.",
-    assets: {
-      image: "/images/hydra.png",
-      video: "https://assets.mixkit.co/videos/581/581-720.mp4",
-    },
-    specs: [
-      { label: "Range", value: "TBC" },
-      { label: "Payload", value: "TBC" },
-      { label: "Endurance", value: "TBC" },
-    ],
-  },
+  // {
+  //   id: "04",
+  //   name: "Mosquito",
+  //   codename: "—",
+  //   tagline: "Placeholder — awaiting client brief",
+  //   desc: "For inspecting pipelines, monitoring in a covert environment and going through tight spots.",
+  //   assets: {
+  //     image: "/images/hydra_2.png",
+  //     video: "https://assets.mixkit.co/videos/581/581-720.mp4",
+  //   },
+  //   specs: [
+  //     { label: "Range", value: "TBC" },
+  //     { label: "Payload", value: "TBC" },
+  //     { label: "Endurance", value: "TBC" },
+  //   ],
+  // },
+  // {
+  //   id: "05",
+  //   name: "Spectre",
+  //   codename: "—",
+  //   tagline: "Placeholder — awaiting client brief",
+  //   desc: "A high-altitude long-endurance platform capable of operating above controlled airspace, designed for wide-area persistent surveillance.",
+  //   assets: {
+  //     image: "/images/kelvar_one_2.png",
+  //     video: "https://assets.mixkit.co/videos/581/581-720.mp4",
+  //   },
+  //   specs: [
+  //     { label: "Range", value: "TBC" },
+  //     { label: "Payload", value: "TBC" },
+  //     { label: "Endurance", value: "TBC" },
+  //   ],
+  // },
+  // {
+  //   id: "06",
+  //   name: "Jackal",
+  //   codename: "—",
+  //   tagline: "Placeholder — awaiting client brief",
+  //   desc: "A vertical take-off and landing strike platform optimised for precision engagement in urban and complex operating environments.",
+  //   assets: {
+  //     image: "/images/hydra.png",
+  //     video: "https://assets.mixkit.co/videos/581/581-720.mp4",
+  //   },
+  //   specs: [
+  //     { label: "Range", value: "TBC" },
+  //     { label: "Payload", value: "TBC" },
+  //     { label: "Endurance", value: "TBC" },
+  //   ],
+  // }, 
 ];
 
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/careers", label: "Careers" },
-  { href: "/press", label: "Press" },
   { href: "/contact", label: "Contact" },
+  // { href: "/careers", label: "Careers" },
+  // { href: "/press", label: "Press" },
 ];
 
 export const values = [
