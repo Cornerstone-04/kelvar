@@ -144,13 +144,13 @@ export const values = [
 
 export const team = [
   {
-    name: "Placeholder Name",
-    role: "Chief Executive Officer",
+    name: "Funfere B. Koroye",
+    role: "Co-Founder",
     bio: "Placeholder bio — awaiting client content.",
   },
   {
     name: "Placeholder Name",
-    role: "Chief Technology Officer",
+    role: "Co-Founder",
     bio: "Placeholder bio — awaiting client content.",
   },
   {
