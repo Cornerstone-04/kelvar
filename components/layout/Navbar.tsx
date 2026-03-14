@@ -9,7 +9,7 @@ import {
   useMotionValueEvent,
 } from "motion/react";
 import { useState } from "react";
-import { navLinks } from "@/lib/data";
+import { navLinks, site } from "@/lib/data";
 import GlitchText from "../ui/glitch-text";
 
 const menuBgs: Record<string, string> = {
@@ -184,7 +184,7 @@ export default function Navbar() {
 
               {/* Footer */}
               <div className="px-1 py-2 font-mono text-[0.6rem] uppercase tracking-[0.15em] text-white/18">
-                Kelvar Industries · London, UK
+                Kelvar Industries · {site.location}
               </div>
             </motion.div>
           </motion.div>
