@@ -27,10 +27,10 @@ export default function DronePlatformRow({
   const isOdd = !isEven;
 
   return (
-    <div id={`drone-${drone.id}`}>
+    <div id={`${drone.name.toLowerCase().replace(/\s+/g, "-")}`}>
       {/* Label row */}
       <div
-        className={`flex items-start gap-12 px-10 pt-12 ${
+        className={`flex items-start gap-12 px-10 pt-20 ${
           isEven ? "flex-row" : "flex-row-reverse"
         }`}
       >
@@ -80,7 +80,7 @@ export default function DronePlatformRow({
         <img
           src={drone.assets.image}
           alt={drone.name}
-          className="absolute inset-0 h-full w-full object-cover brightness-[0.55] saturate-[0.7]"
+          className="absolute inset-0 h-full w-full object-cover brightness-[0.75] saturate-[0.7]"
         />
       </motion.div>
 
@@ -99,7 +99,7 @@ export default function DronePlatformRow({
           muted
           loop
           playsInline
-          className={`absolute inset-0 h-full w-full object-cover brightness-[0.45] saturate-[0.6] ${
+          className={`absolute inset-0 h-full w-full object-cover brightness-[0.75] saturate-[0.7] ${
             isEven ? "object-[center_30%]" : "object-[center_70%]"
           }`}
         >

@@ -112,7 +112,7 @@ export const drones = [
   //     { label: "Payload", value: "TBC" },
   //     { label: "Endurance", value: "TBC" },
   //   ],
-  // }, 
+  // },
 ];
 
 export const navLinks = [

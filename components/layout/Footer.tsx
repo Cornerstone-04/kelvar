@@ -23,7 +23,9 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-[0.75rem] leading-relaxed text-white/40 font-mono max-w-[28ch]">
-            Engineering next-generation unmanned systems. London, UK.
+            Engineering next-generation unmanned systems.
+            <br />
+            {site.location}
           </p>
         </div>
 
@@ -36,7 +38,7 @@ export default function Footer() {
             {drones.map((drone) => (
               <li key={drone.id}>
                 <a
-                  href={`/#drone-${drone.id}`}
+                  href={`/#${drone.name.toLowerCase().replace(/\s+/g, "-")}`}
                   className="text-[0.72rem] tracking-widest uppercase text-white/50 hover:text-white no-underline transition-colors duration-200 font-mono"
                 >
                   {drone.name}
