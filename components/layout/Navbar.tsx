@@ -10,13 +10,14 @@ import {
 } from "motion/react";
 import { useState } from "react";
 import { navLinks } from "@/lib/data";
+import GlitchText from "../ui/glitch-text";
 
 const menuBgs: Record<string, string> = {
-  "/": "linear-gradient(135deg, #0d0d2e 0%, #1a1a4e 100%)",
-  "/about": "linear-gradient(135deg, #07072d 0%, #282846 100%)",
-  "/careers": "linear-gradient(135deg, #0a0a20 0%, #1c1c38 100%)",
-  "/press": "linear-gradient(135deg, #080718 0%, #14142e 100%)",
-  "/contact": "linear-gradient(135deg, #060615 0%, #0f0f28 100%)",
+  "/": "#0d0d2ee6",
+  "/about": "#14143ce6",
+  "/careers": "#0a0a20e6",
+  "/press": "#080718e6",
+  "/contact": "#060614e6",
 };
 
 export default function Navbar() {
@@ -27,11 +28,8 @@ export default function Navbar() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const prev = scrollY.getPrevious() ?? 0;
-    if (latest > prev && latest > 80) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
+    if (latest > prev && latest > 80) setHidden(true);
+    else setHidden(false);
   });
 
   return (
@@ -40,19 +38,11 @@ export default function Navbar() {
         initial={{ y: 0, opacity: 0 }}
         animate={{ y: hidden && !open ? "-100%" : 0, opacity: 1 }}
         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-3.75 backdrop-blur-lg"
-        style={{
-          background: "rgba(7,7,42,0.75)",
-          WebkitBackdropFilter: "blur(16px)",
-          borderBottom: "1px solid rgba(255,255,255,0.05)",
-        }}
+        className="fixed top-0 right-0 left-0 z-50 flex py-4 items-center justify-between border-b border-white/5 bg-[#07072abf] px-8 backdrop-blur-lg md:px-10"
+        style={{ WebkitBackdropFilter: "blur(16px)" }}
       >
-        <Link
-          href="/"
-          className="no-underline font-semibold text-sm font-heading tracking-[0.2em] uppercase leading-[1.2] block"
-          onClick={() => setOpen(false)}
-        >
-          <span style={{ color: "rgba(255,255,255,0.7)" }}>
+        <Link href="/" className="no-underline" onClick={() => setOpen(false)}>
+          <span className="block font-heading text-base font-semibold leading-[1.2] uppercase tracking-[0.2em] text-white/70">
             Kelvar
             <br />
             Industries
@@ -67,24 +57,24 @@ export default function Navbar() {
           <Image
             src="/kelvar-bird.png"
             alt="Kelvar Industries"
-            width={40}
-            height={40}
-            className="rounded-sm opacity-90 hover:opacity-100 transition-opacity duration-200"
+            width={60}
+            height={60}
+            className="rounded-sm opacity-90 transition-opacity duration-200 hover:opacity-100"
           />
         </Link>
 
         <button
           onClick={() => setOpen(!open)}
-          className="flex flex-col justify-center gap-1.25 p-2 -mr-2"
+          className="-mr-2 flex flex-col justify-center gap-1.25 p-2"
           aria-label="Toggle menu"
         >
           <motion.span
-            className="block h-px w-9 bg-white origin-center"
+            className="block h-px w-9 origin-center bg-white"
             animate={{ rotate: open ? 45 : 0, y: open ? 5.5 : 0 }}
             transition={{ duration: 0.25 }}
           />
           <motion.span
-            className="block h-px bg-white origin-center w-9"
+            className="block h-px w-9 origin-center bg-white"
             animate={{ rotate: open ? -45 : 0, y: open ? -5.5 : 0 }}
             transition={{ duration: 0.25 }}
           />
@@ -99,27 +89,16 @@ export default function Navbar() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
             className="fixed inset-0 z-40 flex"
-            style={{ background: "rgba(7,7,42,0.3)" }}
           >
-            {/* Left preview panel — desktop only */}
-            <div className="hidden md:block flex-1 relative overflow-hidden">
+            {/* Close hit area on left — desktop */}
+            <div
+              className="relative hidden flex-1 cursor-pointer md:flex"
+              onClick={() => setOpen(false)}
+            >
               <div
-                className="absolute inset-0"
-                style={{ background: "#07072a" }}
+                className="absolute inset-0 bg-[#07072a66] backdrop-blur-[20px]"
+                style={{ WebkitBackdropFilter: "blur(20px)" }}
               />
-              <AnimatePresence>
-                {hovered && (
-                  <motion.div
-                    key={hovered}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute inset-0"
-                    style={{ background: menuBgs[hovered] }}
-                  />
-                )}
-              </AnimatePresence>
             </div>
 
             {/* Menu panel */}
@@ -128,89 +107,83 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full md:w-105 flex flex-col justify-between py-20 px-10 relative"
-              style={{
-                background: "#07072a",
-                borderLeft: "1px solid rgba(255,255,255,0.05)",
-              }}
+              className="relative flex h-full w-full flex-col gap-3 bg-[#07072ad9] px-3 pt-24 pb-3 backdrop-blur-[50px] md:w-105"
+              style={{ WebkitBackdropFilter: "blur(50px)" }}
             >
+              {/* Close */}
               <button
                 onClick={() => setOpen(false)}
-                className="absolute top-5 right-6 transition-colors duration-200"
-                style={{
-                  fontFamily: "'Barlow Condensed', sans-serif",
-                  fontSize: "1.4rem",
-                  color: "rgba(255,255,255,0.35)",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "white")}
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.color = "rgba(255,255,255,0.35)")
-                }
+                className="absolute top-7 right-6 z-10 font-heading text-[1.4rem] text-white/35 transition-colors duration-200 hover:text-white"
                 aria-label="Close menu"
               >
                 ✕
               </button>
 
-              <nav className="flex flex-col gap-1 mt-4">
-                {navLinks.map(({ href, label }, i) => (
-                  <motion.div
-                    key={href}
-                    initial={{ opacity: 0, x: 24 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{
-                      duration: 0.35,
-                      delay: 0.08 + i * 0.06,
-                      ease: [0.16, 1, 0.3, 1],
-                    }}
-                    onMouseEnter={() => setHovered(href)}
-                    onMouseLeave={() => setHovered(null)}
-                    style={{
-                      borderBottom: "1px solid rgba(255,255,255,0.06)",
-                      paddingBottom: "1.25rem",
-                      paddingTop: "1.25rem",
-                    }}
+              {/* Nav items — each is a flex-1 box */}
+              {navLinks.map(({ href, label }, i) => (
+                <motion.div
+                  key={href}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.35,
+                    delay: 0.05 + i * 0.06,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  onMouseEnter={() => setHovered(href)}
+                  onMouseLeave={() => setHovered(null)}
+                  className="relative max-h-40 flex-1 overflow-hidden"
+                >
+                  <Link
+                    href={href}
+                    onClick={() => setOpen(false)}
+                    className="relative z-1 flex h-full w-full items-end px-3 py-2 no-underline"
                   >
-                    <Link
-                      href={href}
-                      onClick={() => setOpen(false)}
-                      className="flex items-center gap-3 no-underline"
-                    >
-                      <motion.span
-                        className="w-1.5 h-1.5 rounded-full shrink-0 block"
-                        animate={{
-                          background:
-                            hovered === href ? "white" : "transparent",
-                          borderColor:
-                            hovered === href
-                              ? "white"
-                              : "rgba(255,255,255,0.25)",
-                          scale: hovered === href ? 1.3 : 1,
-                        }}
-                        style={{ border: "1px solid rgba(255,255,255,0.25)" }}
-                        transition={{ duration: 0.15 }}
+                    {/* Circle indicator */}
+                    <div className="absolute top-3 left-3">
+                      <div className="relative h-2 w-2 overflow-hidden rounded-full border border-white/40">
+                        <motion.div
+                          animate={{
+                            scale: hovered === href ? 1 : 0,
+                            opacity: hovered === href ? 1 : 0,
+                          }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute inset-0 rounded-full bg-white"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Label */}
+                    {hovered === href ? (
+                      <GlitchText
+                        tag="span"
+                        text={label}
+                        active={true}
+                        speed={80}
+                        className="font-heading text-[clamp(1.6rem,4vw,2.2rem)] font-bold uppercase tracking-[0.04em] text-white"
                       />
-                      <span
-                        className="uppercase font-heading font-bold tracking-[0.04em] "
-                        style={{
-                          fontSize: "clamp(2rem, 5vw, 2.6rem)",
-                          color:
-                            hovered === href
-                              ? "rgba(255,255,255,1)"
-                              : "rgba(255,255,255,0.3)",
-                          transition: "color 0.2s ease",
-                        }}
-                      >
+                    ) : (
+                      <span className="font-heading text-[clamp(1.6rem,4vw,2.2rem)] font-bold uppercase tracking-[0.04em] text-white/35">
                         {label}
                       </span>
-                    </Link>
-                  </motion.div>
-                ))}
-              </nav>
+                    )}
+                  </Link>
 
-              <div
-                className="font-mono text-[0.6rem] tracking-[0.15em] uppercase"
-                style={{ color: "rgba(255,255,255,0.18)" }}
-              >
+                  {/* bg base */}
+                  <div className="absolute inset-0 border border-white/6 bg-white/3" />
+
+                  {/* hover flood */}
+                  <motion.div
+                    animate={{ opacity: hovered === href ? 1 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute inset-0"
+                    style={{ background: menuBgs[href] ?? menuBgs["/"] }}
+                  />
+                </motion.div>
+              ))}
+
+              {/* Footer */}
+              <div className="px-1 py-2 font-mono text-[0.6rem] uppercase tracking-[0.15em] text-white/18">
                 Kelvar Industries · London, UK
               </div>
             </motion.div>

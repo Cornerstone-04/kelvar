@@ -7,7 +7,8 @@ interface GlitchTextProps {
   style?: React.CSSProperties;
   className?: string;
   delay?: number;
-  speed?: number; // ms per character, default 35
+  speed?: number;
+  active?: boolean;
   tag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
 }
 
@@ -17,6 +18,7 @@ export default function GlitchText({
   className,
   delay = 0,
   speed = 35,
+  active,
   tag: Tag = "h1",
 }: GlitchTextProps) {
   const [displayed, setDisplayed] = useState("");
@@ -24,8 +26,21 @@ export default function GlitchText({
   const frameRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const containerRef = useRef<HTMLElement | null>(null);
 
-  // Start only when element enters the viewport
   useEffect(() => {
+    if (typeof active === "boolean") {
+      if (active) {
+        const timeout = setTimeout(() => {
+          setDisplayed("");
+          setStarted(true);
+        }, delay);
+        return () => clearTimeout(timeout);
+      } else {
+        setDisplayed("");
+        setStarted(false);
+      }
+      return;
+    }
+
     const el = containerRef.current;
     if (!el) return;
 
@@ -42,12 +57,12 @@ export default function GlitchText({
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [delay]);
+  }, [delay, active]);
 
-  // Typewriter tick
   useEffect(() => {
     if (!started) return;
 
+    setDisplayed("");
     let i = 0;
 
     const tick = () => {
@@ -59,6 +74,7 @@ export default function GlitchText({
     };
 
     frameRef.current = setTimeout(tick, 0);
+
     return () => {
       if (frameRef.current) clearTimeout(frameRef.current);
     };
@@ -72,7 +88,7 @@ export default function GlitchText({
         style={style}
       >
         {displayed}
-        {displayed.length < text.length && (
+        {displayed.length < text.length && started && (
           <span className="opacity-40 animate-[blink_0.7s_step-end_infinite]">
             ▋
           </span>
