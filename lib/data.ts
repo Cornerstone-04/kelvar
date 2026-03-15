@@ -17,10 +17,10 @@ export const site = {
 export const drones = [
   {
     id: "01",
-    name: "SKYDOME",
+    name: "SKY DOME",
     codename: "—",
-    tagline: "Placeholder — awaiting client brief",
-    desc: "A next-generation unmanned aerial vehicle designed for extended endurance operations in contested environments.",
+    tagline: "Flying cctv camera for air",
+    desc: "Flying cctv camera for air.",
     assets: {
       image: "/images/fusion_vtol.png",
       video: "videos/fusion_vtol.mp4",
@@ -35,8 +35,8 @@ export const drones = [
     id: "02",
     name: "ROBOBOT",
     codename: "—",
-    tagline: "Placeholder — awaiting client brief",
-    desc: "With its roll cage design, on board parachute and ability to fold into the back of a standard pickup, the Robobot isn’t just a vehicle; it’s drone as a service.",
+    tagline: "Floor robot for interior spaces",
+    desc: "Floor robot for interior spaces.",
     // assets: assets("1532996122724-e3c354a0b15b", 44642),
     assets: {
       image: "/images/kelvar_one.png",
@@ -52,8 +52,8 @@ export const drones = [
     id: "03",
     name: "HYDRA",
     codename: "—",
-    tagline: "Placeholder — awaiting client brief",
-    desc: "An advanced low cost, petrol-powered AAV that merges the high-speed endurance of a small plane with the versatile VTOL capabilities of a drone for long-range reconnaissance.",
+    tagline: "Waterproof drone for over-sea survey.",
+    desc: "Waterproof drone for over-sea survey.",
     // assets: assets("1473968512647-3e447244af8f", 581),
     assets: {
       image: "/images/hydra.png",
@@ -65,62 +65,12 @@ export const drones = [
       { label: "Endurance", value: "TBC" },
     ],
   },
-  // {
-  //   id: "04",
-  //   name: "Mosquito",
-  //   codename: "—",
-  //   tagline: "Placeholder — awaiting client brief",
-  //   desc: "For inspecting pipelines, monitoring in a covert environment and going through tight spots.",
-  //   assets: {
-  //     image: "/images/hydra_2.png",
-  //     video: "https://assets.mixkit.co/videos/581/581-720.mp4",
-  //   },
-  //   specs: [
-  //     { label: "Range", value: "TBC" },
-  //     { label: "Payload", value: "TBC" },
-  //     { label: "Endurance", value: "TBC" },
-  //   ],
-  // },
-  // {
-  //   id: "05",
-  //   name: "Spectre",
-  //   codename: "—",
-  //   tagline: "Placeholder — awaiting client brief",
-  //   desc: "A high-altitude long-endurance platform capable of operating above controlled airspace, designed for wide-area persistent surveillance.",
-  //   assets: {
-  //     image: "/images/kelvar_one_2.png",
-  //     video: "https://assets.mixkit.co/videos/581/581-720.mp4",
-  //   },
-  //   specs: [
-  //     { label: "Range", value: "TBC" },
-  //     { label: "Payload", value: "TBC" },
-  //     { label: "Endurance", value: "TBC" },
-  //   ],
-  // },
-  // {
-  //   id: "06",
-  //   name: "Jackal",
-  //   codename: "—",
-  //   tagline: "Placeholder — awaiting client brief",
-  //   desc: "A vertical take-off and landing strike platform optimised for precision engagement in urban and complex operating environments.",
-  //   assets: {
-  //     image: "/images/hydra.png",
-  //     video: "https://assets.mixkit.co/videos/581/581-720.mp4",
-  //   },
-  //   specs: [
-  //     { label: "Range", value: "TBC" },
-  //     { label: "Payload", value: "TBC" },
-  //     { label: "Endurance", value: "TBC" },
-  //   ],
-  // },
 ];
 
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
-  // { href: "/careers", label: "Careers" },
-  // { href: "/press", label: "Press" },
 ];
 
 export const values = [
@@ -144,18 +94,13 @@ export const values = [
 
 export const team = [
   {
-    name: "Funfere B. Koroye",
+    name: "Keniye B. Koroye",
     role: "Co-Founder",
     bio: "Placeholder bio — awaiting client content.",
   },
   {
     name: "Placeholder Name",
     role: "Co-Founder",
-    bio: "Placeholder bio — awaiting client content.",
-  },
-  {
-    name: "Placeholder Name",
-    role: "Head of Engineering",
     bio: "Placeholder bio — awaiting client content.",
   },
 ];

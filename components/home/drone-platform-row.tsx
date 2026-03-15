@@ -60,7 +60,7 @@ export default function DronePlatformRow({
 
           <GlitchText
             tag="p"
-            className={`max-w-[65ch] font-mono text-xs-plus leading-[1.75] text-muted ${
+            className={`max-w-[65ch] font-mono text-sm leading-[1.75] text-muted ${
               isOdd ? "md:text-right" : ""
             }`}
             text={drone.desc}

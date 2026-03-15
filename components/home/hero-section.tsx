@@ -72,15 +72,15 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="mb-10 max-w-[14ch] font-heading text-[clamp(4.5rem,14vw,13rem)] leading-[0.9] font-black uppercase tracking-[-0.02em] text-primary"
         >
-          Eyes
+          CCTV
           <br />
-          Everywhere
+          That Moves
           <br />
           <span
             className="text-transparent [WebkitTextStroke:1px_#f5f5f940]"
             style={{ WebkitTextStroke: "2px #f5f5f940" }}
           >
-            Protected
+            Everywhere
           </span>
         </motion.h1>
 

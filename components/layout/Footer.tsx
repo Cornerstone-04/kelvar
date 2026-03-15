@@ -23,7 +23,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-[0.75rem] leading-relaxed text-white/40 font-mono max-w-[28ch]">
-            Engineering next-generation unmanned systems.
+            Engineering next-generation unmanned CCTV systems.
             <br />
             {site.location}
           </p>
