@@ -1,5 +1,5 @@
 import { site } from "@/lib/data";
-import GlitchText from "../ui/glitch-text";
+import {GlitchText} from "../ui/glitch-text";
 import { motion } from "motion/react";
 
 export const AboutHeroSection = () => {

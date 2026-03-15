@@ -12,7 +12,7 @@ interface GlitchTextProps {
   tag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
 }
 
-export default function GlitchText({
+export function GlitchText({
   text,
   style,
   className,

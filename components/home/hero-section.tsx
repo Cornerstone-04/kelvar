@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import Link from "next/link";
 import { useRef } from "react";
 import { drones, site } from "@/lib/data";
-import GlitchText from "@/components/ui/glitch-text";
+import { GlitchText } from "@/components/ui/glitch-text";
 // import { ScrollIndicator } from "../ui/scroll-indicator";
 
 export default function HeroSection() {

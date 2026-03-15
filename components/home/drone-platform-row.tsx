@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import GlitchText from "@/components/ui/glitch-text";
+import { GlitchText } from "@/components/ui/glitch-text";
 import { Rule } from "@/components/ui/rule";
 
 type Drone = {

@@ -10,7 +10,7 @@ import {
 } from "motion/react";
 import { useState } from "react";
 import { navLinks, site } from "@/lib/data";
-import GlitchText from "../ui/glitch-text";
+import { GlitchText } from "../ui/glitch-text";
 
 const menuBgs: Record<string, string> = {
   "/": "#0d0d2ee6",

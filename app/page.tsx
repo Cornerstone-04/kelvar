@@ -3,11 +3,9 @@
 import HeroSection from "@/components/home/hero-section";
 import MissionSection from "@/components/home/mission-section";
 import DronePlatformsSection from "@/components/home/drone-platforms-section";
-import {
-  EthosSection,
-  AreasOfFocusSection,
-} from "@/components/home/ethos-focus-sections";
-import GlobalNetworkMap from "@/components/ui/map/global-network-map";
+import { EthosSection } from "@/components/home/ethos-section";
+import { GlobalNetworkMap } from "@/components/ui/map/global-network-map";
+import { AreasOfFocusSection } from "@/components/home/focus-area-section";
 
 export default function HomePage() {
   return (

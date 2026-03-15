@@ -1,4 +1,4 @@
-import GlitchText from "./glitch-text";
+import { GlitchText } from "./glitch-text";
 
 export function SectionLabel({ children }: { children: string }) {
   return (

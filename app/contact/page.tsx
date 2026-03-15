@@ -5,6 +5,38 @@ import { useState } from "react";
 import { site } from "@/lib/data";
 import { SectionLabel } from "@/components/ui/section-label";
 
+const fields = [
+  { label: "Full Name", type: "text", placeholder: "Your name" },
+  {
+    label: "Email",
+    type: "email",
+    placeholder: "you@company.com",
+  },
+  {
+    label: "Organisation",
+    type: "text",
+    placeholder: "Company or institution",
+  },
+  {
+    label: "Subject",
+    type: "text",
+    placeholder: "Partnership, investment, general...",
+  },
+];
+
+const contact_info = [
+  {
+    label: "Email",
+    value: site.email,
+    href: `mailto:${site.email}`,
+  },
+  { label: "Location", value: site.location },
+  {
+    label: "Availability",
+    value: "Open to partnerships, investment & collaboration",
+  },
+];
+
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
 
@@ -51,24 +83,7 @@ export default function ContactPage() {
               }}
               className="space-y-8"
             >
-              {[
-                { label: "Full Name", type: "text", placeholder: "Your name" },
-                {
-                  label: "Email",
-                  type: "email",
-                  placeholder: "you@company.com",
-                },
-                {
-                  label: "Organisation",
-                  type: "text",
-                  placeholder: "Company or institution",
-                },
-                {
-                  label: "Subject",
-                  type: "text",
-                  placeholder: "Partnership, investment, general...",
-                },
-              ].map((field, i) => (
+              {fields.map((field, i) => (
                 <motion.div
                   key={field.label}
                   initial={{ opacity: 0, y: 12 }}
@@ -120,18 +135,7 @@ export default function ContactPage() {
           <SectionLabel>Details</SectionLabel>
 
           <div className="space-y-0">
-            {[
-              {
-                label: "Email",
-                value: site.email,
-                href: `mailto:${site.email}`,
-              },
-              { label: "Location", value: site.location },
-              {
-                label: "Availability",
-                value: "Open to partnerships, investment & collaboration",
-              },
-            ].map((item) => (
+            {contact_info.map((item) => (
               <div key={item.label} className="border-b border-border-col py-5">
                 <div className="mb-1 font-mono text-[0.58rem] uppercase tracking-[0.25em] text-white/20">
                   {item.label}

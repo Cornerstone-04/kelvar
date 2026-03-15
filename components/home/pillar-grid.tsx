@@ -1,10 +1,7 @@
-"use client";
-
+import { ethos } from "@/lib/data";
 import { motion } from "motion/react";
-import { SectionLabel } from "@/components/ui/section-label";
-import { ethos, focus } from "@/lib/data";
 
-function PillarGrid({ items }: { items: typeof ethos }) {
+export function PillarGrid({ items }: { items: typeof ethos }) {
   return (
     <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-px bg-[#ffffff12]">
       {items.map((item, i) => (
@@ -43,27 +40,5 @@ function PillarGrid({ items }: { items: typeof ethos }) {
         </motion.div>
       ))}
     </div>
-  );
-}
-
-export function EthosSection() {
-  return (
-    <section className="border-t border-[#ffffff12] px-10 py-28">
-      <div className="mb-12">
-        <SectionLabel>Ethos</SectionLabel>
-      </div>
-      <PillarGrid items={ethos} />
-    </section>
-  );
-}
-
-export function AreasOfFocusSection() {
-  return (
-    <section className="border-t border-[#ffffff12] px-10 py-28">
-      <div className="mb-12">
-        <SectionLabel>Areas of Focus</SectionLabel>
-      </div>
-      <PillarGrid items={focus} />
-    </section>
   );
 }

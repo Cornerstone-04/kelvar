@@ -1,7 +1,7 @@
 "use client";
 
 import { SectionLabel } from "../section-label";
-import SpinningGlobe from "./spinning-globe";
+import { SpinningGlobe } from "./spinning-globe";
 
 const nodes = [
   {
@@ -19,7 +19,7 @@ const nodes = [
   },
 ];
 
-export default function GlobalNetworkMap() {
+export function GlobalNetworkMap() {
   return (
     <section className="border-t border-[#ffffff12] px-10 py-16">
       <div className="mb-10">

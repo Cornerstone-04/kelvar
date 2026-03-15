@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Kelvar Industries",
     images: [
       {
-        url: "https://kelvarindustries.vercel.app/kelvar.jpg",
+        url: "https://kelvarindustries.vercel.app/kelvar-primary.png",
         alt: "Kelvar Industries — Engineering next-generation drone systems for defence, surveillance, and precision logistics. Based in London, UK.",
       },
     ],

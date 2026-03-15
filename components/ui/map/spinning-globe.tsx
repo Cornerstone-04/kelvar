@@ -46,7 +46,7 @@ const LNG_LINES = Array.from({ length: 12 }, (_, i) => i * 30);
 const DOT_ROWS = 28;
 const DOT_COLS = 56;
 
-export default function SpinningGlobe() {
+export function SpinningGlobe() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const rafRef = useRef<number>(0);
   const angleRef = useRef<number>(0);
