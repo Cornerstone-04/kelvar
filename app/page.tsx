@@ -3,7 +3,10 @@
 import HeroSection from "@/components/home/hero-section";
 import MissionSection from "@/components/home/mission-section";
 import DronePlatformsSection from "@/components/home/drone-platforms-section";
-import PressPreviewSection from "@/components/home/press-preview-section";
+import {
+  EthosSection,
+  AreasOfFocusSection,
+} from "@/components/home/ethos-focus-sections";
 import GlobalNetworkMap from "@/components/ui/map/global-network-map";
 
 export default function HomePage() {
@@ -12,7 +15,8 @@ export default function HomePage() {
       <HeroSection />
       <MissionSection />
       <DronePlatformsSection />
-      <PressPreviewSection />
+      <EthosSection />
+      <AreasOfFocusSection />
       <GlobalNetworkMap />
     </div>
   );

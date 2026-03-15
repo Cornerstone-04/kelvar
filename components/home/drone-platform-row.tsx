@@ -91,7 +91,7 @@ export default function DronePlatformRow({
         viewport={{ once: true, margin: "-40px" }}
         transition={{ duration: 0.8, delay: 0.15 }}
         className={`relative mt-6 mb-0 aspect-video overflow-hidden bg-card ${
-          isEven ? "mr-20 ml-10" : "mr-10 ml-20"
+          isEven ? "mr-10 md:mr-20 ml-10" : "mr-10 ml-10 md:ml-20"
         }`}
       >
         <video

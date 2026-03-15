@@ -1,8 +1,7 @@
 "use client";
 
 import { SectionLabel } from "../section-label";
-import "./global-network-map.css";
-import { MapSVG } from "./map-svg";
+import SpinningGlobe from "./spinning-globe";
 
 const nodes = [
   {
@@ -11,12 +10,7 @@ const nodes = [
     role: "West Africa Hub",
     coord: "06.5°N · 03.4°E",
   },
-  {
-    id: "02",
-    city: "London",
-    role: "Europe HQ",
-    coord: "51.5°N · 00.1°W",
-  },
+  { id: "02", city: "London", role: "Europe HQ", coord: "51.5°N · 00.1°W" },
   {
     id: "03",
     city: "Los Angeles",
@@ -32,10 +26,15 @@ export default function GlobalNetworkMap() {
         <SectionLabel>Global Reach</SectionLabel>
       </div>
 
-      <div className="relative w-full overflow-hidden aspect-square md:aspect-[2.1/1]">
-        <MapSVG />
+      {/* Globe */}
+      <div
+        className="relative w-full overflow-hidden"
+        style={{ height: "clamp(320px, 55vw, 580px)" }}
+      >
+        <SpinningGlobe />
       </div>
 
+      {/* Node cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#ffffff0f] mt-7">
         {nodes.map((node) => (
           <div
@@ -50,6 +49,9 @@ export default function GlobalNetworkMap() {
             </h3>
             <p className="font-mono text-xs-plus tracking-[0.2em] text-muted uppercase">
               {node.role}
+            </p>
+            <p className="font-mono text-xxs tracking-[0.12em] text-dim mt-1">
+              {node.coord}
             </p>
           </div>
         ))}

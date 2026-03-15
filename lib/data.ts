@@ -3,7 +3,7 @@ const assets = (unsplashId: string, mixkitId: number) => ({
   video: `https://assets.mixkit.co/videos/${mixkitId}/${mixkitId}-720.mp4`,
 });
 
-export const site = {
+const site = {
   name: "Kelvar Industries",
   tagline: "Eyes Everywhere. Safety Guaranteed.",
   mission:
@@ -14,7 +14,7 @@ export const site = {
   email: "contact@kelvarindustries.com",
 };
 
-export const drones = [
+const drones = [
   {
     id: "01",
     name: "SKY DOME",
@@ -67,13 +67,13 @@ export const drones = [
   },
 ];
 
-export const navLinks = [
+const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
-export const values = [
+const values = [
   {
     title: "Vigilance",
     desc: "We build systems designed to see, detect, and respond with constant awareness, day and night.",
@@ -92,20 +92,20 @@ export const values = [
   },
 ];
 
-export const team = [
+const team = [
   {
     name: "Keniye B. Koroye",
     role: "Co-Founder",
-    bio: "Placeholder bio — awaiting client content.",
+    bio: "UK-based Nigerian industrial designer, product analyst, and entrepreneur. Studied Industrial Design at SCAD and holds a UX Design certification from the UX Design Institute. With experience spanning hardware, fintech, and autonomous systems, Keniye brings a multidisciplinary approach to building technology that merges African ingenuity with global ambition.",
   },
   {
-    name: "Placeholder Name",
-    role: "Co-Founder",
-    bio: "Placeholder bio — awaiting client content.",
+    name: "Evangel Iheukwumere",
+    role: "Co-Founder & CTO",
+    bio: "Software engineer with experience across full-stack development, AI integration, and real-time systems. Previously at Eli Lilly, where he built AI-enhanced chatbot infrastructure, and founded Kevvlar — an all-in-one project management platform. Currently completing a BSc in Software Engineering at the University of Portsmouth.",
   },
 ];
 
-export const careers = {
+const careers = {
   headline: "Build the Future of Intelligent Protection",
   intro:
     "We are building autonomous surveillance technologies that combine vigilance, resilience, and intelligent action. If you care about purposeful systems and want to help protect what matters most, we'd love to hear from you.",
@@ -143,7 +143,7 @@ export const careers = {
   ],
 };
 
-export const press = [
+const press = [
   {
     outlet: "Placeholder Outlet",
     headline:
@@ -166,3 +166,53 @@ export const press = [
     url: "#",
   },
 ];
+
+const ethos = [
+  {
+    id: "01",
+    word: "SAFETY",
+    sub: "Protecting people before harm reaches them.",
+    image:
+      "https://images.unsplash.com/photo-1508444845599-5c89863b1c44?w=900&fm=jpg&q=80&fit=crop",
+  },
+  {
+    id: "02",
+    word: "SECURITY",
+    sub: "Resilient systems that hold the line.",
+    image:
+      "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=900&fm=jpg&q=80&fit=crop",
+  },
+  {
+    id: "03",
+    word: "SURVEILLANCE",
+    sub: "Total awareness. Zero blind spots.",
+    image:
+      "https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=900&fm=jpg&q=80&fit=crop",
+  },
+];
+
+const focus = [
+  {
+    id: "01",
+    word: "AIR",
+    sub: "Autonomous aerial platforms for wide-area coverage.",
+    image:
+      "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=900&fm=jpg&q=80&fit=crop",
+  },
+  {
+    id: "02",
+    word: "LAND",
+    sub: "Ground-based units built for urban and remote terrain.",
+    image:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&fm=jpg&q=80&fit=crop",
+  },
+  {
+    id: "03",
+    word: "SEA",
+    sub: "Waterproof systems for coastal and maritime operations.",
+    image:
+      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=900&fm=jpg&q=80&fit=crop",
+  },
+];
+
+export { ethos, focus, press, careers, team, values, navLinks, drones, site };
