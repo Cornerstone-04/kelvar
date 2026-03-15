@@ -17,7 +17,7 @@ export const site = {
 export const drones = [
   {
     id: "01",
-    name: "FUSION VTOL",
+    name: "SKYDOME",
     codename: "—",
     tagline: "Placeholder — awaiting client brief",
     desc: "A next-generation unmanned aerial vehicle designed for extended endurance operations in contested environments.",
@@ -33,14 +33,14 @@ export const drones = [
   },
   {
     id: "02",
-    name: "HYDRA",
+    name: "ROBOBOT",
     codename: "—",
     tagline: "Placeholder — awaiting client brief",
-    desc: "An advanced low cost, petrol-powered AAV that merges the high-speed endurance of a small plane with the versatile VTOL capabilities of a drone for long-range reconnaissance.",
-    // assets: assets("1473968512647-3e447244af8f", 581),
+    desc: "With its roll cage design, on board parachute and ability to fold into the back of a standard pickup, the Robobot isn’t just a vehicle; it’s drone as a service.",
+    // assets: assets("1532996122724-e3c354a0b15b", 44642),
     assets: {
-      image: "/images/hydra.png",
-      video: "https://assets.mixkit.co/videos/581/581-720.mp4",
+      image: "/images/kelvar_one.png",
+      video: "https://assets.mixkit.co/videos/44642/44642-720.mp4",
     },
     specs: [
       { label: "Range", value: "TBC" },
@@ -50,14 +50,14 @@ export const drones = [
   },
   {
     id: "03",
-    name: "Kelvar One",
+    name: "HYDRA",
     codename: "—",
     tagline: "Placeholder — awaiting client brief",
-    desc: "With its roll cage design, on board parachute and ability to fold into the back of a standard pickup, the Kelvar One isn’t just a vehicle; it’s drone as a service.",
-    // assets: assets("1532996122724-e3c354a0b15b", 44642),
+    desc: "An advanced low cost, petrol-powered AAV that merges the high-speed endurance of a small plane with the versatile VTOL capabilities of a drone for long-range reconnaissance.",
+    // assets: assets("1473968512647-3e447244af8f", 581),
     assets: {
-      image: "/images/kelvar_one.png",
-      video: "https://assets.mixkit.co/videos/44642/44642-720.mp4",
+      image: "/images/hydra.png",
+      video: "https://assets.mixkit.co/videos/581/581-720.mp4",
     },
     specs: [
       { label: "Range", value: "TBC" },
