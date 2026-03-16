@@ -96,7 +96,7 @@ const team = [
   {
     name: "Keniye B. Koroye",
     role: "Co-Founder",
-    bio: "UK-based Nigerian industrial designer, product analyst, and entrepreneur. Studied Industrial Design at SCAD and holds a UX Design certification from the UX Design Institute. With experience spanning hardware, fintech, and autonomous systems, Keniye brings a multidisciplinary approach to building technology that merges African ingenuity with global ambition.",
+    bio: "An industrial designer, product analyst, and entrepreneur celebrated for merging African cultural narratives with global innovation. A SCAD alum and Tech Nation Global Talent ambassador, Keniye has designed for brands like Tecno Mobile and AFA Sports, and holds a patent for the TekGlove. Based in London, he specializes in bridging the gap between high-impact hardware and fintech strategy.",
   },
   {
     name: "Evangel Iheukwumere",
