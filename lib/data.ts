@@ -14,16 +14,158 @@ const site = {
   email: "contact@kelvarindustries.com",
 };
 
+export type DroneFeature = {
+  title: string;
+  desc: string;
+  tag: "Primary" | "Secondary";
+};
+
+export type DroneUseCase = {
+  icon: string;
+  label: string;
+  desc: string;
+};
+
+export type DroneStat = {
+  value: string;
+  label: string;
+};
+
+export type DronePageData = {
+  id: string;
+  name: string;
+  slug: string;
+  trademark?: boolean;
+  tagline: string;
+  concept: string;
+  features: DroneFeature[];
+  useCases: DroneUseCase[];
+  vision: string;
+  stats: DroneStat[];
+  philosophy: string[];
+  industries: string[];
+  assets: {
+    image: string;
+    video: string;
+  };
+  specs: { label: string; value: string }[];
+};
+
+export const dronePages: DronePageData[] = [
+  {
+    id: "01",
+    name: "SKY DOME",
+    slug: "sky-dome",
+    trademark: true,
+    tagline:
+      "AI-Powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
+    concept:
+      "Imagine a living CCTV network where cameras don't stay fixed on walls — they fly, reposition, track, and respond. SKY DOME™ replaces blind spots with 360° dynamic aerial visibility, powered by AI, machine learning, and predictive threat analytics. Each drone in the network communicates with the others, creating a protective dome of real-time, adaptive security over any environment.",
+    features: [
+      {
+        title: "Autonomous Patrol Swarm",
+        desc: "Multiple micro-drones create overlapping surveillance paths for continuous, uninterrupted coverage across any environment.",
+        tag: "Primary",
+      },
+      {
+        title: "AI Motion & Threat Detection",
+        desc: "Intelligent classification of humans, vehicles, unusual behaviour, fire, smoke, and perimeter breaches — in real time.",
+        tag: "Primary",
+      },
+      {
+        title: "Responsive Swarm Behaviour",
+        desc: "When a threat is detected, the swarm converges, tracks, records, and alerts instantly — without human intervention.",
+        tag: "Primary",
+      },
+      {
+        title: "Night & Low-Light Vision",
+        desc: "Thermal and infrared imaging ensures complete visibility regardless of time of day or weather conditions.",
+        tag: "Secondary",
+      },
+      {
+        title: "Seamless Ground Integration",
+        desc: "Integrates with Wall Cameras, Ceiling Cameras, Floor Bots, Spider Bots, and Drone Bot systems for a unified security layer.",
+        tag: "Secondary",
+      },
+      {
+        title: "Quiet & Residential-Safe",
+        desc: "Designed for estates, farms, villages, and urban neighbourhoods. Lightweight, low-noise, and safe for everyday environments.",
+        tag: "Secondary",
+      },
+    ],
+    useCases: [
+      {
+        icon: "",
+        label: "Homes & Estates",
+        desc: "Perimeter patrol, intruder detection, and night surveillance for private residences and compounds.",
+      },
+      {
+        icon: "",
+        label: "Commercial Spaces",
+        desc: "Shopping centres, banks, retail stores, and logistics depots secured with adaptive aerial coverage.",
+      },
+      {
+        icon: "",
+        label: "Industrial Facilities",
+        desc: "Factories, power stations, refineries, and construction sites protected around the clock.",
+      },
+      {
+        icon: "🌐",
+        label: "Large-Scale Operations",
+        desc: "Campuses, ports, airports, and government facilities covered with scalable swarm deployment.",
+      },
+    ],
+    vision:
+      "To replace outdated static CCTV with a mobile, intelligent, self-coordinated aerial security network — creating a safer world by preventing fire, fraud, and felony before they happen.",
+    stats: [
+      { value: "642,170", label: "Emergency fire incidents in the UK" },
+      { value: "3.9M", label: "Fraud cases recorded annually" },
+      { value: "9.4M", label: "Recorded crime incidents" },
+      { value: "+33%", label: "Rise in fire outbreaks" },
+      { value: "72%", label: "Of fraud cases are identity-driven" },
+      { value: "58,000+", label: "Knife & firearm offences combined" },
+    ],
+    philosophy: [
+      "True security is proactive, autonomous, and always learning.",
+      "Technology should think and respond faster than the threat.",
+      "Innovation must protect real homes, real businesses, and real communities.",
+    ],
+    industries: [
+      "Residential estates & private compounds",
+      "Retail, hospitality, logistics, and commercial spaces",
+      "Oil & gas, energy, factories, and high-risk industrial zones",
+    ],
+    assets: {
+      image: "/images/fusion_vtol.png",
+      video: "/videos/fusion_vtol.mp4",
+    },
+    specs: [
+      { label: "System Type", value: "Autonomous Aerial Swarm" },
+      { label: "Detection", value: "AI · ML · Predictive Analytics" },
+      { label: "Vision", value: "Thermal · Infrared · HD" },
+      { label: "Coverage", value: "360° Dynamic" },
+      { label: "Range", value: "TBC" },
+      { label: "Endurance", value: "TBC" },
+      {
+        label: "Integration",
+        value: "Ground Cameras · Floor Bots · Spider Bots",
+      },
+      { label: "Origin", value: "United Kingdom" },
+    ],
+  },
+];
+
 const drones = [
   {
     id: "01",
     name: "SKY DOME",
     codename: "—",
-    tagline: "Flying cctv camera for air",
-    desc: "Flying cctv camera for air.",
+    tagline:
+      "AI-powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
+    desc: "AI-powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
     assets: {
       image: "/images/fusion_vtol.png",
-      video: "videos/fusion_vtol.mp4",
+      video: "/videos/fusion_vtol.mp4",
     },
     specs: [
       { label: "Range", value: "TBC" },
@@ -99,9 +241,9 @@ const team = [
     bio: "An industrial designer, product analyst, and entrepreneur celebrated for merging African cultural narratives with global innovation. A SCAD alum and Tech Nation Global Talent ambassador, Keniye has designed for brands like Tecno Mobile and AFA Sports, and holds a patent for the TekGlove. Based in London, he specializes in bridging the gap between high-impact hardware and fintech strategy.",
   },
   {
-    name: "Evangel Iheukwumere",
+    name: "Chidi E. Iheukwumere",
     role: "Co-Founder & CTO",
-    bio: "Software engineer with experience across full-stack development, AI integration, and real-time systems. Previously at Eli Lilly, where he built AI-enhanced chatbot infrastructure, and founded Kevvlar — an all-in-one project management platform. Currently completing a BSc in Software Engineering at the University of Portsmouth.",
+    bio: "Software engineer with experience across full-stack development, AI integration, and real-time systems. Previously at Eli Lilly, where he built AI-enhanced chatbot infrastructure, and founded Kevvlar — an all-in-one project management platform.",
   },
 ];
 
