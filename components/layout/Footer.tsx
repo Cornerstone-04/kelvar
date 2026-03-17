@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { drones, navLinks, site } from "@/lib/data";
+import { Libre_Barcode_39_Text } from "next/font/google";
 
 export default function Footer() {
   return (
@@ -54,7 +55,7 @@ export default function Footer() {
             Navigation
           </div>
           <ul className="space-y-2 list-none">
-            {navLinks.map(({ href, label }) => (
+            {navLinks.slice(0, 3).map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
