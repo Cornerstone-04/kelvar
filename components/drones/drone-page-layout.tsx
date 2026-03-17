@@ -145,7 +145,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
                     {f.title}
                   </h2>
                   <p
-                    className={`font-mono text-xs-plus leading-[1.75] text-muted max-w-[55ch] ${!isEven ? "md:ml-auto" : ""}`}
+                    className={`font-mono text-xs-plus leading-[1.75] text-muted max-w-[55ch] ${!isEven ? "md:ml-auto md:text-right" : ""}`}
                   >
                     {f.desc}
                   </p>

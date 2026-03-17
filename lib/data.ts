@@ -172,8 +172,8 @@ const drones = [
       "AI-powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
     desc: "AI-powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
     assets: {
-      image: "/images/fusion_vtol.png",
-      video: "/videos/fusion_vtol.mp4",
+      image: "/images/sky-dome/SKY_DOME_DRONE_01.jpg",
+      video: "/videos/sky-dome-showcase.mp4",
     },
     specs: [
       { label: "Range", value: "TBC" },
@@ -188,10 +188,9 @@ const drones = [
     slug: "robobot",
     tagline: "Floor robot for interior spaces",
     desc: "Floor robot for interior spaces.",
-    // assets: assets("1532996122724-e3c354a0b15b", 44642),
     assets: {
-      image: "/images/kelvar_one.png",
-      video: "https://assets.mixkit.co/videos/44642/44642-720.mp4",
+      image: "/images/spiderbot/spiderbot.jpg",
+      video: "/videos/spiderbot.mp4",
     },
     specs: [
       { label: "Range", value: "TBC" },
@@ -206,7 +205,6 @@ const drones = [
     slug: "hydra",
     tagline: "Waterproof drone for over-sea survey.",
     desc: "Waterproof drone for over-sea survey.",
-    // assets: assets("1473968512647-3e447244af8f", 581),
     assets: {
       image: "/images/hydra.png",
       video: "https://assets.mixkit.co/videos/581/581-720.mp4",

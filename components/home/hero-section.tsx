@@ -33,7 +33,7 @@ export default function HeroSection() {
         className="absolute inset-0 z-0 h-full w-full object-cover brightness-[0.35] saturate-[0.6]"
       >
         <source
-          src="https://assets.mixkit.co/videos/579/579-720.mp4"
+          src="/videos/kelvar-showcase.mp4"
           type="video/mp4"
         />
       </video>
