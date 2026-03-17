@@ -1,6 +1,8 @@
 "use client";
 
 import { useRef } from "react";
+import { LuHouse, LuBuilding2, LuFactory, LuGlobe } from "react-icons/lu";
+import type { IconType } from "react-icons";
 import { motion, useScroll, useTransform } from "motion/react";
 import Link from "next/link";
 import { SectionLabel } from "@/components/ui/section-label";
@@ -8,6 +10,13 @@ import { GlitchText } from "@/components/ui/glitch-text";
 import { Rule } from "@/components/ui/rule";
 import type { DronePageData } from "@/lib/data";
 import Image from "next/image";
+
+const iconMap: Record<string, IconType> = {
+  house: LuHouse,
+  building: LuBuilding2,
+  factory: LuFactory,
+  globe: LuGlobe,
+};
 
 export default function DronePageLayout({ drone }: { drone: DronePageData }) {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -191,8 +200,14 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="bg-bg px-8 py-10"
             >
-              <div className="mb-3 font-mono text-xxs tracking-[0.25em] text-dim">
+              {/*<div className="mb-3 font-mono text-xxs tracking-[0.25em] text-dim">
                 {String(i + 1).padStart(2, "0")}
+              </div>*/}
+              <div className="mb-4 text-primary/40">
+                {(() => {
+                  const Icon = iconMap[uc.icon] ?? LuGlobe;
+                  return <Icon size={20} />;
+                })()}
               </div>
               <h3 className="mb-3 font-heading font-bold text-[1.3rem] text-primary">
                 {uc.label}

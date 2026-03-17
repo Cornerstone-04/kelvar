@@ -1,8 +1,3 @@
-const assets = (unsplashId: string, mixkitId: number) => ({
-  image: `https://images.unsplash.com/photo-${unsplashId}?w=1600&fm=jpg&q=80&fit=crop`,
-  video: `https://assets.mixkit.co/videos/${mixkitId}/${mixkitId}-720.mp4`,
-});
-
 const site = {
   name: "Kelvar Industries",
   tagline: "Eyes Everywhere. Safety Guaranteed.",
@@ -102,22 +97,22 @@ export const dronePages: DronePageData[] = [
     ],
     useCases: [
       {
-        icon: "",
+        icon: "house",
         label: "Homes & Estates",
         desc: "Perimeter patrol, intruder detection, and night surveillance for private residences and compounds.",
       },
       {
-        icon: "",
+        icon: "building",
         label: "Commercial Spaces",
         desc: "Shopping centres, banks, retail stores, and logistics depots secured with adaptive aerial coverage.",
       },
       {
-        icon: "",
+        icon: "factory",
         label: "Industrial Facilities",
         desc: "Factories, power stations, refineries, and construction sites protected around the clock.",
       },
       {
-        icon: "🌐",
+        icon: "globe",
         label: "Large-Scale Operations",
         desc: "Campuses, ports, airports, and government facilities covered with scalable swarm deployment.",
       },
@@ -169,7 +164,7 @@ const drones = [
     codename: "—",
     slug: "sky-dome",
     tagline:
-      "AI-powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
+      "AI Powered CCTV cameras that fly; to prevent Fire, Fraud & Felony",
     desc: "AI-powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
     assets: {
       image: "/images/sky-dome/SKY_DOME_DRONE_01.jpg",
@@ -322,21 +317,21 @@ const ethos = [
   {
     id: "01",
     word: "SAFETY",
-    sub: "Protecting people before harm reaches them.",
+    sub: "We design systems that act before harm arrives — not after. Every Kelvar platform is engineered to detect early, respond fast, and protect the people and places that matter most. Safety is not a feature. It is the foundation.",
     image:
       "https://images.unsplash.com/photo-1508444845599-5c89863b1c44?w=900&fm=jpg&q=80&fit=crop",
   },
   {
     id: "02",
     word: "SECURITY",
-    sub: "Resilient systems that hold the line.",
+    sub: "True security doesn't sleep. Our autonomous systems maintain constant vigilance across perimeters, properties, and critical infrastructure — holding the line without fatigue, blind spots, or delay. Resilient by design. Relentless by default.",
     image:
       "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=900&fm=jpg&q=80&fit=crop",
   },
   {
     id: "03",
     word: "SURVEILLANCE",
-    sub: "Total awareness. Zero blind spots.",
+    sub: "Static cameras see what's in front of them. Kelvar sees everything. Our aerial and ground-based platforms deliver total situational awareness — dynamic, adaptive, and always on. Zero blind spots. Zero compromise.",
     image:
       "https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=900&fm=jpg&q=80&fit=crop",
   },
@@ -346,21 +341,21 @@ const focus = [
   {
     id: "01",
     word: "AIR",
-    sub: "Autonomous aerial platforms for wide-area coverage.",
+    sub: "Our autonomous aerial platforms deliver wide-area surveillance that no fixed camera can match. From residential estates to industrial zones, Sky Dome and its successors patrol, track, and respond — covering ground continuously and without boundaries.",
     image:
       "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=900&fm=jpg&q=80&fit=crop",
   },
   {
     id: "02",
     word: "LAND",
-    sub: "Ground-based units built for urban and remote terrain.",
+    sub: "Ground-based autonomous units built for the environments people live and work in. Urban streets, remote perimeters, indoor spaces — Kelvar's land systems navigate complex terrain with precision, bringing intelligent surveillance to every corner.",
     image:
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&fm=jpg&q=80&fit=crop",
   },
   {
     id: "03",
     word: "SEA",
-    sub: "Waterproof systems for coastal and maritime operations.",
+    sub: "Coastal borders, offshore infrastructure, and maritime operations demand a different kind of protection. Kelvar's waterproof systems are engineered for harsh aquatic environments — delivering the same autonomous intelligence at sea as on land and in the air.",
     image:
       "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=900&fm=jpg&q=80&fit=crop",
   },

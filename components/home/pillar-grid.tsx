@@ -34,7 +34,7 @@ export function PillarGrid({ items }: { items: typeof ethos }) {
           </h3>
 
           {/* Sub */}
-          <p className="font-mono text-[0.6rem] leading-relaxed text-muted">
+          <p className="font-mono text-xs-plus leading-relaxed text-muted">
             {item.sub}
           </p>
         </motion.div>
