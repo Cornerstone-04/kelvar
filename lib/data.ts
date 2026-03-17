@@ -11,13 +11,14 @@ const site = {
   story:
     "In Tolkien’s mythology, Kelvar refers to the living creatures of Arda capable of autonomous movement — quick, self-directed beings that roam, fly, and guard the natural world. We adopted the name as a symbol of intelligent systems built for vigilance, protection, and clarity of action. Inspired by the elevated sight and guardianship associated with the Great Eagles, Kelvar Industries develops autonomous technologies designed to safeguard people, property, and progress through resilient, always-on surveillance.",
   location: "Lagos · London · Los Angeles",
-  email: "contact@kelvarindustries.com",
+  email: "hello@kelvarindustries.com",
 };
 
 export type DroneFeature = {
   title: string;
   desc: string;
   tag: "Primary" | "Secondary";
+  image?: string;
 };
 
 export type DroneUseCase = {
@@ -66,31 +67,37 @@ export const dronePages: DronePageData[] = [
         title: "Autonomous Patrol Swarm",
         desc: "Multiple micro-drones create overlapping surveillance paths for continuous, uninterrupted coverage across any environment.",
         tag: "Primary",
+        image: "/images/sky-dome/SKY_DOME_DRONE_08.jpg",
       },
       {
         title: "AI Motion & Threat Detection",
         desc: "Intelligent classification of humans, vehicles, unusual behaviour, fire, smoke, and perimeter breaches — in real time.",
         tag: "Primary",
+        image: "/images/sky-dome/SKY_DOME_DRONE_07.jpg",
       },
       {
         title: "Responsive Swarm Behaviour",
         desc: "When a threat is detected, the swarm converges, tracks, records, and alerts instantly — without human intervention.",
         tag: "Primary",
+        image: "/images/sky-dome/SKY_DOME_DRONE_02.jpg",
       },
       {
         title: "Night & Low-Light Vision",
         desc: "Thermal and infrared imaging ensures complete visibility regardless of time of day or weather conditions.",
         tag: "Secondary",
+        image: "/images/sky-dome/SKY_DOME_DRONE_-_CEILING_01.jpg",
       },
       {
         title: "Seamless Ground Integration",
         desc: "Integrates with Wall Cameras, Ceiling Cameras, Floor Bots, Spider Bots, and Drone Bot systems for a unified security layer.",
         tag: "Secondary",
+        image: "/images/sky-dome/SKY_DOME_POLES.jpg",
       },
       {
         title: "Quiet & Residential-Safe",
         desc: "Designed for estates, farms, villages, and urban neighbourhoods. Lightweight, low-noise, and safe for everyday environments.",
         tag: "Secondary",
+        image: "/images/sky-dome/SKY_DOME_DRONE-_TABLE_TOP.jpg",
       },
     ],
     useCases: [
@@ -136,8 +143,8 @@ export const dronePages: DronePageData[] = [
       "Oil & gas, energy, factories, and high-risk industrial zones",
     ],
     assets: {
-      image: "/images/fusion_vtol.png",
-      video: "/videos/fusion_vtol.mp4",
+      image: "/images/sky-dome/SKY_DOME_DRONE_01.jpg",
+      video: "/videos/sky-dome-showcase.mp4",
     },
     specs: [
       { label: "System Type", value: "Autonomous Aerial Swarm" },
@@ -160,6 +167,7 @@ const drones = [
     id: "01",
     name: "SKY DOME",
     codename: "—",
+    slug: "sky-dome",
     tagline:
       "AI-powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
     desc: "AI-powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
@@ -177,6 +185,7 @@ const drones = [
     id: "02",
     name: "ROBOBOT",
     codename: "—",
+    slug: "robobot",
     tagline: "Floor robot for interior spaces",
     desc: "Floor robot for interior spaces.",
     // assets: assets("1532996122724-e3c354a0b15b", 44642),
@@ -194,6 +203,7 @@ const drones = [
     id: "03",
     name: "HYDRA",
     codename: "—",
+    slug: "hydra",
     tagline: "Waterproof drone for over-sea survey.",
     desc: "Waterproof drone for over-sea survey.",
     // assets: assets("1473968512647-3e447244af8f", 581),
@@ -213,6 +223,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  { href: "/drones/sky-dome", label: "Sky Dome" },
 ];
 
 const values = [

@@ -7,14 +7,14 @@ const nodes = [
   {
     id: "01",
     city: "Lagos",
-    role: "West Africa Hub",
+    role: "Africa HQ",
     coord: "06.5°N · 03.4°E",
   },
   { id: "02", city: "London", role: "Europe HQ", coord: "51.5°N · 00.1°W" },
   {
     id: "03",
     city: "Los Angeles",
-    role: "West Coast Hub",
+    role: "America HQ",
     coord: "34.0°N · 118.2°W",
   },
 ];

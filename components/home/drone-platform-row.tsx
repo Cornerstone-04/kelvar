@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { GlitchText } from "@/components/ui/glitch-text";
 import { Rule } from "@/components/ui/rule";
+import Link from "next/link";
 
 type Drone = {
   id: string;
@@ -12,6 +13,7 @@ type Drone = {
     image: string;
     video: string;
   };
+  slug?: string;
 };
 
 interface DronePlatformRowProps {
@@ -51,11 +53,28 @@ export default function DronePlatformRow({
           }`}
         >
           <h2
-            className={`mb-5 font-heading text-[clamp(3rem,9vw,7rem)] leading-[0.95] font-black uppercase text-primary ${
+            className={`group mb-5 font-heading text-[clamp(3rem,9vw,7rem)] leading-[0.95] font-black uppercase text-primary ${
               isOdd ? "md:text-right" : ""
             }`}
           >
-            {drone.name}
+            {drone.slug === "sky-dome" ? (
+              <Link
+                href={`/drones/${drone.slug}`}
+                className="inline-flex items-baseline gap-4"
+              >
+                {drone.name}
+                <motion.span
+                  className="inline-block text-[0.4em] text-dim transition-colors group-hover:text-primary"
+                  initial={{ x: -5, y: 5, opacity: 0 }}
+                  whileInView={{ x: 0, y: 0, opacity: 1 }}
+                  whileHover={{ x: 3, y: -3 }}
+                >
+                  ↗
+                </motion.span>
+              </Link>
+            ) : (
+              <>{drone.name}</>
+            )}
           </h2>
 
           <GlitchText

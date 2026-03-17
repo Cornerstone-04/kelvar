@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 import { dronePages } from "@/lib/data";
 import DronePageLayout from "@/components/drones/drone-page-layout";
 import { Metadata } from "next";
@@ -28,6 +28,6 @@ export default async function DronePage({
 }) {
   const { slug } = await params;
   const drone = dronePages.find((d) => d.slug === slug);
-  if (!drone) notFound();
+  if (!drone) redirect(`/#${slug}`);
   return <DronePageLayout drone={drone} />;
 }
