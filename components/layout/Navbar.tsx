@@ -120,7 +120,7 @@ export default function Navbar() {
               </button>
 
               {/* Nav items — each is a flex-1 box */}
-              {navLinks.map(({ href, label }, i) => (
+              {navLinks.slice(0, 3).map(({ href, label }, i) => (
                 <motion.div
                   key={href}
                   initial={{ opacity: 0, y: 16 }}

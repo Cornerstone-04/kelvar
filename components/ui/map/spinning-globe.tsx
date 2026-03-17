@@ -3,9 +3,9 @@
 import { useEffect, useRef } from "react";
 
 const NODES = [
-  { city: "Lagos", lat: 6.5, lng: 3.4 },
-  { city: "London", lat: 51.5, lng: -0.1 },
-  { city: "Los Angeles", lat: 34.0, lng: -118.2 },
+  { city: "Africa HQ", lat: 6.5, lng: 3.4 },
+  { city: "Europe HQ", lat: 51.5, lng: -0.1 },
+  { city: "America HQ", lat: 34.0, lng: -118.2 },
 ];
 
 // Convert lat/lng to 3-D unit vector

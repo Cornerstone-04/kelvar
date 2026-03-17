@@ -7,14 +7,14 @@ const nodes = [
   {
     id: "01",
     city: "Lagos",
-    role: "West Africa Hub",
+    role: "Africa HQ",
     coord: "06.5°N · 03.4°E",
   },
   { id: "02", city: "London", role: "Europe HQ", coord: "51.5°N · 00.1°W" },
   {
     id: "03",
     city: "Los Angeles",
-    role: "West Coast Hub",
+    role: "America HQ",
     coord: "34.0°N · 118.2°W",
   },
 ];
@@ -24,6 +24,22 @@ export function GlobalNetworkMap() {
     <section className="border-t border-[#ffffff12] px-10 py-16">
       <div className="mb-10">
         <SectionLabel>Global Reach</SectionLabel>
+      </div>
+
+      {/* Write-up */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 max-w-5xl">
+        <p className="font-mono text-xs-plus leading-[1.85] text-muted">
+          Kelvar Industries operates across three continents — not because scale
+          is a goal, but because the threats we address are global. From Lagos
+          to London to Los Angeles, our teams design, deploy, and support
+          autonomous security systems in the environments that need them most.
+        </p>
+        <p className="font-mono text-xs-plus leading-[1.85] text-muted">
+          Each headquarters anchors a regional network of partners, clients, and
+          development resources. Together, they form the operational backbone of
+          a company built to protect people and property wherever they are — and
+          wherever risk follows.
+        </p>
       </div>
 
       {/* Globe */}
