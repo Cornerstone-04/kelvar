@@ -55,7 +55,7 @@ export default function Footer() {
             Navigation
           </div>
           <ul className="space-y-2 list-none">
-            {navLinks.slice(0, 3).map(({ href, label }) => (
+            {navLinks.map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
