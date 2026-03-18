@@ -139,7 +139,7 @@ export const dronePages: DronePageData[] = [
     ],
     assets: {
       image: "/images/sky-dome/SKY_DOME_DRONE_01.jpg",
-      video: "/videos/sky-dome-showcase.mp4",
+        video: "/videos/sky_dome_showcase.mp4",
     },
     specs: [
       { label: "System Type", value: "Autonomous Aerial Swarm" },
@@ -168,7 +168,7 @@ const drones = [
     desc: "AI-powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
     assets: {
       image: "/images/sky-dome/SKY_DOME_DRONE_01.jpg",
-      video: "/videos/sky-dome-showcase.mp4",
+      video: "/videos/sky_dome_showcase.mp4",
     },
     specs: [
       { label: "Range", value: "TBC" },
@@ -184,8 +184,8 @@ const drones = [
     tagline: "Floor robot for interior spaces",
     desc: "Floor robot for interior spaces.",
     assets: {
-      image: "/images/spiderbot/spiderbot.jpg",
-      video: "/videos/spiderbot.mp4",
+      image: "/images/robobot/NU_FLOOR_CLEANER 01.jpg",
+      video: "/videos/spiderbot_showcase.mp4",
     },
     specs: [
       { label: "Range", value: "TBC" },
@@ -216,7 +216,6 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
-  { href: "/drones/sky-dome", label: "Sky Dome" },
 ];
 
 const values = [
