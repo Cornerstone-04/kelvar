@@ -108,7 +108,7 @@ export default function HeroSection() {
         {drones.map((d) => (
           <a
             key={d.id}
-            href={`/#${d.name.toLowerCase().replace(/\s+/g, "-")}`}
+            href={`/#${d.slug}`}
             className="group relative overflow-hidden border border-white/8 bg-white/4 px-4 py-2 font-mono text-xxs uppercase tracking-[0.2em] text-white/25 no-underline backdrop-blur-md transition-all duration-300 ease-linear hover:border-white/15 hover:bg-white/8 hover:text-white/70"
           >
             {/* soft glow hover */}

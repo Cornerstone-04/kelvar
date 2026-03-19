@@ -167,14 +167,14 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="relative mx-10 mt-8 aspect-video overflow-hidden bg-card"
+              className="group relative mx-10 mt-8 aspect-video overflow-hidden bg-card"
             >
               <Image
                 src={f.image ?? drone.assets.image}
                 alt={f.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 80vw"
-                className="object-cover brightness-[0.45] saturate-[0.5]"
+                className="object-cover brightness-60 group-hover:brightness-75 saturate-[0.5] transition-all ease-linear"
                 priority={i === 0}
               />
               <div className="absolute inset-0 bg-[linear-gradient(to_top,#07072a_0%,transparent_60%)]" />

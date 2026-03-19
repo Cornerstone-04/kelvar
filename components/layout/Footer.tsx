@@ -39,7 +39,7 @@ export default function Footer() {
             {drones.map((drone) => (
               <li key={drone.id}>
                 <a
-                  href={`/#${drone.name.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={`/#${drone.slug}`}
                   className="text-[0.72rem] tracking-widest uppercase text-white/50 hover:text-white no-underline transition-colors duration-200 font-mono"
                 >
                   {drone.name}

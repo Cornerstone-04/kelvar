@@ -185,7 +185,7 @@ const drones = [
     desc: "Floor robot for interior spaces.",
     assets: {
       image: "/images/robobot/NU_FLOOR_CLEANER 01.jpg",
-      video: "/videos/spiderbot_showcase.mp4",
+      video: "/videos/robobot_showcase.mp4",
     },
     specs: [
       { label: "Range", value: "TBC" },
@@ -195,14 +195,14 @@ const drones = [
   },
   {
     id: "03",
-    name: "HYDRA",
+    name: "HYDRA X",
     codename: "—",
-    slug: "hydra",
+    slug: "hydrax",
     tagline: "Waterproof drone for over-sea survey.",
     desc: "Waterproof drone for over-sea survey.",
     assets: {
-      image: "/images/hydra.png",
-      video: "https://assets.mixkit.co/videos/581/581-720.mp4",
+      image: "/images/hydrax.jpg",
+      video: "/videos/hydrax_showcase.mp4",
     },
     specs: [
       { label: "Range", value: "TBC" },
