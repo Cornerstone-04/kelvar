@@ -30,7 +30,7 @@ export default function DronePlatformRow({
   const isOdd = !isEven;
 
   return (
-    <div id={`${drone.name.toLowerCase().replace(/\s+/g, "-")}`}>
+    <div id={drone.slug}>
       {/* Label row */}
       <div
         className={`flex items-start gap-12 px-10 pt-20 ${
