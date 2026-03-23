@@ -216,6 +216,7 @@ const drones = [
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  // { href: "/research", label: "Research" },
   { href: "/contact", label: "Contact" },
 ];
 
