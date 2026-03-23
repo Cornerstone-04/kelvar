@@ -139,7 +139,7 @@ export const dronePages: DronePageData[] = [
     ],
     assets: {
       image: "/images/sky-dome/SKY_DOME_DRONE_01.jpg",
-        video: "/videos/sky_dome_showcase.mp4",
+      video: "/videos/sky_dome_showcase.mp4",
     },
     specs: [
       { label: "System Type", value: "Autonomous Aerial Swarm" },
@@ -167,7 +167,8 @@ const drones = [
       "AI Powered CCTV cameras that fly; to prevent Fire, Fraud & Felony",
     desc: "AI-powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
     assets: {
-      image: "/images/sky-dome/SKY_DOME_DRONE_01.jpg",
+      image1: "/images/sky-dome/SKY_DOME_DRONE_01.jpg",
+      image2: "/images/sky-dome/SKY_DOME_DRONE_03.jpg",
       video: "/videos/sky_dome_showcase.mp4",
     },
     specs: [
@@ -184,7 +185,7 @@ const drones = [
     tagline: "Floor robot for interior spaces",
     desc: "Floor robot for interior spaces.",
     assets: {
-      image: "/images/robobot/NU_FLOOR_CLEANER 01.jpg",
+      image1: "/images/robobot/NU_FLOOR_CLEANER 01.jpg",
       video: "/videos/robobot_showcase.mp4",
     },
     specs: [
@@ -195,13 +196,13 @@ const drones = [
   },
   {
     id: "03",
-    name: "HYDRA X",
+    name: "HYDRAX",
     codename: "—",
     slug: "hydrax",
     tagline: "Waterproof drone for over-sea survey.",
     desc: "Waterproof drone for over-sea survey.",
     assets: {
-      image: "/images/hydrax.jpg",
+      image1: "/images/hydrax.jpg",
       video: "/videos/hydrax_showcase.mp4",
     },
     specs: [
@@ -318,7 +319,7 @@ const ethos = [
     word: "SAFETY",
     sub: "We design systems that act before harm arrives — not after. Every Kelvar platform is engineered to detect early, respond fast, and protect the people and places that matter most. Safety is not a feature. It is the foundation.",
     image:
-      "https://images.unsplash.com/photo-1508444845599-5c89863b1c44?w=900&fm=jpg&q=80&fit=crop",
+      "https://images.unsplash.com/photo-0giQg5NzFY8?w=900&fm=jpg&q=80&fit=crop",
   },
   {
     id: "02",
@@ -342,14 +343,14 @@ const focus = [
     word: "AIR",
     sub: "Our autonomous aerial platforms deliver wide-area surveillance that no fixed camera can match. From residential estates to industrial zones, Sky Dome and its successors patrol, track, and respond — covering ground continuously and without boundaries.",
     image:
-      "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=900&fm=jpg&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1646749701929-f271445c7990?w=900&fm=jpg&q=80&fit=crop",
   },
   {
     id: "02",
     word: "LAND",
     sub: "Ground-based autonomous units built for the environments people live and work in. Urban streets, remote perimeters, indoor spaces — Kelvar's land systems navigate complex terrain with precision, bringing intelligent surveillance to every corner.",
     image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&fm=jpg&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1542401886-65d6c61db217?w=900&fm=jpg&q=80&fit=crop",
   },
   {
     id: "03",

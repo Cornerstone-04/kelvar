@@ -11,7 +11,8 @@ type Drone = {
   name: string;
   desc: string;
   assets: {
-    image: string;
+    image1: string;
+    image2?: string;
     video: string;
   };
   slug?: string;
@@ -70,7 +71,7 @@ export default function DronePlatformRow({
                   whileInView={{ x: 0, y: 0, opacity: 1 }}
                   whileHover={{ x: 3, y: -3 }}
                 >
-                <LuArrowUpRight/>
+                  <LuArrowUpRight />
                 </motion.span>
               </Link>
             ) : (
@@ -98,7 +99,11 @@ export default function DronePlatformRow({
         className="relative mt-6 mb-0 mx-10 aspect-16/7 overflow-hidden bg-surface"
       >
         <img
-          src={drone.assets.image}
+          src={
+            drone.slug === "sky-dome"
+              ? drone.assets.image2 || drone.assets.image1
+              : drone.assets.image1
+          }
           alt={drone.name}
           className="absolute inset-0 h-full w-full object-cover brightness-[0.75] saturate-[0.7]"
         />
