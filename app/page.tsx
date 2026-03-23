@@ -6,6 +6,7 @@ import DronePlatformsSection from "@/components/home/drone-platforms-section";
 import { EthosSection } from "@/components/home/ethos-section";
 import { GlobalNetworkMap } from "@/components/ui/map/global-network-map";
 import { AreasOfFocusSection } from "@/components/home/focus-area-section";
+// import { RAndDSection } from "@/components/home/research-section";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <DronePlatformsSection />
       <EthosSection />
       <AreasOfFocusSection />
+      {/*<RAndDSection />*/}
       <GlobalNetworkMap />
     </div>
   );
