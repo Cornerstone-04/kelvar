@@ -216,12 +216,12 @@ const drones = [
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  // { href: "/research", label: "Research" },
+  // { href: "/research", label: "Kelvar R&D" },
   { href: "/contact", label: "Contact" },
 ];
 
 const values = [
-  {
+  { 
     title: "Vigilance",
     desc: "We build systems designed to see, detect, and respond with constant awareness, day and night.",
   },
