@@ -7,7 +7,6 @@ import { EthosSection } from "@/components/home/ethos-section";
 import { GlobalNetworkMap } from "@/components/ui/map/global-network-map";
 import { AreasOfFocusSection } from "@/components/home/focus-area-section";
 import { ArrSection } from "@/components/home/arr-section";
-// import { RAndDSection } from "@/components/home/research-section";
 
 export default function HomePage() {
   return (
@@ -18,7 +17,6 @@ export default function HomePage() {
       <ArrSection />
       <EthosSection />
       <AreasOfFocusSection />
-      {/*<RAndDSection />*/}
       <GlobalNetworkMap />
     </div>
   );
