@@ -20,6 +20,7 @@ export type DroneUseCase = {
   icon: string;
   label: string;
   desc: string;
+  image?: string;
 };
 
 export type DroneStat = {
@@ -100,21 +101,29 @@ export const dronePages: DronePageData[] = [
         icon: "house",
         label: "Homes & Estates",
         desc: "Perimeter patrol, intruder detection, and night surveillance for private residences and compounds.",
+        image:
+          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&fm=jpg&q=75&fit=crop",
       },
       {
         icon: "building",
-        label: "Commercial Spaces",
+        label: "Shopping Malls",
         desc: "Shopping centres, banks, retail stores, and logistics depots secured with adaptive aerial coverage.",
+        image:
+          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&fm=jpg&q=75&fit=crop",
       },
       {
         icon: "factory",
-        label: "Industrial Facilities",
+        label: "Power Plants",
         desc: "Factories, power stations, refineries, and construction sites protected around the clock.",
+        image:
+          "https://images.unsplash.com/photo-1548337138-e87d889cc369?w=800&fm=jpg&q=75&fit=crop",
       },
       {
         icon: "globe",
-        label: "Large-Scale Operations",
-        desc: "Campuses, ports, airports, and government facilities covered with scalable swarm deployment.",
+        label: "Farms",
+        desc: "Agricultural land, rural properties, and open perimeters monitored with scalable swarm coverage.",
+        image:
+          "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&fm=jpg&q=75&fit=crop",
       },
     ],
     vision:
@@ -216,12 +225,13 @@ const drones = [
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  // { href: "/research", label: "Kelvar R&D" },
+  { href: "/focus", label: "Focus" },
+  { href: "/research", label: "RDD" },
   { href: "/contact", label: "Contact" },
 ];
 
 const values = [
-  { 
+  {
     title: "Vigilance",
     desc: "We build systems designed to see, detect, and respond with constant awareness, day and night.",
   },

@@ -6,6 +6,7 @@ import DronePlatformsSection from "@/components/home/drone-platforms-section";
 import { EthosSection } from "@/components/home/ethos-section";
 import { GlobalNetworkMap } from "@/components/ui/map/global-network-map";
 import { AreasOfFocusSection } from "@/components/home/focus-area-section";
+import { ArrSection } from "@/components/home/arr-section";
 // import { RAndDSection } from "@/components/home/research-section";
 
 export default function HomePage() {
@@ -14,6 +15,7 @@ export default function HomePage() {
       <HeroSection />
       <MissionSection />
       <DronePlatformsSection />
+      <ArrSection />
       <EthosSection />
       <AreasOfFocusSection />
       {/*<RAndDSection />*/}

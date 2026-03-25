@@ -198,23 +198,34 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-bg px-8 py-10"
+              className="bg-bg overflow-hidden"
             >
-              {/*<div className="mb-3 font-mono text-xxs tracking-[0.25em] text-dim">
-                {String(i + 1).padStart(2, "0")}
-              </div>*/}
-              <div className="mb-4 text-primary/40">
-                {(() => {
-                  const Icon = iconMap[uc.icon] ?? LuGlobe;
-                  return <Icon size={20} />;
-                })()}
+              {/* Image */}
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src={uc.image ?? "/images/sky-dome/SKY_DOME_DRONE_01.jpg"}
+                  alt={uc.label}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover brightness-[0.55] saturate-[0.5] transition-all duration-500 hover:brightness-[0.7]"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_55%)]" />
               </div>
-              <h3 className="mb-3 font-heading font-bold text-[1.3rem] text-primary">
-                {uc.label}
-              </h3>
-              <p className="font-mono text-xxs leading-relaxed text-muted">
-                {uc.desc}
-              </p>
+              {/* Text */}
+              <div className="px-6 py-6">
+                <div className="mb-3 text-primary/40">
+                  {(() => {
+                    const Icon = iconMap[uc.icon] ?? LuGlobe;
+                    return <Icon size={18} />;
+                  })()}
+                </div>
+                <h3 className="mb-2 font-heading font-bold text-[1.3rem] text-primary">
+                  {uc.label}
+                </h3>
+                <p className="font-mono text-xxs leading-relaxed text-muted">
+                  {uc.desc}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
