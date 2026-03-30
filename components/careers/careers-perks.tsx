@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { careers } from "@/lib/data";
 import { SectionLabel } from "@/components/ui/section-label";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function CareersPerks() {
   return (
@@ -19,7 +20,7 @@ export default function CareersPerks() {
             transition={{ duration: 0.4, delay: i * 0.08 }}
             className="border border-border-col px-4 py-4 font-mono text-[0.72rem] text-white/60"
           >
-            <span className="mr-2 text-white/20">→</span>
+            <span className="mr-2 text-white/20"><BsArrowRight /></span>
             {perk}
           </motion.div>
         ))}

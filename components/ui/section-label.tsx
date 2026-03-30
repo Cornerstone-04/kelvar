@@ -2,7 +2,7 @@ import { GlitchText } from "./glitch-text";
 
 export function SectionLabel({ children }: { children: string }) {
   return (
-    <div className="flex items-center gap-4 mb-8">
+    <div className="flex items-center gap-4">
       <GlitchText
         className="text-xs tracking-[0.3em] uppercase text-white/60 font-mono"
         text={children}

@@ -5,6 +5,7 @@ import { GlitchText } from "@/components/ui/glitch-text";
 import { Rule } from "@/components/ui/rule";
 import Link from "next/link";
 import { LuArrowUpRight } from "react-icons/lu";
+import { BsArrowUpRight } from "react-icons/bs";
 
 type Drone = {
   id: string;
@@ -71,7 +72,7 @@ export default function DronePlatformRow({
                   whileInView={{ x: 0, y: 0, opacity: 1 }}
                   whileHover={{ x: 3, y: -3 }}
                 >
-                  <LuArrowUpRight />
+                  <BsArrowUpRight />
                 </motion.span>
               </Link>
             ) : (

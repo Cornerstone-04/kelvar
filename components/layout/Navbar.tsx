@@ -15,8 +15,8 @@ import { GlitchText } from "../ui/glitch-text";
 const menuBgs: Record<string, string> = {
   "/": "#0d0d2ee6",
   "/about": "#14143ce6",
-  "/focus": "#0e1428e6",
-  "/research": "#0a1420e6",
+  "/research": "#0e1428e6",
+  "/focus": "#0a1420e6",
   "/contact": "#060614e6",
 };
 

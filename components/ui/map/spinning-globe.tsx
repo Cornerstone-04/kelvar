@@ -177,9 +177,9 @@ export function SpinningGlobe() {
       }));
 
       const pairs = [
-        [0, 1], // Lagos → London
-        [1, 2], // London → LA
-        [0, 2], // Lagos → LA
+        [0, 1], // Lagos <BsArrowRight /> London
+        [1, 2], // London <BsArrowRight /> LA
+        [0, 2], // Lagos <BsArrowRight /> LA
       ] as const;
 
       for (const [ai, bi] of pairs) {

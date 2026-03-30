@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function PressPreviewSection() {
   return (
@@ -13,9 +14,9 @@ export default function PressPreviewSection() {
 
         <Link
           href="/press"
-          className="border-b border-[#ffffff26] pb-0.5 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-muted no-underline transition-colors"
+          className="border-b border-[#ffffff26] pb-0.5 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-muted no-underline transition-colors inline-flex gap-3 items-center"
         >
-          See All Articles →
+          See All Articles <BsArrowRight />
         </Link>
       </div>
 

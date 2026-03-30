@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { site } from "@/lib/data";
+import { BsArrowRight } from "react-icons/bs";
 
 interface CareerRole {
   title: string;
@@ -17,10 +18,7 @@ interface CareersRoleItemProps {
   index: number;
 }
 
-export default function CareersRoleItem({
-  role,
-  index,
-}: CareersRoleItemProps) {
+export default function CareersRoleItem({ role, index }: CareersRoleItemProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -57,7 +55,7 @@ export default function CareersRoleItem({
         href={`mailto:${site.email}?subject=Application — ${role.title}`}
         className="shrink-0 border border-white/15 px-6 py-3 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-white/60 no-underline transition-all duration-200 hover:border-white/40 hover:text-white"
       >
-        Apply →
+        Apply <BsArrowRight />
       </Link>
     </motion.div>
   );

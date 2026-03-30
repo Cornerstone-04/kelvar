@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import { drones, site } from "@/lib/data";
 import { GlitchText } from "@/components/ui/glitch-text";
-// import { ScrollIndicator } from "../ui/scroll-indicator";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -32,10 +32,7 @@ export default function HeroSection() {
         playsInline
         className="absolute inset-0 z-0 h-full w-full object-cover brightness-[0.35] saturate-[0.6]"
       >
-        <source
-          src="/videos/kelvar_showcase.mp4"
-          type="video/mp4"
-        />
+        <source src="/videos/kelvar_showcase.mp4" type="video/mp4" />
       </video>
 
       {/* Noise / grain texture */}
@@ -91,9 +88,9 @@ export default function HeroSection() {
         >
           <Link
             href="#platforms"
-            className="inline-flex items-center gap-3 border border-[#ffffff26] px-[1.6rem] py-[0.8rem] font-mono text-[0.62rem] uppercase tracking-[0.2em] text-primary no-underline transition-colors duration-200 ease-in-out hover:border-[#ffffff80]"
+            className="inline-flex justify-center items-center gap-3 border border-[#ffffff26] px-[1.6rem] py-[0.8rem] font-mono text-[0.62rem] uppercase tracking-[0.2em] text-primary no-underline transition-colors duration-200 ease-in-out hover:border-[#ffffff80]"
           >
-            Explore Platforms <span>→</span>
+            Explore Platforms <BsArrowRight />
           </Link>
         </motion.div>
       </motion.div>

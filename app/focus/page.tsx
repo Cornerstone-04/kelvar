@@ -6,6 +6,8 @@ import { focus, drones } from "@/lib/data";
 import { SectionLabel } from "@/components/ui/section-label";
 import { Rule } from "@/components/ui/rule";
 import { GlitchText } from "@/components/ui/glitch-text";
+import { ScrollingText } from "@/components/about/scrolling-text";
+import { BsArrowRight } from "react-icons/bs";
 
 const domainDetail: Record<
   string,
@@ -93,16 +95,33 @@ export default function FocusPage() {
   return (
     <div className="min-h-screen bg-bg">
       {/* Header */}
-      <section className="relative flex min-h-[50svh] items-end overflow-hidden border-b border-[#ffffff12]">
-        <div className="pointer-events-none absolute top-[-10%] left-1/2 z-0 h-[70vw] w-[70vw] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,#28285060_0%,transparent_65%)]" />
-        <div className="relative z-1 w-full px-10 py-20">
-          <GlitchText
-            tag="p"
-            text="Kelvar Industries"
-            delay={200}
-            speed={80}
-            className="font-mono text-xxs uppercase tracking-[0.3em] text-muted mb-6"
-          />
+      <section className="relative flex min-h-[60svh] items-end overflow-hidden border-b border-border-col px-6 pb-16 pt-36 md:px-12">
+        <div
+          className="pointer-events-none absolute inset-0 z-0 opacity-30"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E\")",
+            backgroundSize: "256px 256px",
+          }}
+        />
+        <div className="pointer-events-none absolute top-0 left-1/2 z-0 h-[60vw] w-[60vw] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,#28285060_0%,transparent_65%)]" />
+
+        <div className="relative z-1 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-6"
+          >
+            <GlitchText
+              tag="p"
+              text="Kelvar Industries"
+              delay={200}
+              speed={80}
+              className="font-mono text-xxs uppercase tracking-[0.3em] text-muted mb-6"
+            />
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -137,7 +156,7 @@ export default function FocusPage() {
         return (
           <div key={domain.id}>
             {/* Domain hero image */}
-            <div className="relative aspect-[21/7] overflow-hidden">
+            <div className="relative aspect-21/7 overflow-hidden">
               <img
                 src={domain.image}
                 alt={domain.word}
@@ -162,7 +181,7 @@ export default function FocusPage() {
                     <SectionLabel>{detail.headline}</SectionLabel>
                   </div>
                   {detail.body.map((para, i) => (
-                    <motion.p
+                    <motion.div
                       key={i}
                       initial={{ opacity: 0, y: 12 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -170,8 +189,8 @@ export default function FocusPage() {
                       transition={{ duration: 0.6, delay: i * 0.1 }}
                       className="font-mono text-xs-plus leading-[1.85] text-muted mb-4"
                     >
-                      {para}
-                    </motion.p>
+                      <ScrollingText text={para} />
+                    </motion.div>
                   ))}
                 </div>
 
@@ -229,9 +248,9 @@ export default function FocusPage() {
                         {sys.slug && (
                           <Link
                             href={`/drones/${sys.slug}`}
-                            className="shrink-0 border border-[#ffffff26] px-4 py-2 font-mono text-xxs uppercase tracking-[0.15em] text-primary/50 hover:text-primary hover:border-[#ffffff60] transition-all duration-200"
+                            className="shrink-0 border border-[#ffffff26] px-4 py-2 font-mono text-xxs uppercase tracking-[0.15em] text-primary/50 hover:text-primary hover:border-[#ffffff60] transition-all duration-200 inline-flex justify-center items-center gap-2"
                           >
-                            View →
+                            View <BsArrowRight />
                           </Link>
                         )}
                       </div>
@@ -273,7 +292,7 @@ export default function FocusPage() {
             href="/contact"
             className="inline-flex items-center gap-3 border border-[#ffffff26] px-[1.6rem] py-[0.8rem] font-mono text-xxs uppercase tracking-[0.2em] text-primary transition-colors duration-200 hover:border-[#ffffff80]"
           >
-            Get in Touch <span>→</span>
+            Get in Touch <BsArrowRight />
           </Link>
         </motion.div>
       </section>

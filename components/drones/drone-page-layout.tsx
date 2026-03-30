@@ -10,6 +10,7 @@ import { GlitchText } from "@/components/ui/glitch-text";
 import { Rule } from "@/components/ui/rule";
 import type { DronePageData } from "@/lib/data";
 import Image from "next/image";
+import { BsArrowRight } from "react-icons/bs";
 
 const iconMap: Record<string, IconType> = {
   house: LuHouse,
@@ -98,7 +99,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
               href="/contact"
               className="inline-flex items-center gap-3 border border-[#ffffff26] px-[1.6rem] py-[0.8rem] font-mono text-xxs uppercase tracking-[0.2em] text-primary transition-colors duration-200 hover:border-[#ffffff80]"
             >
-              Enquire Now <span>→</span>
+              Enquire Now <BsArrowRight />
             </Link>
           </motion.div>
         </motion.div>
@@ -424,7 +425,10 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
               href="/contact"
               className="inline-flex items-center gap-3 border border-[#ffffff26] px-[1.6rem] py-[0.8rem] font-mono text-xxs uppercase tracking-[0.2em] text-primary transition-colors duration-200 hover:border-[#ffffff80]"
             >
-              Get in Touch <span>→</span>
+              Get in Touch{" "}
+              <span>
+                <BsArrowRight />
+              </span>
             </Link>
           </motion.div>
         </div>

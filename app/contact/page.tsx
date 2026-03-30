@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { site } from "@/lib/data";
 import { SectionLabel } from "@/components/ui/section-label";
+import { BsArrowRight } from "react-icons/bs";
 
 const fields = [
   { label: "Full Name", type: "text", placeholder: "Your name" },
@@ -124,7 +125,7 @@ export default function ContactPage() {
                 type="submit"
                 className="inline-flex items-center gap-2 border border-[#ffffff1f] px-8 py-4 font-mono text-xxs uppercase tracking-[0.15em] text-white/40 no-underline transition-all duration-200 ease-in-out hover:border-[#ffffff66] hover:text-white"
               >
-                Send Message →
+                Send Message <BsArrowRight />
               </button>
             </form>
           )}

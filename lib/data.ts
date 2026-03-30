@@ -137,7 +137,7 @@ export const dronePages: DronePageData[] = [
       { value: "58,000+", label: "Knife & firearm offences combined" },
     ],
     philosophy: [
-      "True security is proactive, autonomous, and always learning.",
+      "Security is proactive, autonomous, and always learning.",
       "Technology should think and respond faster than the threat.",
       "Innovation must protect real homes, real businesses, and real communities.",
     ],
@@ -225,8 +225,8 @@ const drones = [
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/research", label: "RD&D" },
   { href: "/focus", label: "Focus" },
-  { href: "/research", label: "RDD" },
   { href: "/contact", label: "Contact" },
 ];
 
