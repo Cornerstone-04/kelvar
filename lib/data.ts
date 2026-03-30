@@ -354,21 +354,21 @@ const focus = [
     word: "AIR",
     sub: "Our autonomous aerial platforms deliver wide-area surveillance that no fixed camera can match. From residential estates to industrial zones, Sky Dome and its successors patrol, track, and respond — covering ground continuously and without boundaries.",
     image:
-      "https://images.unsplash.com/photo-1646749701929-f271445c7990?w=900&fm=jpg&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1646749701929-f271445c7990?w=1920&h=1080&fm=jpg&q=80&fit=crop",
   },
   {
     id: "02",
     word: "LAND",
     sub: "Ground-based autonomous units built for the environments people live and work in. Urban streets, remote perimeters, indoor spaces — Kelvar's land systems navigate complex terrain with precision, bringing intelligent surveillance to every corner.",
     image:
-      "https://images.unsplash.com/photo-1542401886-65d6c61db217?w=900&fm=jpg&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1542401886-65d6c61db217?w=1920&h=1080&fm=jpg&q=80&fit=crop",
   },
   {
     id: "03",
     word: "SEA",
     sub: "Coastal borders, offshore infrastructure, and maritime operations demand a different kind of protection. Kelvar's waterproof systems are engineered for harsh aquatic environments — delivering the same autonomous intelligence at sea as on land and in the air.",
     image:
-      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=900&fm=jpg&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1920&h=1080&fm=jpg&q=80&fit=crop",
   },
 ];
 
