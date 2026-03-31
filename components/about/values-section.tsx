@@ -29,7 +29,7 @@ export const ValuesSection = () => {
               <h3 className="mb-3 font-heading text-[1.5rem] font-bold text-white">
                 {v.title}
               </h3>
-              <p className="font-mono text-[0.75rem] leading-relaxed text-white/40">
+              <p className="font-mono text-xs-plus leading-relaxed text-white/40">
                 {v.desc}
               </p>
             </motion.div>

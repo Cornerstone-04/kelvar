@@ -57,13 +57,13 @@ export const dronePages: DronePageData[] = [
     tagline:
       "AI-Powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
     concept:
-      "Imagine a living CCTV network where cameras don't stay fixed on walls — they fly, reposition, track, and respond. SKY DOME™ replaces blind spots with 360° dynamic aerial visibility, powered by AI, machine learning, and predictive threat analytics. Each drone in the network communicates with the others, creating a protective dome of real-time, adaptive security over any environment.",
+      "Imagine a living CCTV network where cameras don't stay fixed on walls. They fly, reposition, track, and respond. SKY DOME replaces blind spots with 360° dynamic aerial visibility, powered by AI, machine learning, and predictive threat analytics. Each drone in the network communicates with the others, creating a protective dome of real-time, adaptive security over any environment.",
     features: [
       {
         title: "Autonomous Patrol Swarm",
         desc: "Multiple micro-drones create overlapping surveillance paths for continuous, uninterrupted coverage across any environment.",
         tag: "Primary",
-        image: "/images/sky-dome/SKY_DOME_DRONE_08.jpg",
+        image: "/images/sky-dome/swarm_render.jpg",
       },
       {
         title: "AI Motion & Threat Detection",
@@ -73,9 +73,9 @@ export const dronePages: DronePageData[] = [
       },
       {
         title: "Responsive Swarm Behaviour",
-        desc: "When a threat is detected, the swarm converges, tracks, records, and alerts instantly — without human intervention.",
+        desc: "When a threat is detected, the swarm converges, tracks, records, and alerts instantly without human intervention.",
         tag: "Primary",
-        image: "/images/sky-dome/SKY_DOME_DRONE_02.jpg",
+        image: "/images/sky-dome/swarm_render_03.jpg",
       },
       {
         title: "Night & Low-Light Vision",
@@ -169,7 +169,7 @@ export const dronePages: DronePageData[] = [
 const drones = [
   {
     id: "01",
-    name: "SKY DOME",
+    name: "Sky Dome",
     codename: "—",
     slug: "sky-dome",
     tagline:
@@ -188,7 +188,7 @@ const drones = [
   },
   {
     id: "02",
-    name: "ROBOBOT",
+    name: "Robobot",
     codename: "—",
     slug: "robobot",
     tagline: "Floor robot for interior spaces",
@@ -205,7 +205,7 @@ const drones = [
   },
   {
     id: "03",
-    name: "HYDRAX",
+    name: "Hydrax",
     codename: "—",
     slug: "hydrax",
     tagline: "Waterproof drone for over-sea survey.",

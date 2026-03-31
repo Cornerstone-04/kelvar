@@ -15,7 +15,7 @@ export const MissionSection = () => {
         <div>
           <ScrollingText
             text={site.mission}
-            className="font-mono text-[0.95rem] leading-[1.95] max-w-[65ch]"
+            className="font-mono text-xs-plus leading-[1.95] max-w-[65ch]"
           />
         </div>
       </div>

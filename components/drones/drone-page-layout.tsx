@@ -117,7 +117,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="mb-10 font-heading text-[clamp(1.4rem,3.5vw,2.2rem)] leading-[1.35] font-bold uppercase text-primary"
+            className="mb-10 font-heading text-[clamp(1.4rem,3.5vw,2.2rem)] leading-[1.35] font-bold  text-primary"
           >
             {drone.concept}
           </motion.p>
@@ -223,7 +223,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
                 <h3 className="mb-2 font-heading font-bold text-[1.3rem] text-primary">
                   {uc.label}
                 </h3>
-                <p className="font-mono text-xxs leading-relaxed text-muted">
+                <p className="font-mono text-xs leading-relaxed text-muted">
                   {uc.desc}
                 </p>
               </div>
@@ -246,7 +246,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="mb-10 font-heading text-[clamp(1.4rem,3.5vw,2.2rem)] leading-[1.35] font-bold uppercase text-primary"
+            className="mb-10 font-heading text-[clamp(1.4rem,3.5vw,2.2rem)] leading-[1.35] font-bold normal-case text-primary"
           >
             {drone.vision}
           </motion.p>
@@ -286,14 +286,14 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="hidden md:block relative overflow-hidden bg-card self-stretch min-h-50"
+            className="hidden md:block relative overflow-hidden self-stretch min-h-50 bg-primary"
           >
             <Image
-              src="/images/sky-dome/SKY_DOME_DRONE_04.jpg"
+              src="/images/sky-dome/skydome_tech_pack_1.png"
               alt="Sky Dome — Side Profile"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover brightness-[0.6] saturate-[0.5] scale-110"
+              className="object-contain brightness-100 saturate-[0.5] scale-110"
             />
           </motion.div>
         </div>
@@ -319,7 +319,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
               <div className="font-heading font-black text-[clamp(2rem,5vw,3.5rem)] text-primary leading-none mb-3">
                 {s.value}
               </div>
-              <div className="font-mono text-xxs uppercase tracking-[0.15em] text-muted">
+              <div className="font-mono text-xxs normal-case tracking-[0.15em] text-muted">
                 {s.label}
               </div>
             </motion.div>

@@ -22,7 +22,7 @@ const domainDetail: Record<
     headline: "Eyes in the Sky. No Blind Spots.",
     body: [
       "Aerial surveillance transforms what's possible in security. Unlike fixed cameras, our autonomous aerial platforms reposition, track, and respond — covering ground continuously and without boundaries.",
-      "Sky Dome™ leads our air division: a coordinated swarm of AI-powered micro-drones that create an adaptive protective dome over any environment. Each unit communicates with the others, adjusting patrol paths in real time based on detected movement, threat classification, and environmental conditions.",
+      "Sky Dome leads our air division: a coordinated swarm of AI-powered micro-drones that create an adaptive protective dome over any environment. Each unit communicates with the others, adjusting patrol paths in real time based on detected movement, threat classification, and environmental conditions.",
     ],
     capabilities: [
       "AI threat detection & behavioural classification",
@@ -34,7 +34,7 @@ const domainDetail: Record<
     ],
     systems: [
       {
-        name: "SKY DOME™",
+        name: "SKY DOME",
         desc: "Autonomous aerial CCTV swarm for residential, commercial, and industrial security.",
         slug: "sky-dome",
       },
@@ -223,10 +223,10 @@ export default function FocusPage() {
 
               {/* Systems in this domain */}
               <div>
-                <div className="font-mono text-xxs uppercase tracking-[0.25em] text-dim mb-6">
+                <div className="font-mono text-xxs uppercase tracking-[0.25em] text-muted mb-6">
                   {domain.word} Systems
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#ffffff12]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-bg">
                   {detail.systems.map((sys, i) => (
                     <motion.div
                       key={sys.name}

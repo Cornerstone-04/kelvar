@@ -41,7 +41,7 @@ export const TeamSection = () => {
                 </div>
                 <ScrollingText
                   text={member.bio}
-                  className="font-mono text-[0.78rem] leading-[1.85] text-white max-w-[55ch]"
+                  className="font-mono text-xs-plus leading-[1.85] text-white max-w-[55ch]"
                 />
                 
               </div>

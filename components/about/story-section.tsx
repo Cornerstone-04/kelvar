@@ -15,7 +15,7 @@ export const StorySection = () => {
         <div>
           <ScrollingText
             text={site.story}
-            className="font-mono text-[0.85rem] leading-[1.95] max-w-[65ch]"
+            className="font-mono text-xs-plus leading-[1.95] max-w-[65ch]"
           />
         </div>
       </div>

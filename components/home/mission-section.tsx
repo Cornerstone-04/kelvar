@@ -13,7 +13,7 @@ export default function MissionSection() {
           <SectionLabel>Mission</SectionLabel>
         </div>
 
-        <p className="mb-10 font-heading text-[clamp(1.4rem,3.5vw,2.2rem)] leading-[1.35] font-bold uppercase text-primary">
+        <p className="mb-10 font-heading text-[clamp(1.4rem,3.5vw,2.2rem)] leading-[1.35] font-bold normal-case text-primary">
           {site.mission}
         </p>
 

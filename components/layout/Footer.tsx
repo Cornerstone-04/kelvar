@@ -40,7 +40,7 @@ export default function Footer() {
               <li key={drone.id}>
                 <a
                   href={`/#${drone.slug}`}
-                  className="text-[0.72rem] tracking-widest uppercase text-white/50 hover:text-white no-underline transition-colors duration-200 font-mono"
+                  className="text-[0.72rem] tracking-widest normal-case text-white/50 hover:text-white no-underline transition-colors duration-200 font-mono"
                 >
                   {drone.name}
                 </a>
@@ -59,7 +59,7 @@ export default function Footer() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="text-[0.72rem] tracking-widest uppercase text-white/50 hover:text-white no-underline transition-colors duration-200 font-mono"
+                  className="text-[0.72rem] tracking-widest normal-case text-white/50 hover:text-white no-underline transition-colors duration-200 font-mono"
                 >
                   {label}
                 </Link>
