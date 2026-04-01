@@ -44,6 +44,7 @@ export type DronePageData = {
   assets: {
     image: string;
     video: string;
+    videoAlt: string;
   };
   specs: { label: string; value: string }[];
 };
@@ -149,6 +150,7 @@ export const dronePages: DronePageData[] = [
     assets: {
       image: "/images/sky-dome/SKY_DOME_DRONE_01.jpg",
       video: "/videos/sky_dome_showcase.mp4",
+      videoAlt:"/videos/skydome_swarm_showcase.mp4"
     },
     specs: [
       { label: "System Type", value: "Autonomous Aerial Swarm" },

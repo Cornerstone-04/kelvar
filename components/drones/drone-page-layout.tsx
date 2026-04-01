@@ -42,7 +42,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
           playsInline
           className="absolute inset-0 z-0 h-full w-full object-cover brightness-[0.3] saturate-[0.5]"
         >
-          <source src={drone.assets.video} type="video/mp4" />
+          <source src={drone.assets.videoAlt} type="video/mp4" />
         </video>
 
         <div
