@@ -379,7 +379,9 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
               speed={60}
               className="font-mono text-xxs tracking-[0.2em] text-dim shrink-0"
             />
-            <span className="font-mono text-xs-plus text-muted">{ind}</span>
+            <p className="font-heading font-bold text-[clamp(1.3rem,2.8vw,2rem)] text-primary">
+              {ind}
+            </p>
           </motion.div>
         ))}
         <div className="border-t border-border-col" />

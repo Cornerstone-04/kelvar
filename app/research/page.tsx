@@ -31,13 +31,7 @@ export default function ResearchPage() {
             transition={{ duration: 0.5 }}
             className="mb-6"
           >
-            <GlitchText
-              tag="p"
-              text="Kelvar Industries"
-              delay={200}
-              speed={80}
-              className="font-mono text-xxs uppercase tracking-[0.3em] text-muted mb-6"
-            />
+            <SectionLabel>Kelvar Industries</SectionLabel>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}

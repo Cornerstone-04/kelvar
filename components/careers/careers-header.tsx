@@ -3,6 +3,7 @@
 import { careers } from "@/lib/data";
 import { GlitchText } from "../ui/glitch-text";
 import { motion } from "motion/react";
+import { SectionLabel } from "../ui/section-label";
 
 export function CareersHeader() {
   return (
@@ -24,15 +25,27 @@ export function CareersHeader() {
           transition={{ duration: 0.5 }}
           className="mb-6"
         >
-          <GlitchText
-            className="font-mono text-[0.6rem] uppercase tracking-[0.35em] text-white/25"
-            text="Join Kelvar Industries"
-            delay={300}
-            speed={100}
-          />
+          <SectionLabel>Join Kelvar Industries</SectionLabel>
         </motion.div>
 
         <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="font-heading text-[clamp(3rem,10vw,8rem)] leading-none font-black -tracking-[0.02em] text-white"
+        >
+          Build What
+          <br />
+          <span
+            className="text-transparent"
+            style={{ WebkitTextStroke: "2px #ffffff40" }}
+          >
+            Protects
+          </span>{" "}
+          The World
+        </motion.h1>
+
+        {/*<motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -46,7 +59,7 @@ export function CareersHeader() {
           >
             {careers.headline.split(" ").slice(-2).join(" ")}
           </span>
-        </motion.h1>
+        </motion.h1>*/}
 
         <motion.p
           initial={{ opacity: 0, y: 12 }}

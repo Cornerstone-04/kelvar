@@ -60,7 +60,7 @@ export default function ContactPage() {
       {/* Body */}
       <div className="grid grid-cols-1 border-b border-border-col md:grid-cols-2">
         {/* Form */}
-        <div className="border-r border-border-col px-6 py-16 md:px-12">
+        <div className="border-r border-border-col px-6 py-16 md:px-12 flex flex-col gap-4">
           <SectionLabel>Send a Message</SectionLabel>
 
           {submitted ? (
@@ -132,7 +132,7 @@ export default function ContactPage() {
         </div>
 
         {/* Info */}
-        <div className="bg-surface px-6 py-16 md:px-12">
+        <div className="bg-surface px-6 py-16 md:px-12 flex flex-col gap-4">
           <SectionLabel>Details</SectionLabel>
 
           <div className="space-y-0">

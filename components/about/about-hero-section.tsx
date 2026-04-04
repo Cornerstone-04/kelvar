@@ -1,6 +1,7 @@
 import { site } from "@/lib/data";
-import {GlitchText} from "../ui/glitch-text";
+import { GlitchText } from "../ui/glitch-text";
 import { motion } from "motion/react";
+import { SectionLabel } from "../ui/section-label";
 
 export const AboutHeroSection = () => {
   return (
@@ -22,12 +23,7 @@ export const AboutHeroSection = () => {
           transition={{ duration: 0.5 }}
           className="mb-6"
         >
-          <GlitchText
-            className="font-mono text-[0.6rem] uppercase tracking-[0.35em] text-white/25"
-            text="About Kelvar Industries"
-            delay={300}
-            speed={100}
-          />
+          <SectionLabel>About Kelvar Industries</SectionLabel>
         </motion.div>
 
         <motion.h1
