@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { focus, drones } from "@/lib/data";
+import { focus } from "@/lib/data";
 import { SectionLabel } from "@/components/ui/section-label";
 import { Rule } from "@/components/ui/rule";
 import { GlitchText } from "@/components/ui/glitch-text";
@@ -37,11 +37,6 @@ const domainDetail: Record<
         name: "SKY DOME",
         desc: "Autonomous aerial CCTV swarm for residential, commercial, and industrial security.",
         slug: "sky-dome",
-      },
-      {
-        name: "HYDRAX",
-        desc: "Waterproof aerial platform engineered for coastal, offshore, and maritime environments.",
-        slug: "hydrax",
       },
     ],
   },
