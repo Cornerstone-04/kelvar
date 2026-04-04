@@ -62,7 +62,7 @@ export const dronePages: DronePageData[] = [
     features: [
       {
         title: "Autonomous Patrol Swarm",
-        desc: "Multiple micro-drones create overlapping surveillance paths for continuous, uninterrupted coverage across any environment.",
+        desc: "Multiple drones create overlapping surveillance paths for continuous, uninterrupted coverage across any environment.",
         tag: "Primary",
         image: "/images/sky-dome/swarm_render.jpg",
       },
@@ -73,10 +73,10 @@ export const dronePages: DronePageData[] = [
         image: "/images/sky-dome/SKY_DOME_DRONE_07.jpg",
       },
       {
-        title: "Responsive Swarm Behaviour",
-        desc: "When a threat is detected, the swarm converges, tracks, records, and alerts instantly without human intervention.",
+        title: "Solar Powered Surveillance",
+        desc: "Self-sustaining drone systems powered by solar energy, enabling continuous operation in remote or off-grid environments with minimal maintenance.",
         tag: "Primary",
-        image: "/images/sky-dome/swarm_render_03.jpg",
+        image: "/images/sky-dome/skydome_solar_render.jpg",
       },
       {
         title: "Night & Low-Light Vision",
@@ -85,8 +85,8 @@ export const dronePages: DronePageData[] = [
         image: "/images/sky-dome/SKY_DOME_DRONE_-_CEILING_01.jpg",
       },
       {
-        title: "Seamless Ground Integration",
-        desc: "Integrates with Wall Cameras, Ceiling Cameras, Floor Bots, Spider Bots, and Drone Bot systems for a unified security layer.",
+        title: "Mobile Ground Sentry",
+        desc: "Integrates with flying CCTV cameras, solar powered street light, and an outdoor weatherproof system for a unified security layer.",
         tag: "Secondary",
         image: "/images/sky-dome/SKY_DOME_POLES.jpg",
       },
@@ -150,7 +150,7 @@ export const dronePages: DronePageData[] = [
     assets: {
       image: "/images/sky-dome/SKY_DOME_DRONE_01.jpg",
       video: "/videos/sky_dome_showcase.mp4",
-      videoAlt:"/videos/skydome_swarm_showcase.mp4"
+      videoAlt: "/videos/skydome_swarm_showcase.mp4",
     },
     specs: [
       { label: "System Type", value: "Autonomous Aerial Swarm" },
@@ -161,9 +161,9 @@ export const dronePages: DronePageData[] = [
       { label: "Endurance", value: "TBC" },
       {
         label: "Integration",
-        value: "Ground Cameras · Floor Bots · Spider Bots",
+        value: "Table · Ceiling · Outdoor",
       },
-      { label: "Origin", value: "United Kingdom" },
+      { label: "Origin", value: "United Kingdom · Nigeria" },
     ],
   },
 ];
@@ -226,10 +226,11 @@ const drones = [
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/research", label: "RD&D" },
+  { href: "/about", label: "About" },
   { href: "/focus", label: "Focus" },
   { href: "/contact", label: "Contact" },
+  { href: "/careers", label: "Careers" },
 ];
 
 const values = [

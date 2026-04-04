@@ -14,10 +14,11 @@ import { GlitchText } from "../ui/glitch-text";
 
 const menuBgs: Record<string, string> = {
   "/": "#0d0d2ee6",
-  "/about": "#14143ce6",
-  "/research": "#0e1428e6",
-  "/focus": "#0a1420e6",
-  "/contact": "#060614e6",
+  "/research": "#080d2ae6",
+  "/about": "#0a1130e6",
+  "/focus": "#060e28e6",
+  "/contact": "#04091fe6",
+  "/careers": "#070a24e6",
 };
 
 export default function Navbar() {
