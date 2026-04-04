@@ -3,7 +3,7 @@
 import { drones } from "@/lib/data";
 import DronePlatformRow from "@/components/home/drone-platform-row";
 
-export default function DronePlatformsSection() {
+export function DronePlatformsSection() {
   return (
     <section id="platforms" className="border-t border-[#ffffff12]">
       {drones.map((drone, i) => (

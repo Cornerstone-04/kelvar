@@ -7,7 +7,7 @@ import { drones, site } from "@/lib/data";
 import { GlitchText } from "@/components/ui/glitch-text";
 import { BsArrowRight } from "react-icons/bs";
 
-export default function HeroSection() {
+export function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({

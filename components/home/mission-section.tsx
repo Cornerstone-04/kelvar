@@ -5,7 +5,7 @@ import { site } from "@/lib/data";
 import { SectionLabel } from "@/components/ui/section-label";
 import { BsArrowRight } from "react-icons/bs";
 
-export default function MissionSection() {
+export function MissionSection() {
   return (
     <section className="border-t border-[#ffffff12] px-10 py-32">
       <div className="max-w-300">
@@ -21,7 +21,7 @@ export default function MissionSection() {
           href="/about"
           className="inline-flex items-center gap-2 border border-[#ffffff1f] px-[1.2rem] py-[0.6rem] font-mono text-[0.65rem] uppercase tracking-[0.15em] text-white/40 no-underline transition-all duration-200 ease-in-out hover:border-[#ffffff66] hover:text-white"
         >
-          Read More <BsArrowRight/>
+          Read More <BsArrowRight />
         </Link>
       </div>
     </section>

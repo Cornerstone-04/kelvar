@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { site } from "@/lib/data";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowUpRight } from "react-icons/bs";
 
 interface CareerRole {
   title: string;
@@ -18,44 +18,43 @@ interface CareersRoleItemProps {
   index: number;
 }
 
-export default function CareersRoleItem({ role, index }: CareersRoleItemProps) {
+export function CareersRoleItem({ role, index }: CareersRoleItemProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="group grid grid-cols-1 items-center gap-4 border-t border-border-col py-8 md:grid-cols-[1fr_auto]"
+      transition={{ duration: 0.4, delay: index * 0.06 }}
     >
-      <div>
-        <h3 className="mb-2 font-heading text-[1.4rem] font-bold text-white transition-colors group-hover:text-white/80">
-          {role.title}
-        </h3>
-
-        <div className="mb-3 flex flex-wrap gap-3">
-          <span className="font-mono text-[0.6rem] uppercase tracking-[0.2em] text-white/30">
-            {role.department}
-          </span>
-          <span className="text-white/15">·</span>
-          <span className="font-mono text-[0.6rem] uppercase tracking-[0.2em] text-white/30">
-            {role.location}
-          </span>
-          <span className="text-white/15">·</span>
-          <span className="font-mono text-[0.6rem] uppercase tracking-[0.2em] text-white/30">
-            {role.type}
-          </span>
-        </div>
-
-        <p className="max-w-2xl font-mono text-[0.78rem] leading-relaxed text-white/40">
-          {role.summary}
-        </p>
-      </div>
-
       <Link
         href={`mailto:${site.email}?subject=Application — ${role.title}`}
-        className="shrink-0 border border-white/15 px-6 py-3 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-white/60 no-underline transition-all duration-200 hover:border-white/40 hover:text-white"
+        className="group block border border-border-col no-underline transition-colors duration-200 hover:border-white/20"
       >
-        Apply <BsArrowRight />
+        {/* Top row — title + location/type */}
+        <div className="flex items-start justify-between gap-4 px-6 py-5">
+          <div>
+            <h3 className="mb-1.5 font-heading text-[1.3rem] font-bold text-white transition-colors group-hover:text-white/80">
+              {role.title}
+            </h3>
+            <p className="font-mono text-xxs text-white/35">
+              {role.location} · {role.type}
+            </p>
+          </div>
+          <BsArrowUpRight
+            className="mt-1 shrink-0 text-white/20 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white/60"
+            size={16}
+          />
+        </div>
+
+        {/* Separator */}
+        <div className="border-t border-border-col" />
+
+        {/* Bottom row — summary */}
+        <div className="px-6 py-4">
+          <p className="font-mono text-xxs leading-relaxed text-white/30 group-hover:text-white/45 transition-colors duration-200">
+            {role.summary}
+          </p>
+        </div>
       </Link>
     </motion.div>
   );

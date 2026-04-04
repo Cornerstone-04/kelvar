@@ -1,12 +1,13 @@
 "use client";
 
-import HeroSection from "@/components/home/hero-section";
-import MissionSection from "@/components/home/mission-section";
-import DronePlatformsSection from "@/components/home/drone-platforms-section";
+import { HeroSection } from "@/components/home/hero-section";
+import { MissionSection } from "@/components/home/mission-section";
+import { DronePlatformsSection } from "@/components/home/drone-platforms-section";
 import { EthosSection } from "@/components/home/ethos-section";
 import { GlobalNetworkMap } from "@/components/ui/map/global-network-map";
 import { AreasOfFocusSection } from "@/components/home/focus-area-section";
 import { ArrSection } from "@/components/home/arr-section";
+import { AirConvoySection } from "@/components/home/airconvoy-section";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <MissionSection />
       <DronePlatformsSection />
       <ArrSection />
+      {/*<AirConvoySection />*/}
       <EthosSection />
       <AreasOfFocusSection />
       <GlobalNetworkMap />

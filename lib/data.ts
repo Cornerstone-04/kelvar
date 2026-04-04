@@ -266,9 +266,9 @@ const team = [
 ];
 
 const careers = {
-  headline: "Build the Future of Intelligent Protection",
+  headline: "Build What Protects the World.",
   intro:
-    "We are building autonomous surveillance technologies that combine vigilance, resilience, and intelligent action. If you care about purposeful systems and want to help protect what matters most, we'd love to hear from you.",
+    "Kelvar Industries is looking for driven, unconventional people who want their work to mean something. We're a small team solving hard problems in autonomous surveillance — if you want to be part of what comes next, we want to hear from you.",
   perks: [
     "Competitive salary & growth opportunities",
     "Flexible & hybrid working",
@@ -277,28 +277,28 @@ const careers = {
   ],
   roles: [
     {
-      title: "Autonomous Systems Engineer",
-      department: "Engineering",
-      location: "London, UK",
+      title: "Drone Pilot",
+      department: "Operations",
+      location: "Lagos · London · Los Angeles",
       type: "Full-time",
       summary:
-        "Design and develop intelligent system behaviours for autonomous surveillance and monitoring platforms.",
+        "Operate and manage autonomous and semi-autonomous drone platforms across live deployments, field testing, and demonstration events. You'll work directly with our engineering team to push the limits of what our systems can do in real-world conditions.",
     },
     {
-      title: "Embedded Systems Engineer",
-      department: "Engineering",
-      location: "London, UK · Hybrid",
+      title: "Industrial Designer",
+      department: "Design",
+      location: "Remote",
       type: "Full-time",
       summary:
-        "Build firmware and real-time control systems that power reliable, always-on autonomous devices.",
+        "Design the physical form of Kelvar's next generation of autonomous platforms — from early-stage concept modelling to production-ready specifications. You'll shape how our systems look, feel, and perform in the field.",
     },
     {
-      title: "Computer Vision Engineer",
-      department: "Engineering",
-      location: "London, UK",
+      title: "Social Media Manager",
+      department: "Marketing",
+      location: "Remote",
       type: "Full-time",
       summary:
-        "Develop perception and visual intelligence capabilities that improve awareness, tracking, and response accuracy.",
+        "Own Kelvar's presence across social platforms. Build the visual language, grow the audience, and communicate what we're building to the world. You'll be the voice of a company doing things that haven't been done before.",
     },
   ],
 };

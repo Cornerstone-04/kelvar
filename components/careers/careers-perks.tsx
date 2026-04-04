@@ -3,14 +3,14 @@
 import { motion } from "motion/react";
 import { careers } from "@/lib/data";
 import { SectionLabel } from "@/components/ui/section-label";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowReturnRight } from "react-icons/bs";
 
-export default function CareersPerks() {
+export function CareersPerks() {
   return (
     <div className="border-b border-border-col bg-surface px-6 py-16 md:px-12">
       <SectionLabel>Why Kelvar</SectionLabel>
 
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-4 mt-6">
         {careers.perks.map((perk, i) => (
           <motion.div
             key={i}
@@ -18,9 +18,11 @@ export default function CareersPerks() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
-            className="border border-border-col px-4 py-4 font-mono text-[0.72rem] text-white/60"
+            className="border border-border-col px-4 py-4 font-mono text-[0.72rem] text-white/60 flex items-center"
           >
-            <span className="mr-2 text-white/20"><BsArrowRight /></span>
+            <span className="mr-2 text-white/50">
+              <BsArrowReturnRight />
+            </span>
             {perk}
           </motion.div>
         ))}
