@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { site } from "@/lib/data";
 import { BsArrowUpRight } from "react-icons/bs";
+import { Rule } from "../ui/rule";
 
 interface CareerRole {
   title: string;
@@ -28,6 +29,8 @@ export function CareersRoleItem({ role, index }: CareersRoleItemProps) {
     >
       <Link
         href={`mailto:${site.email}?subject=Application — ${role.title}`}
+        target="_blank"
+        rel="noopener noreferrer"
         className="group block border border-border-col no-underline transition-colors duration-200 hover:border-white/20"
       >
         {/* Top row — title + location/type */}
@@ -46,8 +49,7 @@ export function CareersRoleItem({ role, index }: CareersRoleItemProps) {
           />
         </div>
 
-        {/* Separator */}
-        <div className="border-t border-border-col" />
+        <Rule />
 
         {/* Bottom row — summary */}
         <div className="px-6 py-4">

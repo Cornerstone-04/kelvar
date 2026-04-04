@@ -1,7 +1,7 @@
 import { team } from "@/lib/data";
 import { motion } from "motion/react";
 import { SectionLabel } from "../ui/section-label";
-import { ScrollingText } from "./scrolling-text";
+import { ScrollingText } from "../ui/scrolling-text";
 
 export const TeamSection = () => {
   return (
@@ -41,7 +41,7 @@ export const TeamSection = () => {
                 </div>
                 <ScrollingText
                   text={member.bio}
-                  className="font-mono text-xs-plus leading-[1.85] text-white max-w-[55ch]"
+                  className="font-mono text-xs-plus leading-[1.85] text-white max-w-[75ch]"
                 />
                 
               </div>

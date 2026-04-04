@@ -146,7 +146,9 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
                 className={`flex flex-1 flex-col md:gap-12 ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
               >
                 <div className="flex-1">
-                  <div className="mb-2 font-mono text-xxs tracking-[0.15em] uppercase text-dim">
+                  <div
+                    className={`${isEven ? "text-left" : "text-right"} mb-2 font-mono text-xxs tracking-[0.15em] uppercase text-dim`}
+                  >
                     {f.tag}
                   </div>
                   <h2
@@ -175,7 +177,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
                 alt={f.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 80vw"
-                className="object-cover brightness-60 group-hover:brightness-75 saturate-[0.5] transition-all ease-linear"
+                className="object-cover brightness-60 group-hover:brightness-75 saturate-[0.5] group-hover:scale-105 transition-all ease-linear"
                 priority={i === 0}
               />
               <div className="absolute inset-0 bg-[linear-gradient(to_top,#07072a_0%,transparent_60%)]" />
@@ -286,14 +288,14 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="hidden md:block relative overflow-hidden self-stretch min-h-50 bg-primary"
+            className="group hidden md:block relative overflow-hidden self-stretch min-h-50 bg-primary"
           >
             <Image
               src="/images/sky-dome/skydome_tech_pack_1.png"
               alt="Sky Dome — Side Profile"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain brightness-100 saturate-[0.5] scale-110"
+              className="object-contain brightness-100 saturate-[0.5] scale-110 group-hover:scale-115 transition-all ease-linear"
             />
           </motion.div>
         </div>
@@ -417,8 +419,8 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
               Always On.
             </h2>
             <p className="font-mono text-xs-plus leading-[1.8] text-muted mb-12 max-w-2xl mx-auto">
-              As the UK confronts rising threats — 642,170 fire incidents, 3.9
-              million fraud cases, and 9.4 million recorded crimes — traditional
+              As the UK confronts rising threats, 642,170 fire incidents, 3.9
+              million fraud cases, and 9.4 million recorded crimes, traditional
               static CCTV cannot keep pace. {drone.name}
               {drone.trademark ? <sup>TM</sup> : ""} delivers a next-generation
               response.

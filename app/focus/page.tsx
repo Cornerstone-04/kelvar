@@ -6,7 +6,7 @@ import { focus } from "@/lib/data";
 import { SectionLabel } from "@/components/ui/section-label";
 import { Rule } from "@/components/ui/rule";
 import { GlitchText } from "@/components/ui/glitch-text";
-import { ScrollingText } from "@/components/about/scrolling-text";
+import { ScrollingText } from "@/components/ui/scrolling-text";
 import { BsArrowRight } from "react-icons/bs";
 
 const domainDetail: Record<

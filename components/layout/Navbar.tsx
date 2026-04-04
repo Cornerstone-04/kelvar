@@ -66,7 +66,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="-mr-2 flex flex-col justify-center gap-1.25 p-2"
+          className="-mr-2 flex flex-col justify-center gap-2 p-2"
           aria-label="Toggle menu"
         >
           <motion.span

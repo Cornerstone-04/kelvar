@@ -1,6 +1,6 @@
 import { site } from "@/lib/data";
 import { SectionLabel } from "../ui/section-label";
-import { ScrollingText } from "./scrolling-text";
+import { ScrollingText } from "../ui/scrolling-text";
 
 export const StorySection = () => {
   return (
@@ -15,7 +15,7 @@ export const StorySection = () => {
         <div>
           <ScrollingText
             text={site.story}
-            className="font-mono text-xs-plus leading-[1.95] max-w-[65ch]"
+            className="font-mono text-xs-plus leading-[1.95] max-w-[75ch]"
           />
         </div>
       </div>

@@ -6,7 +6,7 @@ import { SectionLabel } from "@/components/ui/section-label";
 import { GlitchText } from "@/components/ui/glitch-text";
 import { Rule } from "@/components/ui/rule";
 import { research } from "@/lib/data";
-import { ScrollingText } from "@/components/about/scrolling-text";
+import { ScrollingText } from "@/components/ui/scrolling-text";
 import { BsArrowRight } from "react-icons/bs";
 
 export default function ResearchPage() {
@@ -33,7 +33,7 @@ export default function ResearchPage() {
           >
             <SectionLabel>Kelvar Industries</SectionLabel>
           </motion.div>
-          <motion.h1
+          {/*<motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
@@ -41,13 +41,30 @@ export default function ResearchPage() {
           >
             Research,
             <br />
-            Design &<br />
+            Design &
+            <br />
             <span
               className="text-transparent"
               style={{ WebkitTextStroke: "2px rgba(245,245,249,0.2)" }}
             >
               Development
             </span>
+          </motion.h1>*/}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="font-heading text-[clamp(3rem,10vw,8rem)] leading-none font-black tracking-[-0.02em] text-white"
+          >
+            Research, Design
+            <br />
+            <span
+              className="text-transparent"
+              style={{ WebkitTextStroke: "2px #ffffff40" }}
+            >
+              &amp; Development
+            </span>
+            
           </motion.h1>
         </div>
       </section>
@@ -66,15 +83,15 @@ export default function ResearchPage() {
               transition={{ duration: 0.7 }}
               className="font-heading font-bold text-[clamp(1.4rem,3vw,2rem)] leading-tight text-primary"
             >
-              At Kelvar Industries, innovation is not outsourced — it is
+              At Kelvar Industries, innovation is not outsourced, it is
               engineered at the core.
             </motion.p>
           </div>
           <div className="flex flex-col gap-5">
             {[
               "Our RD&D division drives the continuous evolution of autonomous surveillance through rigorous research, precision design, and real-world testing.",
-              "We operate at the intersection of hardware, software, and intelligence — building systems that are not only functional, but adaptive, resilient, and future-ready. From early-stage concept modeling to full-scale deployment, every Kelvar platform is developed with a singular objective: operational superiority in dynamic environments.",
-              "Our process is iterative and uncompromising. We test in complexity, refine through data, and deploy with confidence — ensuring that every system performs when it matters most.",
+              "We operate at the intersection of hardware, software, and intelligence, building systems that are not only functional, but adaptive, resilient, and future-ready. From early-stage concept modeling to full-scale deployment, every Kelvar platform is developed with a singular objective: operational superiority in dynamic environments.",
+              "Our process is iterative and uncompromising. We test in complexity, refine through data, and deploy with confidence, ensuring that every system performs when it matters most.",
             ].map((para, i) => (
               <motion.div
                 key={i}
@@ -144,9 +161,9 @@ export default function ResearchPage() {
               Built In.
             </motion.h2>
             <p className="font-mono text-xs-plus leading-[1.85] text-muted mb-8">
-              Every system that emerges from our RD&D division is powered by our
-              Autonomous A.I. Robotics layer — ensuring that research translates
-              directly into deployable, intelligent platforms.
+              {
+                "Every system that emerges from our RD&D division is powered by our Autonomous A.I. Robotics layer, ensuring that research translates directly into deployable, intelligent platforms."
+              }
             </p>
             <Link
               href="/#platforms"

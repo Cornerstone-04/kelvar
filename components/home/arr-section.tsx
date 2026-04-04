@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { SectionLabel } from "@/components/ui/section-label";
-import { ScrollingText } from "../about/scrolling-text";
+import { ScrollingText } from "../ui/scrolling-text";
 import { BsArrowRight } from "react-icons/bs";
 
 const aarParagraphs = [
@@ -12,7 +12,7 @@ const aarParagraphs = [
     isScrolling: true,
   },
   {
-    text: "AAR integrates advanced artificial intelligence with autonomous robotics to enable real-time perception, analysis, and response. Our systems do not simply observe — they interpret, adapt, and act within milliseconds, without reliance on constant human control.",
+    text: "AAR integrates advanced artificial intelligence with autonomous robotics to enable real-time perception, analysis, and response. Our systems do not simply observe, they interpret, adapt, and act within milliseconds, without reliance on constant human control.",
     isScrolling: true,
   },
   {
@@ -20,7 +20,7 @@ const aarParagraphs = [
     isScrolling: true,
   },
   {
-    text: "This is not remote surveillance. This is independent security — engineered to think, move, and protect on its own.",
+    text: "This is not remote surveillance. This is independent security, engineered to think, move, and protect on its own.",
     isScrolling: true,
     className: "text-primary/70 italic",
   },
