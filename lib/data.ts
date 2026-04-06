@@ -279,7 +279,7 @@ const careers = {
   ],
   roles: [
     {
-      title: "Drone Pilot",
+      title: "Drone Engineer",
       department: "Operations",
       location: "Remote",
       type: "Full-time",
