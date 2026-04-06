@@ -27,7 +27,7 @@ const domainDetail: Record<
     capabilities: [
       "AI threat detection & behavioural classification",
       "Autonomous swarm coordination & patrol routing",
-      "Thermal, infrared, and HD optical imaging",
+      "Thermal, infrared, and LiDAR optical imaging",
       "Night vision & low-light operation",
       "Real-time perimeter breach alerts",
       "Seamless integration with ground systems",
@@ -90,7 +90,7 @@ export default function FocusPage() {
   return (
     <div className="min-h-screen bg-bg">
       {/* Header */}
-      <section className="relative flex min-h-[60svh] items-end overflow-hidden border-b border-border-col px-6 pb-16 pt-36 md:px-12">
+      <section className="relative flex min-h-[60svh] items-end overflow-hidden border-b border-border-col px-6 pb-16 pt-18 md:pt-36 md:px-12">
         <div
           className="pointer-events-none absolute inset-0 z-0 opacity-30"
           style={{
@@ -145,7 +145,7 @@ export default function FocusPage() {
         return (
           <div key={domain.id}>
             {/* Domain hero image */}
-            <div className="relative aspect-21/7 overflow-hidden">
+            <div className="relative aspect-video md:aspect-21/7 overflow-hidden">
               <img
                 src={domain.image}
                 alt={domain.word}
@@ -153,7 +153,7 @@ export default function FocusPage() {
               />
               <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_60%)]" />
               <div className="absolute bottom-8 left-10 flex items-end gap-6">
-                <span className="font-mono text-xxs tracking-[0.2em] text-dim">
+                <span className="font-mono font-bold text-xxs tracking-[0.2em] text-muted">
                   {domain.id}
                 </span>
                 <h2 className="font-heading font-black text-[clamp(4rem,12vw,10rem)] leading-none tracking-[-0.02em] text-primary">
@@ -223,7 +223,7 @@ export default function FocusPage() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: i * 0.1 }}
-                      className="bg-bg px-8 py-8 group"
+                      className="bg-bg md:px-8 py-8 group"
                     >
                       <div className="flex items-start justify-between gap-4">
                         <div>

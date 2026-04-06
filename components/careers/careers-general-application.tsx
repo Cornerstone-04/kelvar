@@ -6,7 +6,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 export function CareersGeneralApplication() {
   return (
-    <div className="mt-16 border-t border-border-col pt-12 font-medium">
+    <div className="mt-8 md:mt-16 border-t border-border-col pt-12 font-medium">
       <p className="mb-4 font-mono text-xs-plus text-white/50">
         Don't see a role that fits? We're always open to exceptional people.
       </p>

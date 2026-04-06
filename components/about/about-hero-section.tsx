@@ -4,7 +4,7 @@ import { SectionLabel } from "../ui/section-label";
 
 export const AboutHeroSection = () => {
   return (
-    <div className="relative flex min-h-[60svh] items-end overflow-hidden border-b border-border-col px-6 pb-16 pt-36 md:px-12">
+    <div className="relative flex min-h-[60svh] items-end overflow-hidden border-b border-border-col px-6 pb-16 pt-18 md:pt-36 md:px-12">
       <div
         className="pointer-events-none absolute inset-0 z-0 opacity-30"
         style={{

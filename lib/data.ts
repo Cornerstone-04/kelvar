@@ -67,16 +67,16 @@ export const dronePages: DronePageData[] = [
         image: "/images/sky-dome/swarm_render.jpg",
       },
       {
-        title: "AI Motion & Threat Detection",
+        title: "Sky Dome Dock",
         desc: "Intelligent classification of humans, vehicles, unusual behaviour, fire, smoke, and perimeter breaches — in real time.",
         tag: "Primary",
-        image: "/images/sky-dome/SKY_DOME_DRONE_07.jpg",
+        image: "/images/sky-dome/SKY_DOME_DRONE-_TABLE_TOP.jpg",
       },
       {
         title: "Solar Powered Surveillance",
         desc: "Self-sustaining drone systems powered by solar energy, enabling continuous operation in remote or off-grid environments with minimal maintenance.",
         tag: "Primary",
-        image: "/images/sky-dome/skydome_solar_render.jpg",
+        image: "/images/sky-dome/sky_dome_solar.jpg",
       },
       {
         title: "Night & Low-Light Vision",
@@ -84,17 +84,17 @@ export const dronePages: DronePageData[] = [
         tag: "Secondary",
         image: "/images/sky-dome/SKY_DOME_DRONE_-_CEILING_01.jpg",
       },
-      {
-        title: "Mobile Ground Sentry",
-        desc: "Integrates with flying CCTV cameras, solar powered street light, and an outdoor weatherproof system for a unified security layer.",
-        tag: "Secondary",
-        image: "/images/sky-dome/SKY_DOME_POLES.jpg",
-      },
+      // {
+      //   title: "Mobile Ground Sentry",
+      //   desc: "Integrates with flying CCTV cameras, solar powered street light, and an outdoor weatherproof system for a unified security layer.",
+      //   tag: "Secondary",
+      //   image: "/images/sky-dome/SKY_DOME_POLES.jpg",
+      // },
       {
         title: "Quiet & Residential-Safe",
         desc: "Designed for estates, farms, villages, and urban neighbourhoods. Lightweight, low-noise, and safe for everyday environments.",
         tag: "Secondary",
-        image: "/images/sky-dome/SKY_DOME_DRONE-_TABLE_TOP.jpg",
+        image: "/images/sky-dome/SKY_DOME_DRONE_07.jpg",
       },
     ],
     useCases: [
@@ -154,11 +154,11 @@ export const dronePages: DronePageData[] = [
     },
     specs: [
       { label: "System Type", value: "Autonomous Aerial Swarm" },
+      { label: "Drone Dock", value: "Sound · Sense · Smell" },
+      { label: "Sensors", value: "Gunshot · Glass Breaking · Smell" },
       { label: "Detection", value: "AI · ML · Predictive Analytics" },
-      { label: "Vision", value: "Thermal · Infrared · HD" },
+      { label: "Vision", value: "Thermal · Infrared · LiDAR" },
       { label: "Coverage", value: "360° Dynamic" },
-      { label: "Range", value: "TBC" },
-      { label: "Endurance", value: "TBC" },
       {
         label: "Integration",
         value: "Table · Ceiling · Outdoor",
@@ -193,8 +193,9 @@ const drones = [
     name: "Robobot",
     codename: "—",
     slug: "robobot",
-    tagline: "Floor robot for interior spaces",
-    desc: "Floor robot for interior spaces.",
+    tagline:
+      "AI-powered ground patrol for the spaces drones can't reach — indoors, always on.",
+    desc: "Autonomous indoor robot for continuous floor-level surveillance across offices, warehouses, factories, and commercial interiors.",
     assets: {
       image1: "/images/robobot/NU_FLOOR_CLEANER 01.jpg",
       video: "/videos/robobot_showcase.mp4",
@@ -210,8 +211,9 @@ const drones = [
     name: "Hydrax",
     codename: "—",
     slug: "hydrax",
-    tagline: "Waterproof drone for over-sea survey.",
-    desc: "Waterproof drone for over-sea survey.",
+    tagline:
+      "AI-powered aerial surveillance for coastlines, ports, and open water — corrosion-proof, always watching.",
+    desc: "Waterproof autonomous drone engineered for over-sea survey, maritime security, and offshore infrastructure monitoring.",
     assets: {
       image1: "/images/hydrax.jpg",
       video: "/videos/hydrax_showcase.mp4",
@@ -279,7 +281,7 @@ const careers = {
     {
       title: "Drone Pilot",
       department: "Operations",
-      location: "Lagos · London · Los Angeles",
+      location: "Remote",
       type: "Full-time",
       summary:
         "Operate and manage autonomous and semi-autonomous drone platforms across live deployments, field testing, and demonstration events. You'll work directly with our engineering team to push the limits of what our systems can do in real-world conditions.",

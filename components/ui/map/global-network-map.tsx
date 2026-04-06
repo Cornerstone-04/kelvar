@@ -46,7 +46,7 @@ export function GlobalNetworkMap() {
             {nodes.map((node) => (
               <div
                 key={node.id}
-                className="bg-bg px-6 py-5 transition-colors duration-200 hover:bg-surface flex items-center justify-between"
+                className="bg-bg md:px-6 py-5 transition-colors duration-200 hover:bg-surface flex items-center justify-between"
               >
                 <div>
                   <p className="font-mono text-xxs font-medium tracking-[0.25em] text-dim mb-1 uppercase">

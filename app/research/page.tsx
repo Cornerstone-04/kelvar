@@ -3,17 +3,17 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { SectionLabel } from "@/components/ui/section-label";
-import { GlitchText } from "@/components/ui/glitch-text";
 import { Rule } from "@/components/ui/rule";
 import { research } from "@/lib/data";
 import { ScrollingText } from "@/components/ui/scrolling-text";
 import { BsArrowRight } from "react-icons/bs";
+import { airConvoyDomains, coreTech, useCases } from "@/lib/air-convoy";
 
 export default function ResearchPage() {
   return (
     <div className="min-h-screen bg-bg">
       {/* Header */}
-      <section className="relative flex min-h-[60svh] items-end overflow-hidden border-b border-border-col px-6 pb-16 pt-36 md:px-12">
+      <section className="relative flex min-h-[60svh] items-end overflow-hidden border-b border-border-col px-6 pb-16 pt-18 md:pt-36 md:px-12">
         <div
           className="pointer-events-none absolute inset-0 z-0 opacity-30"
           style={{
@@ -33,23 +33,6 @@ export default function ResearchPage() {
           >
             <SectionLabel>Kelvar Industries</SectionLabel>
           </motion.div>
-          {/*<motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading font-black text-[clamp(3.5rem,12vw,10rem)] leading-none tracking-[-0.02em] text-primary mb-4"
-          >
-            Research,
-            <br />
-            Design &
-            <br />
-            <span
-              className="text-transparent"
-              style={{ WebkitTextStroke: "2px rgba(245,245,249,0.2)" }}
-            >
-              Development
-            </span>
-          </motion.h1>*/}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,7 +47,6 @@ export default function ResearchPage() {
             >
               &amp; Development
             </span>
-            
           </motion.h1>
         </div>
       </section>
@@ -112,7 +94,7 @@ export default function ResearchPage() {
       <Rule />
 
       {/* Research areas */}
-      <section className="px-10 py-24">
+      <section className="px-10 py-12 md:py-24">
         <div className="mb-12">
           <SectionLabel>Areas of Research</SectionLabel>
         </div>
@@ -124,7 +106,7 @@ export default function ResearchPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-bg px-8 py-10"
+              className="bg-bg md:px-8 py-10"
             >
               <div className="font-mono text-xxs tracking-[0.2em] text-dim mb-4 uppercase">
                 {area.id}
@@ -142,9 +124,235 @@ export default function ResearchPage() {
 
       <Rule />
 
+      {/* ── AIRCONVOY ── */}
+      <section className="py-12 md:py-24">
+        {/* Header — with padding */}
+        <div className="px-10 mb-16">
+          <SectionLabel>Featured Platform</SectionLabel>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
+            <div>
+              <motion.h2
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="font-heading font-black text-[clamp(3rem,9vw,7rem)] leading-none tracking-[-0.02em] text-primary"
+              >
+                AirConvoy
+                <sup className="text-[0.25em] align-super ml-2 text-primary/30">
+                  ™
+                </sup>
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="font-mono text-xs-plus text-muted mt-3"
+              >
+                Solar Sentry System · Tri-Domain Tethered Aerial Platform for
+                Air, Land & Sea
+              </motion.p>
+            </div>
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="font-mono text-xs-plus leading-[1.85] text-muted"
+            >
+              AirConvoy is a core component of Kelvar Industries'{" "}
+              <strong className="text-primary/70">Solar Sentry System</strong>,
+              a next-generation tethered drone platform engineered for
+              continuous, high-endurance surveillance, communication, and
+              environmental monitoring across air, land, and maritime
+              environments. Built for governments, security agencies, emergency
+              services, oil &amp; gas operations, and critical infrastructure
+              protection, delivering real-time intelligence with zero downtime.
+            </motion.p>
+          </div>
+        </div>
+
+        {/* ── INTRO IMAGE — full bleed showcase ── */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 1.2 }}
+          className="relative w-full overflow-hidden mb-0 aspect-video"
+        >
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover brightness-70"
+          >
+            <source src="/videos/airconvoy.mp4" type="video/mp4" />
+          </video>
+          {/*<div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_40%)]" />*/}
+          {/*<div className="absolute inset-0 bg-[linear-gradient(to_bottom,var(--bg)_0%,transparent_25%)]" />*/}
+
+          {/* Overlay label */}
+          <div className="absolute bottom-4 left-5 right-5 md:bottom-8 md:left-10 md:right-10 flex items-end justify-between">
+            <div>
+              <p className="font-mono text-xxs md:text-xs-plus font-bold uppercase tracking-[0.3em] text-white mb-2">
+                AirConvoy &mdash;
+              </p>
+              <p className="font-heading font-black text-[clamp(1.5rem,4vw,3.5rem)] leading-none text-primary">
+                Always above
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        <Rule />
+
+        {/* ── DOMAIN SECTIONS ── */}
+        {airConvoyDomains.map((d, i) => (
+          <div key={d.id}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 1 }}
+              className="relative w-full overflow-hidden aspect-21/9"
+            >
+              <img
+                src={d.image}
+                alt={`AirConvoy — ${d.domain}`}
+                className="absolute inset-0 h-full w-full object-cover brightness-[0.35] saturate-[0.5]"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_50%)]" />
+              {/*<div className="absolute inset-0 bg-[linear-gradient(to_bottom,var(--bg)_0%,transparent_30%)]" />*/}
+
+              <div className="absolute bottom-0 left-10 right-10 pb-8 flex items-end justify-between">
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7, delay: 0.2 }}
+                  className="font-heading font-black text-[clamp(5rem,15vw,13rem)] leading-none tracking-[-0.02em] text-primary"
+                >
+                  {d.domain}
+                </motion.h3>
+                <span className="font-mono text-xxs tracking-[0.2em] text-dim mb-4 shrink-0">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Capabilities */}
+            <div className="px-10 pt-10 pb-20">
+              <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start">
+                <div>
+                  <p className="font-mono text-xxs uppercase tracking-[0.25em] text-dim">
+                    {d.headline}
+                  </p>
+                </div>
+                <div className="border-t border-[#ffffff12]">
+                  {d.capabilities.map((cap, ci) => (
+                    <motion.div
+                      key={ci}
+                      initial={{ opacity: 0, x: -8 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: ci * 0.06 }}
+                      className="border-b border-[#ffffff12] py-4 flex items-start gap-6"
+                    >
+                      <span className="font-mono text-xxs tracking-[0.15em] text-dim shrink-0">
+                        {String(ci + 1).padStart(2, "0")}
+                      </span>
+                      <span className="font-mono text-xs-plus leading-relaxed text-muted">
+                        {cap}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <Rule />
+          </div>
+        ))}
+
+        {/* ── CORE TECHNOLOGIES ── */}
+        <div className="px-10 py-12 md:py-20">
+          <div className="mb-12">
+            <SectionLabel>Core Technologies</SectionLabel>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#ffffff12]">
+            {coreTech.map((t, i) => (
+              <motion.div
+                key={t.id}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="bg-bg md:px-8 py-5 md:py-10"
+              >
+                <div className="font-mono text-xxs tracking-[0.2em] text-dim mb-4 uppercase">
+                  {t.id}
+                </div>
+                <h3 className="font-heading font-bold text-[1.3rem] text-primary mb-3">
+                  {t.title}
+                </h3>
+                <p className="font-mono text-xs-plus leading-[1.75] text-muted">
+                  {t.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <Rule />
+
+        {/* ── USE CASES ── */}
+        <div className="px-10 py-12 md:py-20">
+          <div className="mb-12">
+            <SectionLabel>Use Cases</SectionLabel>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#ffffff12]">
+            {useCases.map((uc, i) => (
+              <motion.div
+                key={uc.category}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="bg-surface px-4 md:px-8 py-5 md:py-10"
+              >
+                <h3 className="font-heading font-bold text-[1.2rem] text-primary mb-6">
+                  {uc.category}
+                </h3>
+                <div className="border-t border-[#ffffff12]">
+                  {uc.items.map((item, ii) => (
+                    <div
+                      key={ii}
+                      className="border-b border-[#ffffff12] py-4 flex items-center gap-4"
+                    >
+                      <span className="font-mono text-xxs text-dim shrink-0">
+                        {String(ii + 1).padStart(2, "0")}
+                      </span>
+                      <span className="font-mono text-xs-plus text-muted">
+                        {item}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <Rule />
+      </section>
+
+      <Rule />
+
       {/* AAR connection */}
-      <section className="border-t border-[#ffffff12] px-10 py-24 bg-surface">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="border-t border-[#ffffff12] px-10 py-12 md:py-24 bg-surface">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
             <div className="mb-8">
               <SectionLabel>Powered by AAR</SectionLabel>
@@ -202,7 +410,7 @@ export default function ResearchPage() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-[#ffffff12] px-10 py-24 text-center">
+      <section className="border-t border-[#ffffff12] px-10 py-12 md:py-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

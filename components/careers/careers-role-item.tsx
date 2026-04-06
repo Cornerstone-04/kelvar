@@ -39,7 +39,7 @@ export function CareersRoleItem({ role, index }: CareersRoleItemProps) {
             <h3 className="mb-1.5 font-heading text-[1.3rem] font-bold text-white transition-colors group-hover:text-white/80">
               {role.title}
             </h3>
-            <p className="font-mono text-xs-plus text-white/35">
+            <p className="font-mono text-xs-plus text-muted">
               {role.location} · {role.type}
             </p>
           </div>
@@ -53,7 +53,7 @@ export function CareersRoleItem({ role, index }: CareersRoleItemProps) {
 
         {/* Bottom row — summary */}
         <div className="px-6 py-4">
-          <p className="font-mono text-xs-plus leading-relaxed text-white/30 group-hover:text-white/45 transition-colors duration-200">
+          <p className="font-mono text-xs-plus leading-relaxed text-muted group-hover:text-white/45 transition-colors duration-200">
             {role.summary}
           </p>
         </div>

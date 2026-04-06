@@ -38,7 +38,7 @@ export function CareersRoles() {
   };
 
   return (
-    <div className="px-6 py-20 md:px-12">
+    <div className="px-6 py-12 md:py-20 md:px-12">
       <SectionLabel>Open Positions</SectionLabel>
 
       <div className="grid grid-cols-1 gap-10 md:grid-cols-[280px_1fr] md:gap-16">
@@ -79,7 +79,7 @@ export function CareersRoles() {
           ) : (
             Object.entries(grouped).map(([dept, roles]) => (
               <div key={dept} className="flex flex-col gap-2 mt-6">
-                <p className="font-mono text-xxs uppercase tracking-[0.25em] text-white/25">
+                <p className="font-mono text-xxs uppercase tracking-[0.25em] text-muted">
                   {dept}
                 </p>
 

@@ -11,7 +11,7 @@ export function PillarGrid({ items }: { items: typeof ethos }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5, delay: i * 0.08 }}
-          className="bg-bg p-6"
+          className="bg-bg md:px-6 py-6"
         >
           {/* Image */}
           <div className="group/img relative mb-4 aspect-video overflow-hidden bg-surface">

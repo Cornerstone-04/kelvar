@@ -30,7 +30,7 @@ export function HeroSection() {
         muted
         loop
         playsInline
-        className="absolute inset-0 z-0 h-full w-full object-cover brightness-[0.35] saturate-[0.6]"
+        className="absolute inset-0 z-0 h-full w-full object-cover brightness-50 saturate-[0.6]"
       >
         <source src="/videos/kelvar_showcase.mp4" type="video/mp4" />
       </video>
@@ -53,7 +53,7 @@ export function HeroSection() {
       {/* Hero content */}
       <motion.div
         style={{ y: heroY, opacity: heroOpacity }}
-        className="relative z-2 w-full px-10 py-24"
+        className="relative z-2 w-full px-10 py-12 md:py-24"
       >
         <GlitchText
           tag="p"

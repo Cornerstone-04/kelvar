@@ -35,7 +35,7 @@ export default function DronePlatformRow({
     <div id={drone.slug}>
       {/* Label row */}
       <div
-        className={`flex items-start gap-12 px-10 pt-20 ${
+        className={`flex items-start gap-12 px-10 pt-10 md:pt-20 ${
           isEven ? "flex-row" : "flex-row-reverse"
         }`}
       >
@@ -97,7 +97,7 @@ export default function DronePlatformRow({
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.8 }}
-        className="relative mt-6 mb-0 mx-10 aspect-16/7 overflow-hidden bg-surface"
+        className="relative mt-6 mb-0 mx-10 aspect-16/9 overflow-hidden bg-surface"
       >
         <img
           src={
