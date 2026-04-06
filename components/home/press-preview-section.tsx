@@ -5,7 +5,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 export default function PressPreviewSection() {
   return (
-    <section className="border-t border-[#ffffff12] px-10 py-28">
+    <section className="border-t border-[#ffffff12] px-6 md:px-10 py-28">
       <div className="mb-12 flex items-end justify-between">
         <h2 className="flex items-center gap-3 font-heading text-[clamp(1.5rem,4vw,3rem)] font-bold uppercase text-primary">
           Press

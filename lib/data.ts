@@ -197,7 +197,7 @@ const drones = [
       "AI-powered ground patrol for the spaces drones can't reach — indoors, always on.",
     desc: "Autonomous indoor robot for continuous floor-level surveillance across offices, warehouses, factories, and commercial interiors.",
     assets: {
-      image1: "/images/robobot/NU_FLOOR_CLEANER 01.jpg",
+      image1: "/images/robobot/robobot_single.jpg",
       video: "/videos/robobot_showcase.mp4",
     },
     specs: [

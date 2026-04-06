@@ -53,7 +53,7 @@ export function HeroSection() {
       {/* Hero content */}
       <motion.div
         style={{ y: heroY, opacity: heroOpacity }}
-        className="relative z-2 w-full px-10 py-12 md:py-24"
+        className="relative z-2 w-full px-6 md:px-10 py-12 md:py-24"
       >
         <GlitchText
           tag="p"

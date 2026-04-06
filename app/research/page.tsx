@@ -52,7 +52,7 @@ export default function ResearchPage() {
       </section>
 
       {/* Intro — Ken's copy */}
-      <section className="border-t border-[#ffffff12] px-10 py-24">
+      <section className="border-t border-[#ffffff12] px-6 md:px-10 py-12 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div>
             <div className="mb-8">
@@ -94,8 +94,8 @@ export default function ResearchPage() {
       <Rule />
 
       {/* Research areas */}
-      <section className="px-10 py-12 md:py-24">
-        <div className="mb-12">
+      <section className="px-6 md:px-10 py-12 md:py-24">
+        <div className="mb-6 md:mb-12">
           <SectionLabel>Areas of Research</SectionLabel>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#ffffff12]">
@@ -124,56 +124,8 @@ export default function ResearchPage() {
 
       <Rule />
 
-      {/* ── AIRCONVOY ── */}
-      <section className="py-12 md:py-24">
-        {/* Header — with padding */}
-        <div className="px-10 mb-16">
-          <SectionLabel>Featured Platform</SectionLabel>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
-            <div>
-              <motion.h2
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="font-heading font-black text-[clamp(3rem,9vw,7rem)] leading-none tracking-[-0.02em] text-primary"
-              >
-                AirConvoy
-                <sup className="text-[0.25em] align-super ml-2 text-primary/30">
-                  ™
-                </sup>
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.15 }}
-                className="font-mono text-xs-plus text-muted mt-3"
-              >
-                Solar Sentry System · Tri-Domain Tethered Aerial Platform for
-                Air, Land & Sea
-              </motion.p>
-            </div>
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="font-mono text-xs-plus leading-[1.85] text-muted"
-            >
-              AirConvoy is a core component of Kelvar Industries'{" "}
-              <strong className="text-primary/70">Solar Sentry System</strong>,
-              a next-generation tethered drone platform engineered for
-              continuous, high-endurance surveillance, communication, and
-              environmental monitoring across air, land, and maritime
-              environments. Built for governments, security agencies, emergency
-              services, oil &amp; gas operations, and critical infrastructure
-              protection, delivering real-time intelligence with zero downtime.
-            </motion.p>
-          </div>
-        </div>
-
-        {/* ── INTRO IMAGE — full bleed showcase ── */}
+      <section className="pb-12 md:pb-24">
+        {/* ── INTRO VIDEO — full bleed ── */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -186,27 +138,75 @@ export default function ResearchPage() {
             muted
             loop
             playsInline
-            className="absolute inset-0 h-full w-full object-cover brightness-70"
+            className="absolute inset-0 h-full w-full object-cover brightness-[0.55]"
           >
             <source src="/videos/airconvoy.mp4" type="video/mp4" />
           </video>
-          {/*<div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_40%)]" />*/}
-          {/*<div className="absolute inset-0 bg-[linear-gradient(to_bottom,var(--bg)_0%,transparent_25%)]" />*/}
 
-          {/* Overlay label */}
-          <div className="absolute bottom-4 left-5 right-5 md:bottom-8 md:left-10 md:right-10 flex items-end justify-between">
-            <div>
-              <p className="font-mono text-xxs md:text-xs-plus font-bold uppercase tracking-[0.3em] text-white mb-2">
-                AirConvoy &mdash;
-              </p>
-              <p className="font-heading font-black text-[clamp(1.5rem,4vw,3.5rem)] leading-none text-primary">
-                Always above
-              </p>
-            </div>
+          {/* Stronger bottom fade so text below bleeds in cleanly */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_8%,transparent_50%)]" />
+          {/* Subtle vignette on sides */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(7,7,42,0.5)_100%)]" />
+
+          {/* Bottom-left label */}
+          <div className="absolute left-6 bottom-8 md:left-10">
+            {/*<p className="font-mono text-xxs uppercase tracking-[0.3em] text-white/35 mb-2">
+              Solar Sentry System · Kelvar Industries
+            </p>*/}
+            <h2 className="font-heading font-black text-[clamp(4rem,10vw,8rem)] normal-case leading-none tracking-[-0.02em] text-primary">
+              AirConvoy
+              <sup className="text-[0.25em] align-super ml-1 text-primary">
+                ™
+              </sup>
+            </h2>
+            <p className="font-mono text-xs-plus md:text-base font-medium text-muted mt-2 max-w-[40ch]">
+              Always Above
+            </p>
           </div>
         </motion.div>
 
-        <Rule />
+        {/* ── DESCRIPTION — below video ── */}
+        <div className="px-6 md:px-10 py-12 md:py-20 border-b border-[#ffffff12]">
+          <div className="grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-8 md:gap-12 items-start">
+            <div className="max-w-md">
+              <div>
+                <SectionLabel className="mb-3">Featured Platform</SectionLabel>
+              </div>
+
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="font-heading font-bold text-[clamp(1.3rem,3vw,2rem)] leading-[1.15] text-primary"
+              >
+                AirConvoy is a core component of Kelvar Industries’ Solar Sentry
+                System.
+              </motion.p>
+
+              <p className="mt-4 font-mono text-xxs font-semibold uppercase tracking-[0.2em] text-dim">
+                Tri-Domain Tethered Aerial Platform
+              </p>
+            </div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="max-w-[75ch] font-mono text-xs-plus leading-[1.9] text-muted"
+            >
+              AirConvoy is Kelvar Industries’ next‑generation tethered drone
+              system engineered for continuous, high‑endurance surveillance,
+              communication, and environmental monitoring across air, land, and
+              maritime environments. Built for governments, security agencies,
+              emergency services, oil &amps; gas operations, and critical
+              infrastructure protection, AirConvoy delivers real‑time
+              intelligence with zero downtime, thanks to its power‑over‑tether
+              architecture and ultra‑secure data link.
+            </motion.p>
+          </div>
+        </div>
 
         {/* ── DOMAIN SECTIONS ── */}
         {airConvoyDomains.map((d, i) => (
@@ -216,37 +216,36 @@ export default function ResearchPage() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 1 }}
-              className="relative w-full overflow-hidden aspect-21/9"
+              className="relative w-full overflow-hidden aspect-video md:aspect-21/9"
             >
               <img
                 src={d.image}
                 alt={`AirConvoy — ${d.domain}`}
-                className="absolute inset-0 h-full w-full object-cover brightness-[0.35] saturate-[0.5]"
+                className="absolute inset-0 h-full w-full object-cover brightness-50 saturate-[0.5]"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_50%)]" />
-              {/*<div className="absolute inset-0 bg-[linear-gradient(to_bottom,var(--bg)_0%,transparent_30%)]" />*/}
+              <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_55%)]" />
 
-              <div className="absolute bottom-0 left-10 right-10 pb-8 flex items-end justify-between">
+              <div className="absolute bottom-0 left-6 right-6 pb-6 md:left-10 md:right-10 md:pb-8 flex items-end justify-between">
                 <motion.h3
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7, delay: 0.2 }}
-                  className="font-heading font-black text-[clamp(5rem,15vw,13rem)] leading-none tracking-[-0.02em] text-primary"
+                  className="font-heading normal-case font-black text-[clamp(4rem,10vw,8rem)] leading-none tracking-[-0.02em] text-primary"
                 >
                   {d.domain}
                 </motion.h3>
-                <span className="font-mono text-xxs tracking-[0.2em] text-dim mb-4 shrink-0">
+                <span className="font-mono text-xxs font-medium tracking-[0.2em] text-muted mb-2 md:mb-4 shrink-0">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
             </motion.div>
 
             {/* Capabilities */}
-            <div className="px-10 pt-10 pb-20">
-              <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start">
+            <div className="px-6 md:px-10 pt-8 pb-16 md:pt-10 md:pb-20">
+              <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 md:gap-12 items-start">
                 <div>
-                  <p className="font-mono text-xxs uppercase tracking-[0.25em] text-dim">
+                  <p className="font-mono font-medium text-xxs uppercase tracking-[0.25em] text-muted leading-relaxed">
                     {d.headline}
                   </p>
                 </div>
@@ -277,7 +276,7 @@ export default function ResearchPage() {
         ))}
 
         {/* ── CORE TECHNOLOGIES ── */}
-        <div className="px-10 py-12 md:py-20">
+        <div className="px-6 md:px-10 py-12 md:py-20">
           <div className="mb-12">
             <SectionLabel>Core Technologies</SectionLabel>
           </div>
@@ -289,7 +288,7 @@ export default function ResearchPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-bg md:px-8 py-5 md:py-10"
+                className="bg-bg px-6 md:px-8 py-8 md:py-10"
               >
                 <div className="font-mono text-xxs tracking-[0.2em] text-dim mb-4 uppercase">
                   {t.id}
@@ -308,7 +307,7 @@ export default function ResearchPage() {
         <Rule />
 
         {/* ── USE CASES ── */}
-        <div className="px-10 py-12 md:py-20">
+        <div className="px-6 md:px-10 py-12 md:py-20">
           <div className="mb-12">
             <SectionLabel>Use Cases</SectionLabel>
           </div>
@@ -320,7 +319,7 @@ export default function ResearchPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="bg-surface px-4 md:px-8 py-5 md:py-10"
+                className="bg-surface px-6 md:px-8 py-8 md:py-10"
               >
                 <h3 className="font-heading font-bold text-[1.2rem] text-primary mb-6">
                   {uc.category}
@@ -346,12 +345,31 @@ export default function ResearchPage() {
         </div>
 
         <Rule />
+
+        {/* ── TAGLINE ── */}
+        {/*
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="px-6 md:px-10 py-20 md:py-24 text-center"
+        >
+          <p className="font-heading font-black text-[clamp(2rem,6vw,5rem)] leading-none text-primary mb-4">
+            Unbroken Power.
+            <br />
+            Unbroken Vision.
+          </p>
+          <p className="font-mono text-xxs uppercase tracking-[0.3em] text-dim mt-4">
+            AirConvoy™ · Solar Sentry System · Always Above.
+          </p>
+        </motion.div>*/}
       </section>
 
       <Rule />
 
       {/* AAR connection */}
-      <section className="border-t border-[#ffffff12] px-10 py-12 md:py-24 bg-surface">
+      <section className="border-t border-[#ffffff12] px-6 md:px-10 py-12 md:py-24 bg-surface">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
             <div className="mb-8">
@@ -410,7 +428,7 @@ export default function ResearchPage() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-[#ffffff12] px-10 py-12 md:py-24 text-center">
+      <section className="border-t border-[#ffffff12] px-6 md:px-10 py-12 md:py-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

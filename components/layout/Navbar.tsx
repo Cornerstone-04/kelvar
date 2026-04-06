@@ -39,7 +39,7 @@ export default function Navbar() {
         initial={{ y: 0, opacity: 0 }}
         animate={{ y: hidden && !open ? "-100%" : 0, opacity: 1 }}
         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed top-0 right-0 left-0 z-50 flex py-4 items-center justify-between border-b border-white/5 bg-[#07072abf] px-8 backdrop-blur-lg md:px-10"
+        className="fixed top-0 right-0 left-0 z-50 flex py-4 items-center justify-between border-b border-white/5 bg-[#07072abf] px-6 backdrop-blur-lg md:px-10"
         style={{ WebkitBackdropFilter: "blur(16px)" }}
       >
         <Link href="/" className="no-underline" onClick={() => setOpen(false)}>

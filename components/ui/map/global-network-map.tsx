@@ -16,7 +16,7 @@ const nodes = [
 
 export function GlobalNetworkMap() {
   return (
-    <section className="border-t border-[#ffffff12] px-10 py-16">
+    <section className="border-t border-[#ffffff12] px-6 md:px-10 py-16">
       <div className="mb-12">
         <SectionLabel>Global Reach</SectionLabel>
       </div>

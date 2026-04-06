@@ -1,10 +1,9 @@
 const airConvoyDomains = [
   {
     id: "01",
-    domain: "Air",
+    domain: "Air Domain",
     headline: "Persistent Elevated Surveillance",
-    image:
-      "https://images.unsplash.com/photo-1446776811765-4b79af1adbc1?w=900&fm=jpg&q=75&fit=crop",
+    image: "/images/airconvoy/airconvoy_air.jpg",
     capabilities: [
       "24/7 operation with uninterrupted power",
       "High-altitude tethered flight up to 150–300m",
@@ -14,10 +13,9 @@ const airConvoyDomains = [
   },
   {
     id: "02",
-    domain: "Land",
+    domain: "Land Domain",
     headline: "Mobile or Fixed Deployment",
-    image:
-      "https://images.unsplash.com/photo-1542401886-65d6c61db217?w=900&fm=jpg&q=75&fit=crop",
+    image: "/images/airconvoy/airconvoy_land.jpg",
     capabilities: [
       "Rapid deployment under 3 minutes",
       "Auto-stabilising flight in harsh wind conditions",
@@ -27,10 +25,9 @@ const airConvoyDomains = [
   },
   {
     id: "03",
-    domain: "Sea",
+    domain: "Sea Domain",
     headline: "Maritime & Offshore Operations",
-    image:
-      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=900&fm=jpg&q=75&fit=crop",
+    image: "/images/airconvoy/airconvoy_sea.jpg",
     capabilities: [
       "Corrosion-proof frame",
       "Saltwater-resistant tethering",

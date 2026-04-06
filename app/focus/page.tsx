@@ -5,7 +5,6 @@ import Link from "next/link";
 import { focus } from "@/lib/data";
 import { SectionLabel } from "@/components/ui/section-label";
 import { Rule } from "@/components/ui/rule";
-import { GlitchText } from "@/components/ui/glitch-text";
 import { ScrollingText } from "@/components/ui/scrolling-text";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -145,7 +144,7 @@ export default function FocusPage() {
         return (
           <div key={domain.id}>
             {/* Domain hero image */}
-            <div className="relative aspect-video md:aspect-21/7 overflow-hidden">
+            <div className="relative aspect-video md:aspect-21/9 overflow-hidden">
               <img
                 src={domain.image}
                 alt={domain.word}
@@ -156,14 +155,14 @@ export default function FocusPage() {
                 <span className="font-mono font-bold text-xxs tracking-[0.2em] text-muted">
                   {domain.id}
                 </span>
-                <h2 className="font-heading font-black text-[clamp(4rem,12vw,10rem)] leading-none tracking-[-0.02em] text-primary">
+                <h2 className="font-heading font-black text-[clamp(4rem,10vw,8rem)] leading-none tracking-[-0.02em] text-primary">
                   {domain.word}
                 </h2>
               </div>
             </div>
 
             {/* Headline + body */}
-            <section className="border-t border-[#ffffff12] px-10 py-24">
+            <section className="border-t border-[#ffffff12] px-6 md:px-10 py-12 md:py-24">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-20">
                 <div>
                   <div className="mb-8">
@@ -255,7 +254,7 @@ export default function FocusPage() {
       })}
 
       {/* CTA */}
-      <section className="border-t border-[#ffffff12] px-10 py-24 text-center">
+      <section className="border-t border-[#ffffff12] px-6 md:px-10 py-12 md:py-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

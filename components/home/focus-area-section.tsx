@@ -6,7 +6,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 export function AreasOfFocusSection() {
   return (
-    <section className="border-t border-[#ffffff12] px-10 py-12 md:py-28">
+    <section className="border-t border-[#ffffff12] px-6 md:px-10 py-12 md:py-28">
       <div className="mb-4 flex items-center justify-between gap-4">
         <div className="flex-1">
           <SectionLabel>Areas of Focus</SectionLabel>

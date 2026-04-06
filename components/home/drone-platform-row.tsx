@@ -97,7 +97,7 @@ export default function DronePlatformRow({
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.8 }}
-        className="relative mt-6 mb-0 mx-10 aspect-16/9 overflow-hidden bg-surface"
+        className="relative mt-6 mb-0 mx-10 aspect-video overflow-hidden bg-surface"
       >
         <img
           src={
@@ -106,7 +106,7 @@ export default function DronePlatformRow({
               : drone.assets.image1
           }
           alt={drone.name}
-          className="absolute inset-0 h-full w-full object-cover brightness-[0.75] saturate-[0.7]"
+          className="absolute inset-0 h-full w-full object-cover brightness-80 saturate-[0.7]"
         />
       </motion.div>
 

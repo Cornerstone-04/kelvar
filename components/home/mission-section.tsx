@@ -7,7 +7,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 export function MissionSection() {
   return (
-    <section className="border-t border-[#ffffff12] px-10 py-12 md:py-32">
+    <section className="border-t border-[#ffffff12] px-6 md:px-10 py-12 md:py-32">
       <div className="max-w-300">
         <div className="mb-8">
           <SectionLabel>Mission</SectionLabel>

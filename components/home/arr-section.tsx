@@ -28,7 +28,7 @@ const aarParagraphs = [
 
 export function ArrSection() {
   return (
-    <section className="border-t border-[#ffffff12] px-10 py-12 md:py-24">
+    <section className="border-t border-[#ffffff12] px-6 md:px-10 py-12 md:py-24">
       <div className="mb-12">
         <SectionLabel>Autonomous A.I. Robotics</SectionLabel>
       </div>

@@ -57,7 +57,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
 
         <motion.div
           style={{ y: heroY, opacity: heroOpacity }}
-          className="relative z-2 w-full px-10 py-24"
+          className="relative z-2 w-full px-6 md:px-10 py-12 md:py-24"
         >
           <GlitchText
             tag="p"
@@ -106,7 +106,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
       </section>
 
       {/* ── CONCEPT ── */}
-      <section className="border-t border-[#ffffff12] px-10 py-32">
+      <section className="border-t border-[#ffffff12] px-6 md:px-10 py-16 md:py-32">
         <div className="max-w-300">
           <div className="mb-8">
             <SectionLabel>Concept</SectionLabel>
@@ -132,7 +132,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
         return (
           <div key={f.title}>
             <div
-              className={`flex items-start gap-12 px-10 pt-16 ${isEven ? "flex-row" : "flex-row-reverse"}`}
+              className={`flex items-start gap-12 px-6 md:px-10 pt-16 ${isEven ? "flex-row" : "flex-row-reverse"}`}
             >
               <div className="min-w-8 pt-1.5">
                 <GlitchText
@@ -147,7 +147,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
               >
                 <div className="flex-1">
                   <div
-                    className={`${isEven ? "text-left" : "text-right"} mb-2 font-mono text-xxs tracking-[0.15em] uppercase text-dim`}
+                    className={`${isEven ? "md:text-left" : "md:text-right"} mb-2 font-mono text-xxs tracking-[0.15em] uppercase text-dim`}
                   >
                     {f.tag}
                   </div>
@@ -177,7 +177,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
                 alt={f.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 80vw"
-                className="object-cover brightness-60 group-hover:brightness-75 saturate-[0.5] group-hover:scale-105 transition-all ease-linear"
+                className="object-cover brightness-70 group-hover:brightness-75 saturate-[0.5] group-hover:scale-105 transition-all ease-linear"
                 priority={i === 0}
               />
               <div className="absolute inset-0 bg-[linear-gradient(to_top,#07072a_0%,transparent_60%)]" />
@@ -189,7 +189,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
       })}
 
       {/* ── USE CASES ── */}
-      <section className="border-t border-border-col px-10 py-24">
+      <section className="border-t border-border-col px-6 md:px-10 py-12 md:py-24">
         <div className="mb-12">
           <SectionLabel>Ideal For</SectionLabel>
         </div>
@@ -210,7 +210,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
                   alt={uc.label}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover brightness-[0.55] saturate-[0.5] transition-all duration-500 hover:brightness-[0.7]"
+                  className="object-cover brightness-70 saturate-[0.5] transition-all duration-500 hover:brightness-[0.7]"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_55%)]" />
               </div>
@@ -237,7 +237,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
       <Rule />
 
       {/* ── VISION ── */}
-      <section className="border-t border-[#ffffff12] px-10 py-32">
+      <section className="border-t border-[#ffffff12] px-6 md:px-10 py-16 md:py-32">
         <div className="max-w-300">
           <div className="mb-8">
             <SectionLabel>Vision</SectionLabel>
@@ -258,7 +258,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
       <Rule />
 
       {/* ── SPECS ── */}
-      <section className="bg-surface px-10 py-24">
+      <section className="bg-surface px-6 md:px-10 py-12 md:py-24">
         <div className="mb-12">
           <SectionLabel>Specifications</SectionLabel>
         </div>
@@ -304,7 +304,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
       <Rule />
 
       {/* ── STATS ── */}
-      <section className="px-10 py-24">
+      <section className="px-6 md:px-10 py-12 md:py-24">
         <div className="mb-12">
           <SectionLabel>The Case for Change</SectionLabel>
         </div>
@@ -332,7 +332,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
       <Rule />
 
       {/* ── PHILOSOPHY ── */}
-      <section className="bg-surface px-10 py-24">
+      <section className="bg-surface px-6 md:px-10 py-12 md:py-24">
         <div className="mb-12">
           <SectionLabel>Philosophy</SectionLabel>
         </div>
@@ -362,7 +362,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
       <Rule />
 
       {/* ── INDUSTRIES ── */}
-      <section className="px-10 py-24">
+      <section className="px-6 md:px-10 py-12 md:py-24">
         <div className="mb-12">
           <SectionLabel>Industries We Serve</SectionLabel>
         </div>
@@ -390,7 +390,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
       </section>
 
       {/* ── CTA ── */}
-      <section className="relative overflow-hidden border-t border-border-col px-10 py-32 text-center">
+      <section className="relative overflow-hidden border-t border-border-col px-6 md:px-10 py-16 md:py-32 text-center">
         <div className="pointer-events-none absolute top-[-20%] left-1/2 z-0 h-[60vw] w-[60vw] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,#28285060_0%,transparent_65%)]" />
         <div className="relative z-1 max-w-3xl mx-auto">
           <motion.div
