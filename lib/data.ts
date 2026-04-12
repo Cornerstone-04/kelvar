@@ -155,7 +155,7 @@ export const dronePages: DronePageData[] = [
     specs: [
       { label: "System Type", value: "Autonomous Aerial Swarm" },
       { label: "Drone Dock", value: "Sound · Sense · Smell" },
-      { label: "Sensors", value: "Gunshot · Glass Breaking · Smell" },
+      { label: "Sensors", value: "Gunshot · Glass Breaking · Fire" },
       { label: "Detection", value: "AI · ML · Predictive Analytics" },
       { label: "Vision", value: "Thermal · Infrared · LiDAR" },
       { label: "Coverage", value: "360° Dynamic" },
@@ -399,7 +399,7 @@ const research = {
     },
     {
       id: "04",
-      title: "Edge AI",
+      title: "Kelvar AI",
       desc: "Pushing intelligence to the device level, enabling drones and ground units to process, decide, and act without relying on cloud connectivity or remote computation.",
     },
   ],
