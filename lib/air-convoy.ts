@@ -1,7 +1,7 @@
 const airConvoyDomains = [
   {
     id: "01",
-    domain: "Air Domain",
+    domain: "Untethered",
     headline: "Persistent Elevated Surveillance",
     image: "/images/airconvoy/airconvoy_air.jpg",
     capabilities: [
@@ -13,7 +13,7 @@ const airConvoyDomains = [
   },
   {
     id: "02",
-    domain: "Land Domain",
+    domain: "Tethered",
     headline: "Mobile or Fixed Deployment",
     image: "/images/airconvoy/airconvoy_land.jpg",
     capabilities: [
@@ -25,7 +25,7 @@ const airConvoyDomains = [
   },
   {
     id: "03",
-    domain: "Sea Domain",
+    domain: "Hybrid",
     headline: "Maritime & Offshore Operations",
     image: "/images/airconvoy/airconvoy_sea.jpg",
     capabilities: [
