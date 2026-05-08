@@ -43,7 +43,6 @@ export const TeamSection = () => {
                   text={member.bio}
                   className="font-mono text-xs-plus leading-[1.85] text-white max-w-[75ch]"
                 />
-                
               </div>
             </motion.div>
           ))}

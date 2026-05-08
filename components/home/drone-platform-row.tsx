@@ -60,7 +60,7 @@ export default function DronePlatformRow({
               isOdd ? "md:text-right" : ""
             }`}
           >
-            {drone.slug === "sky-dome" ? (
+            {drone.slug === "dome" ? (
               <Link
                 href={`/drones/${drone.slug}`}
                 className="inline-flex items-baseline gap-4"
@@ -101,7 +101,7 @@ export default function DronePlatformRow({
       >
         <img
           src={
-            drone.slug === "sky-dome"
+            drone.slug === "dome"
               ? drone.assets.image2 || drone.assets.image1
               : drone.assets.image1
           }

@@ -21,7 +21,7 @@ const domainDetail: Record<
     headline: "Eyes in the Sky. No Blind Spots.",
     body: [
       "Aerial surveillance transforms what's possible in security. Unlike fixed cameras, our autonomous aerial platforms reposition, track, and respond — covering ground continuously and without boundaries.",
-      "Sky Dome leads our air division: a coordinated swarm of AI-powered micro-drones that create an adaptive protective dome over any environment. Each unit communicates with the others, adjusting patrol paths in real time based on detected movement, threat classification, and environmental conditions.",
+      "Dome leads our air division: a coordinated swarm of AI-powered micro-drones that create an adaptive protective dome over any environment. Each unit communicates with the others, adjusting patrol paths in real time based on detected movement, threat classification, and environmental conditions.",
     ],
     capabilities: [
       "AI threat detection & behavioural classification",
@@ -33,9 +33,31 @@ const domainDetail: Record<
     ],
     systems: [
       {
-        name: "SKY DOME",
+        name: "DOME",
         desc: "Autonomous aerial CCTV swarm for residential, commercial, and industrial security.",
-        slug: "sky-dome",
+        slug: "dome",
+      },
+    ],
+  },
+  SEA: {
+    headline: "Coastal. Offshore. Unreachable.",
+    body: [
+      "Coastal borders, offshore infrastructure, and maritime operations represent some of the most difficult environments to secure. Weather, water, and distance make traditional surveillance unreliable. Kelvar's waterproof platforms are built specifically for these conditions.",
+      "Our sea-based systems deliver the same autonomous intelligence that protects homes and factories — now extended to ports, coastlines, fish farms, oil platforms, and marine research operations.",
+    ],
+    capabilities: [
+      "Waterproof and saltwater-resistant design",
+      "Over-sea survey and coastal patrol",
+      "Offshore infrastructure monitoring",
+      "GPS and inertial navigation in open water",
+      "Long-endurance autonomous operation",
+      "Emergency alert and incident response",
+    ],
+    systems: [
+      {
+        name: "HYDRAX",
+        desc: "Waterproof drone for over-sea survey, coastal security, and offshore infrastructure monitoring.",
+        slug: "hydrax",
       },
     ],
   },
@@ -61,25 +83,24 @@ const domainDetail: Record<
       },
     ],
   },
-  SEA: {
-    headline: "Coastal. Offshore. Unreachable.",
+  SPACE: {
+    headline: "Beyond the Atmosphere. Always Watching.",
     body: [
-      "Coastal borders, offshore infrastructure, and maritime operations represent some of the most difficult environments to secure. Weather, water, and distance make traditional surveillance unreliable. Kelvar's waterproof platforms are built specifically for these conditions.",
-      "Our sea-based systems deliver the same autonomous intelligence that protects homes and factories — now extended to ports, coastlines, fish farms, oil platforms, and marine research operations.",
+      "The final frontier of autonomous surveillance is above the clouds. Kelvar's space division is building low-orbit monitoring systems capable of delivering persistent, wide-area intelligence at a global scale — where no ground or aerial platform can reach.",
+      "From satellite-linked sensor networks to low-earth orbit autonomous platforms, Kelvar is engineering the next generation of space-based surveillance infrastructure for governments, defence agencies, and critical global operations.",
     ],
     capabilities: [
-      "Waterproof and saltwater-resistant design",
-      "Over-sea survey and coastal patrol",
-      "Offshore infrastructure monitoring",
-      "GPS and inertial navigation in open water",
-      "Long-endurance autonomous operation",
-      "Emergency alert and incident response",
+      "Low-earth orbit autonomous monitoring",
+      "Satellite-linked real-time data transmission",
+      "Global coverage with persistent surveillance",
+      "Integration with ground and aerial systems",
+      "High-resolution optical and radar imaging",
+      "Secure encrypted data links",
     ],
     systems: [
       {
-        name: "HYDRAX",
-        desc: "Waterproof drone for over-sea survey, coastal security, and offshore infrastructure monitoring.",
-        slug: "hydrax",
+        name: "STRATOS",
+        desc: "Kelvar's space surveillance platforms are currently in the research and design phase. Details to follow.",
       },
     ],
   },

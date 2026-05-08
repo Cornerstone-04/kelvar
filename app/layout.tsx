@@ -53,6 +53,9 @@ export const metadata: Metadata = {
     ],
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: "/kelvar-bird.png",
+  },
 };
 
 export default function RootLayout({

@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import { drones } from "@/lib/data";
 import DronePlatformRow from "@/components/home/drone-platform-row";

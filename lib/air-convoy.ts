@@ -6,7 +6,7 @@ const airConvoyDomains = [
     image: "/images/airconvoy/airconvoy_air.jpg",
     capabilities: [
       "24/7 operation with uninterrupted power",
-      "High-altitude tethered flight up to 150–300m",
+      "High-altitude untethered flight up to 150–300m",
       "AI-powered optical, thermal, and night-vision sensors",
       "Ideal for border monitoring, event security, and disaster assessment",
     ],

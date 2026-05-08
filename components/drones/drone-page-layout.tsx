@@ -206,7 +206,7 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
               {/* Image */}
               <div className="relative aspect-video overflow-hidden">
                 <Image
-                  src={uc.image ?? "/images/sky-dome/SKY_DOME_DRONE_01.jpg"}
+                  src={uc.image ?? "/images/dome/SKY_DOME_DRONE_01.jpg"}
                   alt={uc.label}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -291,8 +291,8 @@ export default function DronePageLayout({ drone }: { drone: DronePageData }) {
             className="group hidden md:block relative overflow-hidden self-stretch min-h-50 bg-primary"
           >
             <Image
-              src="/images/sky-dome/skydome_tech_pack_1.png"
-              alt="Sky Dome — Side Profile"
+              src="/images/dome/skydome_tech_pack_1.png"
+              alt="Dome — Side Profile"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-contain brightness-100 saturate-[0.5] scale-110 group-hover:scale-115 transition-all ease-linear"

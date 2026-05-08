@@ -52,49 +52,43 @@ export type DronePageData = {
 export const dronePages: DronePageData[] = [
   {
     id: "01",
-    name: "SKY DOME",
-    slug: "sky-dome",
+    name: "DOME",
+    slug: "dome",
     trademark: true,
     tagline:
       "AI-Powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
     concept:
-      "Imagine a living CCTV network where cameras don't stay fixed on walls. They fly, reposition, track, and respond. SKY DOME replaces blind spots with 360° dynamic aerial visibility, powered by AI, machine learning, and predictive threat analytics. Each drone in the network communicates with the others, creating a protective dome of real-time, adaptive security over any environment.",
+      "Imagine a living CCTV network where cameras don't stay fixed on walls. They fly, reposition, track, and respond. Dome replaces blind spots with 360° dynamic aerial visibility, powered by AI, machine learning, and predictive threat analytics. Each drone in the network communicates with the others, creating a protective dome of real-time, adaptive security over any environment.",
     features: [
       {
         title: "Autonomous Patrol Swarm",
         desc: "Multiple drones create overlapping surveillance paths for continuous, uninterrupted coverage across any environment.",
         tag: "Primary",
-        image: "/images/sky-dome/swarm_render.jpg",
+        image: "/images/dome/swarm_render.jpg",
       },
       {
-        title: "Sky Dome Dock",
+        title: "Dome Dock",
         desc: "Intelligent classification of humans, vehicles, unusual behaviour, fire, smoke, and perimeter breaches — in real time.",
         tag: "Primary",
-        image: "/images/sky-dome/SKY_DOME_DRONE-_TABLE_TOP.jpg",
+        image: "/images/dome/SKY_DOME_DRONE-_TABLE_TOP.jpg",
       },
       {
         title: "Solar Powered Surveillance",
         desc: "Self-sustaining drone systems powered by solar energy, enabling continuous operation in remote or off-grid environments with minimal maintenance.",
         tag: "Primary",
-        image: "/images/sky-dome/sky_dome_solar.jpg",
+        image: "/images/dome/sky_dome_solar.jpg",
       },
       {
         title: "Night & Low-Light Vision",
         desc: "Thermal and infrared imaging ensures complete visibility regardless of time of day or weather conditions.",
         tag: "Secondary",
-        image: "/images/sky-dome/SKY_DOME_DRONE_-_CEILING_01.jpg",
+        image: "/images/dome/SKY_DOME_DRONE_-_CEILING_01.jpg",
       },
-      // {
-      //   title: "Mobile Ground Sentry",
-      //   desc: "Integrates with flying CCTV cameras, solar powered street light, and an outdoor weatherproof system for a unified security layer.",
-      //   tag: "Secondary",
-      //   image: "/images/sky-dome/SKY_DOME_POLES.jpg",
-      // },
       {
         title: "Quiet & Residential-Safe",
         desc: "Designed for estates, farms, villages, and urban neighbourhoods. Lightweight, low-noise, and safe for everyday environments.",
         tag: "Secondary",
-        image: "/images/sky-dome/SKY_DOME_DRONE_07.jpg",
+        image: "/images/dome/SKY_DOME_DRONE_07.jpg",
       },
     ],
     useCases: [
@@ -148,7 +142,7 @@ export const dronePages: DronePageData[] = [
       "Oil & gas, energy, factories, and high-risk industrial zones",
     ],
     assets: {
-      image: "/images/sky-dome/SKY_DOME_DRONE_01.jpg",
+      image: "/images/dome/SKY_DOME_DRONE_01.jpg",
       video: "/videos/sky_dome_showcase.mp4",
       videoAlt: "/videos/skydome_swarm_showcase.mp4",
     },
@@ -171,15 +165,15 @@ export const dronePages: DronePageData[] = [
 const drones = [
   {
     id: "01",
-    name: "Sky Dome",
+    name: "Dome",
     codename: "—",
-    slug: "sky-dome",
+    slug: "dome",
     tagline:
       "AI Powered CCTV cameras that fly; to prevent Fire, Fraud & Felony",
     desc: "AI-powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
     assets: {
-      image1: "/images/sky-dome/SKY_DOME_DRONE_01.jpg",
-      image2: "/images/sky-dome/SKY_DOME_DRONE_03.jpg",
+      image1: "/images/dome/SKY_DOME_DRONE_01.jpg",
+      image2: "/images/dome/SKY_DOME_DRONE_03.jpg",
       video: "/videos/sky_dome_showcase.mp4",
     },
     specs: [
@@ -357,23 +351,30 @@ const focus = [
   {
     id: "01",
     word: "AIR",
-    sub: "Our autonomous aerial platforms deliver wide-area surveillance that no fixed camera can match. From residential estates to industrial zones, Sky Dome and its successors patrol, track, and respond, covering ground continuously and without boundaries.",
+    sub: "Our autonomous aerial platforms deliver wide-area surveillance that no fixed camera can match. From residential estates to industrial zones, Dome and its successors patrol, track, and respond, covering ground continuously and without boundaries.",
     image:
       "https://images.unsplash.com/photo-1646749701929-f271445c7990?w=1920&h=1080&fm=jpg&q=80&fit=crop",
   },
   {
     id: "02",
+    word: "SEA",
+    sub: "Coastal borders, offshore infrastructure, and maritime operations demand a different kind of protection. Kelvar's waterproof systems are engineered for harsh aquatic environments, delivering the same autonomous intelligence at sea as on land and in the air.",
+    image:
+      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1920&h=1080&fm=jpg&q=80&fit=crop",
+  },
+  {
+    id: "03",
     word: "LAND",
     sub: "Ground-based autonomous units built for the environments people live and work in. Whether it's brban streets, remote perimeters, or indoor spaces, Kelvar's land systems navigate complex terrain with precision, bringing intelligent surveillance to every corner.",
     image:
       "https://images.unsplash.com/photo-1542401886-65d6c61db217?w=1920&h=1080&fm=jpg&q=80&fit=crop",
   },
   {
-    id: "03",
-    word: "SEA",
-    sub: "Coastal borders, offshore infrastructure, and maritime operations demand a different kind of protection. Kelvar's waterproof systems are engineered for harsh aquatic environments, delivering the same autonomous intelligence at sea as on land and in the air.",
+    id: "04",
+    word: "SPACE",
+    sub: "The next frontier of autonomous surveillance extends beyond the atmosphere. Kelvar's space division is developing low-orbit monitoring systems capable of delivering persistent, wide-area intelligence at a scale no ground or aerial platform can match.",
     image:
-      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1920&h=1080&fm=jpg&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1534996858221-380b92700493?w=1920&h=1080&fm=jpg&q=80&fit=crop",
   },
 ];
 
