@@ -7,6 +7,7 @@ import { SectionLabel } from "@/components/ui/section-label";
 import { Rule } from "@/components/ui/rule";
 import { ScrollingText } from "@/components/ui/scrolling-text";
 import { BsArrowRight } from "react-icons/bs";
+import { CtaSection } from "@/components/ui/cta-section";
 
 const domainDetail: Record<
   string,
@@ -275,36 +276,14 @@ export default function FocusPage() {
       })}
 
       {/* CTA */}
-      <section className="border-t border-[#ffffff12] px-6 md:px-10 py-12 md:py-24 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="max-w-2xl mx-auto"
-        >
-          <h2 className="font-heading font-black text-[clamp(2.5rem,8vw,6rem)] leading-none text-primary mb-6">
-            Protect Every
-            <br />
-            <span
-              className="text-transparent"
-              style={{ WebkitTextStroke: "2px rgba(245,245,249,0.2)" }}
-            >
-              Environment.
-            </span>
-          </h2>
-          <p className="font-mono text-xs-plus leading-[1.8] text-muted mb-10 max-w-xl mx-auto">
-            Whether the threat is on land, sea, or in the air — Kelvar has a
-            system built for it.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-3 border border-[#ffffff26] px-[1.6rem] py-[0.8rem] font-mono text-xxs uppercase tracking-[0.2em] text-primary transition-colors duration-200 hover:border-[#ffffff80]"
-          >
-            Get in Touch <BsArrowRight />
-          </Link>
-        </motion.div>
-      </section>
+      <CtaSection
+        title="Protect Entry"
+        breakTitle="Environment"
+        description="Whether the threat is on land, sea, or in the air — Kelvar has a
+            system built for it."
+        linkHref="/contact"
+        linkText="Get in Touch"
+      />
     </div>
   );
 }
