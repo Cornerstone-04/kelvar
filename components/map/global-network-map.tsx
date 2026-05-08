@@ -1,6 +1,6 @@
 "use client";
 
-import { SectionLabel } from "../section-label";
+import { SectionLabel } from "../ui/section-label";
 import { SpinningGlobe } from "./spinning-globe";
 
 const nodes = [
