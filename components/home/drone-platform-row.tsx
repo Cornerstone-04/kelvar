@@ -111,27 +111,29 @@ export default function DronePlatformRow({
       </motion.div>
 
       {/* Image block 2 — Video */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-40px" }}
-        transition={{ duration: 0.8, delay: 0.15 }}
-        className={`relative mt-6 mb-0 aspect-video overflow-hidden bg-card ${
-          isEven ? "mr-10 md:mr-20 ml-10" : "mr-10 ml-10 md:ml-20"
-        }`}
-      >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className={`absolute inset-0 h-full w-full object-cover brightness-[0.75] saturate-[0.7] ${
-            isEven ? "object-[center_30%]" : "object-[center_70%]"
+      {drone.assets.video ? (
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.8, delay: 0.15 }}
+          className={`relative mt-6 mb-0 aspect-video overflow-hidden bg-card ${
+            isEven ? "mr-10 md:mr-20 ml-10" : "mr-10 ml-10 md:ml-20"
           }`}
         >
-          <source src={drone.assets.video} type="video/mp4" />
-        </video>
-      </motion.div>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={`absolute inset-0 h-full w-full object-cover brightness-[0.75] saturate-[0.7] ${
+              isEven ? "object-[center_30%]" : "object-[center_70%]"
+            }`}
+          >
+            <source src={drone.assets.video} type="video/mp4" />
+          </video>
+        </motion.div>
+      ) : null}
 
       <Rule />
     </div>

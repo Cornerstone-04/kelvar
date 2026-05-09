@@ -102,6 +102,7 @@ const domainDetail: Record<
       {
         name: "STRATOS",
         desc: "Kelvar's space surveillance platforms are currently in the research and design phase. Details to follow.",
+        slug: "stratos",
       },
     ],
   },

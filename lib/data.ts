@@ -218,6 +218,24 @@ const drones = [
       { label: "Endurance", value: "TBC" },
     ],
   },
+  {
+    id: "04",
+    name: "Stratos",
+    codename: "—",
+    slug: "stratos",
+    tagline:
+      "Stratospheric surveillance reaching beyond atmosphere — persistent, wide-area, unstoppable.",
+    desc: "AI-powered stratospheric platform delivering persistent surveillance, global communications, and environmental monitoring from 15–50 km altitude.",
+    assets: {
+      image1: "/images/stratos/kelvar-stratos.jpg",
+      // video: "/videos/stratos_showcase.mp4",
+    },
+    specs: [
+      { label: "Range", value: "TBC" },
+      { label: "Payload", value: "TBC" },
+      { label: "Endurance", value: "TBC" },
+    ],
+  },
 ];
 
 const navLinks = [
