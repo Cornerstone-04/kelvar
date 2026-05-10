@@ -228,7 +228,7 @@ const drones = [
     desc: "AI-powered stratospheric platform delivering persistent surveillance, global communications, and environmental monitoring from 15–50 km altitude.",
     assets: {
       image1: "/images/stratos/kelvar-stratos.jpg",
-      // video: "/videos/stratos_showcase.mp4",
+      video: "",
     },
     specs: [
       { label: "Range", value: "TBC" },

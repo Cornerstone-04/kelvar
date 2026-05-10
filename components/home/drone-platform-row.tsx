@@ -4,7 +4,6 @@ import { motion } from "motion/react";
 import { GlitchText } from "@/components/ui/glitch-text";
 import { Rule } from "@/components/ui/rule";
 import Link from "next/link";
-import { LuArrowUpRight } from "react-icons/lu";
 import { BsArrowUpRight } from "react-icons/bs";
 
 type Drone = {
@@ -14,7 +13,7 @@ type Drone = {
   assets: {
     image1: string;
     image2?: string;
-    video: string;
+    video?: string;
   };
   slug?: string;
 };
