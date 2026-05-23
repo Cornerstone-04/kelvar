@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
-import Link from "next/link";
-import { BsArrowRight } from "react-icons/bs";
+import { KelvarButton } from "./kelvar-button";
 
 interface CtaSectionProps {
   title: string;
@@ -43,12 +42,7 @@ export const CtaSection = ({
           {description}
         </p>
 
-        <Link
-          href={linkHref}
-          className="inline-flex items-center gap-3 border border-[#ffffff26] px-[1.6rem] py-[0.8rem] font-mono text-xxs uppercase tracking-[0.2em] text-primary transition-colors duration-200 hover:border-[#ffffff80]"
-        >
-          {linkText} <BsArrowRight />
-        </Link>
+        <KelvarButton href={linkHref}>{linkText}</KelvarButton>
       </motion.div>
     </section>
   );

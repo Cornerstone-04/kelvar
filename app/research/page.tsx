@@ -1,18 +1,16 @@
 "use client";
 
 import { Rule } from "@/components/ui/rule";
-import { airConvoy } from "@/lib/air-convoy";
-// import { kelvarStratos } from "@/lib/kelvar-stratos";
+import { kelvarStratos } from "@/lib/kelvar-stratos";
 
 import { PageHero } from "@/components/research/page-hero";
 import { IntroSection } from "@/components/research/intro-section";
-// import { PlatformNav } from "@/components/research/platform-nav";
 import { PlatformSection } from "@/components/research/platform-section";
 import { ResearchAreas } from "@/components/research/research-areas";
 import { ResearchCTA } from "@/components/research/research-cta";
 import { AarSection } from "@/components/research/aar-section";
 
-const platforms = [airConvoy];
+const platforms = [kelvarStratos];
 
 export default function ResearchPage() {
   return (
@@ -20,15 +18,12 @@ export default function ResearchPage() {
       <PageHero />
       <IntroSection />
       <Rule />
-      {/*<PlatformNav platforms={platforms} />*/}
       <Rule />
       <ResearchAreas />
       <Rule />
-
       {platforms.map((platform) => (
         <PlatformSection key={platform.id} platform={platform} />
       ))}
-
       <AarSection />
       <ResearchCTA />
     </div>

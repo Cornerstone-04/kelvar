@@ -14,7 +14,7 @@ export const airConvoy: Platform = {
     "AirConvoy is Kelvar Industries’ next-generation tethered drone system engineered for continuous, high-endurance surveillance, communication, and environmental monitoring across air, land, and maritime environments. Built for governments, security agencies, emergency services, oil & gas operations, and critical infrastructure protection, AirConvoy delivers real-time intelligence with zero downtime, thanks to its power-over-tether architecture and ultra-secure data link.",
   hero: {
     kind: "video",
-    src: "/videos/airconvoy.mp4",
+    src: "/assets/videos/platforms/airconvoy/airconvoy-showcase.mp4",
   },
   domainsLayout: "immersive",
   domainsLabel: "Operational Domains",
@@ -23,7 +23,7 @@ export const airConvoy: Platform = {
       id: "01",
       name: "Untethered",
       headline: "Persistent Elevated Surveillance",
-      image: "/images/airconvoy/airconvoy_air.jpg",
+      image: "/assets/images/platforms/airconvoy/airconvoy-air.jpg",
       capabilities: [
         "24/7 operation with uninterrupted power",
         "High-altitude untethered flight up to 150–300m",
@@ -35,7 +35,7 @@ export const airConvoy: Platform = {
       id: "02",
       name: "Tethered",
       headline: "Mobile or Fixed Deployment",
-      image: "/images/airconvoy/airconvoy_land.jpg",
+      image: "/assets/images/platforms/airconvoy/airconvoy-land.jpg",
       capabilities: [
         "Rapid deployment under 3 minutes",
         "Auto-stabilising flight in harsh wind conditions",
@@ -47,7 +47,7 @@ export const airConvoy: Platform = {
       id: "03",
       name: "Hybrid",
       headline: "Maritime & Offshore Operations",
-      image: "/images/airconvoy/airconvoy_sea.jpg",
+      image: "/assets/images/platforms/airconvoy/airconvoy-sea.jpg",
       capabilities: [
         "Corrosion-proof frame",
         "Saltwater-resistant tethering",

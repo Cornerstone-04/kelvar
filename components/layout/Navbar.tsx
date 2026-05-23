@@ -56,7 +56,7 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/kelvar-bird.png"
+            src="/assets/images/brand/kelvar-bird.png"
             alt="Kelvar Industries"
             width={60}
             height={60}
