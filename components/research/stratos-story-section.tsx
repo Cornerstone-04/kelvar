@@ -163,7 +163,7 @@ function ArchitectureBlock({ story }: { story: PlatformStory }) {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="relative min-h-[42rem] 2xl:min-h-[56rem] overflow-hidden border border-white/10 bg-[#FEFDFB]"
+          className="relative min-h-168 2xl:min-h-224 overflow-hidden border border-white/10 bg-[#FEFDFB]"
         >
           <Image
             src={story.architecture.diagram.src}
@@ -285,19 +285,23 @@ function PlatformTypesBlock({ story }: { story: PlatformStory }) {
 }
 
 function OperationsBlock({ story }: { story: PlatformStory }) {
+  const sharedDescription = story.operations.panels[0]?.body;
+
   return (
     <StoryFrame className="border-b border-white/10">
       <SectionLabel className="mb-4">{story.operations.label}</SectionLabel>
-      <div className="mb-10 grid gap-6 lg:grid-cols-[minmax(18rem,1.2fr)_minmax(0,0.8fr)] lg:items-end">
-        <div>
-          <h3 className="mt-6 font-heading text-[clamp(2.4rem,5vw,5rem)] font-black leading-[0.9] text-primary">
-            {story.operations.title}
-          </h3>
-        </div>
-        <div className="h-px bg-white/10" />
+      <div className="my-8 grid gap-8 lg:grid-cols-[minmax(20rem,0.95fr)_minmax(0,1.05fr)] lg:items-start">
+        <h3 className="font-heading text-[clamp(3.2rem,5vw,5.5rem)] font-black leading-[0.86] text-primary">
+          {story.operations.title}
+        </h3>
+        {sharedDescription && (
+          <p className="font-mono text-xs-plus leading-[1.95] text-muted md:text-sm">
+            {sharedDescription}
+          </p>
+        )}
       </div>
 
-      <div className="grid gap-6 2xl:grid-cols-2">
+      <div className="grid items-end gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
         {story.operations.panels.map((panel, index) => (
           <motion.article
             key={panel.label}
@@ -305,23 +309,18 @@ function OperationsBlock({ story }: { story: PlatformStory }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-70px" }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="grid overflow-hidden border border-white/10 bg-white/2.5 xl:grid-cols-[minmax(16rem,0.82fr)_minmax(0,1fr)]"
+            className="group relative overflow-hidden bg-white/2.5 "
           >
             {panel.media && (
               <MediaPanel media={panel.media} priority={index === 0} />
             )}
-            <div className="flex flex-col justify-between p-6 md:p-8">
-              <div>
-                <p className="font-mono text-xxs uppercase tracking-[0.25em] text-muted">
-                  {panel.label}
-                </p>
-                <h4 className="mt-4 font-heading text-[2.25rem] font-bold leading-none text-primary">
-                  {panel.title}
-                </h4>
-              </div>
-              <p className="mt-8 font-mono text-xs-plus leading-[1.85] text-muted">
-                {panel.body}
+            <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(to_top,rgba(7,7,42,0.92),rgba(7,7,42,0.5)_58%,transparent)] p-6 pt-24 md:p-8 md:pt-32">
+              <p className="font-mono text-xxs uppercase tracking-[0.25em] text-muted">
+                0{index + 1} / {panel.label}
               </p>
+              <h4 className="mt-4 max-w-[14ch] font-heading text-[clamp(2rem,4vw,3.75rem)] font-black leading-[0.9] text-primary">
+                {panel.title}
+              </h4>
             </div>
           </motion.article>
         ))}
@@ -433,9 +432,7 @@ function MediaPanel({
   priority?: boolean;
 }) {
   const aspectClass =
-    media.orientation === "portrait"
-      ? "aspect-[4/5] xl:aspect-auto"
-      : "aspect-video";
+    media.orientation === "portrait" ? "aspect-3/4" : "aspect-video";
 
   return (
     <div
