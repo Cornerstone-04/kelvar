@@ -64,31 +64,31 @@ export const dronePages: DronePageData[] = [
         title: "Autonomous Patrol Swarm",
         desc: "Multiple drones create overlapping surveillance paths for continuous, uninterrupted coverage across any environment.",
         tag: "Primary",
-        image: "/images/dome/swarm_render.jpg",
+        image: "/assets/images/platforms/dome/swarm-render.jpg",
       },
       {
         title: "Dome Dock",
         desc: "Intelligent classification of humans, vehicles, unusual behaviour, fire, smoke, and perimeter breaches — in real time.",
         tag: "Primary",
-        image: "/images/dome/SKY_DOME_DRONE-_TABLE_TOP.jpg",
+        image: "/assets/images/platforms/dome/sky-dome-table-top.jpg",
       },
       {
         title: "Solar Powered Surveillance",
         desc: "Self-sustaining drone systems powered by solar energy, enabling continuous operation in remote or off-grid environments with minimal maintenance.",
         tag: "Primary",
-        image: "/images/dome/sky_dome_solar.jpg",
+        image: "/assets/images/platforms/dome/sky-dome-solar.jpg",
       },
       {
         title: "Night & Low-Light Vision",
         desc: "Thermal and infrared imaging ensures complete visibility regardless of time of day or weather conditions.",
         tag: "Secondary",
-        image: "/images/dome/SKY_DOME_DRONE_-_CEILING_01.jpg",
+        image: "/assets/images/platforms/dome/sky-dome-ceiling-01.jpg",
       },
       {
         title: "Quiet & Residential-Safe",
         desc: "Designed for estates, farms, villages, and urban neighbourhoods. Lightweight, low-noise, and safe for everyday environments.",
         tag: "Secondary",
-        image: "/images/dome/SKY_DOME_DRONE_07.jpg",
+        image: "/assets/images/platforms/dome/sky-dome-drone-07.jpg",
       },
     ],
     useCases: [
@@ -142,9 +142,9 @@ export const dronePages: DronePageData[] = [
       "Oil & gas, energy, factories, and high-risk industrial zones",
     ],
     assets: {
-      image: "/images/dome/SKY_DOME_DRONE_01.jpg",
-      video: "/videos/sky_dome_showcase.mp4",
-      videoAlt: "/videos/skydome_swarm_showcase.mp4",
+      image: "/assets/images/platforms/dome/sky-dome-drone-01.jpg",
+      video: "/assets/videos/platforms/dome/sky-dome-showcase.mp4",
+      videoAlt: "/assets/videos/platforms/dome/sky-dome-swarm-showcase.mp4",
     },
     specs: [
       { label: "System Type", value: "Autonomous Aerial Swarm" },
@@ -172,14 +172,14 @@ const drones = [
       "AI Powered CCTV cameras that fly; to prevent Fire, Fraud & Felony",
     desc: "AI-powered Autonomous Aerial CCTV Swarm for Residential, Commercial & Industrial Security",
     assets: {
-      image1: "/images/dome/SKY_DOME_DRONE_01.jpg",
-      image2: "/images/dome/SKY_DOME_DRONE_03.jpg",
-      video: "/videos/sky_dome_showcase.mp4",
+      image1: "/assets/images/platforms/dome/sky-dome-drone-01.jpg",
+      image2: "/assets/images/platforms/dome/sky-dome-drone-03.jpg",
+      video: "/assets/videos/platforms/dome/sky-dome-showcase.mp4",
     },
     specs: [
-      { label: "Range", value: "TBC" },
-      { label: "Payload", value: "TBC" },
-      { label: "Endurance", value: "TBC" },
+      { label: "Capability Class", value: "Aerial Surveillance" },
+      { label: "Deployment Mode", value: "Autonomous Swarm" },
+      { label: "Sensor Stack", value: "AI · Thermal · Infrared" },
     ],
   },
   {
@@ -191,13 +191,13 @@ const drones = [
       "AI-powered ground patrol for the spaces drones can't reach — indoors, always on.",
     desc: "Autonomous indoor robot for continuous floor-level surveillance across offices, warehouses, factories, and commercial interiors.",
     assets: {
-      image1: "/images/robobot/robobot_single.jpg",
-      video: "/videos/robobot_showcase.mp4",
+      image1: "/assets/images/platforms/robobot/robobot-single.jpg",
+      video: "/assets/videos/platforms/robobot/robobot-showcase.mp4",
     },
     specs: [
-      { label: "Range", value: "TBC" },
-      { label: "Payload", value: "TBC" },
-      { label: "Endurance", value: "TBC" },
+      { label: "Capability Class", value: "Ground Patrol" },
+      { label: "Deployment Mode", value: "Indoor Autonomous" },
+      { label: "Sensor Stack", value: "Vision · Audio · Proximity" },
     ],
   },
   {
@@ -209,31 +209,13 @@ const drones = [
       "AI-powered aerial surveillance for coastlines, ports, and open water — corrosion-proof, always watching.",
     desc: "Waterproof autonomous drone engineered for over-sea survey, maritime security, and offshore infrastructure monitoring.",
     assets: {
-      image1: "/images/hydrax.jpg",
-      video: "/videos/hydrax_showcase.mp4",
+      image1: "/assets/images/platforms/hydrax/hydrax.jpg",
+      video: "/assets/videos/platforms/hydrax/hydrax-showcase.mp4",
     },
     specs: [
-      { label: "Range", value: "TBC" },
-      { label: "Payload", value: "TBC" },
-      { label: "Endurance", value: "TBC" },
-    ],
-  },
-  {
-    id: "04",
-    name: "Stratos",
-    codename: "—",
-    slug: "stratos",
-    tagline:
-      "Stratospheric surveillance reaching beyond atmosphere — persistent, wide-area, unstoppable.",
-    desc: "AI-powered stratospheric platform delivering persistent surveillance, global communications, and environmental monitoring from 15–50 km altitude.",
-    assets: {
-      image1: "/images/stratos/kelvar-stratos.jpg",
-      video: "",
-    },
-    specs: [
-      { label: "Range", value: "TBC" },
-      { label: "Payload", value: "TBC" },
-      { label: "Endurance", value: "TBC" },
+      { label: "Capability Class", value: "Maritime Surveillance" },
+      { label: "Deployment Mode", value: "Waterproof Aerial" },
+      { label: "Sensor Stack", value: "Optical · Thermal · Marine" },
     ],
   },
 ];
@@ -316,30 +298,6 @@ const careers = {
     },
   ],
 };
-
-const press = [
-  {
-    outlet: "Placeholder Outlet",
-    headline:
-      "Kelvar Industries unveils autonomous surveillance vision inspired by vigilance and intelligent motion",
-    date: "2025",
-    url: "#",
-  },
-  {
-    outlet: "Placeholder Outlet",
-    headline:
-      "How Kelvar Industries is rethinking 24/7 intelligent surveillance for modern protection needs",
-    date: "2025",
-    url: "#",
-  },
-  {
-    outlet: "Placeholder Outlet",
-    headline:
-      "Kelvar Industries positions autonomous monitoring as the next frontier in safety technology",
-    date: "2025",
-    url: "#",
-  },
-];
 
 const ethos = [
   {
@@ -427,7 +385,6 @@ const research = {
 export {
   ethos,
   focus,
-  press,
   careers,
   team,
   values,

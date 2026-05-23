@@ -22,7 +22,7 @@ export function IntroSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="font-heading text-[clamp(1.4rem,3vw,2rem)] font-bold leading-tight text-primary"
+            className="font-heading text-[clamp(1.4rem,3vw,3rem)] font-bold leading-tight text-primary"
           >
             At Kelvar Industries, innovation is not outsourced, it is engineered
             at the core.

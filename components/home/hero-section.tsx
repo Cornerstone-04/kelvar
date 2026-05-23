@@ -32,7 +32,7 @@ export function HeroSection() {
         playsInline
         className="absolute inset-0 z-0 h-full w-full object-cover brightness-50 saturate-[0.6]"
       >
-        <source src="/videos/kelvar_showcase.mp4" type="video/mp4" />
+        <source src="/assets/videos/brand/kelvar-showcase.mp4" type="video/mp4" />
       </video>
 
       {/* Noise / grain texture */}

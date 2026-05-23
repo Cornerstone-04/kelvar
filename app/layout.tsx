@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Barlow_Condensed, Inter, DM_Mono } from "next/font/google";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import "./globals.css";
 
 const barlow = Barlow_Condensed({
   variable: "--font-barlow",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "London",
   ],
   authors: [{ name: "Kelvar Industries" }],
-  metadataBase: new URL("https://kelvarindustries.vercel.app"),
+  metadataBase: new URL("https://www.kelvarindustries.com"),
   openGraph: {
     type: "website",
     title: "Kelvar Industries",
@@ -47,14 +47,14 @@ export const metadata: Metadata = {
     siteName: "Kelvar Industries",
     images: [
       {
-        url: "https://kelvarindustries.vercel.app/kelvar-primary.png",
+        url: "https://www.kelvarindustries.com/assets/images/brand/kelvar-primary.png",
         alt: "Kelvar Industries — Engineering next-generation drone systems for defence, surveillance, and precision logistics. Based in London, UK.",
       },
     ],
   },
   robots: { index: true, follow: true },
   icons: {
-    icon: "/kelvar-bird.png",
+    icon: "/assets/images/brand/kelvar-bird-2.png",
   },
 };
 

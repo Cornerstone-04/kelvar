@@ -6,19 +6,18 @@ import { BsArrowRight } from "react-icons/bs";
 const stats = [
   { value: "3", label: "Active Platforms" },
   { value: "3", label: "Global Offices" },
-  { value: "Air · Land · Sea", label: "Operational Domains" },
+  { value: "Air · Land · Sea · Space", label: "Operational Domains" },
   { value: "Always On", label: "System Availability" },
 ];
 
 export function AarSection() {
   return (
     <section className="border-t border-[#ffffff12] bg-surface px-6 py-12 md:px-10 md:py-24">
+      <div className="mb-8">
+        <SectionLabel>Powered by AAR</SectionLabel>
+      </div>
       <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-16">
         <div>
-          <div className="mb-8">
-            <SectionLabel>Powered by AAR</SectionLabel>
-          </div>
-
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
