@@ -25,7 +25,7 @@ export function StratosStorySection({
         id={platform.id}
         className="relative isolate scroll-mt-24 overflow-hidden pb-16 md:pb-24"
       >
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_10%,rgba(148,148,168,0.16),transparent_34%),radial-gradient(circle_at_85%_26%,rgba(245,245,249,0.08),transparent_28%)]" />
+        {/* <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_10%,rgba(148,148,168,0.16),transparent_34%),radial-gradient(circle_at_85%_26%,rgba(245,245,249,0.08),transparent_28%)]" />*/}
         <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-224 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.04),transparent_55%)]" />
 
         <StoryHero platform={platform} story={story} />
@@ -57,7 +57,7 @@ function StoryHero({
         fill
         priority
         sizes="100vw"
-        className="object-cover brightness-[0.48] saturate-[0.78]"
+        className="object-cover object-top brightness-[0.48] saturate-[0.78]"
       />
       <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,rgba(7,7,42,0.25)_38%,rgba(7,7,42,0.72)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_42%,rgba(7,7,42,0.8)_100%)]" />
@@ -95,7 +95,7 @@ function StoryHero({
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-10 grid gap-px bg-white/10 lg:grid-cols-[minmax(0,1.45fr)_minmax(22rem,0.9fr)]"
         >
-          <div className="bg-bg/72 p-5 backdrop-blur-md md:p-7">
+          <div className="bg-bg/90 p-5 backdrop-blur-md md:p-7">
             <p className="max-w-5xl font-mono text-xs-plus leading-[1.85] text-muted md:text-sm">
               {story.summary}
             </p>
@@ -103,7 +103,7 @@ function StoryHero({
 
           <MetricGrid
             metrics={story.metrics}
-            columns="sm:grid-cols-3 lg:grid-cols-1"
+            columns="sm:grid-cols-3 lg:grid-cols-1 "
           />
         </motion.div>
       </div>
@@ -244,7 +244,7 @@ function PlatformTypesBlock({ story }: { story: PlatformStory }) {
   return (
     <StoryFrame className="border-b border-white/10">
       <SectionLabel className="mb-4">{story.platformTypes.label}</SectionLabel>
-      <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(18rem,0.8fr)_minmax(0,1fr)]">
+      <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(18rem,0.72fr)_minmax(0,1.08fr)]">
         <div>
           <h3 className="font-heading text-[clamp(2.3rem,5vw,5.25rem)] font-black leading-[0.9] text-primary">
             {story.platformTypes.title}
@@ -388,7 +388,7 @@ function AdvantagesBlock({ story }: { story: PlatformStory }) {
   return (
     <StoryFrame>
       <SectionLabel className="mb-4">{story.advantages.label}</SectionLabel>
-      <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(18rem,0.72fr)_minmax(0,1.28fr)]">
+      <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(18rem,0.72fr)_minmax(0,1.08fr)]">
         <h3 className="font-heading text-[clamp(2.4rem,5vw,5.25rem)] font-black leading-[0.9] text-primary">
           {story.advantages.title}
         </h3>
