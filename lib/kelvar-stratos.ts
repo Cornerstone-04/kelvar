@@ -14,7 +14,7 @@ export const kelvarStratos: Platform = {
     "Kelvar Stratos is a solar-powered stratospheric platform delivering satellite-like persistence with drone-level control for surveillance, connectivity, and economic security. A stratospheric balloon (also known as a high-altitude balloon) is an uncrewed or crewed balloon that travels into the Earth's stratosphere, typically reaching altitudes between 18 km and 37 km (11 to 23 miles). These platforms are used for weather monitoring, scientific research, and increasingly, as a low-carbon alternative for space tourism.",
   hero: {
     kind: "image",
-    src: "/assets/images/platforms/stratos/kelvar-stratos.jpg",
+    src: "/assets/images/platforms/stratos/stratos-hero.jpg",
     alt: "Kelvar Stratos drone modelling and design",
   },
   domainsLayout: "cards",
@@ -28,7 +28,7 @@ export const kelvarStratos: Platform = {
     summary:
       "Kelvar Stratos is a solar-powered stratospheric platform delivering satellite-like persistence with drone-level control for surveillance, connectivity, and economic security. A stratospheric balloon (also known as a high-altitude balloon) is an uncrewed or crewed balloon that travels into the Earth's stratosphere, typically reaching altitudes between 18 km and 37 km (11 to 23 miles). These platforms are used for weather monitoring, scientific research, and increasingly, as a low-carbon alternative for space tourism.",
     hero: {
-      src: "/assets/images/platforms/stratos/kelvar-stratos.jpg",
+      src: "/assets/images/platforms/stratos/stratos-hero.jpg",
       alt: "Kelvar Stratos drone modelling and design",
       orientation: "landscape",
     },
@@ -51,7 +51,7 @@ export const kelvarStratos: Platform = {
       title: "What Kelvar Stratos is",
       body: "Kelvar Stratos is a solar-powered stratospheric platform delivering satellite-like persistence with drone-level control for surveillance, connectivity, and economic security. A stratospheric balloon (also known as a high-altitude balloon) is an uncrewed or crewed balloon that travels into the Earth's stratosphere, typically reaching altitudes between 18 km and 37 km (11 to 23 miles). These platforms are used for weather monitoring, scientific research, and increasingly, as a low-carbon alternative for space tourism.",
       media: {
-        src: "/assets/images/platforms/stratos/kelvar-stratos.jpg",
+        src: "/assets/images/platforms/stratos/stratos-hero.jpg",
         alt: "Kelvar Stratos concept rendering",
         orientation: "landscape",
       },
@@ -111,7 +111,7 @@ export const kelvarStratos: Platform = {
         {
           label: "Ground Systems",
           title: "Deployment infrastructure",
-          body: "The Kelvar Kite StratoSolar System (SSV) is a hybrid stratospheric platform that combines a large high-altitude balloon with a solar-powered fixed-wing UAV to deliver persistent, near-space capabilities at a fraction of satellite cost; the balloon provides the primary lift and maintains altitude in the stratosphere for long durations, while the UAV acts as an intelligent control unit, using solar energy to power sensors, communications, and AI-driven stabilisation, enabling the system to remain over a target area for weeks or months while performing surveillance, telecom relay, environmental monitoring, and security operations, making it an adaptable, low-cost aerial infrastructure solution for applications across smart cities, remote connectivity, and national-scale monitoring in regions like Nigeria and across Africa.",
+          body: "The Kelvar Kite StratoSolar System combines balloon lift with a solar fixed-wing UAV to deliver persistent near-space coverage. The balloon sustains altitude while the UAV powers control, sensing, communications, and stabilisation for surveillance, relay, monitoring, and security missions.",
           media: {
             src: "/assets/images/platforms/stratos/stratos-on-land.jpg",
             alt: "Kelvar Stratos drone on land in its docking station",
@@ -121,7 +121,7 @@ export const kelvarStratos: Platform = {
         {
           label: "Fleet Surveillance",
           title: "Operational deployment",
-          body: "The Kelvar Kite StratoSolar System (SSV) is a hybrid stratospheric platform that combines a large high-altitude balloon with a solar-powered fixed-wing UAV to deliver persistent, near-space capabilities at a fraction of satellite cost; the balloon provides the primary lift and maintains altitude in the stratosphere for long durations, while the UAV acts as an intelligent control unit, using solar energy to power sensors, communications, and AI-driven stabilisation, enabling the system to remain over a target area for weeks or months while performing surveillance, telecom relay, environmental monitoring, and security operations, making it an adaptable, low-cost aerial infrastructure solution for applications across smart cities, remote connectivity, and national-scale monitoring in regions like Nigeria and across Africa.",
+          body: "The Kelvar Kite StratoSolar System combines balloon lift with a solar fixed-wing UAV to deliver persistent near-space coverage. The balloon sustains altitude while the UAV powers control, sensing, communications, and stabilisation for surveillance, relay, monitoring, and security missions.",
           media: {
             src: "/assets/images/platforms/stratos/stratos-in-air.jpg",
             alt: "Several Kelvar Stratos drones in the air",
@@ -141,20 +141,20 @@ export const kelvarStratos: Platform = {
         {
           name: "Space Tourism",
           body: "Several startups are developing pressurized capsules for passengers to view the curvature of the Earth and the blackness of space without the high G-forces of a rocket.",
-          subApplications: [
-            {
-              name: "Space Perspective",
-              body: 'Offers rides in their "Spaceship Neptune" capsule.',
-            },
-            {
-              name: "Zephalto",
-              body: 'Focuses on a luxury "low-carbon" experience from France.',
-            },
-            {
-              name: "World View",
-              body: 'Plans to launch from "Wonders of the World" sites like the Grand Canyon.',
-            },
-          ],
+          // subApplications: [
+          //   {
+          //     name: "Space Perspective",
+          //     body: 'Offers rides in their "Spaceship Neptune" capsule.',
+          //   },
+          //   {
+          //     name: "Zephalto",
+          //     body: 'Focuses on a luxury "low-carbon" experience from France.',
+          //   },
+          //   {
+          //     name: "World View",
+          //     body: 'Plans to launch from "Wonders of the World" sites like the Grand Canyon.',
+          //   },
+          // ],
         },
         {
           name: "Communication & Intelligence",
@@ -168,15 +168,15 @@ export const kelvarStratos: Platform = {
       items: [
         {
           title: "Satellite-like persistence",
-          body: "Kelvar Stratos is a solar-powered stratospheric platform delivering satellite-like persistence with drone-level control for surveillance, connectivity, and economic security.",
+          body: "Operating in the stratosphere for weeks or months at a time, Kelvar Stratos provides continuous regional coverage without the launch cost, latency, or replacement cycle of satellites.",
         },
         {
           title: "Drone-level control",
-          body: "The Kelvar Kite StratoSolar System (SSV) is a hybrid stratospheric platform that combines a large high-altitude balloon with a solar-powered fixed-wing UAV to deliver persistent, near-space capabilities at a fraction of satellite cost; the balloon provides the primary lift and maintains altitude in the stratosphere for long durations, while the UAV acts as an intelligent control unit, using solar energy to power sensors, communications, and AI-driven stabilisation, enabling the system to remain over a target area for weeks or months while performing surveillance, telecom relay, environmental monitoring, and security operations, making it an adaptable, low-cost aerial infrastructure solution for applications across smart cities, remote connectivity, and national-scale monitoring in regions like Nigeria and across Africa.",
+          body: "A solar-powered fixed-wing UAV acts as the system's intelligent control layer, steering stabilisation, payload operations, sensing, and communications while the balloon provides long-duration stratospheric lift.",
         },
         {
           title: "Economic security infrastructure",
-          body: "Kelvar Stratos is a solar-powered stratospheric platform delivering satellite-like persistence with drone-level control for surveillance, connectivity, and economic security.",
+          body: "Persistent stratospheric coverage helps monitor critical assets, extend connectivity, and give operators the real-time awareness needed to protect trade, borders, resources, and public infrastructure.",
         },
       ],
     },
