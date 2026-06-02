@@ -5,6 +5,7 @@ import { GlitchText } from "@/components/ui/glitch-text";
 import { Rule } from "@/components/ui/rule";
 import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
+import { LazyVideo } from "@/components/ui/lazy-video";
 
 type Drone = {
   id: string;
@@ -120,17 +121,12 @@ export default function DronePlatformRow({
             isEven ? "mr-10 md:mr-20 ml-10" : "mr-10 ml-10 md:ml-20"
           }`}
         >
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
+          <LazyVideo
+            src={drone.assets.video}
             className={`absolute inset-0 h-full w-full object-cover brightness-[0.75] saturate-[0.7] ${
               isEven ? "object-[center_30%]" : "object-[center_70%]"
             }`}
-          >
-            <source src={drone.assets.video} type="video/mp4" />
-          </video>
+          />
         </motion.div>
       ) : null}
 

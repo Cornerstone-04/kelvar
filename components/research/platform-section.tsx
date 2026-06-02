@@ -9,6 +9,7 @@ import type {
 import { Rule } from "../ui/rule";
 import { SectionLabel } from "../ui/section-label";
 import { StratosStorySection } from "./stratos-story-section";
+import { LazyVideo } from "../ui/lazy-video";
 
 export function PlatformSection({ platform }: { platform: Platform }) {
   if (platform.story) {
@@ -42,15 +43,10 @@ function PlatformHero({ platform }: { platform: Platform }) {
       className="relative mb-0 aspect-video w-full overflow-hidden"
     >
       {platform.hero.kind === "video" ? (
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <LazyVideo
+          src={platform.hero.src}
           className="absolute inset-0 h-full w-full object-cover brightness-[0.55]"
-        >
-          <source src={platform.hero.src} type="video/mp4" />
-        </video>
+        />
       ) : (
         <Image
           src={platform.hero.src}
