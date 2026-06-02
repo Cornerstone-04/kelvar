@@ -97,7 +97,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
             >
               <div
-                className="absolute inset-0 bg-[#07072a66] backdrop-blur-[20px]"
+                className="absolute inset-0 bg-[#07072a66] backdrop-blur-lg"
                 style={{ WebkitBackdropFilter: "blur(20px)" }}
               />
             </div>

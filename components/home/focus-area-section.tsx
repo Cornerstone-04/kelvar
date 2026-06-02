@@ -12,7 +12,7 @@ export function AreasOfFocusSection() {
           <SectionLabel>Areas of Focus</SectionLabel>
         </div>
         {/*<Link
-          href="/focus"
+          href="/focus" 
           className="inline-flex items-center gap-3 shrink-0 mb-8 font-mono text-xxs uppercase tracking-[0.15em] text-muted border-b border-[#ffffff20] pb-px hover:text-primary hover:border-[#ffffff60] transition-all duration-200"
         >
           Explore All <BsArrowRight />
