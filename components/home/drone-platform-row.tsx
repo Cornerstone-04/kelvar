@@ -15,6 +15,7 @@ type Drone = {
     image1: string;
     image2?: string;
     video?: string;
+    videoPoster?: string;
   };
   slug?: string;
 };
@@ -123,6 +124,7 @@ export default function DronePlatformRow({
         >
           <LazyVideo
             src={drone.assets.video}
+            poster={drone.assets.videoPoster}
             className={`absolute inset-0 h-full w-full object-cover brightness-[0.75] saturate-[0.7] ${
               isEven ? "object-[center_30%]" : "object-[center_70%]"
             }`}

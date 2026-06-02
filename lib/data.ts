@@ -175,6 +175,7 @@ const drones = [
       image1: "/assets/images/platforms/dome/sky-dome-drone-01.jpg",
       image2: "/assets/images/platforms/dome/sky-dome-drone-03.jpg",
       video: "/assets/videos/platforms/dome/sky-dome-showcase.mp4",
+      videoPoster: "/assets/images/platforms/dome/sky-dome-thumbnail.png",
     },
     specs: [
       { label: "Capability Class", value: "Aerial Surveillance" },
@@ -193,6 +194,7 @@ const drones = [
     assets: {
       image1: "/assets/images/platforms/robobot/robobot-single.jpg",
       video: "/assets/videos/platforms/robobot/robobot-showcase.mp4",
+      videoPoster: "/assets/images/platforms/robobot/robobot-thumbnail.png",
     },
     specs: [
       { label: "Capability Class", value: "Ground Patrol" },
@@ -211,6 +213,7 @@ const drones = [
     assets: {
       image1: "/assets/images/platforms/hydrax/hydrax.jpg",
       video: "/assets/videos/platforms/hydrax/hydrax-showcase.mp4",
+      videoPoster: "/assets/images/platforms/hydrax/hydrax-thumbnail.png",
     },
     specs: [
       { label: "Capability Class", value: "Maritime Surveillance" },
