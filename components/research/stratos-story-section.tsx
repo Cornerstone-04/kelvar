@@ -116,7 +116,7 @@ function OverviewBand({ story }: { story: PlatformStory }) {
     <StoryFrame className="border-b border-white/10">
       <div className="grid gap-8 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] lg:items-end">
         <div>
-          <SectionLabel className="mb-4">{story.overview.label}</SectionLabel>
+          <SectionLabel>{story.overview.label}</SectionLabel>
           <motion.h3
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -145,7 +145,7 @@ function OverviewBand({ story }: { story: PlatformStory }) {
 function ArchitectureBlock({ story }: { story: PlatformStory }) {
   return (
     <StoryFrame className="border-b border-white/10">
-      <SectionLabel className="mb-4">{story.architecture.label}</SectionLabel>
+      <SectionLabel>{story.architecture.label}</SectionLabel>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(20rem,0.9fr)_minmax(0,1.1fr)] lg:items-end">
         <h3 className="max-w-3xl font-heading text-[clamp(2.4rem,5vw,5.5rem)] font-black leading-[0.9] text-primary">
@@ -243,7 +243,7 @@ function ArchitectureBlock({ story }: { story: PlatformStory }) {
 function PlatformTypesBlock({ story }: { story: PlatformStory }) {
   return (
     <StoryFrame className="border-b border-white/10">
-      <SectionLabel className="mb-4">{story.platformTypes.label}</SectionLabel>
+      <SectionLabel>{story.platformTypes.label}</SectionLabel>
       <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(18rem,0.72fr)_minmax(0,1.08fr)]">
         <div>
           <h3 className="font-heading text-[clamp(2.3rem,5vw,5.25rem)] font-black leading-[0.9] text-primary">
@@ -289,7 +289,7 @@ function OperationsBlock({ story }: { story: PlatformStory }) {
 
   return (
     <StoryFrame className="border-b border-white/10">
-      <SectionLabel className="mb-4">{story.operations.label}</SectionLabel>
+      <SectionLabel>{story.operations.label}</SectionLabel>
       <div className="my-8 grid gap-8 lg:grid-cols-[minmax(20rem,0.95fr)_minmax(0,1.05fr)] lg:items-start">
         <h3 className="font-heading text-[clamp(3.2rem,5vw,5.5rem)] font-black leading-[0.86] text-primary">
           {story.operations.title}
@@ -332,7 +332,7 @@ function OperationsBlock({ story }: { story: PlatformStory }) {
 function ApplicationsBlock({ story }: { story: PlatformStory }) {
   return (
     <StoryFrame className="border-b border-white/10">
-      <SectionLabel className="mb-4">{story.applications.label}</SectionLabel>
+      <SectionLabel>{story.applications.label}</SectionLabel>
       <div className="grid gap-8 lg:grid-cols-[minmax(18rem,0.72fr)_minmax(0,1.08fr)] mt-8">
         <div className="lg:sticky lg:top-24 lg:self-start">
           <h3 className="mt-6 font-heading text-[clamp(2.4rem,5vw,5.25rem)] font-black leading-[0.9] text-primary">
@@ -387,7 +387,7 @@ function ApplicationsBlock({ story }: { story: PlatformStory }) {
 function AdvantagesBlock({ story }: { story: PlatformStory }) {
   return (
     <StoryFrame>
-      <SectionLabel className="mb-4">{story.advantages.label}</SectionLabel>
+      <SectionLabel>{story.advantages.label}</SectionLabel>
       <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(18rem,0.72fr)_minmax(0,1.08fr)]">
         <h3 className="font-heading text-[clamp(2.4rem,5vw,5.25rem)] font-black leading-[0.9] text-primary">
           {story.advantages.title}

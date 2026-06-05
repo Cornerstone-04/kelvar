@@ -27,7 +27,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-bg text-white">
       <div className="relative z-1 px-6 py-8 md:px-10 md:py-16">
-        <div className="grid gap-12  lg:grid-cols-[minmax(18rem,1.25fr)_repeat(3,minmax(10rem,0.8fr))]">
+        <div className="grid gap-12 lg:grid-cols-3 justify-items-center">
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
               <Image
@@ -46,13 +46,13 @@ export default function Footer() {
 
             <p className="mt-6 max-w-[45ch] font-mono text-xs-plus leading-[1.85] text-white/45">
               Engineering autonomous surveillance systems for air, land, sea,
-              and stratospheric security.
+              and space security.
             </p>
           </div>
 
           <FooterColumn title="Quick Links" links={navLinks} />
           <FooterColumn title="Platforms" links={platformLinks} />
-          <FooterColumn title="Resources" links={resourceLinks} />
+          {/* <FooterColumn title="Resources" links={resourceLinks} /> */}
         </div>
 
         <div className="mt-14 grid gap-4 border-t border-white/10 pt-7 font-mono text-[0.68rem] text-white/36 md:grid-cols-3 md:items-center">
