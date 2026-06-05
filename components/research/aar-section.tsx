@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
 const stats = [
-  { value: "3", label: "Active Platforms" },
+  { value: "4", label: "Active Platforms" },
   { value: "3", label: "Global Offices" },
   { value: "Air · Land · Sea · Space", label: "Operational Domains" },
   { value: "Always On", label: "System Availability" },

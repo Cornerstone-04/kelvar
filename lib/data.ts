@@ -185,25 +185,6 @@ const drones = [
   },
   {
     id: "02",
-    name: "Robobot",
-    codename: "—",
-    slug: "robobot",
-    tagline:
-      "AI-powered ground patrol for the spaces drones can't reach — indoors, always on.",
-    desc: "Autonomous indoor robot for continuous floor-level surveillance across offices, warehouses, factories, and commercial interiors.",
-    assets: {
-      image1: "/assets/images/platforms/robobot/robobot-single.jpg",
-      video: "/assets/videos/platforms/robobot/robobot-showcase.mp4",
-      videoPoster: "/assets/images/platforms/robobot/robobot-thumbnail.png",
-    },
-    specs: [
-      { label: "Capability Class", value: "Ground Patrol" },
-      { label: "Deployment Mode", value: "Indoor Autonomous" },
-      { label: "Sensor Stack", value: "Vision · Audio · Proximity" },
-    ],
-  },
-  {
-    id: "03",
     name: "Hydrax",
     codename: "—",
     slug: "hydrax",
@@ -219,6 +200,25 @@ const drones = [
       { label: "Capability Class", value: "Maritime Surveillance" },
       { label: "Deployment Mode", value: "Waterproof Aerial" },
       { label: "Sensor Stack", value: "Optical · Thermal · Marine" },
+    ],
+  },
+  {
+    id: "03",
+    name: "Robobot",
+    codename: "—",
+    slug: "robobot",
+    tagline:
+      "AI-powered ground patrol for the spaces drones can't reach — indoors, always on.",
+    desc: "Autonomous indoor robot for continuous floor-level surveillance across offices, warehouses, factories, and commercial interiors.",
+    assets: {
+      image1: "/assets/images/platforms/robobot/robobot-single.jpg",
+      video: "/assets/videos/platforms/robobot/robobot-showcase.mp4",
+      videoPoster: "/assets/images/platforms/robobot/robobot-thumbnail.png",
+    },
+    specs: [
+      { label: "Capability Class", value: "Ground Patrol" },
+      { label: "Deployment Mode", value: "Indoor Autonomous" },
+      { label: "Sensor Stack", value: "Vision · Audio · Proximity" },
     ],
   },
 ];

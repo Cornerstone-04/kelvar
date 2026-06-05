@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export function PillarGrid({ items }: { items: typeof ethos }) {
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-px bg-[#ffffff12]">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-px">
       {items.map((item, i) => (
         <motion.div
           key={item.id}
@@ -11,7 +11,7 @@ export function PillarGrid({ items }: { items: typeof ethos }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5, delay: i * 0.08 }}
-          className="bg-bg md:px-6 py-6"
+          className="bg-bg px-4 py-6 border-b border-[#ffffff12] sm:px-5 md:px-6 md:border-b-0 md:border-r last:border-r-0"
         >
           {/* Image */}
           <div className="group/img relative mb-4 aspect-video overflow-hidden bg-surface">
