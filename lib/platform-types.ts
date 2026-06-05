@@ -76,6 +76,28 @@ export type PlatformStoryAdvantage = {
   body: string;
 };
 
+export type PlatformStoryCostOption = {
+  name: string;
+  position: string;
+  upfront: string;
+  recurring: string;
+  timeline: string;
+  constraint: string;
+  summary: string;
+};
+
+export type PlatformStoryCostAnalysis = {
+  label: string;
+  title: string;
+  intro: string;
+  options: PlatformStoryCostOption[];
+  proofPoints: PlatformStoryMetric[];
+  conclusion: {
+    title: string;
+    body: string;
+  };
+};
+
 export type PlatformStory = {
   eyebrow: string;
   title: string;
@@ -100,6 +122,7 @@ export type PlatformStory = {
     title: string;
     items: PlatformStoryApplication[];
   };
+  costAnalysis: PlatformStoryCostAnalysis;
   advantages: {
     label: string;
     title: string;

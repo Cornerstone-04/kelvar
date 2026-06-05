@@ -34,6 +34,7 @@ export function StratosStorySection({
         <PlatformTypesBlock story={story} />
         <OperationsBlock story={story} />
         <ApplicationsBlock story={story} />
+        <CostAnalysisBlock story={story} />
         <AdvantagesBlock story={story} />
       </section>
 
@@ -381,6 +382,109 @@ function ApplicationsBlock({ story }: { story: PlatformStory }) {
         </div>
       </div>
     </StoryFrame>
+  );
+}
+
+function CostAnalysisBlock({ story }: { story: PlatformStory }) {
+  return (
+    <StoryFrame className="border-b border-white/10">
+      <SectionLabel>{story.costAnalysis.label}</SectionLabel>
+
+      <div className="mb-12 mt-8 grid gap-8 lg:grid-cols-[minmax(18rem,0.9fr)_minmax(0,0.9fr)] lg:items-end">
+        <header className="max-w-3xl">
+          <h3 className="font-heading text-[clamp(2.4rem,5vw,5.25rem)] font-black leading-[0.9] text-primary">
+            {story.costAnalysis.title}
+          </h3>
+        </header>
+
+        <p className="max-w-3xl font-mono text-xs-plus leading-[1.9] text-muted md:text-sm">
+          {story.costAnalysis.intro}
+        </p>
+      </div>
+
+      <div className="grid gap-px overflow-hidden border border-white/10 bg-white/10 lg:grid-cols-2">
+        {story.costAnalysis.options.map((option, index) => {
+          return (
+            <motion.article
+              key={option.name}
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              className="flex min-h-full flex-col bg-bg/90 p-6 md:p-8 xl:p-10"
+            >
+              <div className="flex flex-col gap-5">
+                <h4 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold leading-none text-primary">
+                  {option.name}
+                </h4>
+
+                <p className="w-fit border border-white/15 px-3 py-2 font-heading text-[clamp(1.5rem,3vw,3.5rem)] font-black leading-none text-primary">
+                  {option.position}
+                </p>
+              </div>
+
+              <div className="mt-9 grid gap-6 sm:grid-cols-2">
+                <CostField label="Upfront" value={option.upfront} />
+                <CostField label="Recurring" value={option.recurring} />
+                <CostField label="Timeline" value={option.timeline} />
+                <CostField label="Constraint" value={option.constraint} />
+              </div>
+
+              <p className="mt-4 border-t border-white/10 pt-4 font-mono text-xs-plus leading-[1.75] text-primary/82">
+                {option.summary}
+              </p>
+            </motion.article>
+          );
+        })}
+      </div>
+
+      <div className="mt-8 grid overflow-hidden border border-white/10 bg-white/5 lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,0.85fr)]">
+        <div className="border-b border-white/10 p-6 md:p-8 lg:border-b-0 lg:border-r lg:border-white/10 xl:p-10">
+          <p className="font-mono text-[0.58rem] uppercase tracking-[0.25em] text-dim">
+            Kelvar Stratos advantage
+          </p>
+          <h4 className="mt-5 max-w-3xl font-heading text-[clamp(2rem,4vw,4rem)] font-black leading-[0.9] text-primary">
+            {story.costAnalysis.conclusion.title}
+          </h4>
+          <p className="mt-6 max-w-3xl font-mono text-xs-plus leading-[1.85] text-muted">
+            {story.costAnalysis.conclusion.body}
+          </p>
+        </div>
+
+        <div className="grid gap-px bg-white/10 sm:grid-cols-3 lg:grid-cols-1">
+          {story.costAnalysis.proofPoints.map((point, index) => (
+            <motion.div
+              key={point.label}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: index * 0.06 }}
+              className="bg-bg/72 p-6 md:p-7"
+            >
+              <p className="font-heading text-[clamp(1.65rem,3vw,2.6rem)] font-black leading-none text-primary">
+                {point.value}
+              </p>
+              <p className="mt-3 font-mono text-xxs uppercase tracking-[0.18em] text-muted">
+                {point.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </StoryFrame>
+  );
+}
+
+function CostField({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="border-t border-white/10 pt-4">
+      <p className="font-mono text-[0.58rem] uppercase tracking-[0.22em] text-dim">
+        {label}
+      </p>
+      <p className="mt-2 font-mono text-xs-plus leading-[1.7] text-muted">
+        {value}
+      </p>
+    </div>
   );
 }
 

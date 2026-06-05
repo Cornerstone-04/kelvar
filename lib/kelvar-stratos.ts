@@ -148,7 +148,65 @@ export const kelvarStratos: Platform = {
           body: "Acting as an aerial communications relay, stratospheric platforms can extend broadband, emergency communications, and network coverage to remote, underserved, or disaster-affected regions.",
         },
       ],
-    },  
+    },
+    costAnalysis: {
+      label: "Cost Analysis",
+      title: "Satellite capability without satellite costs.",
+      intro:
+        "The cost difference between orbital and near-space platforms can be measured in millions of dollars. While satellites provide exceptional coverage, they require significant investment to build, launch, and operate. High-altitude UAV balloons offer a more accessible path to persistent monitoring and communications.",
+
+      options: [
+        {
+          name: "Orbital Satellite",
+          position: "$7.5M - $60M+",
+          upfront:
+            "Spacecraft manufacturing, payload development, launch services, insurance, licensing, and approvals.",
+          recurring:
+            "Ground station operations, mission control, maintenance, tracking, and future replacement missions.",
+          timeline:
+            "Months to years from design and testing to launch and operational deployment.",
+          constraint:
+            "Difficult to recover, repair, upgrade, or rapidly redeploy once in orbit.",
+          summary:
+            "Provides global coverage, but requires substantial capital investment and long deployment cycles.",
+        },
+        {
+          name: "High-Altitude UAV Balloon",
+          position: "$10k - $150K+",
+          upfront:
+            "Balloon envelope, lifting gas, payload systems, navigation equipment, and launch operations.",
+          recurring:
+            "Recovery, relaunch, replacement components, tracking support, and mission logistics.",
+          timeline:
+            "Can be deployed within days or weeks depending on payload and mission requirements.",
+          constraint:
+            "Mission duration, drift, recovery requirements, and continuity can limit long-term operations.",
+          summary:
+            "Far more affordable than satellites, making near-space missions accessible for research, monitoring, and communications.",
+        },
+      ],
+
+      proofPoints: [
+        {
+          value: "No Rocket",
+          label: "Avoids orbital launch costs",
+        },
+        {
+          value: "Recoverable",
+          label: "Hardware can be serviced and reused",
+        },
+        {
+          value: "Persistent",
+          label: "Regional coverage for extended missions",
+        },
+      ],
+
+      conclusion: {
+        title: "Where Kelvar Stratos Changes the Economics",
+        body: "Kelvar Stratos combines the affordability of high-altitude UAV balloons with the persistence traditionally associated with satellite systems. By leveraging solar-powered endurance, controlled station-keeping, and reusable infrastructure, Stratos delivers continuous regional coverage without the financial burden of orbital deployment.",
+      },
+    },
+
     advantages: {
       label: "Technological Advantages",
       title: "Why the hybrid StratoSolar model matters",
