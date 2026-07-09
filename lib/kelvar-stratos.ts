@@ -38,7 +38,7 @@ export const kelvarStratos: Platform = {
         label: "Stratospheric operating band",
       },
       {
-        value: "Weeks-months",
+        value: "Weeks - Months",
         label: "Persistent mission endurance",
       },
       {
