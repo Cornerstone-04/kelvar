@@ -94,18 +94,9 @@ function StoryHero({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-10 grid gap-px bg-white/10 lg:grid-cols-[minmax(0,1.45fr)_minmax(22rem,0.9fr)]"
+          className="mt-10 "
         >
-          <div className="bg-bg/90 p-5 backdrop-blur-md md:p-7">
-            <p className="max-w-5xl font-mono text-xs-plus leading-[1.85] text-muted md:text-sm">
-              {story.summary}
-            </p>
-          </div>
-
-          <MetricGrid
-            metrics={story.metrics}
-            columns="sm:grid-cols-3 lg:grid-cols-1 "
-          />
+          <MetricGrid metrics={story.metrics} columns="sm:grid-cols-3" />
         </motion.div>
       </div>
     </div>

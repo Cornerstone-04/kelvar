@@ -11,7 +11,7 @@ export const kelvarStratos: Platform = {
   introTitle:
     "Stratos is Kelvar Industries’ next-generation stratospheric platform.",
   description:
-    "Kelvar Stratos is a solar-powered stratospheric platform delivering satellite-like persistence with UAV-level control for surveillance, connectivity, and economic security. A stratospheric balloon (also known as a high-altitude balloon) is an uncrewed or crewed balloon that travels into the Earth's stratosphere, typically reaching altitudes between 18 km and 37 km (11 to 23 miles). These platforms are used for weather monitoring, scientific research, and increasingly, as a low-carbon alternative for space tourism.",
+    "Kelvar Stratos is a solar-powered stratospheric platform delivering satellite-like persistence with UAV-level control for surveillance, connectivity, and economic security. A stratospheric balloon (also known as a high-altitude balloon) is an autonomous vehicle that travels into the Earth's stratosphere, typically reaching altitudes between 18 km and 37 km (11 to 23 miles). These platforms are used for weather monitoring, scientific research, and increasingly, as a low-carbon alternative for space tourism.",
   hero: {
     kind: "image",
     src: "/assets/images/platforms/stratos/stratos-hero.jpg",
@@ -26,7 +26,7 @@ export const kelvarStratos: Platform = {
     eyebrow: "Kelvar Stratos / Near-Space Infrastructure",
     title: "Solar-powered persistence with UAV-level control.",
     summary:
-      "Kelvar Stratos is a solar-powered stratospheric platform delivering satellite-like persistence with UAV-level control for surveillance, connectivity, and economic security. A stratospheric balloon (also known as a high-altitude balloon) is an uncrewed or crewed balloon that travels into the Earth's stratosphere, typically reaching altitudes between 18 km and 37 km (11 to 23 miles). These platforms are used for weather monitoring, scientific research, and increasingly, as a low-carbon alternative for space tourism.",
+      "Kelvar Stratos is a solar-powered stratospheric platform delivering satellite-like persistence with UAV-level control for surveillance, connectivity, and economic security. A stratospheric balloon (also known as a high-altitude balloon) is an autonomous vehicle that travels into the Earth's stratosphere, typically reaching altitudes between 18 km and 37 km (11 to 23 miles). These platforms are used for weather monitoring, scientific research, and increasingly, as a low-carbon alternative for space tourism.",
     hero: {
       src: "/assets/images/platforms/stratos/stratos-hero.jpg",
       alt: "Kelvar Stratos UAV Balloon Satellite modelling and design",
@@ -49,7 +49,7 @@ export const kelvarStratos: Platform = {
     overview: {
       label: "Overview",
       title: "What Kelvar Stratos is",
-      body: "Kelvar Stratos is a solar-powered stratospheric platform delivering satellite-like persistence with UAV-level control for surveillance, connectivity, and economic security. A stratospheric balloon (also known as a high-altitude balloon) is an uncrewed or crewed balloon that travels into the Earth's stratosphere, typically reaching altitudes between 18 km and 37 km (11 to 23 miles). These platforms are used for weather monitoring, scientific research, and increasingly, as a low-carbon alternative for space tourism.",
+      body: "Kelvar Stratos is a solar-powered stratospheric platform delivering satellite-like persistence with UAV-level control for surveillance, connectivity, and economic security. A stratospheric balloon (also known as a high-altitude balloon) is an autonomous vehicle that travels into the Earth's stratosphere, typically reaching altitudes between 18 km and 37 km (11 to 23 miles). These platforms are used for weather monitoring, scientific research, and increasingly, as a low-carbon alternative for space tourism.",
       media: {
         src: "/assets/images/platforms/stratos/stratos-hero.jpg",
         alt: "Kelvar Stratos concept rendering",
@@ -60,7 +60,7 @@ export const kelvarStratos: Platform = {
       label: "System Architecture",
       title:
         "Balloon lift. Solar UAV intelligence. Persistent near-space operations.",
-      body: "The Kelvar Kite StratoSolar System (SSV) is a hybrid stratospheric platform that combines a large high-altitude balloon with a solar-powered fixed-wing UAV to deliver persistent, near-space capabilities at a fraction of satellite cost; the balloon provides the primary lift and maintains altitude in the stratosphere for long durations, while the UAV acts as an intelligent control unit, using solar energy to power sensors, communications, and AI-driven stabilisation, enabling the system to remain over a target area for weeks or months while performing surveillance, telecom relay, environmental monitoring, and security operations, making it an adaptable, low-cost aerial infrastructure solution for applications across smart cities, remote connectivity, and national-scale monitoring in regions like Nigeria and across Africa.",
+      body: "The Kelvar Kite StratoSolar System (SSV) is a hybrid stratospheric platform that combines a large high-altitude balloon with a solar-powered fixed-wing UAV to deliver persistent, near-space capabilities at a fraction of satellite cost; the balloon provides the primary lift and maintains altitude in the stratosphere for long durations, while the UAV acts as an intelligent control unit, using solar energy to power sensors, communications, and AI-driven stabilisation, enabling the system to remain over a target area for weeks or months while performing surveillance, telecom relay, environmental monitoring, and security operations, making it an adaptable, low-cost aerial infrastructure solution for applications across smart cities, remote connectivity, and national-scale monitoring.",
       diagram: {
         src: "/assets/images/platforms/stratos/stratos-structure.jpg",
         alt: "Diagram of the Stratos UAV Balloon Satellite design structure and components",
@@ -209,7 +209,7 @@ export const kelvarStratos: Platform = {
 
     advantages: {
       label: "Technological Advantages",
-      title: "Why the hybrid StratoSolar model matters",
+      title: "Why the hybrid Kelvar Stratos model matters",
       items: [
         {
           title: "Satellite-like persistence",
