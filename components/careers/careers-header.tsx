@@ -1,4 +1,4 @@
-import { careers } from "@/lib/data";
+import { careers } from "@/content/careers";
 import { InternalPageHero } from "../ui/internal-page-hero";
 
 export function CareersHeader() {

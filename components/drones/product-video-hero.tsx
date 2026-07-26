@@ -2,12 +2,12 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import type { DronePageData } from "@/lib/data";
+import type { ProductDetail } from "@/types/product-types";
 import { GlitchText } from "@/components/ui/glitch-text";
 import { KelvarButton } from "@/components/ui/kelvar-button";
 import { NoiseOverlay } from "@/components/ui/ambient-field";
 
-export function DroneVideoHero({ drone }: { drone: DronePageData }) {
+export function ProductVideoHero({ product }: { product: ProductDetail }) {
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -28,7 +28,7 @@ export function DroneVideoHero({ drone }: { drone: DronePageData }) {
         playsInline
         className="absolute inset-0 z-0 h-full w-full object-cover brightness-[0.32] saturate-[0.58]"
       >
-        <source src={drone.assets.videoAlt} type="video/mp4" />
+        <source src={product.assets.videoAlt} type="video/mp4" />
       </video>
 
       <NoiseOverlay className="z-1 opacity-45" />
@@ -53,8 +53,8 @@ export function DroneVideoHero({ drone }: { drone: DronePageData }) {
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="mb-6 font-heading text-[clamp(4rem,14vw,11rem)] font-black leading-none text-primary"
         >
-          {drone.name}
-          {drone.trademark && (
+          {product.name}
+          {product.trademark && (
             <sup className="ml-2 align-super text-[0.25em] text-primary/30">
               ™
             </sup>
@@ -67,7 +67,7 @@ export function DroneVideoHero({ drone }: { drone: DronePageData }) {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="mb-10 max-w-[58ch] font-mono text-xs-plus leading-[1.75] text-muted"
         >
-          {drone.tagline}
+          {product.tagline}
         </motion.p>
 
         <motion.div

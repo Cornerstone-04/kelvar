@@ -1,4 +1,4 @@
-export type PlatformHero =
+export type ResearchPlatformHero =
   | {
       kind: "video";
       src: string;
@@ -115,6 +115,7 @@ export type PlatformStory = {
   operations: {
     label: string;
     title: string;
+    description: string;
     panels: PlatformStoryNarrative[];
   };
   applications: {
@@ -130,7 +131,7 @@ export type PlatformStory = {
   };
 };
 
-export type Platform = {
+type ResearchPlatformBase = {
   id: string;
   name: string;
   trademark?: boolean;
@@ -140,11 +141,23 @@ export type Platform = {
   type: string;
   introTitle: string;
   description: string;
-  hero: PlatformHero;
+  hero: ResearchPlatformHero;
   domainsLayout: "immersive" | "cards";
   domainsLabel: string;
   domains: PlatformDomain[];
   coreTech: PlatformTechnology[];
   useCases: PlatformUseCase[];
-  story?: PlatformStory;
 };
+
+export type StandardResearchPlatform = ResearchPlatformBase & {
+  kind: "standard";
+};
+
+export type StratosResearchPlatform = ResearchPlatformBase & {
+  kind: "stratos";
+  story: PlatformStory;
+};
+
+export type ResearchPlatform =
+  | StandardResearchPlatform
+  | StratosResearchPlatform;

@@ -34,6 +34,10 @@
     --dim: #484761;
     --bg-alt: #07072d;
     --border-col-2: #ffffff0d;
+    --border-subtle: #ffffff1a;
+    --text-secondary: #9494a8;
+    --text-tertiary: #ffffff5c;
+    --nav-background: #07072abf;
 }
 
 @layer base {

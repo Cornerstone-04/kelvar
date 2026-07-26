@@ -1,18 +1,18 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import type {
-  Platform,
+  ResearchPlatform,
   PlatformDomain,
   PlatformTechnology,
   PlatformUseCase,
-} from "@/lib/platform-types";
+} from "@/types/research-types";
 import { Rule } from "../ui/rule";
 import { SectionLabel } from "../ui/section-label";
-import { StratosStorySection } from "./stratos-story-section";
+import { StratosStorySection } from "./stratos/stratos-story-section";
 import { LazyVideo } from "../ui/lazy-video";
 
-export function PlatformSection({ platform }: { platform: Platform }) {
-  if (platform.story) {
+export function PlatformSection({ platform }: { platform: ResearchPlatform }) {
+  if (platform.kind === "stratos") {
     return <StratosStorySection platform={platform} story={platform.story} />;
   }
 
@@ -33,7 +33,7 @@ export function PlatformSection({ platform }: { platform: Platform }) {
   );
 }
 
-function PlatformHero({ platform }: { platform: Platform }) {
+function PlatformHero({ platform }: { platform: ResearchPlatform }) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -77,7 +77,7 @@ function PlatformHero({ platform }: { platform: Platform }) {
   );
 }
 
-function PlatformIntro({ platform }: { platform: Platform }) {
+function PlatformIntro({ platform }: { platform: ResearchPlatform }) {
   return (
     <div className="border-b border-[#ffffff12] px-6 py-12 md:px-10 md:py-20">
       <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2 md:gap-12">
@@ -113,7 +113,7 @@ function PlatformIntro({ platform }: { platform: Platform }) {
   );
 }
 
-function PlatformDomains({ platform }: { platform: Platform }) {
+function PlatformDomains({ platform }: { platform: ResearchPlatform }) {
   if (platform.domainsLayout === "immersive") {
     return (
       <>

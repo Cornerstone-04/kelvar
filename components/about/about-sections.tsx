@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
-import { site, team, values } from "@/lib/data";
+import { team, values } from "@/content/about";
+import { site } from "@/content/site";
 import { SectionLabel } from "../ui/section-label";
 import { ScrollingText } from "../ui/scrolling-text";
 

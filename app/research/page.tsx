@@ -1,7 +1,7 @@
 "use client";
 
 import { Rule } from "@/components/ui/rule";
-import { kelvarStratos } from "@/lib/kelvar-stratos";
+import { kelvarStratos } from "@/content/research/stratos";
 
 import { PageHero } from "@/components/research/page-hero";
 import { IntroSection } from "@/components/research/intro-section";
@@ -17,7 +17,6 @@ export default function ResearchPage() {
     <div className="min-h-screen bg-bg">
       <PageHero />
       <IntroSection />
-      <Rule />
       <Rule />
       <ResearchAreas />
       <Rule />

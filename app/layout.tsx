@@ -1,29 +1,39 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import { Barlow_Condensed, Inter, DM_Mono } from "next/font/google";
+import { SiteNavbar } from "@/components/layout/site-navbar";
+import { SiteFooter } from "@/components/layout/site-footer";
+import localFont from "next/font/local";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import "./globals.css";
 
-const barlow = Barlow_Condensed({
+const barlow = localFont({
+  src: [
+    { path: "../public/assets/fonts/barlow/BarlowCondensed-Regular.ttf", weight: "400" },
+    { path: "../public/assets/fonts/barlow/BarlowCondensed-Medium.ttf", weight: "500" },
+    { path: "../public/assets/fonts/barlow/BarlowCondensed-SemiBold.ttf", weight: "600" },
+    { path: "../public/assets/fonts/barlow/BarlowCondensed-Bold.ttf", weight: "700" },
+    { path: "../public/assets/fonts/barlow/BarlowCondensed-ExtraBold.ttf", weight: "800" },
+    { path: "../public/assets/fonts/barlow/BarlowCondensed-Black.ttf", weight: "900" },
+  ],
   variable: "--font-barlow",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
 });
 
-const inter = Inter({
+const inter = localFont({
+  src: [
+    { path: "../public/assets/fonts/inter/Inter_18pt-Light.ttf", weight: "300" },
+    { path: "../public/assets/fonts/inter/Inter_18pt-Regular.ttf", weight: "400" },
+    { path: "../public/assets/fonts/inter/Inter_18pt-Medium.ttf", weight: "500" },
+    { path: "../public/assets/fonts/inter/Inter_18pt-SemiBold.ttf", weight: "600" },
+  ],
   variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  style: ["normal", "italic"],
 });
 
-const dmMono = DM_Mono({
+const dmMono = localFont({
+  src: [
+    { path: "../public/assets/fonts/dm-mono/DMMono-Light.ttf", weight: "300" },
+    { path: "../public/assets/fonts/dm-mono/DMMono-Regular.ttf", weight: "400" },
+    { path: "../public/assets/fonts/dm-mono/DMMono-Medium.ttf", weight: "500" },
+  ],
   variable: "--font-dm-mono",
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -69,9 +79,9 @@ export default function RootLayout({
       className={`${barlow.variable} ${inter.variable} ${dmMono.variable}`}
     >
       <body>
-        <Navbar />
+        <SiteNavbar />
         <main>{children}</main>
-        <Footer />
+        <SiteFooter />
         <ScrollToTop />
       </body>
     </html>

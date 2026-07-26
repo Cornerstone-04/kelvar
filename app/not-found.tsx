@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { BsArrowLeft } from "react-icons/bs";
 
 function StaticCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -155,7 +156,7 @@ export default function NotFound() {
           href="/"
           className="inline-flex items-center gap-3 border border-white/12 px-[1.8rem] py-[0.8rem] font-mono text-[0.62rem] uppercase tracking-[0.2em] text-white/60 no-underline transition-all duration-200 ease-in-out hover:border-white/40 hover:text-white"
         >
-          ← Re-establish Link
+          <BsArrowLeft /> Re-establish Link
         </Link>
       </motion.div>
 

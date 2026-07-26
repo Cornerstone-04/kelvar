@@ -1,4 +1,4 @@
-import { careers } from "@/lib/data";
+import { careers } from "@/content/careers";
 
 export const ALL = "All";
 

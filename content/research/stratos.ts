@@ -1,6 +1,7 @@
-import type { Platform } from "./platform-types";
+import type { ResearchPlatform } from "@/types/research-types";
 
-export const kelvarStratos: Platform = {
+export const kelvarStratos: ResearchPlatform = {
+  kind: "stratos",
   id: "stratos",
   name: "Stratos",
   trademark: true,
@@ -108,6 +109,8 @@ export const kelvarStratos: Platform = {
     operations: {
       label: "System Operations",
       title: "From ground deployment to fleet-level persistence",
+      description:
+        "The Kelvar Kite StratoSolar System combines balloon lift with a solar fixed-wing UAV to deliver persistent near-space coverage. The balloon sustains altitude while the UAV powers control, sensing, communications, and stabilisation for surveillance, relay, monitoring, and security missions.",
       panels: [
         {
           label: "Ground Systems",
@@ -213,7 +216,7 @@ export const kelvarStratos: Platform = {
       items: [
         {
           title: "Satellite-like persistence",
-          body: "Operating in the stratosphere for weeks or months at a time, Kelvar Stratos provides continuous regional coverage without the launch cost, latency, or replacement cycle o f satellites.",
+          body: "Operating in the stratosphere for weeks or months at a time, Kelvar Stratos provides continuous regional coverage without the launch cost, latency, or replacement cycle of satellites.",
         },
         {
           title: "UAV-level control",

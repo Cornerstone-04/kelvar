@@ -3,7 +3,8 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import Link from "next/link";
 import { useRef } from "react";
-import { drones, site } from "@/lib/data";
+import { platformSummaries } from "@/content/products/summaries";
+import { site } from "@/content/site";
 import { GlitchText } from "@/components/ui/glitch-text";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -14,7 +15,6 @@ export function HeroSection() {
     target: heroRef,
     offset: ["start start", "end start"],
   });
-  // const indicatorOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
@@ -102,7 +102,7 @@ export function HeroSection() {
         transition={{ delay: 1.2, duration: 0.6 }}
         className="absolute right-10 bottom-8 z-2 hidden gap-3 md:flex"
       >
-        {drones.map((d) => (
+        {platformSummaries.map((d) => (
           <a
             key={d.id}
             href={`/#${d.slug}`}
@@ -116,10 +116,6 @@ export function HeroSection() {
         ))}
       </motion.div>
 
-      {/*scroll indicator*/}
-      {/*<motion.div className="md:hidden" style={{ opacity: indicatorOpacity }}>
-        <ScrollIndicator />
-      </motion.div>*/}
     </section>
   );
 }

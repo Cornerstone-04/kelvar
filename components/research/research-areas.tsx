@@ -1,4 +1,4 @@
-import { research } from "@/lib/data";
+import { research } from "@/content/research/areas";
 import { SectionFrame } from "../ui/section-frame";
 import { motion } from "motion/react";
 

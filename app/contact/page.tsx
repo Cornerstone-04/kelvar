@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import { useState } from "react";
-import { site } from "@/lib/data";
+import { site } from "@/content/site";
 import { SectionLabel } from "@/components/ui/section-label";
 import { KelvarButton } from "@/components/ui/kelvar-button";
 import { InternalPageHero } from "@/components/ui/internal-page-hero";
