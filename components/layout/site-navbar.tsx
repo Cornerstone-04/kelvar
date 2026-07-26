@@ -9,7 +9,7 @@ import {
   useMotionValueEvent,
 } from "motion/react";
 import { useState } from "react";
-import { navLinks, site } from "@/lib/data";
+import { navLinks, site } from "@/content";
 import { GlitchText } from "../ui/glitch-text";
 
 const menuBgs: Record<string, string> = {
@@ -21,7 +21,7 @@ const menuBgs: Record<string, string> = {
   "/careers": "#070a24e6",
 };
 
-export default function Navbar() {
+export default function SiteNavbar() {
   const [open, setOpen] = useState(false);
   const [hovered, setHovered] = useState<string | null>(null);
   const [hidden, setHidden] = useState(false);

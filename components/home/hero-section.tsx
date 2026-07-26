@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import Link from "next/link";
 import { useRef } from "react";
-import { drones, site } from "@/lib/data";
+import { platformSummaries, site } from "@/content";
 import { GlitchText } from "@/components/ui/glitch-text";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -102,7 +102,7 @@ export function HeroSection() {
         transition={{ delay: 1.2, duration: 0.6 }}
         className="absolute right-10 bottom-8 z-2 hidden gap-3 md:flex"
       >
-        {drones.map((d) => (
+        {platformSummaries.map((d) => (
           <a
             key={d.id}
             href={`/#${d.slug}`}

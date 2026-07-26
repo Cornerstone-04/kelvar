@@ -1,6 +1,6 @@
-import type { Platform } from "./platform-types";
+import type { ResearchPlatform } from "@/types/research-types";
 
-export const airConvoy: Platform = {
+export const airConvoy: ResearchPlatform = {
   id: "airconvoy",
   name: "AirConvoy",
   trademark: true,

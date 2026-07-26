@@ -2,12 +2,12 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import type { DronePageData } from "@/lib/data";
+import type { ProductDetail } from "@/types/product-types";
 import { GlitchText } from "@/components/ui/glitch-text";
 import { KelvarButton } from "@/components/ui/kelvar-button";
 import { NoiseOverlay } from "@/components/ui/ambient-field";
 
-export function DroneVideoHero({ drone }: { drone: DronePageData }) {
+export function DroneVideoHero({ drone }: { drone: ProductDetail }) {
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,

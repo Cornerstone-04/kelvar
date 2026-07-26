@@ -10,7 +10,7 @@ import {
   LuRadar,
 } from "react-icons/lu";
 import type { IconType } from "react-icons";
-import type { DronePageData } from "@/lib/data";
+import type { ProductDetail } from "@/types/product-types";
 import { SectionFrame } from "@/components/ui/section-frame";
 import { SectionLabel } from "@/components/ui/section-label";
 import { MetricGrid } from "@/components/ui/metric-grid";
@@ -23,7 +23,7 @@ const iconMap: Record<string, IconType> = {
   globe: LuGlobe,
 };
 
-export function DomeProductStory({ drone }: { drone: DronePageData }) {
+export function DomeProductStory({ drone }: { drone: ProductDetail }) {
   const primaryFeatures = drone.features.filter(
     (feature) => feature.tag === "Primary",
   );

@@ -1,33 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import { drones, navLinks, site } from "@/lib/data";
+import { navLinks, platformSummaries, site } from "@/content";
 
 const platformLinks = [
-  ...drones.map((drone) => ({
+  ...platformSummaries.map((drone) => ({
     href: `/#${drone.slug}`,
     label: drone.name,
   })),
   { href: "/research#stratos", label: "Stratos" },
 ];
 
-const communityLinks = [
-  { href: "/research", label: "RD&D" },
-  { href: "/focus", label: "Focus Areas" },
-  { href: "/careers", label: "Careers" },
-  { href: "/about", label: "About" },
-];
-
-const resourceLinks = [
-  { href: "/drones/dome", label: "Dome" },
-  { href: "/research#stratos", label: "Stratos" },
-  { href: "/contact", label: "Contact Us" },
-];
-
-export default function Footer() {
+export default function SiteFooter() {
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-bg text-white">
       <div className="relative z-1 px-6 py-8 md:px-10 md:py-16">
-        {/* CHANGED: Removed 'justify-items-center'. Added 'text-left' by default. */}
         <div className="grid gap-12 text-left sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
@@ -53,10 +39,8 @@ export default function Footer() {
 
           <FooterColumn title="Quick Links" links={navLinks} />
           <FooterColumn title="Platforms" links={platformLinks} />
-          {/* <FooterColumn title="Resources" links={resourceLinks} /> */}
         </div>
 
-        {/* CHANGED: Replaced flex-col defaults with flat text alignment tweaks for better mobile reading */}
         <div className="mt-14 grid gap-4 border-t border-white/10 pt-7 font-mono text-[0.68rem] text-white/36 text-left md:grid-cols-3 md:items-center">
           <p>
             Partner with us:{" "}
@@ -81,8 +65,6 @@ export default function Footer() {
           </p>
         </div>
       </div>
-
-      {/* <FooterSignalBand /> */}
     </footer>
   );
 }
@@ -95,7 +77,6 @@ function FooterColumn({
   links: { href: string; label: string }[];
 }) {
   return (
-    // REMOVED: Any global centering styles. Defaults to natural left alignment.
     <div>
       <h2 className="mb-7 font-heading text-[1.25rem] font-bold normal-case tracking-normal text-primary">
         {title}

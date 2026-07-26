@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import SiteNavbar from "@/components/layout/site-navbar";
+import SiteFooter from "@/components/layout/site-footer";
 import { Barlow_Condensed, Inter, DM_Mono } from "next/font/google";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import "./globals.css";
@@ -69,9 +69,9 @@ export default function RootLayout({
       className={`${barlow.variable} ${inter.variable} ${dmMono.variable}`}
     >
       <body>
-        <Navbar />
+        <SiteNavbar />
         <main>{children}</main>
-        <Footer />
+        <SiteFooter />
         <ScrollToTop />
       </body>
     </html>

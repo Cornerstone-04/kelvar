@@ -1,6 +1,6 @@
 "use client";
 
-import { focus } from "@/lib/data";
+import { focus } from "@/content";
 import { focusDetails } from "@/lib/focus-details";
 import { Rule } from "@/components/ui/rule";
 import { CtaSection } from "@/components/ui/cta-section";

@@ -1,10 +1,10 @@
 import { redirect } from "next/navigation";
-import { dronePages } from "@/lib/data";
+import { productDetails } from "@/content";
 import DronePageLayout from "@/components/drones/drone-page-layout";
 import { Metadata } from "next";
 
 export function generateStaticParams() {
-  return dronePages.map((d) => ({ slug: d.slug }));
+  return productDetails.map((product) => ({ slug: product.slug }));
 }
 
 export async function generateMetadata({
@@ -13,11 +13,11 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const drone = dronePages.find((d) => d.slug === slug);
-  if (!drone) return {};
+  const product = productDetails.find((item) => item.slug === slug);
+  if (!product) return {};
   return {
-    title: `${drone.name}${drone.trademark ? "™" : ""} — Kelvar Industries`,
-    description: drone.tagline,
+    title: `${product.name}${product.trademark ? "™" : ""} — Kelvar Industries`,
+    description: product.tagline,
   };
 }
 
@@ -27,7 +27,7 @@ export default async function DronePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const drone = dronePages.find((d) => d.slug === slug);
-  if (!drone) redirect(`/#${slug}`);
-  return <DronePageLayout drone={drone} />;
+  const product = productDetails.find((item) => item.slug === slug);
+  if (!product) redirect(`/#${slug}`);
+  return <DronePageLayout drone={product} />;
 }

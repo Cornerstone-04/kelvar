@@ -1,8 +1,8 @@
-import { Platform } from "@/lib/platform-types";
+import type { ResearchPlatform } from "@/types/research-types";
 import { motion } from "motion/react";
 import { BsArrowRight } from "react-icons/bs";
 
-export function PlatformNav({ platforms }: { platforms: Platform[] }) {
+export function PlatformNav({ platforms }: { platforms: ResearchPlatform[] }) {
   return (
     <section className="px-6 py-8 md:px-10 md:py-12">
       <div className="flex gap-4 md:gap-6">

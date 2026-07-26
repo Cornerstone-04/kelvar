@@ -1,6 +1,6 @@
-import type { Platform } from "./platform-types";
+import type { ResearchPlatform } from "@/types/research-types";
 
-export const kelvarStratos: Platform = {
+export const kelvarStratos: ResearchPlatform = {
   id: "stratos",
   name: "Stratos",
   trademark: true,
@@ -213,7 +213,7 @@ export const kelvarStratos: Platform = {
       items: [
         {
           title: "Satellite-like persistence",
-          body: "Operating in the stratosphere for weeks or months at a time, Kelvar Stratos provides continuous regional coverage without the launch cost, latency, or replacement cycle o f satellites.",
+          body: "Operating in the stratosphere for weeks or months at a time, Kelvar Stratos provides continuous regional coverage without the launch cost, latency, or replacement cycle of satellites.",
         },
         {
           title: "UAV-level control",

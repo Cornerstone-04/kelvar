@@ -27,9 +27,9 @@ Keep the experience on `/research`, using the current Stratos story position aft
 Relevant entry points:
 
 - `app/research/page.tsx`
-- `lib/kelvar-stratos.ts`
-- `lib/platform-types.ts`
-- `components/research/stratos-story-section.tsx`
+- `content/research/stratos.ts`
+- `types/research-types.ts`
+- `components/research/stratos/stratos-story-section.tsx`
 
 The existing `kelvarStratos` object should remain the source passed into `PlatformSection`. Extend or rename its story model as needed, but do not create a parallel hard-coded KELVARX page inside the component.
 
@@ -491,7 +491,7 @@ Recommended components:
 - `KelvarxClosingSection`
 - `KelvarxSectionNav` if the local navigator is implemented
 
-Keep section data in `lib/kelvar-stratos.ts` or rename it to `lib/kelvarx.ts` if the exported object now represents the full division. Components should receive typed data and should not contain the client's copy as scattered literals.
+Keep the existing Stratos material in `content/research/stratos.ts`. If KELVARX is confirmed as a distinct division, add `content/research/kelvarx.ts` and compose its relationship with Stratos through `content/index.ts`. Components should receive typed data and should not contain the client's copy as scattered literals.
 
 ### Existing content to remove or revise
 
