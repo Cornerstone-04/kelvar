@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import type { PlatformStory } from "@/types/research-types";
 import { SectionLabel } from "@/components/ui/section-label";
 import { StoryFrame } from "./story-frame";
+import { riseIn, viewportOnce } from "@/lib/motion-variants";
 
 export function StratosEconomics({ story }: { story: PlatformStory }) {
   return (
@@ -20,9 +21,10 @@ export function StratosEconomics({ story }: { story: PlatformStory }) {
           {story.costAnalysis.options.map((option, index) => (
             <motion.article
               key={option.name}
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              variants={riseIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportOnce}
               transition={{ delay: index * 0.08 }}
               className="bg-bg/90 p-6 md:p-8"
             >

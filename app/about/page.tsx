@@ -1,5 +1,3 @@
-"use client";
-
 import { AboutHeroSection } from "@/components/about/about-hero-section";
 import { AboutSections } from "@/components/about/about-sections";
 

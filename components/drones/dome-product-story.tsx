@@ -23,11 +23,11 @@ const iconMap: Record<string, IconType> = {
   globe: LuGlobe,
 };
 
-export function DomeProductStory({ drone }: { drone: ProductDetail }) {
-  const primaryFeatures = drone.features.filter(
+export function DomeProductStory({ product }: { product: ProductDetail }) {
+  const primaryFeatures = product.features.filter(
     (feature) => feature.tag === "Primary",
   );
-  const secondaryFeatures = drone.features.filter(
+  const secondaryFeatures = product.features.filter(
     (feature) => feature.tag === "Secondary",
   );
 
@@ -48,7 +48,7 @@ export function DomeProductStory({ drone }: { drone: ProductDetail }) {
             transition={{ duration: 0.6 }}
             className="font-mono text-xs-plus leading-[1.95] text-muted md:text-sm"
           >
-            {drone.concept}
+            {product.concept}
           </motion.p>
         </div>
       </SectionFrame>
@@ -88,7 +88,7 @@ export function DomeProductStory({ drone }: { drone: ProductDetail }) {
               Mobile, sensing, self-coordinated CCTV.
             </h3>
             <p className="mt-5 font-mono text-xs-plus leading-[1.85] text-muted">
-              {drone.vision}
+              {product.vision}
             </p>
           </div>
           <div className="grid gap-px bg-white/10">
@@ -103,7 +103,7 @@ export function DomeProductStory({ drone }: { drone: ProductDetail }) {
               >
                 <div className="relative min-h-72 overflow-hidden">
                   <Image
-                    src={feature.image ?? drone.assets.image}
+                    src={feature.image ?? product.assets.image}
                     alt={feature.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 38vw"
@@ -141,7 +141,7 @@ export function DomeProductStory({ drone }: { drone: ProductDetail }) {
             </h2>
           </div>
           <div className="grid gap-px bg-white/10 sm:grid-cols-2">
-            {drone.useCases.map((useCase, index) => {
+            {product.useCases.map((useCase, index) => {
               const Icon = iconMap[useCase.icon] ?? LuGlobe;
               return (
                 <motion.article
@@ -169,12 +169,12 @@ export function DomeProductStory({ drone }: { drone: ProductDetail }) {
       <SectionFrame label="Sensor & Deployment Profile">
         <div className="grid gap-8 lg:grid-cols-2">
           <MetricGrid
-            metrics={drone.stats}
+            metrics={product.stats}
             columns="grid-cols-2 md:grid-cols-3"
           />
           <div>
             <div className="border-t border-white/15">
-              {drone.specs.map((spec, index) => (
+              {product.specs.map((spec, index) => (
                 <motion.div
                   key={spec.label}
                   initial={{ opacity: 0, x: -10 }}
@@ -211,7 +211,7 @@ export function DomeProductStory({ drone }: { drone: ProductDetail }) {
 
       <SectionFrame surface="surface" label="Operating Philosophy">
         <div className="border-y border-white/15">
-          {drone.philosophy.map((line, index) => (
+          {product.philosophy.map((line, index) => (
             <motion.div
               key={line}
               initial={{ opacity: 0, x: -14 }}
@@ -244,8 +244,8 @@ export function DomeProductStory({ drone }: { drone: ProductDetail }) {
           <p className="mx-auto mt-8 max-w-2xl font-mono text-xs-plus leading-[1.8] text-muted">
             As the UK confronts rising threats, 642,170 fire incidents, 3.9
             million fraud cases, and 9.4 million recorded crimes, traditional
-            static CCTV cannot keep pace. {drone.name}
-            {drone.trademark ? <sup>TM</sup> : ""} delivers a next-generation
+            static CCTV cannot keep pace. {product.name}
+            {product.trademark ? <sup>TM</sup> : ""} delivers a next-generation
             response.
           </p>
           <div className="mt-10">

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { navLinks, platformSummaries, site } from "@/content";
+import { platformSummaries } from "@/content/products/summaries";
+import { navLinks, site } from "@/content/site";
 
 const platformLinks = [
   ...platformSummaries.map((drone) => ({
@@ -10,7 +11,7 @@ const platformLinks = [
   { href: "/research#stratos", label: "Stratos" },
 ];
 
-export default function SiteFooter() {
+export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-bg text-white">
       <div className="relative z-1 px-6 py-8 md:px-10 md:py-16">

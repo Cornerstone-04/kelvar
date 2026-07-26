@@ -33,5 +33,6 @@ export const careers = {
       summary:
         "Own Kelvar's presence across social platforms. Build the visual language, grow the audience, and communicate what we're building to the world. You'll be the voice of a company doing things that haven't been done before.",
     },
-  ],
+  ] satisfies CareerRole[],
 };
+import type { CareerRole } from "@/types/content-types";

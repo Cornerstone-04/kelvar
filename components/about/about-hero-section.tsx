@@ -1,4 +1,4 @@
-import { site } from "@/content";
+import { site } from "@/content/site";
 import { InternalPageHero } from "../ui/internal-page-hero";
 
 export const AboutHeroSection = () => {

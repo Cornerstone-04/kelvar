@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
-import { productDetails } from "@/content";
-import DronePageLayout from "@/components/drones/drone-page-layout";
+import { productDetails } from "@/content/products/dome";
+import { ProductPageLayout } from "@/components/drones/product-page-layout";
 import { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -29,5 +29,5 @@ export default async function DronePage({
   const { slug } = await params;
   const product = productDetails.find((item) => item.slug === slug);
   if (!product) redirect(`/#${slug}`);
-  return <DronePageLayout drone={product} />;
+  return <ProductPageLayout product={product} />;
 }

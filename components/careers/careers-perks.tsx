@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { careers } from "@/content";
+import { careers } from "@/content/careers";
 import { SectionLabel } from "@/components/ui/section-label";
 import { BsArrowReturnRight } from "react-icons/bs";
 

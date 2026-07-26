@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import type { PlatformStory } from "@/types/research-types";
 import { SectionLabel } from "@/components/ui/section-label";
 import { StoryFrame } from "./story-frame";
+import { riseIn, viewportOnce } from "@/lib/motion-variants";
 
 export function StratosSystem({ story }: { story: PlatformStory }) {
   return (
@@ -31,9 +32,10 @@ export function StratosSystem({ story }: { story: PlatformStory }) {
             {story.architecture.parts.map((part, index) => (
               <motion.article
                 key={part.name}
-                initial={{ opacity: 0, y: 14 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                variants={riseIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportOnce}
                 transition={{ delay: index * 0.06 }}
                 className="bg-bg/90 p-6"
               >
@@ -69,9 +71,10 @@ export function StratosSystem({ story }: { story: PlatformStory }) {
             {story.platformTypes.types.map((type, index) => (
               <motion.article
                 key={type.name}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                variants={riseIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportOnce}
                 transition={{ delay: index * 0.08 }}
                 className="border border-white/10 bg-white/2.5 p-6"
               >

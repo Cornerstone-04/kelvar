@@ -115,6 +115,7 @@ export type PlatformStory = {
   operations: {
     label: string;
     title: string;
+    description: string;
     panels: PlatformStoryNarrative[];
   };
   applications: {
@@ -130,7 +131,7 @@ export type PlatformStory = {
   };
 };
 
-export type ResearchPlatform = {
+type ResearchPlatformBase = {
   id: string;
   name: string;
   trademark?: boolean;
@@ -146,5 +147,17 @@ export type ResearchPlatform = {
   domains: PlatformDomain[];
   coreTech: PlatformTechnology[];
   useCases: PlatformUseCase[];
-  story?: PlatformStory;
 };
+
+export type StandardResearchPlatform = ResearchPlatformBase & {
+  kind: "standard";
+};
+
+export type StratosResearchPlatform = ResearchPlatformBase & {
+  kind: "stratos";
+  story: PlatformStory;
+};
+
+export type ResearchPlatform =
+  | StandardResearchPlatform
+  | StratosResearchPlatform;

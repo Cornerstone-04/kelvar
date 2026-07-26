@@ -23,5 +23,6 @@ export const research = {
       title: "Kelvar AI",
       desc: "Pushing intelligence to the device level, enabling drones and ground units to process, decide, and act without relying on cloud connectivity or remote computation.",
     },
-  ],
+  ] satisfies ResearchArea[],
 };
+import type { ResearchArea } from "@/types/content-types";

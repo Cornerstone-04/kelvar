@@ -1,4 +1,4 @@
-import { careers } from "@/content";
+import { careers } from "@/content/careers";
 
 export const ALL = "All";
 

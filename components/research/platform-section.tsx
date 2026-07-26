@@ -12,7 +12,7 @@ import { StratosStorySection } from "./stratos/stratos-story-section";
 import { LazyVideo } from "../ui/lazy-video";
 
 export function PlatformSection({ platform }: { platform: ResearchPlatform }) {
-  if (platform.story) {
+  if (platform.kind === "stratos") {
     return <StratosStorySection platform={platform} story={platform.story} />;
   }
 

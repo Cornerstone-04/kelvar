@@ -1,4 +1,4 @@
-import { focus } from "@/content";
+import { focus } from "@/content/home";
 import { SectionLabel } from "../ui/section-label";
 import { PillarGrid } from "./pillar-grid";
 import Link from "next/link";

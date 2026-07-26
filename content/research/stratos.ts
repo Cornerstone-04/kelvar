@@ -1,6 +1,7 @@
 import type { ResearchPlatform } from "@/types/research-types";
 
 export const kelvarStratos: ResearchPlatform = {
+  kind: "stratos",
   id: "stratos",
   name: "Stratos",
   trademark: true,
@@ -108,6 +109,8 @@ export const kelvarStratos: ResearchPlatform = {
     operations: {
       label: "System Operations",
       title: "From ground deployment to fleet-level persistence",
+      description:
+        "The Kelvar Kite StratoSolar System combines balloon lift with a solar fixed-wing UAV to deliver persistent near-space coverage. The balloon sustains altitude while the UAV powers control, sensing, communications, and stabilisation for surveillance, relay, monitoring, and security missions.",
       panels: [
         {
           label: "Ground Systems",

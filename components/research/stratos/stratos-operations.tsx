@@ -14,7 +14,7 @@ export function StratosOperations({ story }: { story: PlatformStory }) {
             {story.operations.title}
           </h3>
           <p className="font-mono text-xs-plus leading-[1.95] text-muted">
-            {story.operations.panels[0]?.body}
+            {story.operations.description}
           </p>
         </div>
         <div className="grid gap-6 lg:grid-cols-2">

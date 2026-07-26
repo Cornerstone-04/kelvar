@@ -16,4 +16,5 @@ export const navLinks = [
   { href: "/focus", label: "Focus" },
   { href: "/contact", label: "Contact" },
   { href: "/careers", label: "Careers" },
-];
+] satisfies NavigationLink[];
+import type { NavigationLink } from "@/types/content-types";

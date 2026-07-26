@@ -1,4 +1,4 @@
-import { ethos } from "@/content";
+import { ethos } from "@/content/home";
 import { motion } from "motion/react";
 
 export function PillarGrid({ items }: { items: typeof ethos }) {

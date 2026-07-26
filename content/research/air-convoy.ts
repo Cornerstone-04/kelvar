@@ -1,6 +1,7 @@
 import type { ResearchPlatform } from "@/types/research-types";
 
 export const airConvoy: ResearchPlatform = {
+  kind: "standard",
   id: "airconvoy",
   name: "AirConvoy",
   trademark: true,

@@ -1,7 +1,7 @@
 "use client";
 
 import { Rule } from "@/components/ui/rule";
-import { kelvarStratos } from "@/content";
+import { kelvarStratos } from "@/content/research/stratos";
 
 import { PageHero } from "@/components/research/page-hero";
 import { IntroSection } from "@/components/research/intro-section";

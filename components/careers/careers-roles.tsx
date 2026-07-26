@@ -7,7 +7,7 @@ import { BsArrowRight, BsArrowUpRight } from "react-icons/bs";
 import { LuChevronDown, LuX } from "react-icons/lu";
 import { SectionLabel } from "@/components/ui/section-label";
 import { Rule } from "../ui/rule";
-import { site } from "@/content";
+import { site } from "@/content/site";
 import {
   ALL,
   filterRoles,

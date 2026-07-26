@@ -1,7 +1,7 @@
 "use client";
 
 import { SectionLabel } from "@/components/ui/section-label";
-import { ethos } from "@/content";
+import { ethos } from "@/content/home";
 import { PillarGrid } from "./pillar-grid";
 
 export function EthosSection() {
