@@ -71,24 +71,24 @@ export const focusDetails: FocusDetails = {
   },
 
   SPACE: {
-    headline: "Beyond the Atmosphere. Always Watching.",
+    headline: "KELVARX. Atmospheric Intelligence at Scale.",
     body: [
-      "The final frontier of autonomous surveillance is above the clouds. Kelvar's space division is building low-orbit monitoring systems capable of delivering persistent, wide-area intelligence at a global scale, where no ground or aerial platform can reach.",
-      "From satellite-linked sensor networks to low-earth orbit autonomous platforms, Kelvar is engineering the next generation of space-based surveillance infrastructure for governments, defence agencies, and critical global operations.",
+      "KELVARX is Kelvar Industries' advanced aerospace, autonomous systems, and space technologies programme.",
+      "Its Stratos Series is being developed to support environmental intelligence, observation, connectivity, and near-space research.",
     ],
     capabilities: [
-      "Low-earth orbit autonomous monitoring",
-      "Satellite-linked real-time data transmission",
-      "Global coverage with persistent surveillance",
-      "Integration with ground and aerial systems",
-      "High-resolution optical and radar imaging",
-      "Secure encrypted data links",
+      "Atmospheric sensing",
+      "Earth observation",
+      "Aerial and thermal imaging",
+      "Communications relay",
+      "Environmental intelligence",
+      "AI-assisted mission operations",
     ],
     systems: [
       {
-        name: "STRATOSTAT",
-        desc: "Kelvar's space surveillance platforms are currently in the research and design phase. Details to follow.",
-        slug: "stratos",
+        name: "KELVARX",
+        desc: "Stratos Kite, Stratos Copter, and Stratos Solar Sat.",
+        slug: "kelvarx",
       },
     ],
   },

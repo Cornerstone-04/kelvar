@@ -7,11 +7,8 @@ import "./globals.css";
 
 const barlow = localFont({
   src: [
-    { path: "../public/assets/fonts/barlow/BarlowCondensed-Regular.ttf", weight: "400" },
-    { path: "../public/assets/fonts/barlow/BarlowCondensed-Medium.ttf", weight: "500" },
     { path: "../public/assets/fonts/barlow/BarlowCondensed-SemiBold.ttf", weight: "600" },
     { path: "../public/assets/fonts/barlow/BarlowCondensed-Bold.ttf", weight: "700" },
-    { path: "../public/assets/fonts/barlow/BarlowCondensed-ExtraBold.ttf", weight: "800" },
     { path: "../public/assets/fonts/barlow/BarlowCondensed-Black.ttf", weight: "900" },
   ],
   variable: "--font-barlow",
@@ -19,7 +16,6 @@ const barlow = localFont({
 
 const inter = localFont({
   src: [
-    { path: "../public/assets/fonts/inter/Inter_18pt-Light.ttf", weight: "300" },
     { path: "../public/assets/fonts/inter/Inter_18pt-Regular.ttf", weight: "400" },
     { path: "../public/assets/fonts/inter/Inter_18pt-Medium.ttf", weight: "500" },
     { path: "../public/assets/fonts/inter/Inter_18pt-SemiBold.ttf", weight: "600" },
@@ -29,7 +25,6 @@ const inter = localFont({
 
 const dmMono = localFont({
   src: [
-    { path: "../public/assets/fonts/dm-mono/DMMono-Light.ttf", weight: "300" },
     { path: "../public/assets/fonts/dm-mono/DMMono-Regular.ttf", weight: "400" },
     { path: "../public/assets/fonts/dm-mono/DMMono-Medium.ttf", weight: "500" },
   ],

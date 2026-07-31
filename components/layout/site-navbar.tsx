@@ -2,18 +2,19 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { motion, AnimatePresence } from "motion/react";
+import { useEffect, useState } from "react";
 import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "motion/react";
-import { useState } from "react";
-import { navLinks, site } from "@/content/site";
+  navLinks,
+  platformNavLinks,
+  researchNavLinks,
+  site,
+} from "@/content/site";
 import { GlitchText } from "../ui/glitch-text";
 
 const menuBgs: Record<string, string> = {
   "/": "#0d0d2ee6",
+  "/#platforms": "#080d2ae6",
   "/research": "#080d2ae6",
   "/about": "#0a1130e6",
   "/focus": "#060e28e6",
@@ -25,13 +26,27 @@ export function SiteNavbar() {
   const [open, setOpen] = useState(false);
   const [hovered, setHovered] = useState<string | null>(null);
   const [hidden, setHidden] = useState(false);
-  const { scrollY } = useScroll();
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const prev = scrollY.getPrevious() ?? 0;
-    if (latest > prev && latest > 80) setHidden(true);
-    else setHidden(false);
-  });
+  useEffect(() => {
+    let previousY = window.scrollY;
+    let frame: number | null = null;
+
+    const handleScroll = () => {
+      if (frame !== null) return;
+      frame = requestAnimationFrame(() => {
+        const latest = window.scrollY;
+        setHidden(latest > previousY && latest > 80);
+        previousY = latest;
+        frame = null;
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (frame !== null) cancelAnimationFrame(frame);
+    };
+  }, []);
 
   return (
     <>
@@ -39,8 +54,7 @@ export function SiteNavbar() {
         initial={{ y: 0, opacity: 0 }}
         animate={{ y: hidden && !open ? "-100%" : 0, opacity: 1 }}
         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed top-0 right-0 left-0 z-50 flex py-4 items-center justify-between border-b border-white/5 bg-[var(--nav-background)] px-6 backdrop-blur-lg md:px-10"
-        style={{ WebkitBackdropFilter: "blur(16px)" }}
+        className="fixed top-0 right-0 left-0 z-50 flex py-4 items-center justify-between border-b border-white/5 bg-nav-background px-6 backdrop-blur-sm md:px-10 md:backdrop-blur-lg"
       >
         <Link href="/" className="no-underline" onClick={() => setOpen(false)}>
           <span className="block font-heading text-base font-semibold leading-[1.2] uppercase tracking-[0.2em] text-white/70">
@@ -97,8 +111,7 @@ export function SiteNavbar() {
               onClick={() => setOpen(false)}
             >
               <div
-                className="absolute inset-0 bg-[#07072a66] backdrop-blur-lg"
-                style={{ WebkitBackdropFilter: "blur(20px)" }}
+                className="absolute inset-0 bg-[#07072a99] backdrop-blur-md"
               />
             </div>
 
@@ -108,8 +121,7 @@ export function SiteNavbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="relative flex h-full w-full flex-col gap-3 bg-[#07072ad9] px-3 pt-24 pb-3 backdrop-blur-[50px] md:w-105"
-              style={{ WebkitBackdropFilter: "blur(50px)" }}
+              className="relative flex h-full w-full flex-col gap-3 bg-[#07072af2] px-3 pt-24 pb-3 backdrop-blur-sm md:w-105 md:bg-[#07072ae6] md:backdrop-blur-xl"
             >
               {/* Close */}
               <button
@@ -169,6 +181,28 @@ export function SiteNavbar() {
                       </span>
                     )}
                   </Link>
+
+                  {(href === "/#platforms" || href === "/research") && (
+                    <motion.div
+                      initial={{ opacity: 0, x: 8 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      className="absolute right-3 top-3 z-2 grid gap-1 text-right"
+                    >
+                      {(href === "/#platforms"
+                        ? platformNavLinks
+                        : researchNavLinks
+                      ).map((subLink) => (
+                        <Link
+                          key={subLink.href}
+                          href={subLink.href}
+                          onClick={() => setOpen(false)}
+                          className="min-h-8 px-2 py-1 font-mono text-[0.62rem] uppercase tracking-[0.14em] text-white/45 transition-colors hover:text-white"
+                        >
+                          {subLink.label}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
 
                   {/* bg base */}
                   <div className="absolute inset-0 border border-white/6 bg-white/3" />

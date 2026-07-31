@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "motion/react";
 import { SectionLabel } from "../ui/section-label";
 import { ScrollingText } from "../ui/scrolling-text";

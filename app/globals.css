@@ -16,6 +16,7 @@
     --color-dim: var(--dim);
     --color-bg-alt: var(--bg-alt);
     --color-border-col-2: var(--border-col-2);
+    --color-nav-background: var(--nav-background);
 
     /*font size*/
     --text-xxs: 0.625rem; /* 10px */
@@ -83,5 +84,74 @@
     }
     button {
         @apply cursor-pointer;
+    }
+}
+
+@layer components {
+    .kelvar-button-frame {
+        position: relative;
+        isolation: isolate;
+        border-color: rgb(255 255 255 / 0.25);
+    }
+
+    .kelvar-button-frame::before,
+    .kelvar-button-frame::after {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        z-index: -1;
+        pointer-events: none;
+        background-repeat: no-repeat;
+    }
+
+    .kelvar-button-frame::before {
+        background-image:
+            linear-gradient(to right, var(--primary), var(--primary)),
+            linear-gradient(to left, var(--primary), var(--primary));
+        background-position: left top, right bottom;
+        background-size: 0 1px, 0 1px;
+        transition: background-size 300ms ease-out;
+    }
+
+    .kelvar-button-frame::after {
+        background-image:
+            linear-gradient(to bottom, var(--primary), var(--primary)),
+            linear-gradient(to top, var(--primary), var(--primary));
+        background-position: right top, left bottom;
+        background-size: 1px 0, 1px 0;
+        transition: background-size 300ms ease-out 100ms;
+    }
+
+    .kelvar-button-frame:hover::before,
+    .kelvar-button-frame:focus-visible::before {
+        background-size: 100% 1px, 100% 1px;
+    }
+
+    .kelvar-button-frame:hover::after,
+    .kelvar-button-frame:focus-visible::after {
+        background-size: 1px 100%, 1px 100%;
+    }
+
+    .kelvar-button-frame > svg {
+        transition: transform 300ms ease-out;
+    }
+
+    .kelvar-button-frame:hover > svg:first-child,
+    .kelvar-button-frame:focus-visible > svg:first-child {
+        transform: translateX(-0.3rem);
+    }
+
+    .kelvar-button-frame:hover > svg:last-child,
+    .kelvar-button-frame:focus-visible > svg:last-child {
+        transform: translateX(0.4rem);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .kelvar-button-frame::before,
+        .kelvar-button-frame::after,
+        .kelvar-button-frame > svg {
+            transition-duration: 0ms;
+            transition-delay: 0ms;
+        }
     }
 }

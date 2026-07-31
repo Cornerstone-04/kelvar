@@ -1,15 +1,22 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "motion/react";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import Link from "next/link";
 import { useRef } from "react";
 import { platformSummaries } from "@/content/products/summaries";
 import { site } from "@/content/site";
 import { GlitchText } from "@/components/ui/glitch-text";
 import { BsArrowRight } from "react-icons/bs";
+import { LazyVideo } from "@/components/ui/lazy-video";
 
 export function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
+  const reduceMotion = useReducedMotion();
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -25,15 +32,12 @@ export function HeroSection() {
       className="relative flex min-h-svh items-end overflow-hidden"
     >
       {/* Hero background video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
+      <LazyVideo
+        src="/assets/videos/brand/kelvar-showcase.webm"
+        eager
+        poster="/assets/images/platforms/dome/sky-dome-thumbnail.png"
         className="absolute inset-0 z-0 h-full w-full object-cover brightness-50 saturate-[0.6]"
-      >
-        <source src="/assets/videos/brand/kelvar-showcase.mp4" type="video/mp4" />
-      </video>
+      />
 
       {/* Noise / grain texture */}
       <div
@@ -52,7 +56,7 @@ export function HeroSection() {
 
       {/* Hero content */}
       <motion.div
-        style={{ y: heroY, opacity: heroOpacity }}
+        style={reduceMotion ? undefined : { y: heroY, opacity: heroOpacity }}
         className="relative z-2 w-full px-6 md:px-10 py-12 md:py-24"
       >
         <GlitchText
@@ -64,7 +68,7 @@ export function HeroSection() {
         />
 
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
+          initial={reduceMotion ? false : { opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="mb-10 max-w-[14ch] font-heading text-[clamp(4.5rem,14vw,13rem)] leading-[0.9] font-black uppercase tracking-[-0.02em] text-primary"
@@ -75,20 +79,20 @@ export function HeroSection() {
           <br />
           <span
             className="text-transparent [WebkitTextStroke:1px_#f5f5f940]"
-            style={{ WebkitTextStroke: "2px #f5f5f940" }}
+            style={{ WebkitTextStroke: "2px rgba(245,245,249,0.5)" }}
           >
             Everywhere
           </span>
         </motion.h1>
 
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={reduceMotion ? false : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8 }}
         >
           <Link
             href="#platforms"
-            className="inline-flex justify-center items-center gap-3 border border-[#ffffff26] px-[1.6rem] py-[0.8rem] font-mono text-[0.62rem] uppercase tracking-[0.2em] text-primary no-underline transition-colors duration-200 ease-in-out hover:border-[#ffffff80]"
+            className="kelvar-button-frame group inline-flex min-h-12 items-center justify-center gap-4 border px-5 py-3 font-mono text-xxs uppercase tracking-[0.18em] text-primary transition-colors duration-200 hover:bg-white/8 hover:text-primary"
           >
             Explore Platforms <BsArrowRight />
           </Link>
@@ -97,7 +101,7 @@ export function HeroSection() {
 
       {/* Bottom drone nav strip */}
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={reduceMotion ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.6 }}
         className="absolute right-10 bottom-8 z-2 hidden gap-3 md:flex"
@@ -105,7 +109,7 @@ export function HeroSection() {
         {platformSummaries.map((d) => (
           <a
             key={d.id}
-            href={`/#${d.slug}`}
+            href={d.href ?? `/#${d.slug}`}
             className="group relative overflow-hidden border border-white/8 bg-white/4 px-4 py-2 font-mono text-xxs uppercase tracking-[0.2em] text-white/25 no-underline backdrop-blur-md transition-all duration-300 ease-linear hover:border-white/15 hover:bg-white/8 hover:text-white/70"
           >
             {/* soft glow hover */}
@@ -115,7 +119,6 @@ export function HeroSection() {
           </a>
         ))}
       </motion.div>
-
     </section>
   );
 }

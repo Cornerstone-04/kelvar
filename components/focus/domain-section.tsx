@@ -155,11 +155,11 @@ function DomainSystems({
               {system.slug && (
                 <Link
                   href={
-                    system.slug === "stratos"
-                      ? "/research#stratos"
-                      : `/drones/${system.slug}`
+                    system.slug === "kelvarx"
+                      ? "/kelvarx"
+                      : `/#${system.slug}`
                   }
-                  className="inline-flex shrink-0 items-center justify-center gap-2 border border-[#ffffff26] px-4 py-2 font-mono text-xxs uppercase tracking-[0.15em] text-primary/50 transition-all duration-200 hover:border-[#ffffff60] hover:text-primary"
+                  className="kelvar-button-frame inline-flex shrink-0 items-center justify-center gap-2 border px-4 py-2 font-mono text-xxs uppercase tracking-[0.15em] text-primary transition-colors duration-200 hover:bg-white/8 hover:text-primary"
                 >
                   View <BsArrowRight />
                 </Link>

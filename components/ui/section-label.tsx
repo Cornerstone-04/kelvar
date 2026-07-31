@@ -10,7 +10,7 @@ export function SectionLabel({
   return (
     <div className="flex items-center gap-4">
       <GlitchText
-        className={`text-xxs md:text-xs tracking-[0.3em] uppercase text-white/60 font-mono ${className}`}
+        className={`text-xxs md:text-xs tracking-[0.3em] uppercase text-white/70 font-mono ${className}`}
         text={children}
         delay={400}
         speed={100}

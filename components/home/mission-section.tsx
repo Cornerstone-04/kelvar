@@ -19,7 +19,7 @@ export function MissionSection() {
 
         <Link
           href="/about"
-          className="inline-flex items-center gap-2 border border-[#ffffff1f] px-[1.2rem] py-[0.6rem] font-mono text-[0.65rem] uppercase tracking-[0.15em] text-white/40 no-underline transition-all duration-200 ease-in-out hover:border-[#ffffff66] hover:text-white"
+          className="kelvar-button-frame group inline-flex min-h-12 items-center gap-4 border px-5 py-3 font-mono text-xxs uppercase tracking-[0.18em] text-primary transition-colors duration-200 hover:bg-white/8 hover:text-primary"
         >
           Read More <BsArrowRight />
         </Link>

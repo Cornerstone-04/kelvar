@@ -1,5 +1,3 @@
-"use client";
-
 import { HeroSection } from "@/components/home/hero-section";
 import { MissionSection } from "@/components/home/mission-section";
 import { DronePlatformsSection } from "@/components/home/drone-platforms-section";

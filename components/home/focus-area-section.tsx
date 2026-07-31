@@ -13,7 +13,7 @@ export function AreasOfFocusSection() {
         </div>
         <Link
           href="/focus"
-          className="shrink-0 inline-flex items-center gap-3 border border-[#ffffff26] px-[1.6rem] py-[0.8rem] font-mono text-xxs uppercase tracking-[0.2em] text-primary transition-colors duration-200 hover:border-[#ffffff80] whitespace-nowrap"
+          className="kelvar-button-frame group inline-flex min-h-12 shrink-0 items-center gap-4 whitespace-nowrap border px-5 py-3 font-mono text-xxs uppercase tracking-[0.18em] text-primary transition-colors duration-200 hover:bg-white/8 hover:text-primary"
         >
           Explore All <BsArrowRight />
         </Link>

@@ -256,7 +256,7 @@ function CareersGeneralApplication() {
         href={`mailto:${site.email}?subject=General Application — Kelvar Industries`}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex shrink-0 items-center justify-center gap-3 border border-white/15 px-6 py-3 font-mono text-xxs uppercase tracking-[0.2em] text-white/60 no-underline transition-all duration-200 hover:border-white/40 hover:text-white"
+        className="kelvar-button-frame group inline-flex min-h-12 shrink-0 items-center justify-center gap-4 border px-5 py-3 font-mono text-xxs uppercase tracking-[0.18em] text-primary transition-colors duration-200 hover:bg-white/8 hover:text-primary"
       >
         Send a General Application <BsArrowRight />
       </Link>

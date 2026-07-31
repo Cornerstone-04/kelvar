@@ -47,8 +47,7 @@ export const focus = [
   {
     id: "04",
     word: "SPACE",
-    sub: "The next frontier of autonomous surveillance extends beyond the atmosphere. Kelvar's space division is developing low-orbit monitoring systems capable of delivering persistent, wide-area intelligence at a scale no ground or aerial platform can match.",
-    image:
-      "https://images.unsplash.com/photo-1534996858221-380b92700493?w=1920&h=1080&fm=jpg&q=80&fit=crop",
+    sub: "KELVARX develops the Stratos Series: balloon-assisted aerial and near-space systems for atmospheric intelligence, observation, connectivity, and resilient infrastructure.",
+    image: "/assets/images/platforms/stratos/stratos-space.jpg",
   },
 ];
