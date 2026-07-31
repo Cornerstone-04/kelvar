@@ -1,10 +1,23 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
+import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "KELVARX — Kelvar Industries",
+export const metadata: Metadata = createPageMetadata({
+  title: "KELVARX Atmospheric Intelligence",
   description:
-    "Kelvar Industries' advanced aerospace, atmospheric intelligence, and near-space systems programme.",
-};
+    "Discover KELVARX, Kelvar Industries' aerospace and near-space programme connecting atmospheric platforms, autonomous intelligence, sensing, and communications.",
+  path: "/kelvarx",
+  keywords: [
+    "KELVARX",
+    "atmospheric intelligence",
+    "near-space systems",
+    "high-altitude platforms",
+    "aerospace autonomy",
+    "Earth observation",
+    "resilient communications",
+  ],
+  image: "/assets/images/platforms/stratos/stratos-space-2.jpg",
+  imageAlt: "KELVARX atmospheric intelligence and near-space systems programme",
+});
 
 export default function KelvarxLayout({
   children,
