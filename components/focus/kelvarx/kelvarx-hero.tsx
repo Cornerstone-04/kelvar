@@ -5,11 +5,7 @@ import { motion, useReducedMotion } from "motion/react";
 import type { KelvarxProgramme } from "@/types/kelvarx-types";
 import { SectionLabel } from "@/components/ui/section-label";
 
-export function KelvarxHero({
-  programme,
-}: {
-  programme: KelvarxProgramme;
-}) {
+export function KelvarxHero({ programme }: { programme: KelvarxProgramme }) {
   const reduceMotion = useReducedMotion();
 
   return (
@@ -57,9 +53,11 @@ export function KelvarxHero({
               <a
                 key={href}
                 href={href}
-                className="min-h-11 border border-white/15 px-4 py-3 text-white/55 transition-colors hover:border-white/50 hover:text-white"
+                className="group relative overflow-hidden border border-white/8 bg-white/4 px-4 py-2 font-mono text-xxs uppercase tracking-[0.2em] text-white/25 no-underline backdrop-blur-md transition-all duration-300 ease-linear hover:border-white/15 hover:bg-white/8 hover:text-white/70"
               >
-                {label}
+                <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,#ffffff10_0%,transparent_70%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+                <span className="relative z-1">{label}</span>
               </a>
             ))}
           </nav>
