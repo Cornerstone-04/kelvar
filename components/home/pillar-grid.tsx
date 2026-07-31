@@ -1,5 +1,8 @@
+"use client";
+
 import { ethos } from "@/content/home";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 export function PillarGrid({ items }: { items: typeof ethos }) {
   return (
@@ -15,9 +18,11 @@ export function PillarGrid({ items }: { items: typeof ethos }) {
         >
           {/* Image */}
           <div className="group/img relative mb-4 aspect-video overflow-hidden bg-surface">
-            <img
+            <Image
               src={item.image}
               alt={item.word}
+              fill
+              sizes="(max-width: 640px) calc(100vw - 3rem), (max-width: 1024px) 50vw, 33vw"
               className="absolute inset-0 h-full w-full object-cover brightness-[0.6] saturate-[0.5] transition-all duration-500 ease-out group-hover/img:brightness-[0.7] group-hover/img:saturate-[0.7] group-hover/img:scale-[1.03]"
             />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_80%,#07072a99_0%,transparent_60%)]" />

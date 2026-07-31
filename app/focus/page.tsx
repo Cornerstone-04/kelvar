@@ -1,5 +1,3 @@
-"use client";
-
 import { focus } from "@/content/home";
 import { focusDetails } from "@/content/focus-details";
 import { Rule } from "@/components/ui/rule";

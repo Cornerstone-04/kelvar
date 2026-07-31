@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "motion/react";
 import { SectionLabel } from "../ui/section-label";
 import Link from "next/link";
@@ -38,7 +40,7 @@ export function AarSection() {
 
           <Link
             href="/#platforms"
-            className="inline-flex items-center gap-3 border border-[#ffffff26] px-[1.6rem] py-[0.8rem] font-mono text-xxs uppercase tracking-[0.2em] text-primary transition-colors duration-200 hover:border-[#ffffff80]"
+            className="kelvar-button-frame group inline-flex min-h-12 items-center gap-4 border px-5 py-3 font-mono text-xxs uppercase tracking-[0.18em] text-primary transition-colors duration-200 hover:bg-white/8 hover:text-primary"
           >
             View Platforms <BsArrowRight />
           </Link>

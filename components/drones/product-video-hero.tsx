@@ -1,14 +1,16 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import type { ProductDetail } from "@/types/product-types";
 import { GlitchText } from "@/components/ui/glitch-text";
 import { KelvarButton } from "@/components/ui/kelvar-button";
 import { NoiseOverlay } from "@/components/ui/ambient-field";
+import { LazyVideo } from "@/components/ui/lazy-video";
 
 export function ProductVideoHero({ product }: { product: ProductDetail }) {
   const heroRef = useRef<HTMLDivElement>(null);
+  const reduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
@@ -21,22 +23,19 @@ export function ProductVideoHero({ product }: { product: ProductDetail }) {
       ref={heroRef}
       className="relative flex min-h-svh items-end overflow-hidden"
     >
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
+      <LazyVideo
+        src={product.assets.videoAlt}
+        eager
+        poster={product.assets.image}
         className="absolute inset-0 z-0 h-full w-full object-cover brightness-[0.32] saturate-[0.58]"
-      >
-        <source src={product.assets.videoAlt} type="video/mp4" />
-      </video>
+      />
 
       <NoiseOverlay className="z-1 opacity-45" />
       <div className="pointer-events-none absolute inset-0 z-1 bg-[linear-gradient(to_top,var(--bg)_0%,rgba(7,7,42,0.12)_44%,rgba(7,7,42,0.72)_100%)]" />
       <div className="absolute inset-x-0 bottom-[38%] z-1 h-px bg-[linear-gradient(90deg,transparent_0%,#ffffff12_30%,#ffffff12_70%,transparent_100%)]" />
 
       <motion.div
-        style={{ y: heroY, opacity: heroOpacity }}
+        style={reduceMotion ? undefined : { y: heroY, opacity: heroOpacity }}
         className="relative z-2 w-full px-6 py-12 md:px-10 md:py-24"
       >
         <GlitchText
@@ -48,7 +47,7 @@ export function ProductVideoHero({ product }: { product: ProductDetail }) {
         />
 
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
+          initial={reduceMotion ? false : { opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="mb-6 font-heading text-[clamp(4rem,14vw,11rem)] font-black leading-none text-primary"
@@ -62,7 +61,7 @@ export function ProductVideoHero({ product }: { product: ProductDetail }) {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={reduceMotion ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
           className="mb-10 max-w-[58ch] font-mono text-xs-plus leading-[1.75] text-muted"
@@ -71,7 +70,7 @@ export function ProductVideoHero({ product }: { product: ProductDetail }) {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={reduceMotion ? false : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >

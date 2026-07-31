@@ -11,7 +11,7 @@ type KelvarButtonProps = {
 };
 
 const baseClass =
-  "inline-flex items-center justify-center gap-3 border border-white/15 px-6 py-3 font-mono text-xxs uppercase tracking-[0.2em] text-primary transition-colors duration-200 hover:border-white/50";
+  "kelvar-button-frame group inline-flex min-h-12 items-center justify-center gap-4 border px-5 py-3 font-mono text-xxs uppercase tracking-[0.18em] text-primary transition-colors duration-200 hover:bg-white/8 hover:text-primary";
 
 export function KelvarButton({
   href,
@@ -23,7 +23,11 @@ export function KelvarButton({
   const content = (
     <>
       {children}
-      {external ? <BsArrowUpRight /> : <BsArrowRight />}
+      {external ? (
+        <BsArrowUpRight className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+      ) : (
+        <BsArrowRight className="transition-transform duration-300 group-hover:translate-x-1.5" />
+      )}
     </>
   );
 

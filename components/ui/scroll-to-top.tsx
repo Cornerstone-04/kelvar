@@ -1,30 +1,35 @@
 "use client";
 
-import { useState } from "react";
-import {
-  motion,
-  useScroll,
-  useMotionValueEvent,
-  AnimatePresence,
-} from "motion/react";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { LuArrowUp } from "react-icons/lu";
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
-  const { scrollY } = useScroll();
+  const reduceMotion = useReducedMotion();
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 500) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  });
+  useEffect(() => {
+    let frame: number | null = null;
+    const handleScroll = () => {
+      if (frame !== null) return;
+      frame = requestAnimationFrame(() => {
+        setIsVisible(window.scrollY > 500);
+        frame = null;
+      });
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (frame !== null) cancelAnimationFrame(frame);
+    };
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: reduceMotion ? "auto" : "smooth",
     });
   };
 
@@ -38,12 +43,18 @@ export function ScrollToTop() {
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className="group fixed bottom-6 right-6 md:bottom-8 md:right-8 z-40 flex h-8 w-8 cursor-pointer items-center justify-center border border-white/10 bg-bg/80 backdrop-blur-lg transition-all ease-linear duration-300 hover:border-orange hover:bg-bg/95"
+          className="group fixed bottom-6 right-6 z-40 flex h-8 w-8 cursor-pointer items-center justify-center border border-white/70 bg-bg backdrop-blur-lg transition-colors duration-300 ease-out hover:bg-bg/95 md:bottom-8 md:right-8"
         >
-          <LuArrowUp className="text-sm text-white/80 transition-colors duration-300 group-hover:text-orange" />
+          <LuArrowUp className="relative z-2 text-sm text-white/80 transition-colors duration-300 group-hover:text-primary" />
 
-          <span className="absolute -left-px -top-px h-1.5 w-1.5 border-l border-t border-white/30 group-hover:border-white/90 ease-linear transition-all duration-300" />
-          <span className="absolute -bottom-px -right-px h-1.5 w-1.5 border-b border-r border-white/30 transition-colors duration-300 group-hover:border-white/90" />
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -left-px top-1 h-[calc(100%-0.5rem)] w-[calc(100%+0.125rem)] origin-center scale-y-100 bg-bg transition-transform duration-300 ease-out group-hover:scale-y-0"
+          />
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-px left-1 h-[calc(100%+0.125rem)] w-[calc(100%-0.5rem)] origin-center scale-x-100 bg-bg transition-transform delay-100 duration-300 ease-out group-hover:scale-x-0"
+          />
         </motion.button>
       )}
     </AnimatePresence>

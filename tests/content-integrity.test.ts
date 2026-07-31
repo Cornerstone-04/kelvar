@@ -10,6 +10,23 @@ import {
 } from "@/lib/careers-filter-utils";
 
 describe("product content integrity", () => {
+  test("uses the confirmed platform order", () => {
+    expect(platformSummaries.map(({ name }) => name)).toEqual([
+      "Stratokite",
+      "Robobot",
+      "Hydrax",
+      "Dome",
+    ]);
+  });
+
+  test("nests Stratokite under the KELVARX programme", () => {
+    const stratokite = platformSummaries.find(
+      ({ slug }) => slug === "stratokite",
+    );
+
+    expect(stratokite?.href).toBe("/kelvarx/stratokite");
+  });
+
   test("uses unique summary and detail slugs", () => {
     const summarySlugs = platformSummaries.map(({ slug }) => slug);
     const detailSlugs = productDetails.map(({ slug }) => slug);

@@ -6,18 +6,27 @@ type LazyVideoProps = {
   src: string;
   className?: string;
   poster?: string;
+  eager?: boolean;
 };
 
 export function LazyVideo({
   src,
   className,
   poster = "/assets/images/brand/kelvar-thumbnail.png",
+  eager = false,
 }: LazyVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const connection = (
+      navigator as Navigator & { connection?: { saveData?: boolean } }
+    ).connection;
+
+    if (reducedMotion.matches || connection?.saveData) return;
 
     const loadAndPlay = () => {
       if (!video.src) {
@@ -30,7 +39,7 @@ export function LazyVideo({
       });
     };
 
-    if (!("IntersectionObserver" in window)) {
+    if (eager || !("IntersectionObserver" in window)) {
       loadAndPlay();
       return;
     }
@@ -43,13 +52,13 @@ export function LazyVideo({
           video.pause();
         }
       },
-      { rootMargin: "300px 0px", threshold: 0.01 },
+      { rootMargin: "120px 0px", threshold: 0.05 },
     );
 
     observer.observe(video);
 
     return () => observer.disconnect();
-  }, [src]);
+  }, [eager, src]);
 
   return (
     <video

@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "motion/react";
 import { KelvarButton } from "./kelvar-button";
 
@@ -31,7 +33,7 @@ export const CtaSection = ({
           {breakTitle && (
             <span
               className="text-transparent"
-              style={{ WebkitTextStroke: "2px rgba(245,245,249,0.2)" }}
+              style={{ WebkitTextStroke: "2px rgba(245,245,249,0.5)" }}
             >
               {breakTitle}
             </span>

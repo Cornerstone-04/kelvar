@@ -94,8 +94,8 @@ export const productDetails: ProductDetail[] = [
     ],
     assets: {
       image: "/assets/images/platforms/dome/sky-dome-drone-01.jpg",
-      video: "/assets/videos/platforms/dome/sky-dome-showcase.mp4",
-      videoAlt: "/assets/videos/platforms/dome/sky-dome-swarm-showcase.mp4",
+      video: "/assets/videos/platforms/dome/sky-dome-showcase.webm",
+      videoAlt: "/assets/videos/platforms/dome/sky-dome-swarm-showcase.webm",
     },
     specs: [
       { label: "System Type", value: "Autonomous Aerial Swarm" },

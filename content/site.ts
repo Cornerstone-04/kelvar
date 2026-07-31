@@ -11,10 +11,22 @@ export const site = {
 
 export const navLinks = [
   { href: "/", label: "Home" },
+  { href: "/#platforms", label: "Platforms" },
   { href: "/research", label: "RD&D" },
   { href: "/about", label: "About" },
   { href: "/focus", label: "Focus" },
   { href: "/contact", label: "Contact" },
   { href: "/careers", label: "Careers" },
+] satisfies NavigationLink[];
+
+export const platformNavLinks = [
+  { href: "/kelvarx/stratokite", label: "Stratokite" },
+  { href: "/#robobot", label: "Robobot" },
+  { href: "/#hydrax", label: "Hydrax" },
+  { href: "/#dome", label: "Dome" },
+] satisfies NavigationLink[];
+
+export const researchNavLinks = [
+  { href: "/kelvarx", label: "KELVARX" },
 ] satisfies NavigationLink[];
 import type { NavigationLink } from "@/types/content-types";

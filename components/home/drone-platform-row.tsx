@@ -4,8 +4,9 @@ import { motion } from "motion/react";
 import { GlitchText } from "@/components/ui/glitch-text";
 import { Rule } from "@/components/ui/rule";
 import Link from "next/link";
-import { BsArrowUpRight } from "react-icons/bs";
 import { LazyVideo } from "@/components/ui/lazy-video";
+import { BsArrowUpRight } from "react-icons/bs";
+import Image from "next/image";
 
 type Drone = {
   id: string;
@@ -18,6 +19,7 @@ type Drone = {
     videoPoster?: string;
   };
   slug?: string;
+  href?: string;
 };
 
 interface DronePlatformRowProps {
@@ -61,17 +63,18 @@ export default function DronePlatformRow({
               isOdd ? "md:text-right" : ""
             }`}
           >
-            {drone.slug === "dome" ? (
+            {drone.href ? (
               <Link
-                href={`/drones/${drone.slug}`}
-                className="inline-flex items-baseline gap-4"
+                href={drone.href}
+                className="group/link inline-flex items-end gap-4"
               >
                 {drone.name}
                 <motion.span
-                  className="inline-block text-[0.4em] text-dim transition-colors group-hover:text-primary"
-                  initial={{ x: -5, y: 5, opacity: 0 }}
-                  whileInView={{ x: 0, y: 0, opacity: 1 }}
-                  whileHover={{ x: 3, y: -3 }}
+                  aria-hidden="true"
+                  className="inline-block text-[0.4em] text-dim transition-all duration-300 group-hover/link:-translate-y-2 group-hover/link:translate-x-2 group-hover/link:text-primary"
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
                 >
                   <BsArrowUpRight />
                 </motion.span>
@@ -81,14 +84,24 @@ export default function DronePlatformRow({
             )}
           </h2>
 
-          <GlitchText
-            tag="p"
-            className={`max-w-[65ch] font-mono text-sm leading-[1.75] text-muted ${
-              isOdd ? "md:text-right" : ""
-            }`}
-            text={drone.desc}
-            speed={50}
-          />
+          <div className={isOdd ? "md:text-right" : ""}>
+            <GlitchText
+              tag="p"
+              className="max-w-[65ch] font-mono text-sm leading-[1.75] text-muted"
+              text={drone.desc}
+              speed={50}
+            />
+
+            {drone.slug === "stratokite" && (
+              <Link
+                href="/kelvarx"
+                className="group/programme mt-4 inline-flex items-center gap-2 font-mono text-xxs uppercase tracking-[0.15em] text-dim transition-colors duration-200 hover:text-primary"
+              >
+                Explore the KELVARX programme
+                <BsArrowUpRight className="transition-transform duration-300 group-hover/programme:-translate-y-0.5 group-hover/programme:translate-x-0.5" />
+              </Link>
+            )}
+          </div>
         </div>
       </div>
 
@@ -100,13 +113,15 @@ export default function DronePlatformRow({
         transition={{ duration: 0.8 }}
         className="relative mt-6 mb-0 mx-10 aspect-video overflow-hidden bg-surface"
       >
-        <img
+        <Image
           src={
-            drone.slug === "dome"
+            drone.assets.image2
               ? drone.assets.image2 || drone.assets.image1
               : drone.assets.image1
           }
           alt={drone.name}
+          fill
+          sizes="(max-width: 768px) calc(100vw - 5rem), calc(100vw - 10rem)"
           className="absolute inset-0 h-full w-full object-cover brightness-80 saturate-[0.7]"
         />
       </motion.div>

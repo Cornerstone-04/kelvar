@@ -137,7 +137,7 @@ export default function NotFound() {
         <div
           className="mb-8 select-none font-heading text-[clamp(8rem,28vw,22rem)] leading-[0.85] font-black tracking-[-0.04em] text-transparent"
           style={{
-            WebkitTextStroke: "1px rgba(255,255,255,0.15)",
+            WebkitTextStroke: "1px rgba(255,255,255,0.5)",
           }}
         >
           404
@@ -154,7 +154,7 @@ export default function NotFound() {
         {/* CTA */}
         <Link
           href="/"
-          className="inline-flex items-center gap-3 border border-white/12 px-[1.8rem] py-[0.8rem] font-mono text-[0.62rem] uppercase tracking-[0.2em] text-white/60 no-underline transition-all duration-200 ease-in-out hover:border-white/40 hover:text-white"
+          className="kelvar-button-frame group inline-flex min-h-12 items-center gap-4 border px-5 py-3 font-mono text-xxs uppercase tracking-[0.18em] text-primary transition-colors duration-200 hover:bg-white/8 hover:text-primary"
         >
           <BsArrowLeft /> Re-establish Link
         </Link>

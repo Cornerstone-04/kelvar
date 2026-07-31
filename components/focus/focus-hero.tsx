@@ -41,7 +41,7 @@ export function FocusHero() {
           <br />
           <span
             className="text-transparent"
-            style={{ WebkitTextStroke: "2px rgba(245,245,249,0.2)" }}
+            style={{ WebkitTextStroke: "2px rgba(245,245,249,0.5)" }}
           >
             Focus
           </span>
@@ -53,9 +53,9 @@ export function FocusHero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="max-w-[52ch] font-mono text-xs-plus leading-[1.8] text-muted"
         >
-          Kelvar operates across three domains — Air, Land, and Sea. Each
-          demands a different kind of intelligence. Every system we build is
-          engineered for its environment.
+          Kelvar operates across four strategic domains — Air, Land, Sea, and
+          Space. Each demands a different kind of intelligence. Every system
+          we build is engineered for its environment.
         </motion.p>
       </div>
     </section>

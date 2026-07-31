@@ -44,13 +44,14 @@ export type PlatformSummary = {
   codename: string;
   slug: string;
   status: "flagship" | "in-development";
+  href?: string;
   tagline: string;
   desc: string;
   assets: {
     image1: string;
     image2?: string;
-    video: string;
-    videoPoster: string;
+    video?: string;
+    videoPoster?: string;
   };
   specs: { label: string; value: string }[];
 };

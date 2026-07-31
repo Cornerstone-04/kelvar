@@ -15,7 +15,7 @@ export const airConvoy: ResearchPlatform = {
     "AirConvoy is Kelvar Industries’ next-generation tethered drone system engineered for continuous, high-endurance surveillance, communication, and environmental monitoring across air, land, and maritime environments. Built for governments, security agencies, emergency services, oil & gas operations, and critical infrastructure protection, AirConvoy delivers real-time intelligence with zero downtime, thanks to its power-over-tether architecture and ultra-secure data link.",
   hero: {
     kind: "video",
-    src: "/assets/videos/platforms/airconvoy/airconvoy-showcase.mp4",
+    src: "/assets/videos/platforms/airconvoy/airconvoy-showcase.webm",
   },
   domainsLayout: "immersive",
   domainsLabel: "Operational Domains",
