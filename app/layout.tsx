@@ -7,59 +7,123 @@ import "./globals.css";
 
 const barlow = localFont({
   src: [
-    { path: "../public/assets/fonts/barlow/BarlowCondensed-SemiBold.ttf", weight: "600" },
-    { path: "../public/assets/fonts/barlow/BarlowCondensed-Bold.ttf", weight: "700" },
-    { path: "../public/assets/fonts/barlow/BarlowCondensed-Black.ttf", weight: "900" },
+    {
+      path: "../public/assets/fonts/barlow/BarlowCondensed-SemiBold.ttf",
+      weight: "600",
+    },
+    {
+      path: "../public/assets/fonts/barlow/BarlowCondensed-Bold.ttf",
+      weight: "700",
+    },
+    {
+      path: "../public/assets/fonts/barlow/BarlowCondensed-Black.ttf",
+      weight: "900",
+    },
   ],
   variable: "--font-barlow",
 });
 
 const inter = localFont({
   src: [
-    { path: "../public/assets/fonts/inter/Inter_18pt-Regular.ttf", weight: "400" },
-    { path: "../public/assets/fonts/inter/Inter_18pt-Medium.ttf", weight: "500" },
-    { path: "../public/assets/fonts/inter/Inter_18pt-SemiBold.ttf", weight: "600" },
+    {
+      path: "../public/assets/fonts/inter/Inter_18pt-Regular.ttf",
+      weight: "400",
+    },
+    {
+      path: "../public/assets/fonts/inter/Inter_18pt-Medium.ttf",
+      weight: "500",
+    },
+    {
+      path: "../public/assets/fonts/inter/Inter_18pt-SemiBold.ttf",
+      weight: "600",
+    },
   ],
   variable: "--font-inter",
 });
 
 const dmMono = localFont({
   src: [
-    { path: "../public/assets/fonts/dm-mono/DMMono-Regular.ttf", weight: "400" },
+    {
+      path: "../public/assets/fonts/dm-mono/DMMono-Regular.ttf",
+      weight: "400",
+    },
     { path: "../public/assets/fonts/dm-mono/DMMono-Medium.ttf", weight: "500" },
   ],
   variable: "--font-dm-mono",
 });
 
 export const metadata: Metadata = {
-  title: { default: "Kelvar Industries", template: "%s | Kelvar Industries" },
+  metadataBase: new URL("https://www.kelvarindustries.com"),
+  title: {
+    default: "Kelvar Industries | Intelligent Autonomous Systems",
+    template: "%s | Kelvar Industries",
+  },
   description:
-    "Kelvar Industries — Engineering next-generation drone systems for defence, surveillance, and precision logistics. Based in London, UK.",
+    "Kelvar Industries engineers intelligent autonomous drones, robotics, surveillance, and atmospheric systems for persistent awareness and resilient protection.",
   keywords: [
     "Kelvar Industries",
-    "drone R&D",
-    "unmanned systems",
-    "defence technology",
-    "London",
+    "autonomous systems",
+    "intelligent surveillance",
+    "drone technology",
+    "robotics",
+    "atmospheric intelligence",
+    "unmanned aerial systems",
+    "computer vision",
+    "defence and security technology",
   ],
   authors: [{ name: "Kelvar Industries" }],
-  metadataBase: new URL("https://www.kelvarindustries.com"),
+  creator: "Kelvar Industries",
+  publisher: "Kelvar Industries",
+  applicationName: "Kelvar Industries",
+  category: "Technology",
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
-    title: "Kelvar Industries",
+    locale: "en_GB",
+    url: "/",
+    title: "Kelvar Industries | Intelligent Autonomous Systems",
     description:
-      "Engineering next-generation drone systems. Based in London, UK.",
+      "Engineering intelligent autonomous drones, robotics, surveillance, and atmospheric systems for persistent awareness and resilient protection.",
     siteName: "Kelvar Industries",
     images: [
       {
-        url: "https://www.kelvarindustries.com/assets/images/brand/kelvar-primary.png",
-        alt: "Kelvar Industries — Engineering next-generation drone systems for defence, surveillance, and precision logistics. Based in London, UK.",
+        url: "/assets/images/brand/kelvar-thumbnail.png",
+        width: 1920,
+        height: 1080,
+        alt: "Kelvar Industries — intelligent autonomous systems",
       },
     ],
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kelvar Industries | Intelligent Autonomous Systems",
+    description:
+      "Engineering autonomous drones, robotics, surveillance, and atmospheric intelligence systems.",
+    images: ["/assets/images/brand/kelvar-thumbnail.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: "/assets/images/brand/kelvar-bird-2.png",
+    shortcut: "/assets/images/brand/kelvar-bird-2.png",
+    apple: "/assets/images/brand/kelvar-bird-2.png",
   },
 };
 

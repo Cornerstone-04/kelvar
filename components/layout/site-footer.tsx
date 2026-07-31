@@ -21,7 +21,7 @@ export function SiteFooter() {
     >
       <div className="pointer-events-none absolute -left-32 top-0 h-96 w-96 rounded-full bg-white/3 blur-3xl" />
 
-      <div className="relative mx-auto max-w-[112rem] px-6 pb-8 pt-16 md:px-10 md:pb-10 md:pt-24">
+      <div className="relative mx-auto max-w-448 px-6 pb-8 pt-16 md:px-10 md:pb-10 md:pt-24">
         <div className="grid gap-14 md:grid-cols-2 xl:grid-cols-[1.35fr_0.7fr_0.8fr_1fr] xl:gap-20">
           <FooterBrand />
           <FooterColumn title="Company" links={companyLinks} />

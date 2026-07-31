@@ -1,18 +1,30 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { SectionLabel } from "@/components/ui/section-label";
 import { CtaSection } from "@/components/ui/cta-section";
 import { kelvarx } from "@/content/kelvarx";
+import { createPageMetadata } from "@/lib/seo";
 
 const stratokite = kelvarx.systems[0];
 
-export const metadata: Metadata = {
-  title: "Stratokite — KELVARX — Kelvar Industries",
+export const metadata = createPageMetadata({
+  title: "Stratokite | KELVARX Platform",
   description:
-    "Explore Stratokite, KELVARX's developing balloon-assisted atmospheric intelligence platform.",
-};
+    "Explore Stratokite, KELVARX's balloon-assisted high-altitude platform for atmospheric monitoring, Earth observation, sensing, and resilient connectivity.",
+  path: "/kelvarx/stratokite",
+  keywords: [
+    "Stratokite",
+    "KELVARX platform",
+    "balloon-assisted aircraft",
+    "high-altitude platform",
+    "atmospheric monitoring",
+    "Earth observation",
+    "aerial connectivity",
+  ],
+  image: "/assets/images/platforms/stratos/stratos-hero.jpg",
+  imageAlt: "Stratokite balloon-assisted atmospheric intelligence platform",
+});
 
 export default function StratokitePage() {
   return (
