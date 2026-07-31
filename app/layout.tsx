@@ -3,6 +3,7 @@ import { SiteNavbar } from "@/components/layout/site-navbar";
 import { SiteFooter } from "@/components/layout/site-footer";
 import localFont from "next/font/local";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { SiteSplash } from "@/components/layout/site-splash";
 import "./globals.css";
 
 const barlow = localFont({
@@ -138,6 +139,7 @@ export default function RootLayout({
       className={`${barlow.variable} ${inter.variable} ${dmMono.variable}`}
     >
       <body>
+        <SiteSplash />
         <SiteNavbar />
         <main>{children}</main>
         <SiteFooter />
