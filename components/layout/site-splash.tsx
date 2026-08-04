@@ -26,9 +26,10 @@ export function SiteSplash() {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
+    const mobile = window.matchMedia("(max-width: 767px)").matches;
     const timeout = window.setTimeout(
       () => setVisible(false),
-      reduceMotion ? 650 : 3200,
+      reduceMotion ? 250 : mobile ? 1400 : 2000,
     );
 
     return () => {
@@ -84,8 +85,8 @@ export function SiteSplash() {
                     }
               }
               transition={{
-                duration: 3,
-                times: [0, 0.76, 1],
+                duration: 1.85,
+                times: [0, 0.68, 1],
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="pointer-events-none absolute left-1/2 top-12 -translate-x-1/2 border border-white/45"
@@ -96,7 +97,7 @@ export function SiteSplash() {
             <motion.div
               initial={reduceMotion ? false : { opacity: 0, scale: 0.86, filter: "blur(7px)" }}
               animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-              transition={{ duration: reduceMotion ? 0.15 : 0.55, delay: reduceMotion ? 0 : 0.25 }}
+              transition={{ duration: reduceMotion ? 0.1 : 0.4, delay: reduceMotion ? 0 : 0.12 }}
               className="relative z-1 h-32 w-32"
             >
               <Image
@@ -112,7 +113,7 @@ export function SiteSplash() {
             <motion.div
               initial={reduceMotion ? false : { opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: reduceMotion ? 0 : 0.55 }}
+              transition={{ duration: 0.35, delay: reduceMotion ? 0 : 0.3 }}
               className="relative z-1 mt-7"
             >
               <p className="font-heading text-3xl font-bold uppercase tracking-[0.16em] text-primary md:text-4xl">
@@ -130,7 +131,7 @@ export function SiteSplash() {
                     key={label}
                     initial={{ opacity: 0, x: -8 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.35, delay: 0.85 + index * 0.28 }}
+                    transition={{ duration: 0.3, delay: 0.5 + index * 0.18 }}
                     className="flex items-center justify-between gap-6 font-mono text-[0.65rem] uppercase tracking-[0.14em] md:text-[0.7rem]"
                   >
                     <span className="text-muted">{label}</span>
@@ -145,7 +146,7 @@ export function SiteSplash() {
             aria-hidden="true"
             initial={reduceMotion ? false : { scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 2.7, ease: "easeInOut" }}
+            transition={{ duration: 1.65, ease: "easeInOut" }}
             className="absolute inset-x-6 bottom-7 h-px origin-left bg-white/20 md:inset-x-10 md:bottom-9"
           />
         </motion.div>

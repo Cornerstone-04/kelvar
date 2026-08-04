@@ -33,7 +33,7 @@ export const platformSummaries: PlatformSummary[] = [
     assets: {
       image1: "/assets/images/platforms/robobot/robobot-single.jpg",
       video: "/assets/videos/platforms/robobot/robobot-showcase.webm",
-      videoPoster: "/assets/images/platforms/robobot/robobot-thumbnail.png",
+      videoPoster: "/assets/images/platforms/robobot/robobot-poster.jpg",
     },
     specs: [
       { label: "Capability Class", value: "Ground Patrol" },
@@ -53,7 +53,7 @@ export const platformSummaries: PlatformSummary[] = [
     assets: {
       image1: "/assets/images/platforms/hydrax/hydrax.jpg",
       video: "/assets/videos/platforms/hydrax/hydrax-showcase.webm",
-      videoPoster: "/assets/images/platforms/hydrax/hydrax-thumbnail.png",
+      videoPoster: "/assets/images/platforms/hydrax/hydrax-poster.jpg",
     },
     specs: [
       { label: "Capability Class", value: "Maritime Surveillance" },
@@ -74,7 +74,7 @@ export const platformSummaries: PlatformSummary[] = [
       image1: "/assets/images/platforms/dome/sky-dome-drone-01.jpg",
       image2: "/assets/images/platforms/dome/sky-dome-drone-03.jpg",
       video: "/assets/videos/platforms/dome/sky-dome-showcase.webm",
-      videoPoster: "/assets/images/platforms/dome/sky-dome-thumbnail.png",
+      videoPoster: "/assets/images/platforms/dome/sky-dome-poster.jpg",
     },
     specs: [
       { label: "Capability Class", value: "Aerial Surveillance" },

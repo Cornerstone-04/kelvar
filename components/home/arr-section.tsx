@@ -30,7 +30,7 @@ export function ArrSection() {
   return (
     <section className="border-t border-[#ffffff12] px-6 md:px-10 py-12 md:py-24">
       <div className="mb-12">
-        <SectionLabel>Autonomous A.I. Robotics</SectionLabel>
+        <SectionLabel as="h2">Autonomous A.I. Robotics</SectionLabel>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start mb-10 md:mb-20">

@@ -35,7 +35,7 @@ export function HeroSection() {
       <LazyVideo
         src="/assets/videos/brand/kelvar-showcase.webm"
         eager
-        poster="/assets/images/platforms/dome/sky-dome-thumbnail.png"
+        poster="/assets/images/platforms/dome/sky-dome-poster.jpg"
         className="absolute inset-0 z-0 h-full w-full object-cover brightness-50 saturate-[0.6]"
       />
 
@@ -68,9 +68,7 @@ export function HeroSection() {
         />
 
         <motion.h1
-          initial={reduceMotion ? false : { opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          initial={false}
           className="mb-10 max-w-[14ch] font-heading text-[clamp(4.5rem,14vw,13rem)] leading-[0.9] font-black uppercase tracking-[-0.02em] text-primary"
         >
           Surveillance
@@ -110,7 +108,7 @@ export function HeroSection() {
           <a
             key={d.id}
             href={d.href ?? `/#${d.slug}`}
-            className="group relative overflow-hidden border border-white/8 bg-white/4 px-4 py-2 font-mono text-xxs uppercase tracking-[0.2em] text-white/25 no-underline backdrop-blur-md transition-all duration-300 ease-linear hover:border-white/15 hover:bg-white/8 hover:text-white/70"
+            className="group relative overflow-hidden border border-white/8 bg-white/4 px-4 py-2 font-mono text-xxs uppercase tracking-[0.2em] text-white/60 no-underline backdrop-blur-md transition-all duration-300 ease-linear hover:border-white/15 hover:bg-white/8 hover:text-white/85"
           >
             {/* soft glow hover */}
             <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,#ffffff10_0%,transparent_70%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />

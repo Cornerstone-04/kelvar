@@ -42,7 +42,7 @@ The global system is defined in [`app/globals.css`](app/globals.css) and registe
 | `border-border-col` | `--border-col` | `#484761` | Visible structural borders |
 | `text-primary` | `--primary` | `#f5f5f9` | Headlines, active controls, primary copy |
 | `text-muted` | `--muted` | `#9494a8` | Supporting copy and secondary labels |
-| `text-dim` | `--dim` | `#484761` | Indexes, inactive states, quiet metadata |
+| `text-dim` | `--dim` | `#7c7c94` | Indexes, inactive states, quiet metadata |
 | `bg-nav-background` | `--nav-background` | `#07072abf` | Translucent navigation surface |
 
 Kelvar intentionally has no bright accent colour. Hierarchy comes from luminosity, scale, spacing, and motion—not from introducing unrelated hues.
