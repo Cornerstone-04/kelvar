@@ -2,7 +2,7 @@ import { HeroSection } from "@/components/home/hero-section";
 import { MissionSection } from "@/components/home/mission-section";
 import { DronePlatformsSection } from "@/components/home/drone-platforms-section";
 import { EthosSection } from "@/components/home/ethos-section";
-import { GlobalNetworkMap } from "@/components/map/global-network-map";
+import { DeferredGlobalNetworkMap } from "@/components/map/deferred-global-network-map";
 import { AreasOfFocusSection } from "@/components/home/focus-area-section";
 import { ArrSection } from "@/components/home/arr-section";
 
@@ -15,7 +15,7 @@ export default function HomePage() {
       <ArrSection />
       <EthosSection />
       <AreasOfFocusSection />
-      <GlobalNetworkMap />
+      <DeferredGlobalNetworkMap />
     </div>
   );
 }

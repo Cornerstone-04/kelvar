@@ -95,7 +95,7 @@ export default function DronePlatformRow({
             {drone.slug === "stratokite" && (
               <Link
                 href="/kelvarx"
-                className="group/programme mt-4 inline-flex items-center gap-2 font-mono text-xxs uppercase tracking-[0.15em] text-dim transition-colors duration-200 hover:text-primary"
+                className="group/programme mt-4 inline-flex items-center gap-2 font-mono text-xxs uppercase tracking-[0.15em] text-muted transition-colors duration-200 hover:text-primary"
               >
                 Explore the KELVARX programme
                 <BsArrowUpRight className="transition-transform duration-300 group-hover/programme:-translate-y-0.5 group-hover/programme:translate-x-0.5" />

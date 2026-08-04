@@ -18,7 +18,7 @@ export function GlobalNetworkMap() {
   return (
     <section className="border-t border-[#ffffff12] px-6 md:px-10 py-16">
       <div className="mb-12">
-        <SectionLabel>Global Reach</SectionLabel>
+        <SectionLabel as="h2">Global Reach</SectionLabel>
       </div>
 
       {/* Two-column: text left, globe right */}
@@ -49,7 +49,7 @@ export function GlobalNetworkMap() {
                 className="bg-bg md:px-6 py-5 transition-colors duration-200 hover:bg-surface flex items-center justify-between"
               >
                 <div>
-                  <p className="font-mono text-xxs font-medium tracking-[0.25em] text-dim mb-1 uppercase">
+                  <p className="mb-1 font-mono text-xxs font-medium uppercase tracking-[0.25em] text-muted">
                     Node · {node.id}
                   </p>
                   <h3 className="font-heading text-[1.35rem] font-bold uppercase tracking-wide text-primary">
@@ -60,7 +60,7 @@ export function GlobalNetworkMap() {
                   <p className="font-mono text-xs-plus tracking-[0.2em] text-muted uppercase mb-1">
                     {node.role}
                   </p>
-                  <p className="font-mono text-xxs tracking-[0.12em] text-dim">
+                  <p className="font-mono text-xxs tracking-[0.12em] text-muted">
                     {node.coord}
                   </p>
                 </div>

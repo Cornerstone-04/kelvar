@@ -63,6 +63,8 @@ export function LazyVideo({
   return (
     <video
       ref={videoRef}
+      aria-hidden="true"
+      tabIndex={-1}
       muted
       loop
       playsInline
