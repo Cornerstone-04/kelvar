@@ -1,9 +1,6 @@
 import Image from "next/image";
 import { motion } from "motion/react";
-import type {
-  PlatformStory,
-  ResearchPlatform,
-} from "@/types/research-types";
+import type { PlatformStory, ResearchPlatform } from "@/types/research-types";
 import { MetricGrid } from "@/components/ui/metric-grid";
 import { SectionLabel } from "@/components/ui/section-label";
 import { StoryFrame } from "./story-frame";

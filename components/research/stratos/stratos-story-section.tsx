@@ -1,9 +1,6 @@
 "use client";
 
-import type {
-  ResearchPlatform,
-  PlatformStory,
-} from "@/types/research-types";
+import type { ResearchPlatform, PlatformStory } from "@/types/research-types";
 import { Rule } from "@/components/ui/rule";
 import { StratosIntroduction } from "./stratos-introduction";
 import { StratosSystem } from "./stratos-system";

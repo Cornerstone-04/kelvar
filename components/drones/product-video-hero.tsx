@@ -1,7 +1,12 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import type { ProductDetail } from "@/types/product-types";
 import { GlitchText } from "@/components/ui/glitch-text";
 import { KelvarButton } from "@/components/ui/kelvar-button";

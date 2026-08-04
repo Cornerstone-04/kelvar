@@ -4,11 +4,17 @@ import { Rule } from "@/components/ui/rule";
 import { CtaSection } from "@/components/ui/cta-section";
 import { FocusHero } from "@/components/focus/focus-hero";
 import { DomainSection } from "@/components/focus/domain-section";
+import {
+  FocusDomainNav,
+  FocusNetworkStatement,
+} from "@/components/focus/focus-domain-nav";
 
 export default function FocusPage() {
   return (
     <div className="min-h-screen bg-bg">
       <FocusHero />
+      <FocusDomainNav />
+      <FocusNetworkStatement />
 
       {focus.map((domain, index) => {
         const detail = focusDetails[domain.word];

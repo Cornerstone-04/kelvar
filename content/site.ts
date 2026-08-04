@@ -11,12 +11,12 @@ export const site = {
 
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/#platforms", label: "Platforms" },
   { href: "/research", label: "RD&D" },
   { href: "/about", label: "About" },
   { href: "/focus", label: "Focus" },
   { href: "/contact", label: "Contact" },
   { href: "/careers", label: "Careers" },
+  { href: "/#platforms", label: "Platforms" },
 ] satisfies NavigationLink[];
 
 export const platformNavLinks = [

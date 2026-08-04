@@ -41,8 +41,8 @@ export function SiteFooter() {
           <p className="mt-7 border-t border-white/8 pt-7 font-mono text-[0.62rem] leading-[1.8] text-white/24">
             Kelvar Industries develops autonomous surveillance and atmospheric
             intelligence systems across air, land, sea, and space. Platform
-            capabilities described on this website may include systems in
-            active development.
+            capabilities described on this website may include systems in active
+            development.
           </p>
         </div>
       </div>

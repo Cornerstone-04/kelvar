@@ -17,14 +17,14 @@ export const kelvarx = {
   systems: [
     {
       id: "stratos-kite",
-      name: "Stratos Kite",
+      name: "Stratokite",
       href: "/kelvarx/stratokite",
       type: "Balloon-assisted tail-sitter glider drone",
       description:
         "A developing hybrid platform combining helium-assisted lift, a tail-sitter fixed-wing aircraft, radiosonde instrumentation, and intelligent imaging systems.",
       media: {
         src: "/assets/images/platforms/stratos/stratos-in-air.jpg",
-        alt: "Stratos Kite fixed-wing balloon-assisted platform concept",
+        alt: "Stratokite fixed-wing balloon-assisted platform concept",
       },
       payload: [
         "High-resolution EO camera",
@@ -57,8 +57,8 @@ export const kelvarx = {
       description:
         "A developing surveillance and monitoring platform where helium-assisted lift supports endurance while a quadcopter provides positioning and maneuverability.",
       media: {
-        alt: "Stratos Copter artwork pending",
-        placeholder: "Platform imagery in development",
+        src: "/assets/images/platforms/stratos/stratoscopter.jpg",
+        alt: "Stratos Copter balloon-assisted quadcopter platform concept",
       },
       payload: [
         "Daylight zoom camera",
@@ -177,25 +177,25 @@ export const kelvarx = {
     {
       name: "Environmental and climate intelligence",
       outcome: "Build richer atmospheric datasets for forecasting and research.",
-      platforms: ["Stratos Kite", "Stratos Solar Sat"],
+      platforms: ["Stratokite", "Stratos Solar Sat"],
       intelligenceLayer: "KAIN",
     },
     {
       name: "Agriculture and land planning",
       outcome: "Support planning with aerial imagery and local weather intelligence.",
-      platforms: ["Stratos Kite"],
+      platforms: ["Stratokite"],
       intelligenceLayer: "Both",
     },
     {
       name: "Public safety and disaster response",
       outcome: "Provide timely visual and environmental awareness during incidents.",
-      platforms: ["Stratos Copter", "Stratos Kite"],
+      platforms: ["Stratos Copter", "Stratokite"],
       intelligenceLayer: "KELVAR AI Command",
     },
     {
       name: "Border, maritime, and infrastructure awareness",
       outcome: "Extend observation across remote assets and strategic corridors.",
-      platforms: ["Stratos Kite", "Stratos Solar Sat"],
+      platforms: ["Stratokite", "Stratos Solar Sat"],
       intelligenceLayer: "Both",
     },
     {

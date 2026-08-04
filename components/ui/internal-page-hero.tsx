@@ -43,7 +43,9 @@ export function InternalPageHero({
       <AmbientField className="opacity-80" />
 
       <motion.div
-        style={reduceMotion ? undefined : { y: contentY, opacity: contentOpacity }}
+        style={
+          reduceMotion ? undefined : { y: contentY, opacity: contentOpacity }
+        }
         className="relative z-1 max-w-5xl"
       >
         <motion.div

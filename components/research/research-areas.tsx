@@ -8,7 +8,7 @@ export function ResearchAreas() {
   return (
     <SectionFrame label="Areas of Research">
       <div className="grid gap-10 lg:grid-cols-[minmax(20rem,1.1fr)_minmax(0,0.9fr)]">
-        <div>
+        <div className="lg:sticky lg:top-28 lg:self-start">
           <h2 className="font-heading text-[clamp(2.6rem,6vw,6rem)] font-black leading-[0.9] text-primary">
             The intelligence layer behind every Kelvar platform.
           </h2>

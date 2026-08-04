@@ -28,7 +28,7 @@ export function SiteSplash() {
 
     const timeout = window.setTimeout(
       () => setVisible(false),
-      reduceMotion ? 450 : 1850,
+      reduceMotion ? 650 : 3200,
     );
 
     return () => {
@@ -50,7 +50,7 @@ export function SiteSplash() {
           aria-live="polite"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: reduceMotion ? 0.15 : 0.45, ease: "easeOut" }}
+          transition={{ duration: reduceMotion ? 0.2 : 0.6, ease: "easeOut" }}
           className="fixed inset-0 z-100 grid place-items-center overflow-hidden bg-bg"
         >
           {!reduceMotion && (
@@ -58,15 +58,15 @@ export function SiteSplash() {
               aria-hidden="true"
               initial={{ y: "-100vh", opacity: 0 }}
               animate={{ y: "100vh", opacity: [0, 0.55, 0] }}
-              transition={{ duration: 1.25, ease: "linear" }}
+              transition={{ duration: 2.2, ease: "linear" }}
               className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent_5%,rgba(245,245,249,0.7)_50%,transparent_95%)] shadow-[0_0_24px_rgba(245,245,249,0.22)]"
             />
           )}
 
-          <div className="absolute left-6 top-6 font-mono text-[0.55rem] uppercase tracking-[0.24em] text-dim md:left-10 md:top-9">
+          <div className="absolute left-6 top-6 font-mono text-[0.65rem] uppercase tracking-[0.22em] text-muted md:left-10 md:top-9">
             KLV / SYSTEM BOOT
           </div>
-          <div className="absolute right-6 top-6 font-mono text-[0.55rem] uppercase tracking-[0.24em] text-dim md:right-10 md:top-9">
+          <div className="absolute right-6 top-6 font-mono text-[0.65rem] uppercase tracking-[0.22em] text-muted md:right-10 md:top-9">
             00.01
           </div>
 
@@ -84,8 +84,8 @@ export function SiteSplash() {
                     }
               }
               transition={{
-                duration: 1.75,
-                times: [0, 0.68, 1],
+                duration: 3,
+                times: [0, 0.76, 1],
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="pointer-events-none absolute left-1/2 top-12 -translate-x-1/2 border border-white/45"
@@ -97,14 +97,14 @@ export function SiteSplash() {
               initial={reduceMotion ? false : { opacity: 0, scale: 0.86, filter: "blur(7px)" }}
               animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
               transition={{ duration: reduceMotion ? 0.15 : 0.55, delay: reduceMotion ? 0 : 0.25 }}
-              className="relative z-1 h-28 w-28"
+              className="relative z-1 h-32 w-32"
             >
               <Image
                 src="/assets/images/brand/kelvar-bird.png"
                 alt=""
                 fill
                 priority
-                sizes="112px"
+                sizes="128px"
                 className="object-contain"
               />
             </motion.div>
@@ -115,26 +115,26 @@ export function SiteSplash() {
               transition={{ duration: 0.4, delay: reduceMotion ? 0 : 0.55 }}
               className="relative z-1 mt-7"
             >
-              <p className="font-heading text-2xl font-bold uppercase tracking-[0.2em] text-primary">
+              <p className="font-heading text-3xl font-bold uppercase tracking-[0.16em] text-primary md:text-4xl">
                 Kelvar Industries
               </p>
-              <p className="mt-2 font-mono text-[0.58rem] uppercase tracking-[0.3em] text-muted">
+              <p className="mt-3 font-mono text-[0.68rem] uppercase tracking-[0.22em] text-white/65 md:text-xs">
                 Eyes Everywhere. Safety Guaranteed.
               </p>
             </motion.div>
 
             {!reduceMotion && (
-              <div className="relative z-1 mt-10 w-[min(82vw,23rem)] space-y-2 border-t border-white/10 pt-4">
+              <div className="relative z-1 mt-10 w-[min(86vw,27rem)] space-y-3 border-t border-white/15 pt-5">
                 {telemetry.map(([label, value], index) => (
                   <motion.div
                     key={label}
                     initial={{ opacity: 0, x: -8 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.25, delay: 0.7 + index * 0.16 }}
-                    className="flex items-center justify-between gap-6 font-mono text-[0.55rem] uppercase tracking-[0.18em]"
+                    transition={{ duration: 0.35, delay: 0.85 + index * 0.28 }}
+                    className="flex items-center justify-between gap-6 font-mono text-[0.65rem] uppercase tracking-[0.14em] md:text-[0.7rem]"
                   >
-                    <span className="text-dim">{label}</span>
-                    <span className="text-primary/70">{value}</span>
+                    <span className="text-muted">{label}</span>
+                    <span className="text-primary/85">{value}</span>
                   </motion.div>
                 ))}
               </div>
@@ -145,7 +145,7 @@ export function SiteSplash() {
             aria-hidden="true"
             initial={reduceMotion ? false : { scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 1.35, ease: "easeInOut" }}
+            transition={{ duration: 2.7, ease: "easeInOut" }}
             className="absolute inset-x-6 bottom-7 h-px origin-left bg-white/20 md:inset-x-10 md:bottom-9"
           />
         </motion.div>
