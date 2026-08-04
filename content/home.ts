@@ -47,7 +47,7 @@ export const focus = [
   {
     id: "04",
     word: "SPACE",
-    sub: "KELVARX develops the Stratos Series: balloon-assisted aerial and near-space systems for atmospheric intelligence, observation, connectivity, and resilient infrastructure.",
-    image: "/assets/images/platforms/stratos/stratos-space.jpg",
+    sub: "KELVARX is Kelvar Industries' atmospheric and near-space programme, connecting the Stratos Series with shared intelligence for environmental monitoring, Earth observation, and resilient communications.",
+    image: "/assets/images/focus-space-domain.jpg",
   },
 ];

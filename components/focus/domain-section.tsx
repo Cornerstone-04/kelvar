@@ -21,29 +21,42 @@ type DomainSectionProps = {
 
 export function DomainSection({ domain, detail }: DomainSectionProps) {
   return (
-    <>
+    <section
+      id={`focus-${domain.word.toLowerCase()}`}
+      className="scroll-mt-32 border-b border-white/10 lg:grid lg:grid-cols-[minmax(0,1.08fr)_minmax(28rem,0.92fr)]"
+    >
       <DomainHero domain={domain} />
-      <section className="border-t border-[#ffffff12] px-6 py-12 md:px-10 md:py-24">
+      <div className="border-t border-white/10 px-6 py-12 md:px-10 md:py-20 lg:border-l lg:border-t-0">
         <DomainContent domain={domain} detail={detail} />
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
 function DomainHero({ domain }: { domain: FocusDomain }) {
+  const isSpace = domain.word.toLowerCase() === "space";
+
   return (
-    <div className="relative aspect-video overflow-hidden md:aspect-21/7">
+    <div className="group relative aspect-video overflow-hidden lg:sticky lg:top-30 lg:h-[calc(100svh-7.5rem)] lg:aspect-auto">
       <Image
         src={domain.image}
         alt={domain.word}
         fill
         sizes="100vw"
-        className="object-cover brightness-[0.45] saturate-[0.5]"
+        className={`object-cover transition-transform duration-1400 ease-out group-hover:scale-[1.025] ${
+          isSpace
+            ? "brightness-[0.72] saturate-[0.65]"
+            : "brightness-[0.48] saturate-[0.58]"
+        }`}
       />
 
       <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_60%)]" />
 
-      <div className="absolute bottom-8 left-6 flex items-end gap-6 md:left-10">
+      <span className="pointer-events-none absolute -right-3 top-1/2 -translate-y-1/2 font-heading text-[clamp(12rem,28vw,30rem)] font-black leading-none text-white/[0.035]">
+        {domain.id}
+      </span>
+
+      <div className="absolute bottom-8 left-6 flex items-end gap-6 md:left-10 md:bottom-10">
         <span className="font-mono text-xxs font-bold tracking-[0.2em] text-muted">
           {domain.id}
         </span>
@@ -59,7 +72,7 @@ function DomainHero({ domain }: { domain: FocusDomain }) {
 function DomainContent({ domain, detail }: DomainSectionProps) {
   return (
     <>
-      <div className="mb-20 grid grid-cols-1 items-start gap-16 md:grid-cols-2">
+      <div className="mb-16 grid grid-cols-1 items-start gap-12">
         <div>
           <div className="mb-8">
             <SectionLabel>{detail.headline}</SectionLabel>
@@ -131,7 +144,7 @@ function DomainSystems({
         {domainName} Systems
       </div>
 
-      <div className="grid grid-cols-1 gap-px bg-bg md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-px bg-white/8">
         {systems.map((system, index) => (
           <motion.div
             key={system.name}
@@ -139,13 +152,17 @@ function DomainSystems({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="group bg-bg py-8 md:px-8"
+            className="group bg-bg py-8 md:px-6"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h3 className="mb-2 font-heading text-[1.6rem] font-black text-primary transition-colors group-hover:text-primary/80">
                   {system.name}
                 </h3>
+
+                <span className="mb-4 inline-flex border border-white/10 px-2 py-1 font-mono text-[0.55rem] uppercase tracking-[0.16em] text-dim">
+                  {system.slug === "dome" ? "Flagship" : "In Development"}
+                </span>
 
                 <p className="max-w-[45ch] font-mono text-xs-plus leading-[1.75] text-muted">
                   {system.desc}
@@ -155,9 +172,7 @@ function DomainSystems({
               {system.slug && (
                 <Link
                   href={
-                    system.slug === "kelvarx"
-                      ? "/kelvarx"
-                      : `/#${system.slug}`
+                    system.slug === "kelvarx" ? "/kelvarx" : `/#${system.slug}`
                   }
                   className="kelvar-button-frame inline-flex shrink-0 items-center justify-center gap-2 border px-4 py-2 font-mono text-xxs uppercase tracking-[0.15em] text-primary transition-colors duration-200 hover:bg-white/8 hover:text-primary"
                 >

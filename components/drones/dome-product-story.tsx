@@ -82,7 +82,7 @@ export function DomeProductStory({ product }: { product: ProductDetail }) {
 
       <SectionFrame label="System Architecture">
         <div className="grid gap-8 lg:grid-cols-[minmax(18rem,0.62fr)_minmax(0,1.18fr)]">
-           <div className="border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.015))] p-6 md:p-8 lg:sticky lg:top-24 lg:self-start">
+          <div className="border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.015))] p-6 md:p-8 lg:sticky lg:top-24 lg:self-start">
             <LuRadar className="mb-8 text-primary/55" size={28} />
             <h3 className="font-heading text-[2.6rem] font-black leading-none text-primary">
               Mobile, sensing, self-coordinated CCTV.
@@ -128,8 +128,6 @@ export function DomeProductStory({ product }: { product: ProductDetail }) {
               </motion.article>
             ))}
           </div>
-
-         
         </div>
       </SectionFrame>
 

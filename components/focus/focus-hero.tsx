@@ -54,8 +54,8 @@ export function FocusHero() {
           className="max-w-[52ch] font-mono text-xs-plus leading-[1.8] text-muted"
         >
           Kelvar operates across four strategic domains — Air, Land, Sea, and
-          Space. Each demands a different kind of intelligence. Every system
-          we build is engineered for its environment.
+          Space. Each demands a different kind of intelligence. Every system we
+          build is engineered for its environment.
         </motion.p>
       </div>
     </section>
