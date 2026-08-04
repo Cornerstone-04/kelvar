@@ -1,36 +1,224 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kelvar Industries
 
-## Getting Started
+The production website for [Kelvar Industries](https://www.kelvarindustries.com), an engineering company building intelligent autonomous systems across air, land, sea, and space.
 
-First, run the development server:
+The site presents Kelvar's platform portfolio, KELVARX atmospheric programme, research and development work, company story, and career opportunities through an editorial, motion-led interface.
+
+## Technology
+
+- [Next.js 16](https://nextjs.org/) with the App Router and Turbopack
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- [Motion for React](https://motion.dev/)
+- [Bun](https://bun.sh/) for dependency locking and tests
+- Locally hosted Barlow Condensed, DM Mono, and Inter fonts
+
+## Getting started
+
+### Requirements
+
+- Node.js 20 or later
+- Bun 1.3 or later
+
+Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Start the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+## Commands
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+bun run dev          # Start the local development server
+bun test             # Run content-integrity tests
+npx tsc --noEmit     # Check TypeScript without emitting files
+bun run build        # Create an optimised production build
+bun run start        # Serve the production build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The repository's legacy `lint` script is not currently part of validation because Next.js 16 removed `next lint`, while the installed `eslint-config-next` version still requires migration. Until that tooling update is completed, TypeScript, tests, and the production build are the required checks.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Routes
 
-## Deploy on Vercel
+| Route | Purpose |
+| --- | --- |
+| `/` | Company overview, platforms, mission, focus areas, and global reach |
+| `/about` | Mission, story, values, team, and KELVARX introduction |
+| `/focus` | Air, sea, land, and space operating domains |
+| `/kelvarx` | KELVARX atmospheric and near-space programme |
+| `/kelvarx/stratokite` | Stratokite platform story and specifications |
+| `/drones/dome` | Dome flagship platform page |
+| `/research` | Research, Development & Deployment programmes |
+| `/careers` | Culture, benefits, filters, and open positions |
+| `/contact` | Enquiries and company contact details |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+app/                   Routes, layouts, metadata, and page composition
+components/
+  about/               About-page sections
+  careers/             Career culture, filters, and roles
+  drones/              Product-page layouts and stories
+  focus/               Focus domains and KELVARX systems
+  home/                Homepage feature sections
+  layout/              Navbar, menu, splash screen, and footer
+  map/                 Global network map and globe
+  research/            RD&D programme sections
+  ui/                  Shared presentation and interaction primitives
+content/               Confirmed copy and structured page data
+lib/                   Pure utilities, SEO helpers, and motion variants
+public/assets/         Local fonts, images, posters, and WebM videos
+tests/                 Content-integrity tests
+types/                 Shared content and component contracts
+```
+
+### Separation of concerns
+
+The codebase follows four main boundaries:
+
+1. `app/` composes routes and owns route metadata.
+2. `components/` owns presentation and local interaction.
+3. `content/` owns confirmed copy and structured data.
+4. `types/` and `lib/` own shared contracts and pure behaviour.
+
+Page files should remain small. Stateful behaviour belongs in focused hooks, repeated interface patterns belong in `components/ui/`, and factual content should not be embedded inside visual components.
+
+## Content model
+
+Platform summaries are defined in [`content/products/summaries.ts`](content/products/summaries.ts). Detailed Dome content lives in [`content/products/dome.ts`](content/products/dome.ts), while KELVARX and research programmes have their own content modules.
+
+Current platform hierarchy:
+
+```text
+Platforms
+├── Stratokite → /kelvarx/stratokite
+├── Robobot
+├── Hydrax
+└── Dome → /drones/dome
+
+KELVARX
+├── Stratokite
+├── Stratos Copter
+└── Stratos Solar Sat
+```
+
+Robobot and Hydrax remain concise because they are still in development and do not yet have the same confirmed product depth as Dome.
+
+## Design system
+
+The complete visual and interaction teardown is documented in [`DESIGN.md`](DESIGN.md). It covers:
+
+- Brand and visual principles
+- Colour and typography tokens
+- Borders, spacing, grids, and imagery
+- Motion timing and reduced-motion behaviour
+- Navigation and splash choreography
+- The animated Kelvar button
+- Every shared and feature-level component
+- Responsive, accessibility, and performance rules
+- A design-review checklist
+
+Global tokens and component-layer CSS live in [`app/globals.css`](app/globals.css) and are exposed through Tailwind CSS v4 utilities such as:
+
+```text
+bg-bg
+bg-surface
+bg-card
+text-primary
+text-muted
+text-dim
+border-border-col
+```
+
+Use semantic utilities instead of arbitrary CSS-variable colour expressions.
+
+## Motion and accessibility
+
+Motion is implemented with Motion for React and targeted CSS transitions. The site does not require GSAP.
+
+When adding animation:
+
+- Prefer transforms and opacity.
+- Respect `prefers-reduced-motion`.
+- Keep interactive feedback faster than environmental motion.
+- Use viewport-once reveals unless replay communicates useful state.
+- Do not hide essential content until JavaScript hydrates.
+- Provide focus behaviour equivalent to hover behaviour.
+
+Decorative videos are muted, stripped of audio tracks, hidden from assistive technology, and loaded through [`LazyVideo`](components/ui/lazy-video.tsx). Videos pause outside the viewport and do not autoplay for reduced-motion or data-saving users.
+
+## Performance conventions
+
+- Local fonts are loaded with `next/font/local`.
+- Images use `next/image` where responsive sources are possible.
+- Native video posters use lightweight, appropriately sized JPEG files.
+- Below-the-fold video sources are attached only near the viewport.
+- The heavy network map and globe are deferred until users approach the section.
+- Homepage LCP content is visible without waiting for hydration.
+- The splash screen runs once per browser session and uses a shorter mobile sequence.
+- WebM background videos contain video streams only—no unused audio.
+
+When adding media, verify its dimensions and transfer size before committing it.
+
+## Validation
+
+Before handing off a change, run:
+
+```bash
+npx tsc --noEmit
+bun test
+bun run build
+git diff --check
+```
+
+The content-integrity tests currently verify:
+
+- Confirmed platform ordering
+- Stratokite's relationship to KELVARX
+- Unique content slugs
+- Summary/detail consistency
+- Career location parsing, filtering, and grouping
+
+## SEO
+
+Global metadata is defined in [`app/layout.tsx`](app/layout.tsx). Internal routes define focused metadata through their route layouts. Shared SEO utilities live in [`lib/seo.ts`](lib/seo.ts).
+
+New public pages should include:
+
+- A unique title and description
+- Canonical URL
+- Open Graph metadata
+- Twitter metadata
+- Descriptive link text
+- A sequential heading structure
+
+## Deployment
+
+The production domain is:
+
+```text
+https://www.kelvarindustries.com
+```
+
+[`proxy.ts`](proxy.ts) permanently redirects the default Vercel hostname to the canonical production domain. Static assets are excluded from this redirect matcher.
+
+Build the same artefact used in production with:
+
+```bash
+bun run build
+```
+
+## Supporting documentation
+
+- [`DESIGN.md`](DESIGN.md) — complete design and interaction system
+- [`INSTRUCTIONS.md`](INSTRUCTIONS.md) — KELVARX implementation background and client direction
