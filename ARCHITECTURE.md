@@ -35,8 +35,6 @@ The contact form deliberately prepares a validated `mailto:` enquiry because the
 
 ## Quality gates
 
-Run `bun run check` before handoff. Pull requests and main-branch pushes run linting, formatting verification, strict TypeScript, unit tests, the production build, and Chromium, Firefox, and WebKit smoke tests in GitHub Actions.
-
-The default local E2E command uses the installed Chrome application so it does not require a large browser download. Use `bun run test:e2e:install` followed by `bun run test:e2e:cross-browser` when validating the complete engine matrix locally.
+Run `bun run check` before handoff. Pull requests and main-branch pushes run linting, formatting verification, strict TypeScript, unit tests, and the production build in GitHub Actions.
 
 Architecture changes must preserve behaviour, keyboard access, reduced-motion support, metadata and public URLs.

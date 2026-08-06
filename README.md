@@ -27,12 +27,6 @@ Install dependencies:
 bun install
 ```
 
-Install the browser engines used by the end-to-end suite once per machine:
-
-```bash
-bun run test:e2e:install
-```
-
 Start the development server:
 
 ```bash
@@ -49,9 +43,6 @@ bun run lint         # Run ESLint with zero-warning enforcement
 bun run format:check # Verify Prettier formatting
 bun run typecheck    # Check TypeScript without emitting files
 bun test             # Run unit and content-integrity tests
-bun run test:e2e     # Run local smoke tests with installed Chrome
-bun run test:e2e:install # Install the full Playwright browser matrix
-bun run test:e2e:cross-browser # Run Chromium, Firefox, and WebKit smoke tests
 bun run build        # Create an optimised production build
 bun run start        # Serve the production build
 bun run check        # Run the complete local quality gate
@@ -90,7 +81,6 @@ content/               Confirmed copy and structured page data
 lib/                   Pure utilities, SEO helpers, and motion variants
 public/assets/         Local fonts, images, posters, and WebM videos
 tests/                 Content-integrity tests
-e2e/                   Playwright route and interaction smoke tests
 types/                 Shared content and component contracts
 ```
 
@@ -193,7 +183,6 @@ bun run format:check
 bun run typecheck
 bun test
 bun run build
-bun run test:e2e
 git diff --check
 ```
 
