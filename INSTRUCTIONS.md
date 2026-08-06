@@ -19,7 +19,7 @@ Kelvar Industries
 │   └── Space → /kelvarx
 ├── KELVARX
 │   ├── Stratokite
-│   ├── Stratos Copter
+│   ├── Stratocopter
 │   └── Stratos Solar Sat
 └── RD&D
     └── General research programmes and future developments
@@ -95,7 +95,7 @@ Stable anchors:
 - Missions: agriculture, border awareness, environmental monitoring,
   pipeline inspection, and disaster assessment
 
-### Stratos Copter
+### Stratocopter
 
 - Balloon-assisted quadcopter drone
 - Payload: zoom and thermal cameras, radiosonde sensors, loudspeaker,
@@ -132,7 +132,7 @@ The static diagram must remain understandable without motion and communicate:
 
 ```text
 Stratos Kite ─┐
-Stratos Copter ├─ KAIN ─ Atmospheric and visual intelligence
+Stratocopter ├─ KAIN ─ Atmospheric and visual intelligence
 Solar Sat ────┘
 ```
 

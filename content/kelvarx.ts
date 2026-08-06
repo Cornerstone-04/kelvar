@@ -52,13 +52,13 @@ export const kelvarx = {
     },
     {
       id: "stratos-copter",
-      name: "Stratos Copter",
+      name: "Stratocopter",
       type: "Balloon-assisted quadcopter drone",
       description:
         "A developing surveillance and monitoring platform where helium-assisted lift supports endurance while a quadcopter provides positioning and maneuverability.",
       media: {
         src: "/assets/images/platforms/stratos/stratoscopter-2.webp",
-        alt: "Stratos Copter balloon-assisted quadcopter platform concept",
+        alt: "Stratocopter balloon-assisted quadcopter platform concept",
       },
       payload: [
         "Daylight zoom camera",
@@ -192,7 +192,7 @@ export const kelvarx = {
       name: "Public safety and disaster response",
       outcome:
         "Provide timely visual and environmental awareness during incidents.",
-      platforms: ["Stratos Copter", "Stratokite"],
+      platforms: ["Stratocopter", "Stratokite"],
       intelligenceLayer: "KELVAR AI Command",
     },
     {
@@ -205,7 +205,7 @@ export const kelvarx = {
     {
       name: "Telecommunications and rural connectivity",
       outcome: "Explore high-altitude relay coverage for underserved regions.",
-      platforms: ["Stratos Solar Sat", "Stratos Copter"],
+      platforms: ["Stratos Solar Sat", "Stratocopter"],
       intelligenceLayer: "KELVAR AI Command",
     },
     {

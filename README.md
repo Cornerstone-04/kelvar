@@ -121,7 +121,7 @@ Platforms
 
 KELVARX
 ├── Stratokite
-├── Stratos Copter
+├── Stratocopter
 └── Stratos Solar Sat
 ```
 
