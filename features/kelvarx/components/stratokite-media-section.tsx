@@ -38,7 +38,7 @@ export function StratokiteMediaSection() {
                 className={`overflow-hidden border border-white/10 bg-black ${index === 0 ? "md:col-span-2" : ""}`}
               >
                 <div
-                  className={`relative ${index === 0 ? "aspect-[16/9]" : "aspect-square"}`}
+                  className={`relative ${index === 0 ? "aspect-video" : "aspect-square"}`}
                 >
                   <Image
                     src={image.src}
