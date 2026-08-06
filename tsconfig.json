@@ -30,7 +30,9 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "app/focus/air-convoy",
-    "lib"
+    "lib",
+    ".next-e2e/types/**/*.ts",
+    ".next-e2e/dev/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

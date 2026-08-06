@@ -35,10 +35,12 @@ export function GlitchText({
         }, delay);
         return () => clearTimeout(timeout);
       } else {
-        setDisplayed("");
-        setStarted(false);
+        const timeout = setTimeout(() => {
+          setDisplayed("");
+          setStarted(false);
+        }, 0);
+        return () => clearTimeout(timeout);
       }
-      return;
     }
 
     const el = containerRef.current;
@@ -62,7 +64,6 @@ export function GlitchText({
   useEffect(() => {
     if (!started) return;
 
-    setDisplayed("");
     let i = 0;
 
     const tick = () => {

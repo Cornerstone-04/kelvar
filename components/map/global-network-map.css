@@ -1,34 +1,34 @@
 @keyframes kv-pulse-ring {
-    0% {
-        r: 6;
-        opacity: 0.9;
-    }
-    100% {
-        r: 22;
-        opacity: 0;
-    }
+  0% {
+    r: 6;
+    opacity: 0.9;
+  }
+  100% {
+    r: 22;
+    opacity: 0;
+  }
 }
 @keyframes kv-pulse-ring2 {
-    0% {
-        r: 6;
-        opacity: 0.6;
-    }
-    100% {
-        r: 32;
-        opacity: 0;
-    }
+  0% {
+    r: 6;
+    opacity: 0.6;
+  }
+  100% {
+    r: 32;
+    opacity: 0;
+  }
 }
 @keyframes kv-dash {
-    to {
-        stroke-dashoffset: -60;
-    }
+  to {
+    stroke-dashoffset: -60;
+  }
 }
 @keyframes kv-blink {
-    0%,
-    100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.3;
-    }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
 }

@@ -1,157 +1,169 @@
 @import "tailwindcss";
 
 @theme inline {
-    /*fonts*/
-    --font-sans: "Inter", sans-serif;
-    --font-mono: "DM Mono", monospace;
-    --font-heading: "Barlow Condensed", sans-serif;
+  /*fonts*/
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-heading: "Barlow Condensed", sans-serif;
 
-    /*colors*/
-    --color-bg: var(--bg);
-    --color-surface: var(--surface);
-    --color-card: var(--card);
-    --color-border-col: var(--border-col);
-    --color-primary: var(--primary);
-    --color-muted: var(--muted);
-    --color-dim: var(--dim);
-    --color-bg-alt: var(--bg-alt);
-    --color-border-col-2: var(--border-col-2);
-    --color-nav-background: var(--nav-background);
+  /*colors*/
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-border-col: var(--border-col);
+  --color-primary: var(--primary);
+  --color-muted: var(--muted);
+  --color-dim: var(--dim);
+  --color-bg-alt: var(--bg-alt);
+  --color-border-col-2: var(--border-col-2);
+  --color-nav-background: var(--nav-background);
 
-    /*font size*/
-    --text-xxs: 0.625rem; /* 10px */
-    --text-xxs--line-height: 0.875rem; /* 14px */
-    --text-xs-plus: 0.82rem;
-    --text-xs-plus--line-height: 1.1rem;
+  /*font size*/
+  --text-xxs: 0.625rem; /* 10px */
+  --text-xxs--line-height: 0.875rem; /* 14px */
+  --text-xs-plus: 0.82rem;
+  --text-xs-plus--line-height: 1.1rem;
 }
 
 :root {
-    --bg: #07072a;
-    --surface: #0d0d2e;
-    --card: #282846;
-    --border-col: #484761;
-    --primary: #f5f5f9;
-    --muted: #9494a8;
-    --dim: #7c7c94;
-    --bg-alt: #07072d;
-    --border-col-2: #ffffff0d;
-    --border-subtle: #ffffff1a;
-    --text-secondary: #9494a8;
-    --text-tertiary: #ffffff5c;
-    --nav-background: #07072abf;
+  --bg: #07072a;
+  --surface: #0d0d2e;
+  --card: #282846;
+  --border-col: #484761;
+  --primary: #f5f5f9;
+  --muted: #9494a8;
+  --dim: #7c7c94;
+  --bg-alt: #07072d;
+  --border-col-2: #ffffff0d;
+  --border-subtle: #ffffff1a;
+  --text-secondary: #9494a8;
+  --text-tertiary: #ffffff5c;
+  --nav-background: #07072abf;
 }
 
 @layer base {
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-    html {
-        @apply scroll-smooth;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    @apply scroll-smooth;
+  }
 
-    body {
-        @apply bg-bg text-primary font-sans;
-        -webkit-font-smoothing: antialiased;
-    }
+  body {
+    @apply bg-bg text-primary font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        @apply font-heading uppercase tracking-[0.04em];
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading uppercase tracking-[0.04em];
+  }
 
-    ::selection {
-        background: rgba(245, 245, 249, 0.15);
-        color: #fff;
-    }
-    ::-webkit-scrollbar {
-        width: 2px;
-    }
-    ::-webkit-scrollbar-track {
-        background: var(--bg);
-    }
-    ::-webkit-scrollbar-thumb {
-        background: var(--dim);
-    }
+  ::selection {
+    background: rgba(245, 245, 249, 0.15);
+    color: #fff;
+  }
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--dim);
+  }
 
-    a {
-        @apply text-inherit no-underline cursor-pointer;
-    }
-    button {
-        @apply cursor-pointer;
-    }
+  a {
+    @apply text-inherit no-underline cursor-pointer;
+  }
+  button {
+    @apply cursor-pointer;
+  }
 }
 
 @layer components {
-    .kelvar-button-frame {
-        position: relative;
-        isolation: isolate;
-        border-color: rgb(255 255 255 / 0.25);
-    }
+  .kelvar-button-frame {
+    position: relative;
+    isolation: isolate;
+    border-color: rgb(255 255 255 / 0.25);
+  }
 
+  .kelvar-button-frame::before,
+  .kelvar-button-frame::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    pointer-events: none;
+    background-repeat: no-repeat;
+  }
+
+  .kelvar-button-frame::before {
+    background-image:
+      linear-gradient(to right, var(--primary), var(--primary)),
+      linear-gradient(to left, var(--primary), var(--primary));
+    background-position:
+      left top,
+      right bottom;
+    background-size:
+      0 1px,
+      0 1px;
+    transition: background-size 300ms ease-out;
+  }
+
+  .kelvar-button-frame::after {
+    background-image:
+      linear-gradient(to bottom, var(--primary), var(--primary)),
+      linear-gradient(to top, var(--primary), var(--primary));
+    background-position:
+      right top,
+      left bottom;
+    background-size:
+      1px 0,
+      1px 0;
+    transition: background-size 300ms ease-out 100ms;
+  }
+
+  .kelvar-button-frame:hover::before,
+  .kelvar-button-frame:focus-visible::before {
+    background-size:
+      100% 1px,
+      100% 1px;
+  }
+
+  .kelvar-button-frame:hover::after,
+  .kelvar-button-frame:focus-visible::after {
+    background-size:
+      1px 100%,
+      1px 100%;
+  }
+
+  .kelvar-button-frame > svg {
+    transition: transform 300ms ease-out;
+  }
+
+  .kelvar-button-frame:hover > svg:first-child,
+  .kelvar-button-frame:focus-visible > svg:first-child {
+    transform: translateX(-0.3rem);
+  }
+
+  .kelvar-button-frame:hover > svg:last-child,
+  .kelvar-button-frame:focus-visible > svg:last-child {
+    transform: translateX(0.4rem);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
     .kelvar-button-frame::before,
-    .kelvar-button-frame::after {
-        content: "";
-        position: absolute;
-        inset: -1px;
-        z-index: -1;
-        pointer-events: none;
-        background-repeat: no-repeat;
-    }
-
-    .kelvar-button-frame::before {
-        background-image:
-            linear-gradient(to right, var(--primary), var(--primary)),
-            linear-gradient(to left, var(--primary), var(--primary));
-        background-position: left top, right bottom;
-        background-size: 0 1px, 0 1px;
-        transition: background-size 300ms ease-out;
-    }
-
-    .kelvar-button-frame::after {
-        background-image:
-            linear-gradient(to bottom, var(--primary), var(--primary)),
-            linear-gradient(to top, var(--primary), var(--primary));
-        background-position: right top, left bottom;
-        background-size: 1px 0, 1px 0;
-        transition: background-size 300ms ease-out 100ms;
-    }
-
-    .kelvar-button-frame:hover::before,
-    .kelvar-button-frame:focus-visible::before {
-        background-size: 100% 1px, 100% 1px;
-    }
-
-    .kelvar-button-frame:hover::after,
-    .kelvar-button-frame:focus-visible::after {
-        background-size: 1px 100%, 1px 100%;
-    }
-
+    .kelvar-button-frame::after,
     .kelvar-button-frame > svg {
-        transition: transform 300ms ease-out;
+      transition-duration: 0ms;
+      transition-delay: 0ms;
     }
-
-    .kelvar-button-frame:hover > svg:first-child,
-    .kelvar-button-frame:focus-visible > svg:first-child {
-        transform: translateX(-0.3rem);
-    }
-
-    .kelvar-button-frame:hover > svg:last-child,
-    .kelvar-button-frame:focus-visible > svg:last-child {
-        transform: translateX(0.4rem);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        .kelvar-button-frame::before,
-        .kelvar-button-frame::after,
-        .kelvar-button-frame > svg {
-            transition-duration: 0ms;
-            transition-delay: 0ms;
-        }
-    }
+  }
 }

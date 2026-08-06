@@ -176,25 +176,29 @@ export const kelvarx = {
   applications: [
     {
       name: "Environmental and climate intelligence",
-      outcome: "Build richer atmospheric datasets for forecasting and research.",
+      outcome:
+        "Build richer atmospheric datasets for forecasting and research.",
       platforms: ["Stratokite", "Stratos Solar Sat"],
       intelligenceLayer: "KAIN",
     },
     {
       name: "Agriculture and land planning",
-      outcome: "Support planning with aerial imagery and local weather intelligence.",
+      outcome:
+        "Support planning with aerial imagery and local weather intelligence.",
       platforms: ["Stratokite"],
       intelligenceLayer: "Both",
     },
     {
       name: "Public safety and disaster response",
-      outcome: "Provide timely visual and environmental awareness during incidents.",
+      outcome:
+        "Provide timely visual and environmental awareness during incidents.",
       platforms: ["Stratos Copter", "Stratokite"],
       intelligenceLayer: "KELVAR AI Command",
     },
     {
       name: "Border, maritime, and infrastructure awareness",
-      outcome: "Extend observation across remote assets and strategic corridors.",
+      outcome:
+        "Extend observation across remote assets and strategic corridors.",
       platforms: ["Stratokite", "Stratos Solar Sat"],
       intelligenceLayer: "Both",
     },

@@ -34,16 +34,16 @@ The global system is defined in [`app/globals.css`](app/globals.css) and registe
 
 ### Colour system
 
-| Tailwind utility | Token | Value | Purpose |
-| --- | --- | --- | --- |
-| `bg-bg`, `text-bg` | `--bg` | `#07072a` | Primary deep-navy canvas |
-| `bg-surface` | `--surface` | `#0d0d2e` | Raised or alternating sections |
-| `bg-card` | `--card` | `#282846` | Menus, dropdowns, and stronger panels |
-| `border-border-col` | `--border-col` | `#484761` | Visible structural borders |
-| `text-primary` | `--primary` | `#f5f5f9` | Headlines, active controls, primary copy |
-| `text-muted` | `--muted` | `#9494a8` | Supporting copy and secondary labels |
-| `text-dim` | `--dim` | `#7c7c94` | Indexes, inactive states, quiet metadata |
-| `bg-nav-background` | `--nav-background` | `#07072abf` | Translucent navigation surface |
+| Tailwind utility    | Token              | Value       | Purpose                                  |
+| ------------------- | ------------------ | ----------- | ---------------------------------------- |
+| `bg-bg`, `text-bg`  | `--bg`             | `#07072a`   | Primary deep-navy canvas                 |
+| `bg-surface`        | `--surface`        | `#0d0d2e`   | Raised or alternating sections           |
+| `bg-card`           | `--card`           | `#282846`   | Menus, dropdowns, and stronger panels    |
+| `border-border-col` | `--border-col`     | `#484761`   | Visible structural borders               |
+| `text-primary`      | `--primary`        | `#f5f5f9`   | Headlines, active controls, primary copy |
+| `text-muted`        | `--muted`          | `#9494a8`   | Supporting copy and secondary labels     |
+| `text-dim`          | `--dim`            | `#7c7c94`   | Indexes, inactive states, quiet metadata |
+| `bg-nav-background` | `--nav-background` | `#07072abf` | Translucent navigation surface           |
 
 Kelvar intentionally has no bright accent colour. Hierarchy comes from luminosity, scale, spacing, and motion—not from introducing unrelated hues.
 
@@ -59,11 +59,11 @@ Kelvar intentionally has no bright accent colour. Hierarchy comes from luminosit
 
 Fonts are loaded locally in [`app/layout.tsx`](app/layout.tsx).
 
-| Role | Typeface | Tailwind utility | Character |
-| --- | --- | --- | --- |
-| Display | Barlow Condensed | `font-heading` | Compressed, monumental, industrial |
-| Interface/data | DM Mono | `font-mono` | Technical, measured, telemetry-like |
-| General UI | Inter | `font-sans` | Neutral and highly readable |
+| Role           | Typeface         | Tailwind utility | Character                           |
+| -------------- | ---------------- | ---------------- | ----------------------------------- |
+| Display        | Barlow Condensed | `font-heading`   | Compressed, monumental, industrial  |
+| Interface/data | DM Mono          | `font-mono`      | Technical, measured, telemetry-like |
+| General UI     | Inter            | `font-sans`      | Neutral and highly readable         |
 
 #### Display typography
 
@@ -368,16 +368,16 @@ A typed mono eyebrow followed by a flexible horizontal rule. It introduces secti
 
 Files: [`components/home/`](components/home)
 
-| Component | Responsibility | Signature behavior |
-| --- | --- | --- |
-| `HeroSection` | Establishes the site proposition | Full-screen media, scroll-linked fade/drift, glitch title, scroll cue |
-| `MissionSection` | States the core mission | Large editorial statement with restrained reveal |
-| `EthosSection` | Introduces operating principles | Composes the pillar system |
-| `PillarGrid` | Renders ethos items | Numbered, bordered grid with staged entry |
-| `DronePlatformsSection` | Introduces the platform portfolio | Composes platform rows and section framing |
-| `DronePlatformRow` | Presents one platform | Oversized name, media, metadata, directional CTA motion |
-| `AreasOfFocusSection` | Summarises Air, Sea, Land, Space | Domain imagery and pathway into Focus |
-| `ArrSection` | Presents recurring-revenue logic | Technical grid and commercial narrative |
+| Component               | Responsibility                    | Signature behavior                                                    |
+| ----------------------- | --------------------------------- | --------------------------------------------------------------------- |
+| `HeroSection`           | Establishes the site proposition  | Full-screen media, scroll-linked fade/drift, glitch title, scroll cue |
+| `MissionSection`        | States the core mission           | Large editorial statement with restrained reveal                      |
+| `EthosSection`          | Introduces operating principles   | Composes the pillar system                                            |
+| `PillarGrid`            | Renders ethos items               | Numbered, bordered grid with staged entry                             |
+| `DronePlatformsSection` | Introduces the platform portfolio | Composes platform rows and section framing                            |
+| `DronePlatformRow`      | Presents one platform             | Oversized name, media, metadata, directional CTA motion               |
+| `AreasOfFocusSection`   | Summarises Air, Sea, Land, Space  | Domain imagery and pathway into Focus                                 |
+| `ArrSection`            | Presents recurring-revenue logic  | Technical grid and commercial narrative                               |
 
 Home motion is broad and cinematic at the top, then becomes more systematic as the user reaches products and focus areas.
 
@@ -385,29 +385,29 @@ Home motion is broad and cinematic at the top, then becomes more systematic as t
 
 Files: [`components/about/`](components/about)
 
-| Component | Responsibility | Signature behavior |
-| --- | --- | --- |
-| `AboutHeroSection` | Introduces the organisation | Internal hero treatment |
-| `NarrativeSection` | Compares Mission and Story | Equal editorial panels on large displays |
-| `KelvarxFeature` | Makes the programme a major brand story | Pointer-following light field, slow image parallax, telemetry sequence |
-| `ValuesSection` | Presents organisational values | Bordered grid, status-dot pulse, slight hover lift |
-| `TeamSection` | Presents people | Staggered profiles and subdued portrait placeholders |
-| `AboutSectionHeading` | Aligns About subsection labels | Shared number and section-label stack |
-| `AboutSections` | Composes the page narrative | No local presentation logic |
+| Component             | Responsibility                          | Signature behavior                                                     |
+| --------------------- | --------------------------------------- | ---------------------------------------------------------------------- |
+| `AboutHeroSection`    | Introduces the organisation             | Internal hero treatment                                                |
+| `NarrativeSection`    | Compares Mission and Story              | Equal editorial panels on large displays                               |
+| `KelvarxFeature`      | Makes the programme a major brand story | Pointer-following light field, slow image parallax, telemetry sequence |
+| `ValuesSection`       | Presents organisational values          | Bordered grid, status-dot pulse, slight hover lift                     |
+| `TeamSection`         | Presents people                         | Staggered profiles and subdued portrait placeholders                   |
+| `AboutSectionHeading` | Aligns About subsection labels          | Shared number and section-label stack                                  |
+| `AboutSections`       | Composes the page narrative             | No local presentation logic                                            |
 
 ### Focus
 
 Files: [`components/focus/`](components/focus)
 
-| Component | Responsibility | Signature behavior |
-| --- | --- | --- |
-| `FocusHero` | Introduces multi-domain operation | Monumental internal hero |
-| `FocusDomainNav` | Provides Air/Sea/Land/Space wayfinding | Sticky, horizontally scrollable, navbar-aware offset |
-| `FocusNetworkStatement` | Unifies the domains | Large “one intelligence layer” editorial bridge |
-| `DomainSection` | Explains one operating environment | Sticky full-height image beside scrolling capabilities and systems |
-| `DomainHero` | Owns domain visual treatment | Darkened image, oversized ghost index, slow hover scale |
-| `DomainCapabilities` | Lists capabilities | Numbered, staggered technical rows |
-| `DomainSystems` | Connects systems to domains | Status chips and framed CTAs |
+| Component               | Responsibility                         | Signature behavior                                                 |
+| ----------------------- | -------------------------------------- | ------------------------------------------------------------------ |
+| `FocusHero`             | Introduces multi-domain operation      | Monumental internal hero                                           |
+| `FocusDomainNav`        | Provides Air/Sea/Land/Space wayfinding | Sticky, horizontally scrollable, navbar-aware offset               |
+| `FocusNetworkStatement` | Unifies the domains                    | Large “one intelligence layer” editorial bridge                    |
+| `DomainSection`         | Explains one operating environment     | Sticky full-height image beside scrolling capabilities and systems |
+| `DomainHero`            | Owns domain visual treatment           | Darkened image, oversized ghost index, slow hover scale            |
+| `DomainCapabilities`    | Lists capabilities                     | Numbered, staggered technical rows                                 |
+| `DomainSystems`         | Connects systems to domains            | Status chips and framed CTAs                                       |
 
 The Focus page is designed as one continuous instrument. Sticky navigation supplies orientation; sticky imagery preserves environmental context while technical material moves.
 
@@ -415,13 +415,13 @@ The Focus page is designed as one continuous instrument. Sticky navigation suppl
 
 Files: [`components/focus/kelvarx/`](components/focus/kelvarx)
 
-| Component | Responsibility | Signature behavior |
-| --- | --- | --- |
-| `KelvarxHero` | Establishes programme scale | Atmospheric imagery and monumental programme language |
-| `KelvarxApplications` | Explains operational applications | Sticky left narrative with scrolling right-side material |
-| `KainNetwork` | Explains the connectivity layer | Network/system visual language |
-| `KelvarAiCommand` | Explains interpretation and command | Technical data hierarchy and staged reveals |
-| `StratosSeries` | Presents the programme's platform family | Sequential system stories and specification lists |
+| Component             | Responsibility                           | Signature behavior                                       |
+| --------------------- | ---------------------------------------- | -------------------------------------------------------- |
+| `KelvarxHero`         | Establishes programme scale              | Atmospheric imagery and monumental programme language    |
+| `KelvarxApplications` | Explains operational applications        | Sticky left narrative with scrolling right-side material |
+| `KainNetwork`         | Explains the connectivity layer          | Network/system visual language                           |
+| `KelvarAiCommand`     | Explains interpretation and command      | Technical data hierarchy and staged reveals              |
+| `StratosSeries`       | Presents the programme's platform family | Sequential system stories and specification lists        |
 
 KELVARX uses more atmospheric space and environmental imagery than other pages. Its motion should feel persistent and orbital, not fast or aggressive.
 
@@ -442,66 +442,66 @@ Product pages should not invent parity. Development-stage systems can remain con
 
 Files: [`components/research/`](components/research)
 
-| Component | Responsibility | Signature behavior |
-| --- | --- | --- |
-| `PageHero` | Introduces RD&D | Research-specific hero language |
-| `IntroSection` | Preserves the research thesis | Large narrative introduction |
-| `ResearchAreas` | Composes research programmes | Data-driven programme sequence |
-| `PlatformNav` | Links research areas | Compact anchored navigation |
-| `PlatformSection` | Chooses the correct programme renderer | Composition only |
-| `PlatformHero` | Owns programme media | Image/video abstraction and cinematic overlays |
-| `PlatformIntro` | States programme purpose | Two-column thesis and description |
-| `PlatformDomains` | Selects immersive or card domains | Layout determined by content model |
-| `TechnologyGrid` | Presents enabling technology | Three-column technical cards |
-| `UseCaseGrid` | Presents application categories | Structured numbered lists |
-| `NumberedList` | Renders ordered technical information | Static or staggered variant |
-| `StratosStorySection` | Composes the legacy Stratos research narrative | Delegates to specialised story modules |
-| `StratosIntroduction` | Introduces research context | Long-form editorial treatment |
-| `StratosSystem` | Explains system architecture | Technical systems layout |
-| `StratosOperations` | Explains deployment | Operational sequence |
-| `StratosEconomics` | Explains commercial logic | Structured metrics and comparison fields |
-| `StoryFrame` | Frames research story segments | Consistent label and spacing shell |
-| `AarSection` | Presents autonomous recurring revenue | Commercial research bridge |
-| `ResearchCTA` | Ends the RD&D journey | Focused contact pathway |
+| Component             | Responsibility                                 | Signature behavior                             |
+| --------------------- | ---------------------------------------------- | ---------------------------------------------- |
+| `PageHero`            | Introduces RD&D                                | Research-specific hero language                |
+| `IntroSection`        | Preserves the research thesis                  | Large narrative introduction                   |
+| `ResearchAreas`       | Composes research programmes                   | Data-driven programme sequence                 |
+| `PlatformNav`         | Links research areas                           | Compact anchored navigation                    |
+| `PlatformSection`     | Chooses the correct programme renderer         | Composition only                               |
+| `PlatformHero`        | Owns programme media                           | Image/video abstraction and cinematic overlays |
+| `PlatformIntro`       | States programme purpose                       | Two-column thesis and description              |
+| `PlatformDomains`     | Selects immersive or card domains              | Layout determined by content model             |
+| `TechnologyGrid`      | Presents enabling technology                   | Three-column technical cards                   |
+| `UseCaseGrid`         | Presents application categories                | Structured numbered lists                      |
+| `NumberedList`        | Renders ordered technical information          | Static or staggered variant                    |
+| `StratosStorySection` | Composes the legacy Stratos research narrative | Delegates to specialised story modules         |
+| `StratosIntroduction` | Introduces research context                    | Long-form editorial treatment                  |
+| `StratosSystem`       | Explains system architecture                   | Technical systems layout                       |
+| `StratosOperations`   | Explains deployment                            | Operational sequence                           |
+| `StratosEconomics`    | Explains commercial logic                      | Structured metrics and comparison fields       |
+| `StoryFrame`          | Frames research story segments                 | Consistent label and spacing shell             |
+| `AarSection`          | Presents autonomous recurring revenue          | Commercial research bridge                     |
+| `ResearchCTA`         | Ends the RD&D journey                          | Focused contact pathway                        |
 
 ### Careers
 
 Files: [`components/careers/`](components/careers)
 
-| Component | Responsibility | Signature behavior |
-| --- | --- | --- |
-| `CareersHeader` | Establishes hiring proposition | Large internal-page headline |
-| `CareersDisciplineStrip` | Shows cross-disciplinary scope | Continuous low-priority marquee, reduced-motion aware |
-| `CareersPerks` | Presents benefits | Large editorial benefit grid |
-| `CareersCulture` | States working principles | Sticky statement beside scrolling numbered panels |
-| `CareersRoles` | Composes controls and role results | No filtering implementation details |
-| `useCareerFilters` | Owns role filter state and derived results | Pure feature state boundary |
-| `CareerFilterDropdown` | Selects one filter value | Outside-click dismissal and animated chevron |
-| `CareerRoleItem` | Presents one vacancy | Framed card and directional external arrow |
-| `GeneralApplication` | Captures candidates outside listed roles | Large terminal CTA block |
+| Component                | Responsibility                             | Signature behavior                                    |
+| ------------------------ | ------------------------------------------ | ----------------------------------------------------- |
+| `CareersHeader`          | Establishes hiring proposition             | Large internal-page headline                          |
+| `CareersDisciplineStrip` | Shows cross-disciplinary scope             | Continuous low-priority marquee, reduced-motion aware |
+| `CareersPerks`           | Presents benefits                          | Large editorial benefit grid                          |
+| `CareersCulture`         | States working principles                  | Sticky statement beside scrolling numbered panels     |
+| `CareersRoles`           | Composes controls and role results         | No filtering implementation details                   |
+| `useCareerFilters`       | Owns role filter state and derived results | Pure feature state boundary                           |
+| `CareerFilterDropdown`   | Selects one filter value                   | Outside-click dismissal and animated chevron          |
+| `CareerRoleItem`         | Presents one vacancy                       | Framed card and directional external arrow            |
+| `GeneralApplication`     | Captures candidates outside listed roles   | Large terminal CTA block                              |
 
 ### Maps and global systems
 
 Files: [`components/map/`](components/map)
 
-| Component | Responsibility | Signature behavior |
-| --- | --- | --- |
-| `GlobalNetworkMap` | Composes the world-network scene | Connects geographic visualisations to supporting narrative |
-| `MapSvg` | Renders detailed vector geography | Static specialist renderer |
-| `SpinningGlobe` | Projects and rotates global points | Continuous low-speed environmental animation |
+| Component          | Responsibility                     | Signature behavior                                         |
+| ------------------ | ---------------------------------- | ---------------------------------------------------------- |
+| `GlobalNetworkMap` | Composes the world-network scene   | Connects geographic visualisations to supporting narrative |
+| `MapSvg`           | Renders detailed vector geography  | Static specialist renderer                                 |
+| `SpinningGlobe`    | Projects and rotates global points | Continuous low-speed environmental animation               |
 
 Map motion should imply reach and persistence. It should never resemble a game interface.
 
 ### Site chrome
 
-| Component | Responsibility |
-| --- | --- |
-| `SiteNavbar` | Fixed brand/navigation shell |
-| `NavigationMenu` | Menu state, levels, and panel choreography |
-| `NavBlock` | One large interactive navigation target |
-| `useNavbarVisibility` | Scroll direction and shared sticky offset |
-| `SiteFooter` | Brand summary, navigation, contact information, legal closure |
-| `SiteSplash` | One-time brand introduction |
+| Component             | Responsibility                                                |
+| --------------------- | ------------------------------------------------------------- |
+| `SiteNavbar`          | Fixed brand/navigation shell                                  |
+| `NavigationMenu`      | Menu state, levels, and panel choreography                    |
+| `NavBlock`            | One large interactive navigation target                       |
+| `useNavbarVisibility` | Scroll direction and shared sticky offset                     |
+| `SiteFooter`          | Brand summary, navigation, contact information, legal closure |
+| `SiteSplash`          | One-time brand introduction                                   |
 
 ---
 

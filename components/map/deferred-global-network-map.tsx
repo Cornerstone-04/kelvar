@@ -4,7 +4,8 @@ import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 
 const GlobalNetworkMap = dynamic(
-  () => import("./global-network-map").then((module) => module.GlobalNetworkMap),
+  () =>
+    import("./global-network-map").then((module) => module.GlobalNetworkMap),
   { ssr: false },
 );
 

@@ -35,7 +35,9 @@ export function PlatformHero({ platform }: { platform: ResearchPlatform }) {
         <h2 className="font-heading text-[clamp(4rem,10vw,8rem)] font-black normal-case leading-none text-primary">
           {platform.name}
           {platform.trademark && (
-            <sup className="ml-1 align-super text-[0.25em] text-primary">™</sup>
+            <sup className="ml-1 align-super text-[0.25em] text-primary">
+              ™
+            </sup>
           )}
         </h2>
         <p className="mt-2 max-w-[40ch] font-mono text-xs-plus font-medium text-muted md:text-base">

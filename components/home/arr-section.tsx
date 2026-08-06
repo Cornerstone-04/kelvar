@@ -92,7 +92,7 @@ export function ArrSection() {
             RD&amp;D — Research, Design &amp; Development
           </p>
           <p className="font-heading font-bold text-[1.2rem] text-primary">
-            We don't wait for the future. We engineer it.
+            We don&apos;t wait for the future. We engineer it.
           </p>
         </div>
         <Link

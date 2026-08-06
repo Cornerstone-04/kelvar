@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { site } from "@/content/site";
 import { SectionLabel } from "@/components/ui/section-label";

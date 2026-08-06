@@ -5,6 +5,15 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { BsArrowLeft } from "react-icons/bs";
 
+const STATUS_FRAMES = [
+  "SIGNAL LOST",
+  "SIGNAL LO\u2588T",
+  "SIGN\u2588L LOST",
+  "SIGNAL LOST",
+  "\u2588\u2588\u2588\u2588\u2588\u2588 \u2588\u2588\u2588\u2588",
+  "SIGNAL LOST",
+] as const;
+
 function StaticCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -67,25 +76,16 @@ function StaticCanvas() {
 
 function BlinkingStatus() {
   const [frame, setFrame] = useState(0);
-  const states = [
-    "SIGNAL LOST",
-    "SIGNAL LO\u2588T",
-    "SIGN\u2588L LOST",
-    "SIGNAL LOST",
-    "\u2588\u2588\u2588\u2588\u2588\u2588 \u2588\u2588\u2588\u2588",
-    "SIGNAL LOST",
-  ];
-
   useEffect(() => {
     const interval = setInterval(() => {
-      setFrame((f) => (f + 1) % states.length);
+      setFrame((f) => (f + 1) % STATUS_FRAMES.length);
     }, 120);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <span className="font-mono text-[0.65rem] tracking-[0.3em] text-white/35">
-      {states[frame]}
+      {STATUS_FRAMES[frame]}
     </span>
   );
 }

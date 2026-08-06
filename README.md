@@ -39,37 +39,40 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ```bash
 bun run dev          # Start the local development server
-bun test             # Run content-integrity tests
-npx tsc --noEmit     # Check TypeScript without emitting files
+bun run lint         # Run ESLint with zero-warning enforcement
+bun run format:check # Verify Prettier formatting
+bun run typecheck    # Check TypeScript without emitting files
+bun test             # Run unit and content-integrity tests
+bun run test:e2e     # Run Playwright route and form smoke tests
 bun run build        # Create an optimised production build
 bun run start        # Serve the production build
+bun run check        # Run the complete local quality gate
 ```
-
-The repository's legacy `lint` script is not currently part of validation because Next.js 16 removed `next lint`, while the installed `eslint-config-next` version still requires migration. Until that tooling update is completed, TypeScript, tests, and the production build are the required checks.
 
 ## Routes
 
-| Route | Purpose |
-| --- | --- |
-| `/` | Company overview, platforms, mission, focus areas, and global reach |
-| `/about` | Mission, story, values, team, and KELVARX introduction |
-| `/focus` | Air, sea, land, and space operating domains |
-| `/kelvarx` | KELVARX atmospheric and near-space programme |
-| `/kelvarx/stratokite` | Stratokite platform story and specifications |
-| `/drones/dome` | Dome flagship platform page |
-| `/research` | Research, Development & Deployment programmes |
-| `/careers` | Culture, benefits, filters, and open positions |
-| `/contact` | Enquiries and company contact details |
+| Route                 | Purpose                                                             |
+| --------------------- | ------------------------------------------------------------------- |
+| `/`                   | Company overview, platforms, mission, focus areas, and global reach |
+| `/about`              | Mission, story, values, team, and KELVARX introduction              |
+| `/focus`              | Air, sea, land, and space operating domains                         |
+| `/kelvarx`            | KELVARX atmospheric and near-space programme                        |
+| `/kelvarx/stratokite` | Stratokite platform story and specifications                        |
+| `/drones/dome`        | Dome flagship platform page                                         |
+| `/research`           | Research, Development & Deployment programmes                       |
+| `/careers`            | Culture, benefits, filters, and open positions                      |
+| `/contact`            | Enquiries and company contact details                               |
 
 ## Project structure
 
 ```text
 app/                   Routes, layouts, metadata, and page composition
+features/              Cohesive capabilities with explicit ownership
 components/
   about/               About-page sections
   careers/             Career culture, filters, and roles
   drones/              Product-page layouts and stories
-  focus/               Focus domains and KELVARX systems
+  focus/               Focus-domain page sections
   home/                Homepage feature sections
   layout/              Navbar, menu, splash screen, and footer
   map/                 Global network map and globe
@@ -79,19 +82,21 @@ content/               Confirmed copy and structured page data
 lib/                   Pure utilities, SEO helpers, and motion variants
 public/assets/         Local fonts, images, posters, and WebM videos
 tests/                 Content-integrity tests
+e2e/                   Playwright route and interaction smoke tests
 types/                 Shared content and component contracts
 ```
 
 ### Separation of concerns
 
-The codebase follows four main boundaries:
+The codebase follows five main boundaries:
 
 1. `app/` composes routes and owns route metadata.
-2. `components/` owns presentation and local interaction.
-3. `content/` owns confirmed copy and structured data.
-4. `types/` and `lib/` own shared contracts and pure behaviour.
+2. `features/` owns cohesive product capabilities and their behaviour.
+3. `components/` owns shared presentation and page-specific sections.
+4. `content/` owns confirmed copy and structured data.
+5. `types/` and `lib/` own shared contracts and pure behaviour.
 
-Page files should remain small. Stateful behaviour belongs in focused hooks, repeated interface patterns belong in `components/ui/`, and factual content should not be embedded inside visual components.
+Page files should remain small. Stateful behaviour belongs in focused hooks, repeated interface patterns belong in `components/ui/`, and factual content should not be embedded inside visual components. The complete dependency rules and deliberate exceptions are documented in [`ARCHITECTURE.md`](ARCHITECTURE.md).
 
 ## Content model
 
@@ -175,9 +180,12 @@ When adding media, verify its dimensions and transfer size before committing it.
 Before handing off a change, run:
 
 ```bash
-npx tsc --noEmit
+bun run lint
+bun run format:check
+bun run typecheck
 bun test
 bun run build
+bun run test:e2e
 git diff --check
 ```
 

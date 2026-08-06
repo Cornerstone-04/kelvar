@@ -1,13 +1,13 @@
-import { KainNetwork } from "@/components/focus/kelvarx/kain-network";
-import { KelvarAiCommand } from "@/components/focus/kelvarx/kelvar-ai-command";
-import { KelvarxApplications } from "@/components/focus/kelvarx/kelvarx-applications";
-import { KelvarxHero } from "@/components/focus/kelvarx/kelvarx-hero";
-import { StratosSeries } from "@/components/focus/kelvarx/stratos-series";
+import { KainNetwork } from "@/features/kelvarx/components/kain-network";
+import { KelvarAiCommand } from "@/features/kelvarx/components/kelvar-ai-command";
+import { KelvarxApplications } from "@/features/kelvarx/components/kelvarx-applications";
+import { KelvarxHero } from "@/features/kelvarx/components/kelvarx-hero";
+import { StratosSeries } from "@/features/kelvarx/components/stratos-series";
 import { kelvarx } from "@/content/kelvarx";
 
 export default function KelvarxPage() {
   return (
-    <main className="min-h-screen bg-bg">
+    <div className="min-h-screen bg-bg">
       <section id="kelvarx" className="scroll-mt-20">
         <KelvarxHero programme={kelvarx} />
         <StratosSeries systems={kelvarx.systems} />
@@ -18,6 +18,6 @@ export default function KelvarxPage() {
           slogan={kelvarx.slogan}
         />
       </section>
-    </main>
+    </div>
   );
 }

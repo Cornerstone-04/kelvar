@@ -50,7 +50,9 @@ describe("career filters", () => {
   });
 
   test("returns all roles for the all filter", () => {
-    expect(filterRoles({ activeDept: ALL, activeLoc: ALL }).length).toBeGreaterThan(0);
+    expect(
+      filterRoles({ activeDept: ALL, activeLoc: ALL }).length,
+    ).toBeGreaterThan(0);
   });
 
   test("groups roles by department", () => {
@@ -58,7 +60,9 @@ describe("career filters", () => {
     const grouped = groupRolesByDepartment(roles);
 
     expect(Object.keys(grouped).sort()).toEqual(
-      getDepartments().filter((department) => department !== ALL).sort(),
+      getDepartments()
+        .filter((department) => department !== ALL)
+        .sort(),
     );
   });
 });

@@ -18,8 +18,8 @@ export function SiteSplash() {
 
   useEffect(() => {
     if (window.sessionStorage.getItem(sessionKey)) {
-      setVisible(false);
-      return;
+      const frame = window.requestAnimationFrame(() => setVisible(false));
+      return () => window.cancelAnimationFrame(frame);
     }
 
     window.sessionStorage.setItem(sessionKey, "true");
@@ -74,7 +74,9 @@ export function SiteSplash() {
           <div className="relative flex flex-col items-center px-6 text-center">
             <motion.div
               aria-hidden="true"
-              initial={reduceMotion ? false : { width: 104, height: 104, opacity: 0 }}
+              initial={
+                reduceMotion ? false : { width: 104, height: 104, opacity: 0 }
+              }
               animate={
                 reduceMotion
                   ? { opacity: 1 }
@@ -95,9 +97,16 @@ export function SiteSplash() {
             </motion.div>
 
             <motion.div
-              initial={reduceMotion ? false : { opacity: 0, scale: 0.86, filter: "blur(7px)" }}
+              initial={
+                reduceMotion
+                  ? false
+                  : { opacity: 0, scale: 0.86, filter: "blur(7px)" }
+              }
               animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-              transition={{ duration: reduceMotion ? 0.1 : 0.4, delay: reduceMotion ? 0 : 0.12 }}
+              transition={{
+                duration: reduceMotion ? 0.1 : 0.4,
+                delay: reduceMotion ? 0 : 0.12,
+              }}
               className="relative z-1 h-32 w-32"
             >
               <Image
