@@ -1,9 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { SectionLabel } from "@/components/ui/section-label";
 import { CtaSection } from "@/components/ui/cta-section";
+import { LazyVideo } from "@/components/ui/lazy-video";
 import { kelvarx } from "@/content/kelvarx";
+import { stratokiteMedia } from "@/content/products/stratokite";
+import { StratokiteMediaSection } from "./stratokite-media-section";
 
 const stratokite = kelvarx.systems[0];
 
@@ -11,17 +13,13 @@ export function StratokitePage() {
   return (
     <div className="min-h-screen bg-bg">
       <section className="relative flex min-h-svh items-end overflow-hidden px-6 pb-14 pt-32 md:px-10 md:pb-20">
-        {stratokite.media.src && (
-          <Image
-            src={stratokite.media.src}
-            alt={stratokite.media.alt}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover brightness-[0.42] saturate-[0.7]"
-          />
-        )}
-        <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_72%)]" />
+        <LazyVideo
+          src={stratokiteMedia.hero.video}
+          poster={stratokiteMedia.hero.poster}
+          eager
+          className="absolute inset-0 h-full w-full object-cover brightness-[0.48] saturate-[0.75]"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_72%),linear-gradient(to_right,rgba(0,0,0,0.58),transparent_62%)]" />
         <div className="relative z-1 w-full">
           <Link
             href="/kelvarx"
@@ -40,6 +38,8 @@ export function StratokitePage() {
           </p>
         </div>
       </section>
+
+      <StratokiteMediaSection />
 
       <section className="px-6 py-14 md:px-10 md:py-24">
         <SectionLabel>{stratokite.type}</SectionLabel>

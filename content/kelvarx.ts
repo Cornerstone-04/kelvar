@@ -23,8 +23,8 @@ export const kelvarx = {
       description:
         "A developing hybrid platform combining helium-assisted lift, a tail-sitter fixed-wing aircraft, radiosonde instrumentation, and intelligent imaging systems.",
       media: {
-        src: "/assets/images/platforms/stratos/stratos-in-air.jpg",
-        alt: "Stratokite fixed-wing balloon-assisted platform concept",
+        src: "/assets/images/platforms/stratokite/stratokite-air-3.webp",
+        alt: "Stratokite balloon-assisted fixed-wing aircraft in flight",
       },
       payload: [
         "High-resolution EO camera",
@@ -57,7 +57,7 @@ export const kelvarx = {
       description:
         "A developing surveillance and monitoring platform where helium-assisted lift supports endurance while a quadcopter provides positioning and maneuverability.",
       media: {
-        src: "/assets/images/platforms/stratos/stratoscopter.jpg",
+        src: "/assets/images/platforms/stratos/stratoscopter-2.webp",
         alt: "Stratos Copter balloon-assisted quadcopter platform concept",
       },
       payload: [

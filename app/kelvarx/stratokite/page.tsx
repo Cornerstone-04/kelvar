@@ -15,7 +15,7 @@ export const metadata = createPageMetadata({
     "Earth observation",
     "aerial connectivity",
   ],
-  image: "/assets/images/platforms/stratos/stratos-hero.jpg",
+  image: "/assets/images/platforms/stratokite/stratokite-air.webp",
   imageAlt: "Stratokite balloon-assisted atmospheric intelligence platform",
 });
 
