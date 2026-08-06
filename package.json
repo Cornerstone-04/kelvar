@@ -11,7 +11,9 @@
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
     "test": "bun test",
-    "test:e2e": "playwright test",
+    "test:e2e:install": "playwright install chromium firefox webkit",
+    "test:e2e": "playwright test --project=chromium",
+    "test:e2e:cross-browser": "playwright test",
     "check": "bun run lint && bun run format:check && bun run typecheck && bun test && bun run build && bun run test:e2e"
   },
   "dependencies": {
