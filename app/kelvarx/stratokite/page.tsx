@@ -2,12 +2,12 @@ import { StratokitePage } from "@/features/kelvarx/components/stratokite-page";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Stratokite | KELVARX Platform",
+  title: "StratoKite | KELVARX Platform",
   description:
-    "Explore Stratokite, KELVARX's balloon-assisted high-altitude platform for atmospheric monitoring, Earth observation, sensing, and resilient connectivity.",
+    "Explore StratoKite, KELVARX's balloon-assisted high-altitude platform for atmospheric monitoring, Earth observation, sensing, and resilient connectivity.",
   path: "/kelvarx/stratokite",
   keywords: [
-    "Stratokite",
+    "StratoKite",
     "KELVARX platform",
     "balloon-assisted aircraft",
     "high-altitude platform",
@@ -16,7 +16,7 @@ export const metadata = createPageMetadata({
     "aerial connectivity",
   ],
   image: "/assets/images/platforms/stratokite/stratokite-air.webp",
-  imageAlt: "Stratokite balloon-assisted atmospheric intelligence platform",
+  imageAlt: "StratoKite balloon-assisted atmospheric intelligence platform",
 });
 
 export default StratokitePage;

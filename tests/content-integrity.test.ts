@@ -12,14 +12,14 @@ import {
 describe("product content integrity", () => {
   test("uses the confirmed platform order", () => {
     expect(platformSummaries.map(({ name }) => name)).toEqual([
-      "Stratokite",
+      "StratoKite",
       "Robobot",
       "Hydrax",
       "Dome",
     ]);
   });
 
-  test("nests Stratokite under the KELVARX programme", () => {
+  test("nests StratoKite under the KELVARX programme", () => {
     const stratokite = platformSummaries.find(
       ({ slug }) => slug === "stratokite",
     );

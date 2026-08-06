@@ -8,7 +8,7 @@ inside RD&D.
 ```text
 Kelvar Industries
 ├── Platforms
-│   ├── Stratokite → /kelvarx/stratokite
+│   ├── StratoKite → /kelvarx/stratokite
 │   ├── Robobot
 │   ├── Hydrax
 │   └── Dome
@@ -18,9 +18,9 @@ Kelvar Industries
 │   ├── Land
 │   └── Space → /kelvarx
 ├── KELVARX
-│   ├── Stratokite
-│   ├── Stratocopter
-│   └── Stratos Solar Sat
+│   ├── StratoKite
+│   ├── StratoCopter
+│   └── StratoSatellite
 └── RD&D
     └── General research programmes and future developments
 ```
@@ -29,12 +29,12 @@ Kelvar Industries
 
 The main platform order is:
 
-1. Stratokite
+1. StratoKite
 2. Robobot
 3. Hydrax
 4. Dome
 
-Platforms must be reachable from the main navigation. Stratokite is part of the
+Platforms must be reachable from the main navigation. StratoKite is part of the
 KELVARX programme and uses `/kelvarx/stratokite`. Robobot, Hydrax, and Dome link
 to their main platform sections.
 
@@ -85,7 +85,7 @@ Stable anchors:
 
 ## Stratos Series
 
-### Stratos Kite
+### StratoKite
 
 - Balloon-assisted tail-sitter glider drone
 - Payload: EO and thermal cameras, radiosonde, GPS, environmental sensors,
@@ -95,7 +95,7 @@ Stable anchors:
 - Missions: agriculture, border awareness, environmental monitoring,
   pipeline inspection, and disaster assessment
 
-### Stratocopter
+### StratoCopter
 
 - Balloon-assisted quadcopter drone
 - Payload: zoom and thermal cameras, radiosonde sensors, loudspeaker,
@@ -105,7 +105,7 @@ Stable anchors:
 - Missions: public safety, event security, inspection, emergency response,
   and telecommunications support
 
-### Stratos Solar Sat
+### StratoSatellite
 
 - Balloon-assisted near-space satellite drone
 - Payload: high-resolution and infrared imaging, radiosonde, atmospheric
@@ -119,9 +119,9 @@ Each system must visually distinguish payload, collected data, and missions.
 Desktop uses a vertical product sequence. Mobile stacks all essential content
 without hiding it behind mandatory interactions.
 
-Stratokite has a dedicated child page at `/kelvarx/stratokite`, making its
+StratoKite has a dedicated child page at `/kelvarx/stratokite`, making its
 relationship to KELVARX explicit. The platform homepage entry, platform menu,
-and Stratos Kite story link to that route.
+and StratoKite story link to that route.
 
 ## KAIN
 
@@ -131,9 +131,9 @@ three Stratos systems into a shared sensing layer.
 The static diagram must remain understandable without motion and communicate:
 
 ```text
-Stratos Kite ─┐
-Stratocopter ├─ KAIN ─ Atmospheric and visual intelligence
-Solar Sat ────┘
+StratoKite ─┐
+StratoCopter ├─ KAIN ─ Atmospheric and visual intelligence
+StratoSatellite ─┘
 ```
 
 Do not present KAIN as a deployed public network without confirmation.
@@ -169,7 +169,7 @@ KELVARX is an advanced expression of the existing visual system:
 Avoid bright gradients, generic dashboard styling, excessive glass cards,
 rounded startup UI, and imagery that misrepresents a platform.
 
-Existing Stratos images may represent Stratos Kite and the general KELVARX
+Existing Stratos images may represent StratoKite and the general KELVARX
 programme. If no accurate image exists, use an explicitly labelled neutral
 placeholder. Never present one aircraft as multiple different systems.
 
@@ -203,14 +203,14 @@ Do not publish unverified:
 
 ## Definition of done
 
-- Main platform order is Stratokite, Robobot, Hydrax, Dome
+- Main platform order is StratoKite, Robobot, Hydrax, Dome
 - Platforms appear in the main navigation
 - Dome has no standalone content page
 - RD&D contains no Stratos-specific long-form story
 - Space introduces and links into KELVARX
 - Focus presents Space as a concise domain overview linking to `/kelvarx`
 - KELVARX is a standalone page
-- Stratokite is available at `/kelvarx/stratokite`
+- StratoKite is available at `/kelvarx/stratokite`
 - The three Stratos systems are distinct
 - KAIN and AI Command have clear roles
 - Missing imagery uses honest placeholders

@@ -10,17 +10,17 @@ export const stratokiteMedia = {
   gallery: [
     {
       src: "/assets/images/platforms/stratokite/stratokite-model.webp",
-      alt: "Three-quarter render of the Stratokite balloon-assisted aircraft",
+      alt: "Three-quarter render of the StratoKite balloon-assisted aircraft",
       label: "Airframe study / three-quarter",
     },
     {
       src: "/assets/images/platforms/stratokite/stratokite-side.webp",
-      alt: "Side elevation render of the Stratokite aircraft and balloon",
+      alt: "Side elevation render of the StratoKite aircraft and balloon",
       label: "Airframe study / side elevation",
     },
     {
       src: "/assets/images/platforms/stratokite/stratokite-top.webp",
-      alt: "Top elevation render of the Stratokite aircraft and balloon",
+      alt: "Top elevation render of the StratoKite aircraft and balloon",
       label: "Airframe study / plan view",
     },
   ],

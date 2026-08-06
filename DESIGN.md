@@ -425,7 +425,7 @@ Files: [`components/focus/kelvarx/`](components/focus/kelvarx)
 
 KELVARX uses more atmospheric space and environmental imagery than other pages. Its motion should feel persistent and orbital, not fast or aggressive.
 
-### Stratokite and Dome
+### StratoKite and Dome
 
 Files:
 

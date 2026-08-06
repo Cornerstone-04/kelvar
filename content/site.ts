@@ -20,7 +20,7 @@ export const navLinks = [
 ] satisfies NavigationLink[];
 
 export const platformNavLinks = [
-  { href: "/kelvarx/stratokite", label: "Stratokite" },
+  { href: "/kelvarx/stratokite", label: "StratoKite" },
   { href: "/#robobot", label: "Robobot" },
   { href: "/#hydrax", label: "Hydrax" },
   { href: "/#dome", label: "Dome" },

@@ -74,7 +74,7 @@ export const focusDetails: FocusDetails = {
     headline: "KELVARX. Atmospheric Intelligence at Scale.",
     body: [
       "KELVARX is Kelvar Industries' atmospheric and near-space programme, bringing aerial platforms, environmental sensing, imaging, and autonomous mission intelligence into one connected system.",
-      "Its Stratokite, Stratocopter, and Stratos Solar Sat platforms are being developed for atmospheric monitoring, Earth observation, resilient communications, and recoverable near-space research.",
+      "Its StratoKite, StratoCopter, and StratoSatellite platforms are being developed for atmospheric monitoring, Earth observation, resilient communications, and recoverable near-space research.",
     ],
     capabilities: [
       "Atmospheric sensing",
@@ -87,7 +87,7 @@ export const focusDetails: FocusDetails = {
     systems: [
       {
         name: "KELVARX",
-        desc: "Stratokite, Stratocopter, and Stratos Solar Sat.",
+        desc: "StratoKite, StratoCopter, and StratoSatellite.",
         slug: "kelvarx",
       },
     ],

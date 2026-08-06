@@ -56,7 +56,7 @@ bun run check        # Run the complete local quality gate
 | `/about`              | Mission, story, values, team, and KELVARX introduction              |
 | `/focus`              | Air, sea, land, and space operating domains                         |
 | `/kelvarx`            | KELVARX atmospheric and near-space programme                        |
-| `/kelvarx/stratokite` | Stratokite platform story and specifications                        |
+| `/kelvarx/stratokite` | StratoKite platform story and specifications                        |
 | `/drones/dome`        | Dome flagship platform page                                         |
 | `/research`           | Research, Development & Deployment programmes                       |
 | `/careers`            | Culture, benefits, filters, and open positions                      |
@@ -104,15 +104,15 @@ Current platform hierarchy:
 
 ```text
 Platforms
-├── Stratokite → /kelvarx/stratokite
+├── StratoKite → /kelvarx/stratokite
 ├── Robobot
 ├── Hydrax
 └── Dome → /drones/dome
 
 KELVARX
-├── Stratokite
-├── Stratocopter
-└── Stratos Solar Sat
+├── StratoKite
+├── StratoCopter
+└── StratoSatellite
 ```
 
 Robobot and Hydrax remain concise because they are still in development and do not yet have the same confirmed product depth as Dome.
@@ -189,7 +189,7 @@ git diff --check
 The content-integrity tests currently verify:
 
 - Confirmed platform ordering
-- Stratokite's relationship to KELVARX
+- StratoKite's relationship to KELVARX
 - Unique content slugs
 - Summary/detail consistency
 - Career location parsing, filtering, and grouping

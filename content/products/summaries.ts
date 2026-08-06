@@ -3,7 +3,7 @@ import type { PlatformSummary } from "@/types/product-types";
 export const platformSummaries: PlatformSummary[] = [
   {
     id: "01",
-    name: "Stratokite",
+    name: "StratoKite",
     codename: "—",
     slug: "stratokite",
     status: "in-development",
@@ -12,8 +12,9 @@ export const platformSummaries: PlatformSummary[] = [
       "Balloon-assisted aerial intelligence for atmospheric monitoring, observation, and connectivity.",
     desc: "The flagship entry into KELVARX: a developing high-altitude platform connecting aerial sensing with atmospheric intelligence.",
     assets: {
-      image1: "/assets/images/platforms/stratokite/stratokite-hero.webp",
-      image2: "/assets/images/platforms/stratokite/stratokite-model.webp",
+      image1: "/assets/images/platforms/stratokite/stratokite-model.webp",
+      video: "/assets/videos/platforms/stratokite/stratokite-turntable-wide.webm",
+      videoPoster: "/assets/images/platforms/stratokite/stratokite-hero.webp",
     },
     specs: [
       { label: "Capability Class", value: "Atmospheric Intelligence" },

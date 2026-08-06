@@ -13,7 +13,7 @@ export function StratokiteMediaSection() {
             Engineered for the space between.
           </h2>
           <p className="mt-7 max-w-lg font-mono text-xs-plus leading-[1.85] text-muted">
-            Stratokite combines a balloon-assisted ascent architecture with a
+            StratoKite combines a balloon-assisted ascent architecture with a
             fixed-wing VTOL airframe, creating a recoverable platform for
             atmospheric sensing, observation, and persistent missions.
           </p>

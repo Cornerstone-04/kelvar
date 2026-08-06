@@ -31,7 +31,7 @@ export function StratokitePage() {
             KELVARX / Platform 01
           </p>
           <h1 className="mt-5 font-heading text-[clamp(5rem,14vw,13rem)] font-black uppercase leading-[0.78] tracking-[-0.03em]">
-            Stratokite
+            StratoKite
           </h1>
           <p className="mt-8 max-w-2xl font-mono text-xs-plus leading-[1.85] text-white/65">
             {stratokite.description}

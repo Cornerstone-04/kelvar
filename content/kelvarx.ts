@@ -17,14 +17,14 @@ export const kelvarx = {
   systems: [
     {
       id: "stratos-kite",
-      name: "Stratokite",
+      name: "StratoKite",
       href: "/kelvarx/stratokite",
       type: "Balloon-assisted tail-sitter glider drone",
       description:
         "A developing hybrid platform combining helium-assisted lift, a tail-sitter fixed-wing aircraft, radiosonde instrumentation, and intelligent imaging systems.",
       media: {
         src: "/assets/images/platforms/stratokite/stratokite-air-3.webp",
-        alt: "Stratokite balloon-assisted fixed-wing aircraft in flight",
+        alt: "StratoKite balloon-assisted fixed-wing aircraft in flight",
       },
       payload: [
         "High-resolution EO camera",
@@ -52,13 +52,13 @@ export const kelvarx = {
     },
     {
       id: "stratos-copter",
-      name: "Stratocopter",
+      name: "StratoCopter",
       type: "Balloon-assisted quadcopter drone",
       description:
         "A developing surveillance and monitoring platform where helium-assisted lift supports endurance while a quadcopter provides positioning and maneuverability.",
       media: {
         src: "/assets/images/platforms/stratos/stratoscopter-2.webp",
-        alt: "Stratocopter balloon-assisted quadcopter platform concept",
+        alt: "StratoCopter balloon-assisted quadcopter platform concept",
       },
       payload: [
         "Daylight zoom camera",
@@ -85,13 +85,13 @@ export const kelvarx = {
     },
     {
       id: "stratos-solar-sat",
-      name: "Stratos Solar Sat",
+      name: "StratoSatellite",
       type: "Balloon-assisted near-space satellite drone",
       description:
         "A developing solar-powered stratospheric concept intended for Earth observation, atmospheric monitoring, and communications relay missions.",
       media: {
         src: "/assets/images/platforms/stratos/stratos-space-2.jpg",
-        alt: "Stratos Solar Sat near-space platform concept",
+        alt: "StratoSatellite near-space platform concept",
       },
       payload: [
         "Ultra-high-resolution camera",
@@ -178,40 +178,40 @@ export const kelvarx = {
       name: "Environmental and climate intelligence",
       outcome:
         "Build richer atmospheric datasets for forecasting and research.",
-      platforms: ["Stratokite", "Stratos Solar Sat"],
+      platforms: ["StratoKite", "StratoSatellite"],
       intelligenceLayer: "KAIN",
     },
     {
       name: "Agriculture and land planning",
       outcome:
         "Support planning with aerial imagery and local weather intelligence.",
-      platforms: ["Stratokite"],
+      platforms: ["StratoKite"],
       intelligenceLayer: "Both",
     },
     {
       name: "Public safety and disaster response",
       outcome:
         "Provide timely visual and environmental awareness during incidents.",
-      platforms: ["Stratocopter", "Stratokite"],
+      platforms: ["StratoCopter", "StratoKite"],
       intelligenceLayer: "KELVAR AI Command",
     },
     {
       name: "Border, maritime, and infrastructure awareness",
       outcome:
         "Extend observation across remote assets and strategic corridors.",
-      platforms: ["Stratokite", "Stratos Solar Sat"],
+      platforms: ["StratoKite", "StratoSatellite"],
       intelligenceLayer: "Both",
     },
     {
       name: "Telecommunications and rural connectivity",
       outcome: "Explore high-altitude relay coverage for underserved regions.",
-      platforms: ["Stratos Solar Sat", "Stratocopter"],
+      platforms: ["StratoSatellite", "StratoCopter"],
       intelligenceLayer: "KELVAR AI Command",
     },
     {
       name: "Near-space research",
       outcome: "Enable recoverable atmospheric and Earth-observation missions.",
-      platforms: ["Stratos Solar Sat"],
+      platforms: ["StratoSatellite"],
       intelligenceLayer: "KAIN",
     },
   ],
