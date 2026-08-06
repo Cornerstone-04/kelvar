@@ -21,6 +21,8 @@ const barlow = localFont({
       weight: "900",
     },
   ],
+  display: "swap",
+  fallback: ["Arial Narrow", "Arial", "sans-serif"],
   variable: "--font-barlow",
 });
 
@@ -39,6 +41,8 @@ const inter = localFont({
       weight: "600",
     },
   ],
+  display: "swap",
+  fallback: ["Arial", "sans-serif"],
   variable: "--font-inter",
 });
 
@@ -50,6 +54,8 @@ const dmMono = localFont({
     },
     { path: "../public/assets/fonts/dm-mono/DMMono-Medium.ttf", weight: "500" },
   ],
+  display: "swap",
+  fallback: ["Courier New", "monospace"],
   variable: "--font-dm-mono",
 });
 

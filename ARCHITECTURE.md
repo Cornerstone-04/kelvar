@@ -35,6 +35,6 @@ The contact form deliberately prepares a validated `mailto:` enquiry because the
 
 ## Quality gates
 
-Run `bun run check` before handoff. Pull requests and main-branch pushes run linting, formatting verification, strict TypeScript, unit tests, the production build and Playwright smoke tests in GitHub Actions.
+Run `bun run check` before handoff. Pull requests and main-branch pushes run linting, formatting verification, strict TypeScript, unit tests, the production build, and Chromium, Firefox, and WebKit smoke tests in GitHub Actions.
 
 Architecture changes must preserve behaviour, keyboard access, reduced-motion support, metadata and public URLs.

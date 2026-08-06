@@ -43,7 +43,7 @@ bun run lint         # Run ESLint with zero-warning enforcement
 bun run format:check # Verify Prettier formatting
 bun run typecheck    # Check TypeScript without emitting files
 bun test             # Run unit and content-integrity tests
-bun run test:e2e     # Run Playwright route and form smoke tests
+bun run test:e2e     # Run Chromium, Firefox, and WebKit smoke tests
 bun run build        # Create an optimised production build
 bun run start        # Serve the production build
 bun run check        # Run the complete local quality gate
