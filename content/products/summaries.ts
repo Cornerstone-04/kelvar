@@ -12,8 +12,8 @@ export const platformSummaries: PlatformSummary[] = [
       "Balloon-assisted aerial intelligence for atmospheric monitoring, observation, and connectivity.",
     desc: "The flagship entry into KELVARX: a developing high-altitude platform connecting aerial sensing with atmospheric intelligence.",
     assets: {
-      image1: "/assets/images/platforms/stratos/stratos-hero.jpg",
-      image2: "/assets/images/platforms/stratos/stratos-in-air.jpg",
+      image1: "/assets/images/platforms/stratokite/stratokite-hero.webp",
+      image2: "/assets/images/platforms/stratokite/stratokite-model.webp",
     },
     specs: [
       { label: "Capability Class", value: "Atmospheric Intelligence" },
