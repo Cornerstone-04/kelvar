@@ -24,7 +24,7 @@ export function StratokiteMediaSection() {
             <LazyVideo
               src={stratokiteMedia.turntable.video}
               poster={stratokiteMedia.turntable.poster}
-              className="aspect-square w-full object-cover"
+              className="aspect-video w-full object-cover"
             />
             <figcaption className="border-t border-white/10 px-4 py-3 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-dim">
               Configuration study / VTOL airframe

@@ -1,6 +1,6 @@
 export const stratokiteMedia = {
   hero: {
-    video: "/assets/videos/platforms/stratokite/stratokite-flight.webm",
+    video: "/assets/videos/platforms/stratokite/stratokite-flight-tilt.webm",
     poster: "/assets/images/platforms/stratokite/stratokite-air.webp",
   },
   turntable: {

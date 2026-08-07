@@ -13,7 +13,7 @@ export const platformSummaries: PlatformSummary[] = [
     desc: "The flagship entry into KELVARX: a developing high-altitude platform connecting aerial sensing with atmospheric intelligence.",
     assets: {
       image1: "/assets/images/platforms/stratokite/stratokite-model.webp",
-      video: "/assets/videos/platforms/stratokite/stratokite-turntable-wide.webm",
+      video: "/assets/videos/platforms/stratokite/stratokite-flight.webm",
       videoPoster: "/assets/images/platforms/stratokite/stratokite-hero.webp",
     },
     specs: [
