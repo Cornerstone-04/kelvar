@@ -14,9 +14,6 @@ export function NumberedList({
       {items.map((item, index) => {
         const content = (
           <>
-            <span className="shrink-0 font-mono text-xxs tracking-[0.15em] text-dim">
-              {String(index + 1).padStart(2, "0")}
-            </span>
             <span className="font-mono text-xs-plus leading-relaxed text-muted">
               {item}
             </span>

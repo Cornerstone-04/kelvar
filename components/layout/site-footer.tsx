@@ -30,7 +30,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-20 border-t border-white/10 pt-7 md:mt-28">
-          <div className="grid gap-4 font-mono text-[0.68rem] leading-relaxed text-white/38 md:grid-cols-2 md:items-center">
+          <div className="grid gap-4 font-mono text-[0.68rem] leading-relaxed text-dim md:grid-cols-2 md:items-center">
             <p>
               © {new Date().getFullYear()} Kelvar Industries. All rights
               reserved.
@@ -38,7 +38,7 @@ export function SiteFooter() {
             <p className="md:text-right">{site.tagline}</p>
           </div>
 
-          <p className="mt-7 border-t border-white/8 pt-7 font-mono text-[0.62rem] leading-[1.8] text-white/24">
+          <p className="mt-7 border-t border-white/8 pt-7 font-mono text-[0.62rem] leading-[1.8] text-dim">
             Kelvar Industries develops autonomous surveillance and atmospheric
             intelligence systems across air, land, sea, and space. Platform
             capabilities described on this website may include systems in active
@@ -68,7 +68,7 @@ function FooterBrand() {
         </span>
       </Link>
 
-      <p className="mt-7 max-w-[42ch] font-mono text-xs-plus leading-[1.9] text-white/48">
+      <p className="mt-7 max-w-[42ch] font-mono text-xs-plus leading-[1.9] text-muted">
         Engineering intelligent autonomous systems for persistent awareness,
         resilient protection, and atmospheric intelligence.
       </p>
@@ -99,9 +99,9 @@ function FooterColumn({
           <li key={`${link.href}-${link.label}`}>
             <Link
               href={link.href}
-              className="group inline-flex items-center gap-2 font-mono text-xs-plus text-white/48 transition-colors hover:text-primary"
+              className="group inline-flex items-center gap-2 font-mono text-xs-plus text-muted transition-colors hover:text-primary"
             >
-              <span className="h-px w-0 bg-primary transition-all duration-300 group-hover:w-3" />
+              <span className="h-px w-3 origin-left scale-x-0 bg-primary transition-transform duration-200 group-hover:scale-x-100" />
               {link.label}
             </Link>
           </li>
@@ -130,7 +130,7 @@ function FooterContact() {
       </div>
 
       <div className="mt-9 border-t border-white/10 pt-5">
-        <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-white/28">
+        <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-dim">
           Programme
         </p>
         <Link
@@ -153,7 +153,7 @@ function ContactItem({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex items-start gap-4 font-mono text-xs-plus leading-[1.75] text-white/48">
+    <div className="flex items-start gap-4 font-mono text-xs-plus leading-[1.75] text-muted">
       <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-surface text-primary">
         {icon}
       </span>
@@ -164,7 +164,7 @@ function ContactItem({
 
 function FooterHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="font-mono text-xxs font-medium uppercase tracking-[0.26em] text-white/38">
+    <h2 className="font-mono text-xxs font-medium uppercase tracking-[0.26em] text-dim">
       {children}
     </h2>
   );

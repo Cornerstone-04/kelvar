@@ -84,7 +84,7 @@ function BlinkingStatus() {
   }, []);
 
   return (
-    <span className="font-mono text-[0.65rem] tracking-[0.3em] text-white/35">
+    <span className="font-mono text-[0.65rem] tracking-[0.3em] text-dim">
       {STATUS_FRAMES[frame]}
     </span>
   );
@@ -144,10 +144,10 @@ export default function NotFound() {
         </div>
 
         {/* Message */}
-        <p className="mb-3 font-mono text-[0.78rem] tracking-widest text-white/30">
+        <p className="mb-3 font-mono text-[0.78rem] tracking-widest text-dim">
           DRONE COMMS LINK TERMINATED
         </p>
-        <p className="mb-12 font-mono text-[0.7rem] tracking-[0.08em] text-white/15">
+        <p className="mb-12 font-mono text-[0.7rem] tracking-[0.08em] text-dim">
           ERROR_CODE :: PAGE_NOT_FOUND / UPLINK_FAILURE
         </p>
 

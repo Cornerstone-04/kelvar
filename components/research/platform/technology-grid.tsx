@@ -24,9 +24,6 @@ export function TechnologyGrid({
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="bg-bg py-8 sm:px-6 md:px-8 md:py-10"
           >
-            <div className="mb-4 font-mono text-xxs uppercase tracking-[0.2em] text-dim">
-              {technology.id}
-            </div>
             <h3 className="mb-3 font-heading text-[1.3rem] font-bold text-primary">
               {technology.title}
             </h3>

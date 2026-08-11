@@ -84,7 +84,7 @@ export function KelvarxFeature() {
       />
 
       <div className="mx-auto flex min-h-[62svh] max-w-440 flex-col justify-between">
-        <div className="flex items-center justify-between gap-6 font-mono text-xxs uppercase tracking-[0.24em] text-white/45">
+        <div className="flex items-center justify-between gap-6 font-mono text-xxs uppercase tracking-[0.24em] text-dim">
           <span>Programme / Space</span>
           <span className="hidden md:block">Atmospheric Intelligence</span>
         </div>
@@ -119,7 +119,7 @@ export function KelvarxFeature() {
             </motion.span>
           </Link>
         </motion.div>
-        <div className="grid gap-2 border-t border-white/15 pt-5 font-mono text-[0.62rem] uppercase tracking-[0.18em] text-white/36 sm:grid-cols-3">
+        <div className="grid gap-2 border-t border-white/15 pt-5 font-mono text-[0.62rem] uppercase tracking-[0.18em] text-dim sm:grid-cols-3">
           <TelemetryItem index="01" label="Platforms collect" />
           <TelemetryItem index="02" label="KAIN connects" />
           <TelemetryItem index="03" label="AI Command interprets" />
@@ -139,7 +139,7 @@ function TelemetryItem({ index, label }: { index: string; label: string }) {
       transition={{ duration: 0.5, delay: Number(index) * 0.08 }}
       className="flex items-center gap-3"
     >
-      <span className="text-white/55">{index}</span>
+      <span className="text-muted">{index}</span>
       <span>{label}</span>
     </motion.div>
   );

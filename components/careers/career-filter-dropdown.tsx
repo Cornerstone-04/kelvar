@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { useId } from "react";
 import { LuChevronDown } from "react-icons/lu";
 import { ALL } from "@/lib/careers-filter-utils";
 
@@ -16,68 +15,38 @@ export function CareerFilterDropdown({
   value: string;
   onChange: (value: string) => void;
 }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const selectId = useId();
 
-  useEffect(() => {
-    const closeOutside = (event: MouseEvent) => {
-      if (
-        containerRef.current &&
-        !containerRef.current.contains(event.target as Node)
-      )
-        setIsOpen(false);
-    };
-    document.addEventListener("mousedown", closeOutside);
-    return () => document.removeEventListener("mousedown", closeOutside);
-  }, []);
-
-  const displayValue = value === ALL ? `All ${label}s` : value;
   return (
-    <div ref={containerRef} className="flex flex-col gap-2">
-      <label className="font-mono text-xxs uppercase tracking-[0.2em] text-white/20">
+    <div className="flex flex-col gap-2">
+      <label
+        htmlFor={selectId}
+        className="font-mono text-xxs uppercase tracking-[0.2em] text-dim"
+      >
         {label}
       </label>
       <div className="relative">
-        <button
-          type="button"
-          onClick={() => setIsOpen((open) => !open)}
-          aria-expanded={isOpen}
-          className="flex w-full items-center justify-between border border-border-col bg-transparent px-4 py-3 font-mono text-xs-plus text-white/70 transition-all duration-200 hover:border-white/20 focus:border-white/30"
+        <select
+          id={selectId}
+          value={value}
+          onChange={(event) => onChange(event.target.value)}
+          className="min-h-12 w-full appearance-none border border-border-col bg-bg px-4 py-3 pr-12 font-mono text-xs-plus text-primary transition-colors duration-200 hover:border-white/30 focus:border-primary"
         >
-          <span className={value === ALL ? "text-white/40" : "text-white"}>
-            {displayValue}
-          </span>
-          <motion.div
-            animate={{ rotate: isOpen ? 180 : 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <LuChevronDown className="text-white/20" size={14} />
-          </motion.div>
-        </button>
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="absolute z-50 mt-1 w-full border border-border-col bg-card py-1 shadow-2xl"
+          {options.map((option) => (
+            <option
+              key={option}
+              value={option}
+              className="bg-card text-primary"
             >
-              {options.map((option) => (
-                <button
-                  key={option}
-                  type="button"
-                  onClick={() => {
-                    onChange(option);
-                    setIsOpen(false);
-                  }}
-                  className={`w-full px-4 py-2 text-left font-mono text-xs-plus transition-colors hover:bg-white/5 ${value === option ? "text-white" : "text-white/40"}`}
-                >
-                  {option === ALL ? `All ${label}s` : option}
-                </button>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
+              {option === ALL ? `All ${label}s` : option}
+            </option>
+          ))}
+        </select>
+        <LuChevronDown
+          aria-hidden="true"
+          className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-dim"
+          size={14}
+        />
       </div>
     </div>
   );

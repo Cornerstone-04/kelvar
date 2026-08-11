@@ -25,12 +25,8 @@ export function ResearchAreas() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="grid gap-5 bg-bg/90 p-6 md:grid-cols-[4rem_1fr] md:p-8"
+              className="bg-bg/90 p-6 md:p-8"
             >
-              <div className="font-mono text-xxs uppercase tracking-[0.2em] text-dim">
-                {area.id}
-              </div>
-
               <div>
                 <h3 className="font-heading text-[1.9rem] font-bold leading-none text-primary">
                   {area.title}

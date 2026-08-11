@@ -9,7 +9,7 @@ export function ValuesSection() {
   return (
     <section className="border-b border-border-col px-6 py-12 md:px-12 md:py-20">
       <div className="grid grid-cols-1 gap-12 md:grid-cols-[200px_1fr]">
-        <AboutSectionHeading number="03" label="Values" />
+        <AboutSectionHeading label="Values" />
         <div className="grid grid-cols-1 gap-px bg-white/10 sm:grid-cols-2">
           {values.map((value, index) => (
             <motion.article
@@ -21,8 +21,7 @@ export function ValuesSection() {
               transition={{ duration: 0.5, delay: index * 0.07 }}
               className="group bg-bg p-7 md:p-9"
             >
-              <div className="mb-8 flex items-center justify-between font-mono text-[0.58rem] uppercase tracking-[0.3em] text-white/20">
-                <span>0{index + 1}</span>
+              <div className="mb-8 flex justify-end">
                 <motion.span
                   className="h-1.5 w-1.5 rounded-full bg-primary"
                   animate={
@@ -38,7 +37,7 @@ export function ValuesSection() {
               <h3 className="mb-3 font-heading text-[1.7rem] font-bold text-white transition-opacity group-hover:opacity-80">
                 {value.title}
               </h3>
-              <p className="font-mono text-xs-plus leading-relaxed text-white/40">
+              <p className="font-mono text-xs-plus leading-relaxed text-muted">
                 {value.desc}
               </p>
             </motion.article>

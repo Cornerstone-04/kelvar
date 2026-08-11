@@ -42,7 +42,7 @@ export function CareersRoles() {
               <button
                 type="button"
                 onClick={filters.clearFilters}
-                className="inline-flex w-fit items-center justify-center gap-3 border border-white/15 px-6 py-3 font-mono text-xxs uppercase tracking-[0.2em] text-white/60 transition-all duration-200 hover:border-red-500/40 hover:text-red-500"
+                className="inline-flex w-fit items-center justify-center gap-3 border border-white/15 px-6 py-3 font-mono text-xxs uppercase tracking-[0.2em] text-white/60 transition-[color,border-color] duration-200 hover:border-red-500/40 hover:text-red-500"
               >
                 <LuX />
                 Clear Filters
@@ -52,7 +52,7 @@ export function CareersRoles() {
         </aside>
         <div className="flex flex-col gap-8">
           {filters.roles.length === 0 ? (
-            <p className="font-mono text-xxs text-white/25">
+            <p className="font-mono text-xxs text-dim">
               No roles match the selected filters.
             </p>
           ) : (

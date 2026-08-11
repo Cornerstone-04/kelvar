@@ -18,7 +18,7 @@ export function PlatformDomains({ platform }: { platform: ResearchPlatform }) {
 function ImmersiveDomains({ platform }: { platform: ResearchPlatform }) {
   return (
     <>
-      {platform.domains.map((domain, index) => (
+      {platform.domains.map((domain) => (
         <div key={domain.id}>
           <motion.div
             initial={{ opacity: 0 }}
@@ -35,7 +35,7 @@ function ImmersiveDomains({ platform }: { platform: ResearchPlatform }) {
               className="object-cover brightness-50 saturate-[0.5]"
             />
             <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_55%)]" />
-            <div className="absolute bottom-0 left-6 right-6 flex items-end justify-between pb-6 md:left-10 md:right-10 md:pb-8">
+            <div className="absolute bottom-0 left-6 right-6 pb-6 md:left-10 md:right-10 md:pb-8">
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -45,9 +45,6 @@ function ImmersiveDomains({ platform }: { platform: ResearchPlatform }) {
               >
                 {domain.name}
               </motion.h3>
-              <span className="mb-2 shrink-0 font-mono text-xxs font-medium tracking-[0.2em] text-muted md:mb-4">
-                {String(index + 1).padStart(2, "0")}
-              </span>
             </div>
           </motion.div>
           <div className="px-6 pb-16 pt-8 md:px-10 md:pb-20 md:pt-10">
@@ -116,11 +113,8 @@ function CardDomains({
                     duration: 0.3,
                     delay: index * 0.1 + capabilityIndex * 0.05,
                   }}
-                  className="flex items-start gap-3"
+                  className="border-l border-white/15 pl-3"
                 >
-                  <span className="py-1 font-mono text-xxs font-bold tracking-[0.2em] text-dim">
-                    {String(capabilityIndex + 1).padStart(2, "0")}
-                  </span>
                   <span className="font-mono text-xs-plus leading-relaxed text-muted">
                     {capability}
                   </span>

@@ -20,18 +20,13 @@ export function PillarGrid({ items }: { items: typeof ethos }) {
           <div className="group/img relative mb-4 aspect-video overflow-hidden bg-surface">
             <Image
               src={item.image}
-              alt={item.word}
+              alt=""
               fill
               sizes="(max-width: 640px) calc(100vw - 3rem), (max-width: 1024px) 50vw, 33vw"
-              className="absolute inset-0 h-full w-full object-cover brightness-[0.6] saturate-[0.5] transition-all duration-500 ease-out group-hover/img:brightness-[0.7] group-hover/img:saturate-[0.7] group-hover/img:scale-[1.03]"
+              className="absolute inset-0 h-full w-full object-cover brightness-[0.6] saturate-[0.5] transition-[filter,transform] duration-500 ease-out group-hover/img:brightness-[0.7] group-hover/img:saturate-[0.7] group-hover/img:scale-[1.03]"
             />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_80%,#07072a99_0%,transparent_60%)]" />
           </div>
-
-          {/* ID */}
-          <p className="mb-2 font-mono text-xxs tracking-[0.25em] text-dim uppercase">
-            {item.id}
-          </p>
 
           {/* Word */}
           <h3 className="font-heading text-[1.4rem] font-black uppercase leading-none tracking-[0.02em] text-primary mb-2">

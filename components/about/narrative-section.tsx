@@ -11,25 +11,18 @@ export function NarrativeSection() {
   return (
     <section className="border-b border-border-col px-6 py-14 md:px-12 md:py-24">
       <div className="grid gap-px bg-white/10 xl:grid-cols-2">
-        <NarrativePanel
-          number="01"
-          label="Mission"
-          text={site.mission}
-          emphasis
-        />
-        <NarrativePanel number="02" label="Story" text={site.story} />
+        <NarrativePanel label="Mission" text={site.mission} emphasis />
+        <NarrativePanel label="Story" text={site.story} />
       </div>
     </section>
   );
 }
 
 function NarrativePanel({
-  number,
   label,
   text,
   emphasis = false,
 }: {
-  number: string;
   label: string;
   text: string;
   emphasis?: boolean;
@@ -51,19 +44,13 @@ function NarrativePanel({
         viewport={{ once: true }}
         transition={{ ...revealTransition, delay: 0.15 }}
       />
-      <div className="flex flex-col gap-2">
-        <span className="font-mono text-[0.6rem] uppercase tracking-[0.3em] text-white/20">
-          {number}
-        </span>
+      <div>
         <SectionLabel>{label}</SectionLabel>
       </div>
       <ScrollingText
         text={text}
         className={`mt-14 max-w-[68ch] font-mono leading-[1.95] text-white/62 ${emphasis ? "text-[clamp(1rem,1.55vw,1.35rem)]" : "text-sm md:text-base"}`}
       />
-      <span className="pointer-events-none absolute -bottom-10 right-5 font-heading text-[12rem] font-black leading-none text-white/2.5 transition-transform duration-700 group-hover:-translate-y-3 md:text-[18rem]">
-        {number}
-      </span>
     </motion.article>
   );
 }

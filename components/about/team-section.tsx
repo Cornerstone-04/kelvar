@@ -12,7 +12,7 @@ export function TeamSection() {
   return (
     <section className="px-6 py-12 md:px-12 md:py-20">
       <div className="grid grid-cols-1 gap-12 md:grid-cols-[200px_1fr]">
-        <AboutSectionHeading number="04" label="Team" />
+        <AboutSectionHeading label="Team" />
         <div>
           {team.map((member, index) => (
             <motion.article
@@ -37,7 +37,7 @@ export function TeamSection() {
                 <h3 className="mb-1 font-heading text-[1.4rem] font-bold text-white">
                   {member.name}
                 </h3>
-                <div className="mb-5 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-white/30">
+                <div className="mb-5 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-dim">
                   {member.role}
                 </div>
                 <ScrollingText

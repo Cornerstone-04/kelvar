@@ -52,15 +52,7 @@ function DomainHero({ domain }: { domain: FocusDomain }) {
 
       <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_60%)]" />
 
-      <span className="pointer-events-none absolute -right-3 top-1/2 -translate-y-1/2 font-heading text-[clamp(12rem,28vw,30rem)] font-black leading-none text-white/[0.035]">
-        {domain.id}
-      </span>
-
-      <div className="absolute bottom-8 left-6 flex items-end gap-6 md:left-10 md:bottom-10">
-        <span className="font-mono text-xxs font-bold tracking-[0.2em] text-muted">
-          {domain.id}
-        </span>
-
+      <div className="absolute bottom-8 left-6 md:left-10 md:bottom-10">
         <h2 className="font-heading text-[clamp(4rem,10vw,8rem)] font-black leading-none tracking-[-0.02em] text-primary">
           {domain.word}
         </h2>
@@ -115,12 +107,8 @@ function DomainCapabilities({ capabilities }: { capabilities: string[] }) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.06 }}
-            className="flex items-center gap-4 border-b border-[#ffffff12] py-4"
+            className="border-b border-[#ffffff12] py-4"
           >
-            <span className="shrink-0 font-mono text-xxs tracking-[0.15em] text-dim">
-              {String(index + 1).padStart(2, "0")}
-            </span>
-
             <span className="font-mono text-xs-plus text-muted">
               {capability}
             </span>

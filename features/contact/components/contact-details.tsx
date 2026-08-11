@@ -28,7 +28,7 @@ export function ContactDetails() {
                 {item.value}
               </a>
             ) : (
-              <span className="font-mono text-[0.82rem] text-white/50">
+              <span className="font-mono text-[0.82rem] text-muted">
                 {item.value}
               </span>
             )}

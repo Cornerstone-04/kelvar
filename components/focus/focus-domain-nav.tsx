@@ -6,19 +6,16 @@ export function FocusDomainNav() {
     <nav
       aria-label="Focus domains"
       style={{ top: "var(--site-navbar-offset, 4.0625rem)" }}
-      className="sticky z-20 border-b border-white/10 bg-bg/92 px-6 backdrop-blur-md transition-all ease-linear duration-350 md:px-10"
+      className="sticky z-20 border-b border-white/10 bg-bg/92 px-6 backdrop-blur-md md:px-10"
     >
       <div className="flex overflow-x-auto">
         {focus.map((domain) => (
           <Link
             key={domain.id}
             href={`#focus-${domain.word.toLowerCase()}`}
-            className="group flex min-h-14 min-w-32 flex-1 items-center justify-between gap-5 border-x border-white/8 px-4 font-mono text-xxs uppercase tracking-[0.18em] text-muted transition-all ease-linear hover:bg-white/5 hover:text-primary"
+            className="group flex min-h-14 min-w-32 flex-1 items-center justify-between gap-5 border-x border-white/8 px-4 font-mono text-xxs uppercase tracking-[0.18em] text-muted transition-[color,background-color] duration-200 ease-out hover:bg-white/5 hover:text-primary"
           >
             <span>{domain.word}</span>
-            <span className="text-dim transition-transform duration-300 group-hover:translate-x-1">
-              {domain.id}
-            </span>
           </Link>
         ))}
       </div>

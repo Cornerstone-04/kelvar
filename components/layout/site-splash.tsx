@@ -68,33 +68,38 @@ export function SiteSplash() {
             KLV / SYSTEM BOOT
           </div>
           <div className="absolute right-6 top-6 font-mono text-[0.65rem] uppercase tracking-[0.22em] text-muted md:right-10 md:top-9">
-            00.01
+            KELVAR INDUSTRIES
           </div>
 
           <div className="relative flex flex-col items-center px-6 text-center">
-            <motion.div
+            <div
               aria-hidden="true"
-              initial={
-                reduceMotion ? false : { width: 104, height: 104, opacity: 0 }
-              }
-              animate={
-                reduceMotion
-                  ? { opacity: 1 }
-                  : {
-                      width: [104, 104, "140vw"],
-                      height: [104, 104, "140vh"],
-                      opacity: [0, 1, 0],
-                    }
-              }
-              transition={{
-                duration: 1.85,
-                times: [0, 0.68, 1],
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="pointer-events-none absolute left-1/2 top-12 -translate-x-1/2 border border-white/45"
+              className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             >
-              <CornerMarks />
-            </motion.div>
+              <motion.div
+                initial={
+                  reduceMotion
+                    ? false
+                    : { opacity: 0, transform: "scale(0.08)" }
+                }
+                animate={
+                  reduceMotion
+                    ? { opacity: 1 }
+                    : {
+                        opacity: [0, 1, 0],
+                        transform: ["scale(0.08)", "scale(0.08)", "scale(1)"],
+                      }
+                }
+                transition={{
+                  duration: 1.85,
+                  times: [0, 0.68, 1],
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                className="h-[140vmax] w-[140vmax] border border-white/45"
+              >
+                <CornerMarks />
+              </motion.div>
+            </div>
 
             <motion.div
               initial={

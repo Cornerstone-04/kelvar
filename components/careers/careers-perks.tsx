@@ -25,10 +25,7 @@ export function CareersPerks() {
               transition={{ duration: 0.4, delay: i * 0.08 }}
               className="group min-h-52 bg-surface p-6 md:p-8"
             >
-              <span className="font-mono text-xxs uppercase tracking-[0.2em] text-dim">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <p className="mt-16 max-w-xs font-heading text-2xl font-bold leading-tight text-white/68 transition-colors group-hover:text-primary">
+              <p className="max-w-xs font-heading text-2xl font-bold leading-tight text-white/68 transition-colors group-hover:text-primary">
                 {perk}
               </p>
             </motion.article>

@@ -13,24 +13,33 @@ import {
 import type { ContactFieldErrors } from "../types";
 
 const fields = [
-  { name: "name", label: "Full Name", type: "text", placeholder: "Your name" },
+  {
+    name: "name",
+    label: "Full Name",
+    type: "text",
+    placeholder: "Your name",
+    autoComplete: "name",
+  },
   {
     name: "email",
     label: "Email",
     type: "email",
     placeholder: "you@company.com",
+    autoComplete: "email",
   },
   {
     name: "organisation",
     label: "Organisation",
     type: "text",
     placeholder: "Company or institution",
+    autoComplete: "organization",
   },
   {
     name: "subject",
     label: "Subject",
     type: "text",
     placeholder: "Partnership, investment, general...",
+    autoComplete: "off",
   },
 ] as const;
 
@@ -44,7 +53,13 @@ export function ContactForm() {
     const nextErrors = validateContactFields(values);
 
     setErrors(nextErrors);
-    if (Object.keys(nextErrors).length > 0) return;
+    if (Object.keys(nextErrors).length > 0) {
+      const firstInvalidField = Object.keys(nextErrors)[0];
+      window.requestAnimationFrame(() => {
+        document.getElementById(firstInvalidField)?.focus();
+      });
+      return;
+    }
 
     setComposerOpened(true);
     window.location.href = buildContactMailto(site.email, values);
@@ -77,6 +92,7 @@ export function ContactForm() {
                 name={field.name}
                 type={field.type}
                 placeholder={field.placeholder}
+                autoComplete={field.autoComplete}
                 required
                 maxLength={
                   field.name === "email"
@@ -87,7 +103,7 @@ export function ContactForm() {
                 }
                 aria-invalid={Boolean(error)}
                 aria-describedby={error ? errorId : undefined}
-                className="w-full border-b border-border-col bg-transparent pb-2 font-mono text-[0.85rem] text-white outline-none transition-colors placeholder:text-white/15 focus:border-white/40"
+                className="w-full border-b border-border-col bg-transparent pb-2 font-mono text-[0.85rem] text-white outline-none transition-colors placeholder:text-dim focus:border-white/40"
               />
               {error && (
                 <p
@@ -121,7 +137,7 @@ export function ContactForm() {
             rows={4}
             aria-invalid={Boolean(errors.message)}
             aria-describedby={errors.message ? "message-error" : undefined}
-            className="w-full resize-none border-b border-border-col bg-transparent pb-2 font-mono text-[0.85rem] text-white outline-none transition-colors placeholder:text-white/15 focus:border-white/40"
+            className="w-full resize-none border-b border-border-col bg-transparent pb-2 font-mono text-[0.85rem] text-white outline-none transition-colors placeholder:text-dim focus:border-white/40"
           />
           {errors.message && (
             <p

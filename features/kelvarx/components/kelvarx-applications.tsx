@@ -23,20 +23,15 @@ export function KelvarxApplications({
             </h3>
           </div>
           <div className="grid gap-px bg-white/10">
-            {applications.map((application, index) => (
+            {applications.map((application) => (
               <article key={application.name} className="bg-bg p-6">
-                <div className="flex justify-between gap-5">
-                  <h4 className="font-heading text-2xl font-bold">
-                    {application.name}
-                  </h4>
-                  <span className="font-mono text-xxs text-dim">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
+                <h4 className="font-heading text-2xl font-bold">
+                  {application.name}
+                </h4>
                 <p className="mt-4 font-mono text-xs-plus leading-[1.75] text-muted">
                   {application.outcome}
                 </p>
-                <p className="mt-4 font-mono text-[0.65rem] uppercase tracking-[0.13em] text-white/35">
+                <p className="mt-4 font-mono text-[0.65rem] uppercase tracking-[0.13em] text-dim">
                   {application.platforms.join(" · ")} /{" "}
                   {application.intelligenceLayer}
                 </p>

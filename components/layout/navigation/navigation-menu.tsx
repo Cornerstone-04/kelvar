@@ -1,7 +1,7 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   navLinks,
   platformNavLinks,
@@ -21,12 +21,66 @@ export function NavigationMenu({
 }) {
   const [hovered, setHovered] = useState<string | null>(null);
   const [level, setLevel] = useState<MenuLevel | null>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const previouslyFocusedRef = useRef<HTMLElement | null>(null);
+  const reduceMotion = useReducedMotion();
 
-  const closeMenu = () => {
+  const closeMenu = useCallback(() => {
     setLevel(null);
     setHovered(null);
     onClose();
-  };
+  }, [onClose]);
+
+  useEffect(() => {
+    if (!open) return;
+
+    previouslyFocusedRef.current = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const frame = window.requestAnimationFrame(() => {
+      dialogRef.current
+        ?.querySelector<HTMLElement>(
+          'button:not([disabled]), a[href]:not([tabindex="-1"])',
+        )
+        ?.focus();
+    });
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeMenu();
+        return;
+      }
+
+      if (event.key !== "Tab" || !dialogRef.current) return;
+
+      const focusable = Array.from(
+        dialogRef.current.querySelectorAll<HTMLElement>(
+          'button:not([disabled]), a[href]:not([tabindex="-1"])',
+        ),
+      );
+      const first = focusable[0];
+      const last = focusable.at(-1);
+
+      if (!first || !last) return;
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+      previouslyFocusedRef.current?.focus();
+    };
+  }, [closeMenu, open]);
 
   return (
     <AnimatePresence>
@@ -35,8 +89,13 @@ export function NavigationMenu({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.25 }}
+          transition={{ duration: reduceMotion ? 0.15 : 0.25 }}
           className="fixed inset-0 z-40 flex"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Site navigation"
+          id="site-navigation-dialog"
+          ref={dialogRef}
         >
           <div
             className="relative hidden flex-1 cursor-pointer md:flex"
@@ -46,15 +105,22 @@ export function NavigationMenu({
           </div>
 
           <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            initial={
+              reduceMotion ? { opacity: 0 } : { transform: "translateX(100%)" }
+            }
+            animate={{ opacity: 1, transform: "translateX(0%)" }}
+            exit={
+              reduceMotion ? { opacity: 0 } : { transform: "translateX(100%)" }
+            }
+            transition={{
+              duration: reduceMotion ? 0.15 : 0.36,
+              ease: [0.32, 0.72, 0, 1],
+            }}
             className="relative flex h-full w-full flex-col gap-3 bg-[#07072af2] px-3 pt-24 pb-3 backdrop-blur-sm md:w-105 md:bg-[#07072ae6] md:backdrop-blur-xl"
           >
             <button
               onClick={closeMenu}
-              className="absolute top-7 right-6 z-10 font-heading text-[1.4rem] text-white/35 transition-colors duration-200 hover:text-white"
+              className="absolute top-7 right-6 z-10 font-heading text-[1.4rem] text-dim transition-colors duration-200 hover:text-white"
               aria-label="Close menu"
             >
               ✕
@@ -81,7 +147,7 @@ export function NavigationMenu({
               </AnimatePresence>
             </div>
 
-            <div className="px-1 py-2 font-mono text-[0.6rem] uppercase tracking-[0.15em] text-white/18">
+            <div className="px-1 py-2 font-mono text-[0.6rem] uppercase tracking-[0.15em] text-dim">
               Kelvar Industries · {site.location}
             </div>
           </motion.div>
@@ -106,10 +172,10 @@ function MainMenu({
   return (
     <motion.div
       key="main-menu"
-      initial={{ opacity: 0, x: "-100%" }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: "-100%" }}
-      transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
+      initial={{ opacity: 0, transform: "translateX(-4%)" }}
+      animate={{ opacity: 1, transform: "translateX(0%)" }}
+      exit={{ opacity: 0, transform: "translateX(-4%)" }}
+      transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
       className="absolute inset-0 flex flex-col gap-3"
     >
       {navLinks.map(({ href, label }, index) => {
@@ -152,10 +218,10 @@ function Submenu({
   return (
     <motion.div
       key={level}
-      initial={{ opacity: 0, x: "100%" }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: "100%" }}
-      transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
+      initial={{ opacity: 0, transform: "translateX(4%)" }}
+      animate={{ opacity: 1, transform: "translateX(0%)" }}
+      exit={{ opacity: 0, transform: "translateX(4%)" }}
+      transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
       className="absolute inset-0 flex flex-col gap-3"
     >
       <NavBlock

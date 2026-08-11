@@ -40,13 +40,13 @@ export function CareerRoleItem({
             </p>
           </div>
           <BsArrowUpRight
-            className="mt-1 shrink-0 text-white/20 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white/60"
+            className="mt-1 shrink-0 text-dim transition-[color,transform] duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary"
             size={16}
           />
         </div>
         <Rule />
         <div className="px-6 py-4">
-          <p className="font-mono text-xs-plus leading-relaxed text-muted transition-colors duration-200 group-hover:text-white/45">
+          <p className="font-mono text-xs-plus leading-relaxed text-muted transition-colors duration-200 group-hover:text-primary">
             {role.summary}
           </p>
         </div>

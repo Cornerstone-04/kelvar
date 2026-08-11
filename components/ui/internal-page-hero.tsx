@@ -79,7 +79,7 @@ export function InternalPageHero({
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-8 max-w-[75ch] font-mono text-xs-plus leading-[1.9] text-white/42"
+            className="mt-8 max-w-[75ch] font-mono text-xs-plus leading-[1.9] text-muted"
           >
             {description}
           </motion.p>

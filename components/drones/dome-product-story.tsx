@@ -113,10 +113,7 @@ export function DomeProductStory({ product }: { product: ProductDetail }) {
                   <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--bg)_0%,transparent_58%)]" />
                 </div>
                 <div className="flex flex-col justify-between p-6 md:p-8">
-                  <p className="font-mono text-xxs uppercase tracking-[0.22em] text-dim">
-                    Primary / {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <div className="mt-10">
+                  <div>
                     <h3 className="font-heading text-[2.25rem] font-black leading-none text-primary">
                       {feature.title}
                     </h3>
@@ -216,11 +213,8 @@ export function DomeProductStory({ product }: { product: ProductDetail }) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: index * 0.08 }}
-              className="grid gap-5 border-b border-white/15 py-7 last:border-b-0 md:grid-cols-[5rem_1fr]"
+              className="border-b border-white/15 py-7 last:border-b-0"
             >
-              <span className="font-mono text-xxs tracking-[0.22em] text-dim">
-                {String(index + 1).padStart(2, "0")}
-              </span>
               <p className="font-heading text-[clamp(1.4rem,3vw,2.35rem)] font-bold leading-tight text-primary">
                 {line}
               </p>

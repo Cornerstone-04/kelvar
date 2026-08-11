@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import localFont from "next/font/local";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { SiteSplash } from "@/components/layout/site-splash";
+import { MotionProvider } from "@/components/layout/motion-provider";
 import "./globals.css";
 
 const barlow = localFont({
@@ -145,11 +146,21 @@ export default function RootLayout({
       className={`${barlow.variable} ${inter.variable} ${dmMono.variable}`}
     >
       <body>
-        <SiteSplash />
-        <SiteNavbar />
-        <main>{children}</main>
-        <SiteFooter />
-        <ScrollToTop />
+        <a
+          href="#main-content"
+          className="fixed left-4 top-4 z-200 -translate-y-24 bg-primary px-4 py-3 font-mono text-xxs font-medium uppercase tracking-[0.16em] text-bg transition-transform duration-200 focus:translate-y-0"
+        >
+          Skip to main content
+        </a>
+        <MotionProvider>
+          <SiteSplash />
+          <SiteNavbar />
+          <main id="main-content" tabIndex={-1}>
+            {children}
+          </main>
+          <SiteFooter />
+          <ScrollToTop />
+        </MotionProvider>
       </body>
     </html>
   );

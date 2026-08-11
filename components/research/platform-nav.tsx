@@ -14,7 +14,7 @@ export function PlatformNav({ platforms }: { platforms: ResearchPlatform[] }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="group flex-1 rounded-sm border border-[#ffffff12] p-3 transition-all duration-300 ease-linear hover:border-primary hover:bg-surface md:px-6 md:py-4"
+            className="group flex-1 rounded-sm border border-[#ffffff12] p-3 transition-[border-color,background-color] duration-200 ease-out hover:border-primary hover:bg-surface md:px-6 md:py-4"
           >
             <div className="flex items-center justify-between">
               <span className="font-heading text-base font-bold text-primary">

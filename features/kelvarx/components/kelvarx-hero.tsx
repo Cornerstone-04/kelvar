@@ -34,9 +34,9 @@ export function KelvarxHero({ programme }: { programme: KelvarxProgramme }) {
           <p className="max-w-3xl font-mono text-xxs uppercase tracking-[0.28em] text-white/65 md:text-xs">
             {programme.eyebrow}
           </p>
-          <h2 className="mt-5 font-heading text-[clamp(5rem,15vw,13rem)] font-black leading-[0.8] text-primary">
+          <h1 className="mt-5 font-heading text-[clamp(5rem,15vw,13rem)] font-black leading-[0.8] text-primary">
             {programme.name}
-          </h2>
+          </h1>
           <p className="mt-7 max-w-3xl font-mono text-xs-plus leading-[1.9] text-white/68 md:text-sm">
             {programme.description}
           </p>
@@ -53,7 +53,7 @@ export function KelvarxHero({ programme }: { programme: KelvarxProgramme }) {
               <a
                 key={href}
                 href={href}
-                className="group relative overflow-hidden border border-white/8 bg-white/4 px-4 py-2 font-mono text-xxs uppercase tracking-[0.2em] text-white/25 no-underline backdrop-blur-md transition-all duration-300 ease-linear hover:border-white/15 hover:bg-white/8 hover:text-white/70"
+                className="group relative overflow-hidden border border-white/8 bg-white/4 px-4 py-2 font-mono text-xxs uppercase tracking-[0.2em] text-dim no-underline backdrop-blur-md transition-[color,background-color,border-color] duration-200 ease-out hover:border-white/15 hover:bg-white/8 hover:text-primary"
               >
                 <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,#ffffff10_0%,transparent_70%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
@@ -67,9 +67,9 @@ export function KelvarxHero({ programme }: { programme: KelvarxProgramme }) {
       <div className="grid gap-8 border-b border-white/10 px-6 py-14 md:px-10 md:py-24 lg:grid-cols-2 lg:items-end">
         <div>
           <SectionLabel>Division Vision</SectionLabel>
-          <h3 className="mt-6 max-w-3xl font-heading text-[clamp(3rem,6vw,6.5rem)] font-black leading-[0.88]">
+          <h2 className="mt-6 max-w-3xl font-heading text-[clamp(3rem,6vw,6.5rem)] font-black leading-[0.88]">
             Atmospheric intelligence for a connected future.
-          </h3>
+          </h2>
         </div>
         <p className="font-mono text-xs-plus leading-[1.95] text-muted md:text-sm">
           {programme.vision}

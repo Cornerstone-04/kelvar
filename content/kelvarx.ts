@@ -23,7 +23,7 @@ export const kelvarx = {
       description:
         "A developing hybrid platform combining helium-assisted lift, a tail-sitter fixed-wing aircraft, radiosonde instrumentation, and intelligent imaging systems.",
       media: {
-        src: "/assets/images/platforms/stratokite/stratokite-air-3.webp",
+        src: "/assets/images/platforms/stratokite/stratokite-blue-sky-flight.webp",
         alt: "StratoKite balloon-assisted fixed-wing aircraft in flight",
       },
       payload: [

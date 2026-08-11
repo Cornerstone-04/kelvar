@@ -108,7 +108,7 @@ export function HeroSection() {
           <a
             key={d.id}
             href={d.href ?? `/#${d.slug}`}
-            className="group relative overflow-hidden border border-white/8 bg-white/4 px-4 py-2 font-mono text-xxs uppercase tracking-[0.2em] text-white/60 no-underline backdrop-blur-md transition-all duration-300 ease-linear hover:border-white/15 hover:bg-white/8 hover:text-white/85"
+            className="group relative overflow-hidden border border-white/8 bg-white/4 px-4 py-2 font-mono text-xxs uppercase tracking-[0.2em] text-white/60 no-underline backdrop-blur-md transition-[color,background-color,border-color] duration-200 ease-out hover:border-white/15 hover:bg-white/8 hover:text-white/85"
           >
             {/* soft glow hover */}
             <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,#ffffff10_0%,transparent_70%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />

@@ -39,6 +39,14 @@
   --text-secondary: #9494a8;
   --text-tertiary: #ffffff5c;
   --nav-background: #07072abf;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --duration-fast: 160ms;
+  --duration-ui: 220ms;
+  --duration-drawer: 360ms;
 }
 
 @layer base {
@@ -90,6 +98,11 @@
   button {
     @apply cursor-pointer;
   }
+
+  :where(a, button, input, textarea, select, summary):focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
+  }
 }
 
 @layer components {
@@ -119,7 +132,7 @@
     background-size:
       0 1px,
       0 1px;
-    transition: background-size 300ms ease-out;
+    transition: background-size var(--duration-ui) var(--ease-out);
   }
 
   .kelvar-button-frame::after {
@@ -132,17 +145,15 @@
     background-size:
       1px 0,
       1px 0;
-    transition: background-size 300ms ease-out 100ms;
+    transition: background-size var(--duration-ui) var(--ease-out) 80ms;
   }
 
-  .kelvar-button-frame:hover::before,
   .kelvar-button-frame:focus-visible::before {
     background-size:
       100% 1px,
       100% 1px;
   }
 
-  .kelvar-button-frame:hover::after,
   .kelvar-button-frame:focus-visible::after {
     background-size:
       1px 100%,
@@ -150,25 +161,49 @@
   }
 
   .kelvar-button-frame > svg {
-    transition: transform 300ms ease-out;
+    transition: transform var(--duration-ui) var(--ease-out);
   }
 
-  .kelvar-button-frame:hover > svg:first-child,
   .kelvar-button-frame:focus-visible > svg:first-child {
     transform: translateX(-0.3rem);
   }
 
-  .kelvar-button-frame:hover > svg:last-child,
   .kelvar-button-frame:focus-visible > svg:last-child {
     transform: translateX(0.4rem);
   }
 
   @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
     .kelvar-button-frame::before,
     .kelvar-button-frame::after,
     .kelvar-button-frame > svg {
       transition-duration: 0ms;
       transition-delay: 0ms;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .kelvar-button-frame:hover::before {
+      background-size:
+        100% 1px,
+        100% 1px;
+    }
+
+    .kelvar-button-frame:hover::after {
+      background-size:
+        1px 100%,
+        1px 100%;
+    }
+
+    .kelvar-button-frame:hover > svg:first-child {
+      transform: translateX(-0.3rem);
+    }
+
+    .kelvar-button-frame:hover > svg:last-child {
+      transform: translateX(0.4rem);
     }
   }
 }

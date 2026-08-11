@@ -38,20 +38,10 @@ export default function DronePlatformRow({
     <div id={drone.slug}>
       {/* Label row */}
       <div
-        className={`flex items-start gap-12 px-10 pt-10 md:pt-20 ${
+        className={`flex items-start px-10 pt-10 md:pt-20 ${
           isEven ? "flex-row" : "flex-row-reverse"
         }`}
       >
-        {/* Overline number */}
-        <div className="min-w-8 pt-2.5">
-          <GlitchText
-            tag="span"
-            className="font-mono text-xxs tracking-[0.2em] text-dim"
-            text={drone.id}
-            speed={60}
-          />
-        </div>
-
         {/* Name + description */}
         <div
           className={`flex flex-1 flex-col md:items-baseline-last md:gap-12 ${
@@ -71,7 +61,7 @@ export default function DronePlatformRow({
                 {drone.name}
                 <motion.span
                   aria-hidden="true"
-                  className="inline-block text-[0.4em] text-dim transition-all duration-300 group-hover/link:-translate-y-2 group-hover/link:translate-x-2 group-hover/link:text-primary"
+                  className="inline-block text-[0.4em] text-dim transition-[color,transform] duration-200 group-hover/link:-translate-y-2 group-hover/link:translate-x-2 group-hover/link:text-primary"
                   initial={{ x: 0 }}
                   whileHover={{ x: 8 }}
                   transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}

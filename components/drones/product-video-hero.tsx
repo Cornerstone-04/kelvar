@@ -59,9 +59,7 @@ export function ProductVideoHero({ product }: { product: ProductDetail }) {
         >
           {product.name}
           {product.trademark && (
-            <sup className="ml-2 align-super text-[0.25em] text-primary/30">
-              ™
-            </sup>
+            <sup className="ml-2 align-super text-[0.25em] text-dim">™</sup>
           )}
         </motion.h1>
 

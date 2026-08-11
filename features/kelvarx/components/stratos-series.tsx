@@ -58,10 +58,7 @@ function SystemStory({
         ) : (
           <div className="absolute inset-0 grid place-items-center bg-[linear-gradient(145deg,rgba(255,255,255,0.06),transparent)]">
             <div className="text-center">
-              <p className="font-heading text-5xl font-black text-white/15">
-                {String(index + 1).padStart(2, "0")}
-              </p>
-              <p className="mt-4 font-mono text-xxs uppercase tracking-[0.22em] text-white/35">
+              <p className="mt-4 font-mono text-xxs uppercase tracking-[0.22em] text-dim">
                 {system.media.placeholder}
               </p>
             </div>

@@ -23,12 +23,12 @@ export function StratokitePage() {
         <div className="relative z-1 w-full">
           <Link
             href="/kelvarx"
-            className="mb-8 inline-flex items-center gap-2 font-mono text-xxs uppercase tracking-[0.18em] text-white/55 transition-colors hover:text-white"
+            className="mb-8 inline-flex items-center gap-2 font-mono text-xxs uppercase tracking-[0.18em] text-muted transition-colors hover:text-white"
           >
             <BsArrowLeft /> KELVARX Programme
           </Link>
           <p className="font-mono text-xxs uppercase tracking-[0.24em] text-muted">
-            KELVARX / Platform 01
+            KELVARX / Atmospheric platform
           </p>
           <h1 className="mt-5 font-heading text-[clamp(5rem,14vw,13rem)] font-black uppercase leading-[0.78] tracking-[-0.03em]">
             StratoKite
