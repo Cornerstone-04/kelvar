@@ -224,9 +224,22 @@ function Submenu({
       transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
       className="absolute inset-0 flex flex-col gap-3"
     >
+      <div className="flex items-end justify-between border-b border-white/10 px-2 pt-1 pb-3">
+        <div>
+          <p className="font-mono text-[0.58rem] uppercase tracking-[0.22em] text-dim">
+            You are viewing
+          </p>
+          <h2 className="mt-1 font-heading text-xl font-bold uppercase tracking-[0.08em] text-primary">
+            {level === "platforms" ? "Platforms" : "Research & development"}
+          </h2>
+        </div>
+        <span className="font-mono text-[0.58rem] uppercase tracking-[0.18em] text-dim">
+          Submenu
+        </span>
+      </div>
       <NavBlock
         id={`${level}-back`}
-        label="Main Menu"
+        label="Back to Main Menu"
         index={0}
         active={hovered === `${level}-back`}
         onHover={onHover}

@@ -49,7 +49,7 @@ function NarrativePanel({
       </div>
       <ScrollingText
         text={text}
-        className={`mt-14 max-w-[68ch] font-mono leading-[1.95] text-white/62 ${emphasis ? "text-[clamp(1rem,1.55vw,1.35rem)]" : "text-sm md:text-base"}`}
+        className={`mt-14 max-w-[68ch] font-mono leading-[1.95] text-muted ${emphasis ? "text-[clamp(1rem,1.55vw,1.35rem)]" : "text-sm md:text-base"}`}
       />
     </motion.article>
   );

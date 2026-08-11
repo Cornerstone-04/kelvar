@@ -15,9 +15,7 @@ export function KelvarAiCommand({ command }: { command: CommandData }) {
       <SectionLabel>Operational Intelligence Layer</SectionLabel>
       <div className="mt-8 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
-          <h3 className="font-heading text-[clamp(3.5rem,7vw,7rem)] font-black leading-[0.85]">
-            {command.name}
-          </h3>
+          <h2 className="type-editorial">{command.name}</h2>
           <p className="mt-6 font-mono text-xs-plus leading-[1.9] text-muted">
             {command.description}
           </p>

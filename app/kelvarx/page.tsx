@@ -11,7 +11,12 @@ export default function KelvarxPage() {
       <section id="kelvarx" className="scroll-mt-20">
         <KelvarxHero programme={kelvarx} />
         <StratosSeries systems={kelvarx.systems} />
-        <KainNetwork kain={kelvarx.kain} systems={kelvarx.systems} />
+        <KainNetwork
+          kain={kelvarx.kain}
+          systems={kelvarx.systems}
+          command={kelvarx.aiCommand}
+          applications={kelvarx.applications}
+        />
         <KelvarAiCommand command={kelvarx.aiCommand} />
         <KelvarxApplications
           applications={kelvarx.applications}

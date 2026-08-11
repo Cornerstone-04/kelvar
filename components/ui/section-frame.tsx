@@ -3,6 +3,7 @@ import { SectionLabel } from "./section-label";
 
 type SectionFrameProps = {
   children: ReactNode;
+  id?: string;
   label?: string;
   className?: string;
   innerClassName?: string;
@@ -11,6 +12,7 @@ type SectionFrameProps = {
 
 export function SectionFrame({
   children,
+  id,
   label,
   className = "",
   innerClassName = "",
@@ -18,6 +20,7 @@ export function SectionFrame({
 }: SectionFrameProps) {
   return (
     <section
+      id={id}
       className={`border-t border-white/10 px-6 py-14 md:px-10 md:py-24 ${
         surface === "surface" ? "bg-surface" : ""
       } ${className}`}

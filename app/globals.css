@@ -47,6 +47,11 @@
   --duration-fast: 160ms;
   --duration-ui: 220ms;
   --duration-drawer: 360ms;
+
+  /* layout */
+  --content-max: 100rem;
+  --section-block-mobile: 4rem;
+  --section-block-desktop: 6rem;
 }
 
 @layer base {
@@ -106,6 +111,42 @@
 }
 
 @layer components {
+  .type-campaign {
+    font-family: var(--font-barlow), "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(4.5rem, 14vw, 13rem);
+    font-weight: 900;
+    line-height: 0.82;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+  }
+
+  .type-product {
+    font-family: var(--font-barlow), "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(4rem, 11vw, 10rem);
+    font-weight: 900;
+    line-height: 0.84;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  .type-editorial {
+    font-family: var(--font-barlow), "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(2.5rem, 5.5vw, 5.75rem);
+    font-weight: 700;
+    line-height: 0.94;
+    letter-spacing: -0.01em;
+    text-transform: none;
+  }
+
+  .type-section {
+    font-family: var(--font-barlow), "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
   .kelvar-button-frame {
     position: relative;
     isolation: isolate;

@@ -29,7 +29,7 @@ export function FocusNetworkStatement() {
       <p className="font-mono text-xxs uppercase tracking-[0.24em] text-dim">
         Multi-domain awareness
       </p>
-      <h2 className="max-w-5xl font-heading text-[clamp(2.8rem,6vw,6.5rem)] font-black leading-[0.88] text-primary">
+      <h2 className="type-editorial max-w-5xl text-primary">
         Different environments.
         <br />
         One intelligence layer.

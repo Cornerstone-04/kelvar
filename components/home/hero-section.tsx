@@ -69,7 +69,7 @@ export function HeroSection() {
 
         <motion.h1
           initial={false}
-          className="mb-10 max-w-[14ch] font-heading text-[clamp(4.5rem,14vw,13rem)] leading-[0.9] font-black uppercase tracking-[-0.02em] text-primary"
+          className="type-campaign mb-10 max-w-[14ch] text-primary"
         >
           Surveillance
           <br />

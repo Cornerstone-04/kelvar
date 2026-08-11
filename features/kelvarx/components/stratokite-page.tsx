@@ -6,6 +6,10 @@ import { LazyVideo } from "@/components/ui/lazy-video";
 import { kelvarx } from "@/content/kelvarx";
 import { stratokiteMedia } from "@/content/products/stratokite";
 import { StratokiteMediaSection } from "./stratokite-media-section";
+import { ProductSectionNav } from "@/components/products/product-section-nav";
+import { ProductStatusBand } from "@/components/products/product-status-band";
+import { ProductNarrativeIntro } from "@/components/products/product-narrative-intro";
+import { TechnicalDataTable } from "@/components/products/technical-data-table";
 
 const stratokite = kelvarx.systems[0];
 
@@ -30,23 +34,82 @@ export function StratokitePage() {
           <p className="font-mono text-xxs uppercase tracking-[0.24em] text-muted">
             KELVARX / Atmospheric platform
           </p>
-          <h1 className="mt-5 font-heading text-[clamp(5rem,14vw,13rem)] font-black uppercase leading-[0.78] tracking-[-0.03em]">
-            StratoKite
-          </h1>
-          <p className="mt-8 max-w-2xl font-mono text-xs-plus leading-[1.85] text-white/65">
+          <h1 className="type-product mt-5">StratoKite</h1>
+          <p className="mt-8 max-w-2xl font-mono text-xs-plus leading-[1.85] text-muted">
             {stratokite.description}
           </p>
         </div>
       </section>
 
+      <ProductSectionNav
+        productName="StratoKite"
+        links={[
+          { href: "#overview", label: "Overview" },
+          { href: "#airframe", label: "Airframe" },
+          { href: "#capabilities", label: "Capabilities" },
+          { href: "#missions", label: "Mission profile" },
+        ]}
+      />
+
+      <ProductStatusBand
+        status="In development"
+        items={[
+          { label: "Programme", value: "KELVARX" },
+          { label: "Platform class", value: stratokite.type },
+          { label: "Primary role", value: "Atmospheric intelligence" },
+        ]}
+      />
+
+      <div id="overview" className="scroll-mt-28">
+        <ProductNarrativeIntro
+          eyebrow="Platform Overview"
+          title="A recoverable atmospheric platform built to observe, measure, and return."
+          description={stratokite.description}
+          statement="Performance figures remain unpublished while the platform is in development."
+        />
+      </div>
+
       <StratokiteMediaSection />
 
-      <section className="px-6 py-14 md:px-10 md:py-24">
+      <section
+        id="capabilities"
+        className="scroll-mt-28 px-6 py-14 md:px-10 md:py-24"
+      >
         <SectionLabel>{stratokite.type}</SectionLabel>
-        <div className="mt-10 grid gap-px bg-white/10 md:grid-cols-3">
-          <SystemList title="Payload" items={stratokite.payload} />
-          <SystemList title="Data" items={stratokite.dataCollected} />
-          <SystemList title="Missions" items={stratokite.missions} />
+        <div className="mt-10 grid gap-12 xl:grid-cols-[0.72fr_1.28fr] xl:gap-20">
+          <TechnicalDataTable
+            title="Published technical profile"
+            data={[
+              { label: "Architecture", value: stratokite.type },
+              { label: "Lift system", value: "Helium-assisted ascent" },
+              { label: "Airframe", value: "Tail-sitter fixed-wing aircraft" },
+              { label: "Navigation", value: "GPS tracking" },
+              { label: "Processing", value: "AI edge processor" },
+              { label: "Performance", value: "Pending platform validation" },
+            ]}
+          />
+          <div className="grid gap-px bg-white/10 md:grid-cols-2">
+            <SystemList title="Payload" items={stratokite.payload} />
+            <SystemList
+              title="Data collected"
+              items={stratokite.dataCollected}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="missions"
+        className="scroll-mt-28 border-t border-white/10 bg-surface px-6 py-14 md:px-10 md:py-24"
+      >
+        <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
+          <div>
+            <SectionLabel>Mission Profile</SectionLabel>
+            <h2 className="type-editorial mt-7 max-w-xl text-primary">
+              Designed around recoverable intelligence missions.
+            </h2>
+          </div>
+          <SystemList title="Planned missions" items={stratokite.missions} />
         </div>
         <Link
           href="/kelvarx#stratos-series"
@@ -70,9 +133,9 @@ export function StratokitePage() {
 function SystemList({ title, items }: { title: string; items: string[] }) {
   return (
     <div className="bg-bg p-6 md:p-8">
-      <h2 className="font-mono text-xxs uppercase tracking-[0.2em] text-dim">
+      <h3 className="font-mono text-xxs uppercase tracking-[0.2em] text-dim">
         {title}
-      </h2>
+      </h3>
       <ul className="mt-5 space-y-4">
         {items.map((item) => (
           <li

@@ -55,7 +55,7 @@ export function ProductVideoHero({ product }: { product: ProductDetail }) {
           initial={reduceMotion ? false : { opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-6 font-heading text-[clamp(4rem,14vw,11rem)] font-black leading-none text-primary"
+          className="type-product mb-6 text-primary"
         >
           {product.name}
           {product.trademark && (

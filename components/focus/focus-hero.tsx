@@ -35,7 +35,7 @@ export function FocusHero() {
             delay: 0.2,
             ease: [0.16, 1, 0.3, 1],
           }}
-          className="mb-4 font-heading text-[clamp(3.5rem,12vw,10rem)] font-black leading-none tracking-[-0.02em] text-primary"
+          className="type-product mb-4 text-primary"
         >
           Areas of
           <br />

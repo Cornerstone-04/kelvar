@@ -12,9 +12,10 @@ import {
 import type { IconType } from "react-icons";
 import type { ProductDetail } from "@/types/product-types";
 import { SectionFrame } from "@/components/ui/section-frame";
-import { SectionLabel } from "@/components/ui/section-label";
 import { MetricGrid } from "@/components/ui/metric-grid";
 import { KelvarButton } from "@/components/ui/kelvar-button";
+import { ProductNarrativeIntro } from "@/components/products/product-narrative-intro";
+import { TechnicalDataTable } from "@/components/products/technical-data-table";
 
 const iconMap: Record<string, IconType> = {
   house: LuHouse,
@@ -33,27 +34,20 @@ export function DomeProductStory({ product }: { product: ProductDetail }) {
 
   return (
     <>
-      <SectionFrame>
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-end">
-          <div>
-            <SectionLabel>Concept</SectionLabel>
-            <h2 className="mt-8 max-w-3xl font-heading text-[clamp(2rem,5vw,6rem)] font-black leading-[0.9] text-primary">
-              Static CCTV becomes an autonomous protective field.
-            </h2>
-          </div>
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="font-mono text-xs-plus leading-[1.95] text-muted md:text-sm"
-          >
-            {product.concept}
-          </motion.p>
-        </div>
-      </SectionFrame>
+      <div id="overview" className="scroll-mt-32">
+        <ProductNarrativeIntro
+          eyebrow="Concept"
+          title="Static CCTV becomes an autonomous protective field."
+          description={product.concept}
+        />
+      </div>
 
-      <SectionFrame surface="surface" label="Autonomous Response Loop">
+      <SectionFrame
+        id="response-loop"
+        className="scroll-mt-32"
+        surface="surface"
+        label="Autonomous Response Loop"
+      >
         <div className="grid gap-px bg-white/10 md:grid-cols-4">
           {["Detect", "Classify", "Coordinate", "Respond"].map(
             (step, index) => (
@@ -66,7 +60,7 @@ export function DomeProductStory({ product }: { product: ProductDetail }) {
                 className="bg-surface p-6 md:p-8"
               >
                 <p className="font-mono text-xxs uppercase tracking-[0.22em] text-dim">
-                  {String(index + 1).padStart(2, "0")}
+                  Response phase
                 </p>
                 <h3 className="mt-6 font-heading text-[2.3rem] font-black leading-none text-primary">
                   {step}
@@ -80,11 +74,15 @@ export function DomeProductStory({ product }: { product: ProductDetail }) {
         </div>
       </SectionFrame>
 
-      <SectionFrame label="System Architecture">
+      <SectionFrame
+        id="architecture"
+        className="scroll-mt-32"
+        label="System Architecture"
+      >
         <div className="grid gap-8 lg:grid-cols-[minmax(18rem,0.62fr)_minmax(0,1.18fr)]">
           <div className="border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.015))] p-6 md:p-8 lg:sticky lg:top-24 lg:self-start">
             <LuRadar className="mb-8 text-primary/55" size={28} />
-            <h3 className="font-heading text-[2.6rem] font-black leading-none text-primary">
+            <h3 className="type-section text-primary">
               Mobile, sensing, self-coordinated CCTV.
             </h3>
             <p className="mt-5 font-mono text-xs-plus leading-[1.85] text-muted">
@@ -128,10 +126,15 @@ export function DomeProductStory({ product }: { product: ProductDetail }) {
         </div>
       </SectionFrame>
 
-      <SectionFrame surface="surface" label="Mission Readiness">
+      <SectionFrame
+        id="missions"
+        className="scroll-mt-32"
+        surface="surface"
+        label="Mission Readiness"
+      >
         <div className="grid gap-8 ">
           <div className="grid lg:grid-cols-[minmax(18rem,1fr)_minmax(0,0.8fr)]">
-            <h2 className="font-heading text-[clamp(2.5rem,5vw,5.5rem)] font-black leading-[0.9] text-primary">
+            <h2 className="type-editorial text-primary">
               Designed for everyday spaces and high-risk environments.
             </h2>
           </div>
@@ -161,32 +164,21 @@ export function DomeProductStory({ product }: { product: ProductDetail }) {
         </div>
       </SectionFrame>
 
-      <SectionFrame label="Sensor & Deployment Profile">
+      <SectionFrame
+        id="technical-profile"
+        className="scroll-mt-32"
+        label="Sensor & Deployment Profile"
+      >
         <div className="grid gap-8 lg:grid-cols-2">
           <MetricGrid
             metrics={product.stats}
             columns="grid-cols-2 md:grid-cols-3"
           />
           <div>
-            <div className="border-t border-white/15">
-              {product.specs.map((spec, index) => (
-                <motion.div
-                  key={spec.label}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="grid grid-cols-[minmax(8rem,0.48fr)_1fr] gap-4 border-b border-white/15 py-5"
-                >
-                  <span className="font-mono text-xxs uppercase tracking-[0.18em] text-dim">
-                    {spec.label}
-                  </span>
-                  <span className="text-right font-mono text-xs-plus text-primary">
-                    {spec.value}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
+            <TechnicalDataTable
+              title="System specification"
+              data={product.specs}
+            />
 
             <div className="mt-8 grid gap-px bg-white/10 sm:grid-cols-2">
               {secondaryFeatures.map((feature) => (

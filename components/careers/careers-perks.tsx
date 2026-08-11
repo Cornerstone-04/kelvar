@@ -10,7 +10,7 @@ export function CareersPerks() {
       <div className="grid gap-10 lg:grid-cols-[0.55fr_1.45fr] lg:gap-16">
         <div>
           <SectionLabel>Why Kelvar</SectionLabel>
-          <h2 className="mt-7 font-heading text-[clamp(2.8rem,5vw,5.5rem)] font-black leading-[0.88] text-primary">
+          <h2 className="type-editorial mt-7 text-primary">
             Build where your work matters.
           </h2>
         </div>

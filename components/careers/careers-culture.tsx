@@ -61,7 +61,7 @@ export function CareersCulture() {
       <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <SectionLabel>How We Work</SectionLabel>
-          <h2 className="mt-7 max-w-xl font-heading text-[clamp(3rem,6vw,6.5rem)] font-black leading-[0.88] text-primary">
+          <h2 className="type-editorial mt-7 max-w-xl text-primary">
             Hard problems.
             <br />
             Real responsibility.

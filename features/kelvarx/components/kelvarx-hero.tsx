@@ -34,9 +34,7 @@ export function KelvarxHero({ programme }: { programme: KelvarxProgramme }) {
           <p className="max-w-3xl font-mono text-xxs uppercase tracking-[0.28em] text-white/65 md:text-xs">
             {programme.eyebrow}
           </p>
-          <h1 className="mt-5 font-heading text-[clamp(5rem,15vw,13rem)] font-black leading-[0.8] text-primary">
-            {programme.name}
-          </h1>
+          <h1 className="type-campaign mt-5 text-primary">{programme.name}</h1>
           <p className="mt-7 max-w-3xl font-mono text-xs-plus leading-[1.9] text-white/68 md:text-sm">
             {programme.description}
           </p>
@@ -67,7 +65,7 @@ export function KelvarxHero({ programme }: { programme: KelvarxProgramme }) {
       <div className="grid gap-8 border-b border-white/10 px-6 py-14 md:px-10 md:py-24 lg:grid-cols-2 lg:items-end">
         <div>
           <SectionLabel>Division Vision</SectionLabel>
-          <h2 className="mt-6 max-w-3xl font-heading text-[clamp(3rem,6vw,6.5rem)] font-black leading-[0.88]">
+          <h2 className="type-editorial mt-6 max-w-3xl">
             Atmospheric intelligence for a connected future.
           </h2>
         </div>

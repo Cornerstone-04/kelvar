@@ -61,7 +61,7 @@ export function InternalPageHero({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-heading text-[clamp(3rem,10vw,8rem)] font-black leading-none text-white"
+          className="type-product max-w-[14ch] text-white"
         >
           {title}
           {outline && (

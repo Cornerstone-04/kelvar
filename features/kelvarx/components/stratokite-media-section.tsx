@@ -5,11 +5,17 @@ import { stratokiteMedia } from "@/content/products/stratokite";
 
 export function StratokiteMediaSection() {
   return (
-    <section className="border-t border-white/10 px-6 py-16 md:px-10 md:py-24">
+    <section
+      id="airframe"
+      className="scroll-mt-28 border-t border-white/10 px-6 py-16 md:px-10 md:py-24"
+    >
       <div className="grid gap-12 xl:grid-cols-[0.72fr_1.28fr] xl:gap-20">
-        <div className="xl:sticky xl:top-8 xl:self-start">
+        <div
+          className="xl:sticky xl:self-start"
+          style={{ top: "calc(var(--site-navbar-offset, 4.0625rem) + 4.5rem)" }}
+        >
           <SectionLabel>Airframe / System Study</SectionLabel>
-          <h2 className="mt-7 max-w-xl font-heading text-[clamp(3.5rem,7vw,7.5rem)] leading-[0.82] font-black uppercase tracking-[-0.03em]">
+          <h2 className="type-editorial mt-7 max-w-xl text-primary">
             Engineered for the space between.
           </h2>
           <p className="mt-7 max-w-lg font-mono text-xs-plus leading-[1.85] text-muted">

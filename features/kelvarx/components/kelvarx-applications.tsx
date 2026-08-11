@@ -18,9 +18,9 @@ export function KelvarxApplications({
         <div className="grid gap-8 lg:grid-cols-[0.72fr_1.08fr] lg:items-start">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <SectionLabel>Applications</SectionLabel>
-            <h3 className="mt-8 font-heading text-[clamp(3rem,6vw,6rem)] font-black leading-[0.88]">
+            <h2 className="type-editorial mt-8">
               From atmospheric data to operational outcomes.
-            </h3>
+            </h2>
           </div>
           <div className="grid gap-px bg-white/10">
             {applications.map((application) => (
