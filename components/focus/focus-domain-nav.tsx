@@ -13,7 +13,7 @@ export function FocusDomainNav() {
           <Link
             key={domain.id}
             href={`#focus-${domain.word.toLowerCase()}`}
-            className="group flex min-h-14 min-w-32 flex-1 items-center justify-between gap-5 border-x border-white/8 px-4 font-mono text-xxs uppercase tracking-[0.18em] text-muted transition-[color,background-color] duration-200 ease-out hover:bg-white/5 hover:text-primary"
+            className="group flex min-h-14 min-w-fit sm:min-w-32 flex-1 items-center justify-between gap-5 border-x border-white/8 px-4 font-mono text-xxs uppercase tracking-[0.18em] text-muted transition-[color,background-color] duration-200 ease-out hover:bg-white/5 hover:text-primary"
           >
             <span>{domain.word}</span>
           </Link>
